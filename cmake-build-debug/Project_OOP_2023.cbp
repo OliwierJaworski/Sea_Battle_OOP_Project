@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/oliwier-desktop/Documents/Code_Projects/Project_OOP_2023/game.cpp">
+			<Option target="Project_OOP_2023"/>
+		</Unit>
+		<Unit filename="/home/oliwier-desktop/Documents/Code_Projects/Project_OOP_2023/game.h">
+			<Option target="Project_OOP_2023"/>
+		</Unit>
 		<Unit filename="/home/oliwier-desktop/Documents/Code_Projects/Project_OOP_2023/main.cpp">
 			<Option target="Project_OOP_2023"/>
 		</Unit>

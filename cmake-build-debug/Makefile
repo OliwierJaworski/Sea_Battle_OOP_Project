@@ -129,6 +129,30 @@ Project_OOP_2023/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_OOP_2023.dir/build.make CMakeFiles/Project_OOP_2023.dir/build
 .PHONY : Project_OOP_2023/fast
 
+game.o: game.cpp.o
+.PHONY : game.o
+
+# target to build an object file
+game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_OOP_2023.dir/build.make CMakeFiles/Project_OOP_2023.dir/game.cpp.o
+.PHONY : game.cpp.o
+
+game.i: game.cpp.i
+.PHONY : game.i
+
+# target to preprocess a source file
+game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_OOP_2023.dir/build.make CMakeFiles/Project_OOP_2023.dir/game.cpp.i
+.PHONY : game.cpp.i
+
+game.s: game.cpp.s
+.PHONY : game.s
+
+# target to generate assembly for a file
+game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_OOP_2023.dir/build.make CMakeFiles/Project_OOP_2023.dir/game.cpp.s
+.PHONY : game.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Project_OOP_2023"
+	@echo "... game.o"
+	@echo "... game.i"
+	@echo "... game.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -3,4 +3,6 @@ project(Project_OOP_2023)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(Project_OOP_2023 main.cpp)
+add_executable(Project_OOP_2023 main.cpp
+        game.cpp
+        game.h)
