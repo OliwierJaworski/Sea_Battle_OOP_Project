@@ -1,3 +1,0 @@
-/home/oliwier-desktop/Documents/Code_Projects/Project_OOP_2023/cmake-build-debug/CMakeFiles/Project_OOP_2023.dir
-/home/oliwier-desktop/Documents/Code_Projects/Project_OOP_2023/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/oliwier-desktop/Documents/Code_Projects/Project_OOP_2023/cmake-build-debug/CMakeFiles/rebuild_cache.dir
