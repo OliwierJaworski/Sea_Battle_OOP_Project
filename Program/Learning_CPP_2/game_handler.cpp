@@ -3,8 +3,18 @@
 #include <string>
 #include <iostream>
 
-void Game_handler::start_Game()
+void Game_handler::start_Game(Game_handler * game)
 {
+    Player* player1 = new Player;
+    Player* player2 = new Player;
+
+    game->Collect_Players_ID(player1);
+    game->Collect_Players_ID(player2);
+    player1->place_boats();
+
+    printf("Code Still works!\n");
+
+    game->clear_player_ID_list();
 
 }
 
@@ -18,3 +28,4 @@ void Game_handler::clear_player_ID_list()
     playersVector.clear();
     playersVector.shrink_to_fit();
 }
+

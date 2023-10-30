@@ -8,7 +8,7 @@
 class Game_handler
 {
 public:
-    void start_Game();
+    void start_Game(Game_handler * game);
     void Collect_Players_ID(Player * playerX);
     void clear_player_ID_list();
 

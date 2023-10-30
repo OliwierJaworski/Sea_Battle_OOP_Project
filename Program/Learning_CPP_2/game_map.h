@@ -6,6 +6,7 @@
 
 class Game_Map
 {
+    friend class Player;
 public:
     void init_matrix();
     void init_boats();

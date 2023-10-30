@@ -11,7 +11,7 @@ class Player
 public:
     Player();
     void print_name();
-    void place_boatd();
+    void place_boats();
 private:
     std::string Name;
     Game_Map * map;

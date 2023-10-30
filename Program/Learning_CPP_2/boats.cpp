@@ -1,27 +1,29 @@
 #include "boats.h"
 
-Carrier::Carrier(int size)
+Carrier::Carrier(int size, std::string name)
+{
+    boatsize = size;
+    boatname = name;
+}
+//---------------------------------------------------
+Submarine::Submarine(int size, std::string name)
 {
     boatsize = size;
 }
 //---------------------------------------------------
-Submarine::Submarine(int size)
+Battleship::Battleship(int size, std::string name)
 {
     boatsize = size;
 }
 //---------------------------------------------------
-Battleship::Battleship(int size)
+Cruiser::Cruiser(int size, std::string name)
 {
     boatsize = size;
 }
 //---------------------------------------------------
-Cruiser::Cruiser(int size)
+Destroyer::Destroyer(int size, std::string name)
 {
     boatsize = size;
-}
-//---------------------------------------------------
-Destroyer::Destroyer(int size)
-{
-    boatsize = size;
+    boatname = name;
 }
 //---------------------------------------------------
