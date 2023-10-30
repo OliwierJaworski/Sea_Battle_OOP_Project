@@ -55,26 +55,20 @@ build CMakeFiles/Project_OOP_2023.dir/main.cpp.o: CXX_COMPILER__Project_OOP_2023
   OBJECT_DIR = CMakeFiles/Project_OOP_2023.dir
   OBJECT_FILE_DIR = CMakeFiles/Project_OOP_2023.dir
 
-build CMakeFiles/Project_OOP_2023.dir/GameHandler.cpp.o: CXX_COMPILER__Project_OOP_2023_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Project_OOP_2023/Program/GameHandler.cpp || cmake_object_order_depends_target_Project_OOP_2023
-  DEP_FILE = CMakeFiles/Project_OOP_2023.dir/GameHandler.cpp.o.d
-  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Project_OOP_2023.dir
-  OBJECT_FILE_DIR = CMakeFiles/Project_OOP_2023.dir
-
-build CMakeFiles/Project_OOP_2023.dir/GameMatrix.cpp.o: CXX_COMPILER__Project_OOP_2023_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Project_OOP_2023/Program/GameMatrix.cpp || cmake_object_order_depends_target_Project_OOP_2023
-  DEP_FILE = CMakeFiles/Project_OOP_2023.dir/GameMatrix.cpp.o.d
-  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Project_OOP_2023.dir
-  OBJECT_FILE_DIR = CMakeFiles/Project_OOP_2023.dir
-
-build CMakeFiles/Project_OOP_2023.dir/Game_Map.cpp.o: CXX_COMPILER__Project_OOP_2023_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Project_OOP_2023/Program/Game_Map.cpp || cmake_object_order_depends_target_Project_OOP_2023
-  DEP_FILE = CMakeFiles/Project_OOP_2023.dir/Game_Map.cpp.o.d
-  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Project_OOP_2023.dir
-  OBJECT_FILE_DIR = CMakeFiles/Project_OOP_2023.dir
-
 build CMakeFiles/Project_OOP_2023.dir/Player.cpp.o: CXX_COMPILER__Project_OOP_2023_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Project_OOP_2023/Program/Player.cpp || cmake_object_order_depends_target_Project_OOP_2023
   DEP_FILE = CMakeFiles/Project_OOP_2023.dir/Player.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Project_OOP_2023.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project_OOP_2023.dir
+
+build CMakeFiles/Project_OOP_2023.dir/Map.cpp.o: CXX_COMPILER__Project_OOP_2023_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Project_OOP_2023/Program/Map.cpp || cmake_object_order_depends_target_Project_OOP_2023
+  DEP_FILE = CMakeFiles/Project_OOP_2023.dir/Map.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Project_OOP_2023.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project_OOP_2023.dir
+
+build CMakeFiles/Project_OOP_2023.dir/rules.cpp.o: CXX_COMPILER__Project_OOP_2023_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Project_OOP_2023/Program/rules.cpp || cmake_object_order_depends_target_Project_OOP_2023
+  DEP_FILE = CMakeFiles/Project_OOP_2023.dir/rules.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Project_OOP_2023.dir
   OBJECT_FILE_DIR = CMakeFiles/Project_OOP_2023.dir
@@ -87,7 +81,7 @@ build CMakeFiles/Project_OOP_2023.dir/Player.cpp.o: CXX_COMPILER__Project_OOP_20
 #############################################
 # Link the executable Project_OOP_2023
 
-build Project_OOP_2023: CXX_EXECUTABLE_LINKER__Project_OOP_2023_Debug CMakeFiles/Project_OOP_2023.dir/main.cpp.o CMakeFiles/Project_OOP_2023.dir/GameHandler.cpp.o CMakeFiles/Project_OOP_2023.dir/GameMatrix.cpp.o CMakeFiles/Project_OOP_2023.dir/Game_Map.cpp.o CMakeFiles/Project_OOP_2023.dir/Player.cpp.o
+build Project_OOP_2023: CXX_EXECUTABLE_LINKER__Project_OOP_2023_Debug CMakeFiles/Project_OOP_2023.dir/main.cpp.o CMakeFiles/Project_OOP_2023.dir/Player.cpp.o CMakeFiles/Project_OOP_2023.dir/Map.cpp.o CMakeFiles/Project_OOP_2023.dir/rules.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Project_OOP_2023.dir
   POST_BUILD = :

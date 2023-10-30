@@ -1,5 +1,5 @@
 //
-// Created by oliwier-desktop on 25/10/23.
+//  ->een map wordt voor elke speler gemaakt.
 //
 
 #ifndef PROJECT_OOP_2023_PLAYER_H
@@ -10,7 +10,7 @@
 class Player
 {
 public:
-    Game_Map PlayerMap;     //object wordt voor elke speler anders
+         
 
 };
 
