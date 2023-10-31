@@ -12,7 +12,7 @@ void Game_handler::start_Game(Game_handler * game)
     game->Collect_Players_ID(player2);
 
 
-    printf("Code Still works!\n");
+    std::cout << "code still works" << std::endl;
 
     game->clear_player_ID_list();
 

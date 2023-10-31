@@ -1,8 +1,10 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include <string>
 #include "game_map.h"
+
+#include <string>
+
 
 class Player
 {
@@ -12,6 +14,9 @@ public:
     Player();
     void print_name();
     void place_boats();
+    void auto_boat_placer(int baotsize);
+    std::string player_input();
+
 private:
     std::string Name;
     Game_Map * map;
