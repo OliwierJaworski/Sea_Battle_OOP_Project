@@ -10,6 +10,8 @@ int main()
     Game_handler *game = new Game_handler;
     game->start_Game(game);
 
+
+
     delete game;
     return 0;
 }
