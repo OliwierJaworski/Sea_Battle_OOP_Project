@@ -11,7 +11,9 @@ class Game_Map
 public:
     void init_matrix();
     void init_boats();
-    int Calc_Boat_Fit(int x, int y, int size, int boat_rot);
+    int Calc_Boat_Fit(int y, int x, int size, int boat_rot);
+    void Boat_Map_Placer(int y, int x, int size, int boat_rot);
+    void display_map();
     void clear_boats_data();//dit moet private anders kan iedereen boatsdataclearen
 private:
     int game_matrix[10][10];
