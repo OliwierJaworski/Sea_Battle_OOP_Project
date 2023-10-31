@@ -5,6 +5,7 @@
 
 void Game_handler::start_Game(Game_handler * game)
 {
+    srand(time(NULL));
     Player* player1 = new Player;
     Player* player2 = new Player;
 

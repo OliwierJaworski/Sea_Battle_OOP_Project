@@ -40,7 +40,6 @@ std::string Player::player_input()
 
 void Player::auto_boat_placer(int boatsize)
 {
-    srand(time(NULL));
     int random_index_x;
     int random_index_y;
     int boat_rot;
