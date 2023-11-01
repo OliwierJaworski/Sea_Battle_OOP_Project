@@ -2,7 +2,7 @@
 #include "game_map.h"
 
 #include <iostream>
-#include <time.h>
+
 
 Player::Player()
 {
@@ -30,13 +30,7 @@ void Player::print_name()
     std::cout << Name << std::endl;
 }
 
-std::string Player::player_input()
-{
-    std::string char_input;
-    std::cin >> char_input;
 
-    return char_input;
-}
 
 void Player::auto_boat_placer(int boatsize)
 {
@@ -44,6 +38,7 @@ void Player::auto_boat_placer(int boatsize)
     int random_index_y;
     int boat_rot;
     int willfit = 1;
+
     while(willfit !=0)
     {
         random_index_x= rand()%10;
@@ -57,4 +52,29 @@ void Player::auto_boat_placer(int boatsize)
     map->Boat_Map_Placer(random_index_x,random_index_y,boatsize, boat_rot);
 }
 
+int Player::ask_if_hit(const std::string& coordinate, Player* opponent)
+{
+    size_t sign_pos = coordinate.find(',');
+        int firstPart_cord=-1;
+        int SecondPart_cord=-1;
+
+    if (sign_pos != std::string::npos)
+    {
+        firstPart_cord = std::stoi(coordinate.substr(0, sign_pos));
+        SecondPart_cord = std::stoi(coordinate.substr(sign_pos + 1));
+
+    }
+    if( opponent->map->game_matrix[SecondPart_cord][firstPart_cord]>=1)
+    {
+        std::cout << " hit :)" << std::endl;
+        map->enemy_game_matrix[SecondPart_cord][firstPart_cord]=1;
+        return 1;//hit!
+    }
+    else
+    {
+        std::cout << " miss :(" << std::endl;
+        return 0;//miss!
+    }
+
+}
 

@@ -12,10 +12,11 @@ class Player
 
 public:
     Player();
+    ~Player() {delete map;};
     void print_name();
     void place_boats();
     void auto_boat_placer(int baotsize);
-    std::string player_input();
+    int ask_if_hit(const std::string& coordinate, Player* opponent);
 
 private:
     std::string Name;
