@@ -1,8 +1,0 @@
-# ninja log v5
-1	219	1698266090961627573	CMakeFiles/Project_OOP_2023.dir/main.cpp.o	a49cd30e0bb6ee2d
-0	224	1698266261367898949	CMakeFiles/Project_OOP_2023.dir/GameMatrix.cpp.o	3403040c7b2b232b
-0	234	1698254889413897097	CMakeFiles/Project_OOP_2023.dir/playground.cpp.o	3d4d390bab472a3a
-1	71	1698341724343433011	CMakeFiles/Project_OOP_2023.dir/Game_Map.cpp.o	52251acc03a61cf5
-224	261	1698266261403898578	Project_OOP_2023	820cf7816a9f3fe6
-0	230	1698266078453751357	CMakeFiles/Project_OOP_2023.dir/GameHandler.cpp.o	20bac09dc43bee1e
-1	71	1698341724343433011	CMakeFiles/Project_OOP_2023.dir/Player.cpp.o	7530a2abc0e2af83

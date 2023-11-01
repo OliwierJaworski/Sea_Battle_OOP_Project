@@ -12,6 +12,7 @@ void Game_Map::init_matrix()
         for (int y = 0; y < 10; ++y)
         {
             game_matrix[x][y]= 0;
+            enemy_game_matrix[x][y]= 0;
         }
     }
 }
@@ -38,6 +39,7 @@ void Game_Map::init_boats()
 
 void Game_Map::clear_boats_data()
 {
+
     BoatVector.clear();
 }
 
@@ -181,17 +183,25 @@ void Game_Map::Boat_Map_Placer(int x, int y, int size, int boat_rot)
 
 }
 
-
 void Game_Map::display_map()
 {
+    std::cout << "player map:                opponent map:" << std::endl;
     for (int x = 0; x < 10; ++x)
     {
         for (int y = 0; y < 10; ++y)
         {
-            std::cout << game_matrix[x][y];
+            std::cout << game_matrix[x][y] ;
         }
+        std::cout << "                  ";
+        for (int y = 0; y < 10; ++y)
+        {
+            std::cout << enemy_game_matrix[x][y] ;
+        }
+
         std::cout <<std::endl;
     }
 }
+
+
 
 
