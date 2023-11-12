@@ -1,0 +1,3 @@
+/home/oliwier-desktop/Documents/Code_Projects/Gui_code_testing/Sea_Battle_OOP_Project/Testing_Gui_functionality/cmake-build-debug/CMakeFiles/Testing_Gui_functionality.dir
+/home/oliwier-desktop/Documents/Code_Projects/Gui_code_testing/Sea_Battle_OOP_Project/Testing_Gui_functionality/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/oliwier-desktop/Documents/Code_Projects/Gui_code_testing/Sea_Battle_OOP_Project/Testing_Gui_functionality/cmake-build-debug/CMakeFiles/rebuild_cache.dir
