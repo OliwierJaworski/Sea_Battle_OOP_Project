@@ -55,6 +55,12 @@ build CMakeFiles/Testing_Gui_functionality.dir/main.cpp.o: CXX_COMPILER__Testing
   OBJECT_DIR = CMakeFiles/Testing_Gui_functionality.dir
   OBJECT_FILE_DIR = CMakeFiles/Testing_Gui_functionality.dir
 
+build CMakeFiles/Testing_Gui_functionality.dir/glad.c.o: C_COMPILER__Testing_Gui_functionality_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Gui_code_testing/Sea_Battle_OOP_Project/Testing_Gui_functionality/glad.c || cmake_object_order_depends_target_Testing_Gui_functionality
+  DEP_FILE = CMakeFiles/Testing_Gui_functionality.dir/glad.c.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Testing_Gui_functionality.dir
+  OBJECT_FILE_DIR = CMakeFiles/Testing_Gui_functionality.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Testing_Gui_functionality
@@ -63,7 +69,7 @@ build CMakeFiles/Testing_Gui_functionality.dir/main.cpp.o: CXX_COMPILER__Testing
 #############################################
 # Link the executable Testing_Gui_functionality
 
-build Testing_Gui_functionality: CXX_EXECUTABLE_LINKER__Testing_Gui_functionality_Debug CMakeFiles/Testing_Gui_functionality.dir/main.cpp.o | /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
+build Testing_Gui_functionality: CXX_EXECUTABLE_LINKER__Testing_Gui_functionality_Debug CMakeFiles/Testing_Gui_functionality.dir/main.cpp.o CMakeFiles/Testing_Gui_functionality.dir/glad.c.o | /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libglfw.so.3.3  -lGL  -lX11  -lpthread  -lXrandr  -lXi  -ldl
   OBJECT_DIR = CMakeFiles/Testing_Gui_functionality.dir
