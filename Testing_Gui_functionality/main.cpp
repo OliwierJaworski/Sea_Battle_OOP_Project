@@ -1,62 +1,56 @@
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
 #include <iostream>
+#include <SFML/Graphics.hpp>
+#include <filesystem>
 
-//code for adjusting window
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-    glViewport(0, 0, width, height);
-}
-//processes input from user
-void processInput(GLFWwindow *window)
-{
-    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
-}
-
+sf::RenderWindow window;
+sf::Event windowevents;
+sf::Sprite background;
+sf::Sprite flappy;
+sf::Texture background_texture;
+sf::Texture flappy_texture;
+sf::Color windowColor(100, 155, 200);
 int main()
 {
-
-//initialization of glfw
-    glfwInit();
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-//Creating a window using glfw
-    GLFWwindow* window = glfwCreateWindow(800,600 ,"learningOpenGL", NULL, NULL);
-    if(window ==NULL)
+    if(!background_texture.loadFromFile("sprite_textures/flappy_background.png"))
     {
-        std::cout << "Failed to create GLFW window" << std::endl;
-        glfwTerminate();
-        return -1;
+        std::cout << "wrong file location bro" << std::endl;
+        return 1;
     }
-//make the context of our window the main context on the current thread.
-    glfwMakeContextCurrent(window);
-
-//init glad (manages function pointers for OpenGL)
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    if(!flappy_texture.loadFromFile("sprite_textures/flappy_bird_model.png"))
     {
-        std::cout << "Failed to initialize GLAD" << std::endl;
-        return -1;
+        std::cout << "wrong file location bro" << std::endl;
+        return 1;
     }
+    window.create(sf::VideoMode(900, 504), "My Window",sf::Style::Close);
 
-//tell gl size of the rendering window
-    glViewport(0,0,800,600);
+    background.setTextureRect(sf::IntRect(0,0,900,504));
+    background.setTexture(background_texture);
+    background.setColor(sf::Color(255, 255, 255, 200));
+    background.setPosition(0,0);
+
+    flappy.setTexture(flappy_texture);
+    flappy.setPosition(0,0);
+    flappy.setTextureRect(sf::IntRect(0,0,1600,815));
+    flappy.setColor(sf::Color(255, 255, 255, 255));
+    flappy.setPosition(0,0);
+    flappy.setScale(0.07f,0.07f);
 
 
-//call function for every window resize
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-
-//keep displaying the window and update on pollevent
-    while(!glfwWindowShouldClose(window))
+    while(window.isOpen())
     {
-        processInput(window);
-
-        glfwSwapBuffers(window);
-        glfwPollEvents();
+        while (window.pollEvent(windowevents))
+        if(windowevents.type == sf::Event::Closed)
+        {
+            window.close();
+        }
+        window.draw(background);
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+        {
+            flappy.move(0,-0.01f);
+        }
+        flappy.move(0,0.001f);
+        window.draw(flappy);
+        window.display();
     }
-// clear delete GLFW resources allocated
-    glfwTerminate();
     return 0;
 }

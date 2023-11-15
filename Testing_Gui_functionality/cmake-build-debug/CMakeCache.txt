@@ -245,6 +245,12 @@ OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
 //The directory containing a CMake configuration file for SDL2.
 SDL2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SDL2
 
+//The directory containing a CMake configuration file for SFML.
+SFML_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SFML
+
+//Path to a file.
+SFML_DOC_DIR:PATH=SFML_DOC_DIR-NOTFOUND
+
 //Value Computed by CMake
 Testing_Gui_functionality_BINARY_DIR:STATIC=/home/oliwier-desktop/Documents/Code_Projects/Gui_code_testing/Sea_Battle_OOP_Project/Testing_Gui_functionality/cmake-build-debug
 
