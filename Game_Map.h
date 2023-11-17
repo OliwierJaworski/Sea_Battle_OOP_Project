@@ -27,7 +27,7 @@ private:
     int My_map[10][10];
     int Enemy_map[10][10];
     void Init_Boats();
-    void set_map_toempty(int map_to_empty[64][64]);
+    //void set_map_toempty(int map_to_empty[10][10]);
     bool Boats_Fill_Map(Game_Boats& Boat_ID);
     bool Will_Boat_Fit(Game_Boats& Boat_ID, int x, int y, int rot);
     void place_boats(Game_Boats& Boat_ID, int x, int y, int rot);

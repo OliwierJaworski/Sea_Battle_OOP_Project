@@ -1,7 +1,9 @@
 #ifndef REMADE_SEA_BATTLE_GAME_PLAYER_H
 #define REMADE_SEA_BATTLE_GAME_PLAYER_H
+#include <string>
 
 #include "Game_Map.h"
+
 
 class Game_Player
 {
@@ -14,8 +16,10 @@ public:
     const Game_Player* Get_This_Player_Id()                                                         const {return this;}
     bool Get_Player_lost();
     const int Get_friendly_map_loc_value(int x, int y)                                              const {return map->get_my_map(x,y);}
-    void Attack_Enemy(int x, int y, Game_Player& current_player, Game_Player& enemy_player );
+    void Attack_Enemy(Game_Player& current_player, Game_Player& enemy_player );
     void print_player_map(Game_Map & my_map);
+    std::string user_input();
+
 private:
 //private
     Game_Map * map;

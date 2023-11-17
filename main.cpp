@@ -3,18 +3,13 @@
 
 #include "Game_Manager.h"
 
-void start_game(Game_Manager  game);
-
 int main()
 {
     srand(time(NULL));
+
     Game_Manager  game;
-    start_game(game);
+    game.Play_Game();
 
     return 0;
 }
 
-void start_game(Game_Manager game)
-{
-   game.Play_Game();
-}

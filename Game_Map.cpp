@@ -5,6 +5,7 @@
     Game_Map::Game_Map()
     {
         Init_Boats();
+
         for (int i = 0; i < BoatsVector.size(); ++i)
         {
             Boats_Fill_Map(*BoatsVector[i]);
@@ -53,8 +54,6 @@
 
             willfit=Will_Boat_Fit(Boat_ID,random_index_x,random_index_y,boat_rot);
         }
-        std::cout << " found a spot for the boat" << std::endl;
-        std::cout << random_index_x << "," << random_index_y << std::endl;
         place_boats(Boat_ID, random_index_x, random_index_y, boat_rot);
 
     }
@@ -166,33 +165,29 @@
         switch (rot)
         {
             case 0://to right
-                std::cout<< "it reaches the case 0"<< std::endl;
                 for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
                 {
-                    My_map[y][x + var]+=1;
+                    My_map[y][x + var]=Boat_ID.Get_Size();
                 }
                 break;
             case 1://to left
-                std::cout<< "it reaches the case 1"<< std::endl;
                 for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
                 {
-                    My_map[y][x - var]+=1;
+                    My_map[y][x - var]=Boat_ID.Get_Size();
                 }
                 break;
             case 2://up
-                std::cout<< "it reaches the case 2"<< std::endl;
                 for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
                 {
-                    My_map[y- var][x]+=1;
+                    My_map[y- var][x]=Boat_ID.Get_Size();
 
                 }
                 break;
             case 3://down
-                std::cout<< "it reaches the case 3"<< std::endl;
                 for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
                 {
 
-                    My_map[y+ var][x]+=1;
+                    My_map[y+ var][x]=Boat_ID.Get_Size();
                 }
                 break;
 
@@ -210,6 +205,7 @@
         }
         BoatsVector.shrink_to_fit();
     }
+    /*
     void set_map_toempty(int map_to_empty[64][64])
     {
         for (int i = 0; i < 10; ++i)
@@ -217,3 +213,4 @@
            std::fill(map_to_empty[i],map_to_empty[i]+10,0);
         }
     }
+    */

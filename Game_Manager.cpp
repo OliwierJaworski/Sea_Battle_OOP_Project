@@ -27,21 +27,25 @@
     }
     int Game_Manager::Play_Game()
     {
-    /*
+
         bool Is_Game_Finished = false;
 
         while(!Is_Game_Finished)
         {
-            for (int playeriterator = 0; playeriterator < PlayerVector.size(); ++playeriterator) {
-                if (PlayerVector.at(playeriterator)->Get_Player_lost()) {
+            //check for win condition
+            for (int playeriterator = 0; playeriterator < PlayerVector.size(); ++playeriterator)
+            {
+                if (PlayerVector.at(playeriterator)->Get_Player_lost())
+                {
                     std::cout << "player called (moet nog implementeren) has lost" << std::endl;
-                    return 0;
+                    Is_Game_Finished = true;
                 }
             }
+            //if no one has lost yet continue loop
+
         }
         std::cout << "game ended" << std::endl;
         return 0;
-     */
 
     }
 //private
