@@ -39,7 +39,6 @@
     bool Game_Map::Boats_Fill_Map(Game_Boats& Boat_ID)
     {
         //check if coordinates are valid-> no boat parts on it, no illegal placements
-        srand(time(NULL));
 
         int random_index_x;
         int random_index_y;
@@ -48,8 +47,8 @@
 
         while(!willfit)
         {
-            random_index_x= rand()%63;
-            random_index_y= rand()%63;
+            random_index_x= rand()%10;
+            random_index_y= rand()%10;
             boat_rot= rand()%4;
 
             willfit=Will_Boat_Fit(Boat_ID,random_index_x,random_index_y,boat_rot);
@@ -66,7 +65,7 @@
             switch (rot)
             {
                 case 0://to right
-                    if(x + Boat_ID.Get_Size() <= 63 )
+                    if(x + Boat_ID.Get_Size() <= 9 )
                     {
                         for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
                         {
@@ -130,7 +129,7 @@
                     }
                     break;
                 case 3://down
-                    if(y + Boat_ID.Get_Size()  <= 63 )
+                    if(y + Boat_ID.Get_Size()  <= 9 )
                     {
                         for (int var = 0; var < Boat_ID.Get_Size() ; ++var)
                         {
@@ -213,8 +212,8 @@
     }
     void set_map_toempty(int map_to_empty[64][64])
     {
-        for (int i = 0; i < 64; ++i)
+        for (int i = 0; i < 10; ++i)
         {
-           std::fill(map_to_empty[i],map_to_empty[i]+64,0);
+           std::fill(map_to_empty[i],map_to_empty[i]+10,0);
         }
     }

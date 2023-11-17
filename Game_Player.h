@@ -15,6 +15,7 @@ public:
     bool Get_Player_lost();
     const int Get_friendly_map_loc_value(int x, int y)                                              const {return map->get_my_map(x,y);}
     void Attack_Enemy(int x, int y, Game_Player& current_player, Game_Player& enemy_player );
+    void print_player_map(Game_Map & my_map);
 private:
 //private
     Game_Map * map;

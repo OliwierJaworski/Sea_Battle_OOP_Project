@@ -24,8 +24,8 @@ public:
 private:
 //private
     std::vector<Game_Boats *> BoatsVector;
-    int My_map[64][64];
-    int Enemy_map[64][64];
+    int My_map[10][10];
+    int Enemy_map[10][10];
     void Init_Boats();
     void set_map_toempty(int map_to_empty[64][64]);
     bool Boats_Fill_Map(Game_Boats& Boat_ID);
