@@ -10,7 +10,7 @@
 class Game_Map
 {
 
-    public:
+public:
 //constructor | destructor
     Game_Map();
     ~Game_Map();
@@ -18,7 +18,7 @@ class Game_Map
     void set_enemy_map(int x, int y);
     const int get_my_map(int x, int y)      const {return My_map[x][y];}
     const int get_enemy_map(int x, int y)   const {return Enemy_map[x][y];}
-    private:
+private:
 //private
     std::vector<Game_Boats> BoatsVector;
     int My_map[64][64];

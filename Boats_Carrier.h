@@ -4,7 +4,16 @@
 #define REMADE_SEA_BATTLE_BOATS_CARRIER_H
 
 
-class Boats_Carrier {
+class Boats_Carrier  : public Game_Boats
+{
+public:
+//constructor | destructor
+    Boats_Carrier();
+    ~Boats_Carrier();
+//public
+    void SpecialMove();
+private:
+//private
 
 };
 

@@ -1,5 +1,6 @@
 #include "Game_Map.h"
 
+
 //public
 void Game_Map::set_enemy_map(int x, int y)
 {
