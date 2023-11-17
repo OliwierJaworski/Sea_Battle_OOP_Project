@@ -11,16 +11,18 @@ class Game_Boats
 public:
 //constructor | destructor
     Game_Boats() : size(0) {}
-    virtual ~Game_Boats();
+    virtual ~Game_Boats() = 0;
 //public
     virtual void SpecialMove() = 0;
-    static void Take_Damage(Game_Boats & boat, int x, int y);
+    void Take_Damage(Game_Boats & boat, int x, int y);
+    int get_Health_Amount ()                                                                     {return Health_Amount;}
+    int Get_Size()                                                                               {return size;}
 private:
 //private
 
 protected:
 //protected
-    int Health_Amount;
+     int Health_Amount;
     int size;
 };
 

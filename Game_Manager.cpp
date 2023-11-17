@@ -27,7 +27,15 @@
     }
     int Game_Manager::Play_Game()
     {
-
+        for (int playeriterator = 0; playeriterator < PlayerVector.size(); ++playeriterator)
+        {
+            if (PlayerVector.at(playeriterator)->Get_Player_lost())
+            {
+                std::cout << "player called (moet nog implementeren) has lost" << std::endl;
+                return 0;
+            }
+        }
+        return 0;
     }
 //private
     void Game_Manager::Init_Players()
@@ -40,7 +48,7 @@
     }
     void Game_Manager::Free_Alloc()
     {
-        for (int i = 0; i < 1; ++i)
+        for (int i = 0; i < PlayerVector.size(); ++i)
         {
             PlayerVector.erase(PlayerVector.begin()+ i);
         }

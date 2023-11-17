@@ -10,7 +10,7 @@ class Boats_Destroyer : public Game_Boats
 public:
 //constructor | destructor
         Boats_Destroyer();
-        ~Boats_Destroyer();
+        ~Boats_Destroyer() ;
 //public
         void SpecialMove();
 private:
