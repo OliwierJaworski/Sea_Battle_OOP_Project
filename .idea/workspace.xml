@@ -23,18 +23,14 @@
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Boats_Carrier.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Carrier.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Carrier.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Carrier.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Boats_Destroyer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Destroyer.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Boats_Destroyer.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Destroyer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_Boats.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Boats.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Boats.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Boats.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Map.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_Map.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Map.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Player.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/REMADE_Sea_Battle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/REMADE_Sea_Battle.dir/Boats_Carrier.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/REMADE_Sea_Battle.dir/Boats_Carrier.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/REMADE_Sea_Battle.dir/Boats_Destroyer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/REMADE_Sea_Battle.dir/Boats_Destroyer.cpp.o" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,12 +77,12 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="REMADE_Sea_Battle" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="REMADE_Sea_Battle" TARGET_NAME="REMADE_Sea_Battle" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="REMADE_Sea_Battle" RUN_TARGET_NAME="REMADE_Sea_Battle">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="REMADE_Sea_Battle" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="REMADE_Sea_Battle" TARGET_NAME="REMADE_Sea_Battle" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="REMADE_Sea_Battle" RUN_TARGET_NAME="REMADE_Sea_Battle">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -102,7 +98,8 @@
       <updated>1700153552450</updated>
       <workItem from="1700153553670" duration="1326000" />
       <workItem from="1700216373562" duration="7267000" />
-      <workItem from="1700223688012" duration="9797000" />
+      <workItem from="1700223688012" duration="10609000" />
+      <workItem from="1700234356956" duration="310000" />
     </task>
     <servers />
   </component>

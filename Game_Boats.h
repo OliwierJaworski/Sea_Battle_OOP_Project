@@ -11,7 +11,7 @@ class Game_Boats
 public:
 //constructor | destructor
     Game_Boats() : size(0) {}
-    virtual ~Game_Boats() = 0;
+    virtual ~Game_Boats() {};
 //public
     virtual void SpecialMove() = 0;
     void Take_Damage(Game_Boats & boat, int x, int y);
