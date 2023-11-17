@@ -2,6 +2,14 @@
 
 
 //public
+    Game_Map::Game_Map()
+    {
+        Init_Boats();
+        for (int i = 0; i < BoatsVector.size(); ++i)
+        {
+            Boats_Fill_Map(*BoatsVector[i]);
+        }
+    }
     void Game_Map::set_enemy_map(int x, int y)
     {
 
@@ -25,17 +33,30 @@
         BoatsVector.push_back(Destroyer);
         BoatsVector.push_back(Carrier);
     }
-    bool Game_Map::Boats_Fill_Map(Game_Boats& Boat_ID, int x, int y, int rot)
+
+
+
+    bool Game_Map::Boats_Fill_Map(Game_Boats& Boat_ID)
     {
-    //check if coordinates are valid-> no boat parts on it, no illegal placements
-        if(Will_Boat_Fit(Boat_ID,x,y,rot))
+        //check if coordinates are valid-> no boat parts on it, no illegal placements
+        srand(time(NULL));
+
+        int random_index_x;
+        int random_index_y;
+        int boat_rot;
+        bool willfit = false;
+
+        while(!willfit)
         {
-            place_boats(Boat_ID, x, y, rot);
+            random_index_x= rand()%63;
+            random_index_y= rand()%63;
+            boat_rot= rand()%4;
+
+            willfit=Will_Boat_Fit(Boat_ID,random_index_x,random_index_y,boat_rot);
         }
-        else
-        {
-            return false;
-        }
+        std::cout << " found a spot for the boat" << std::endl;
+        std::cout << random_index_x << "," << random_index_y << std::endl;
+        place_boats(Boat_ID, random_index_x, random_index_y, boat_rot);
 
     }
 
@@ -140,7 +161,7 @@
         else
             return false;
     }
-    
+
     void Game_Map::place_boats(Game_Boats& Boat_ID, int x, int y, int rot)
     {
         switch (rot)

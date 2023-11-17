@@ -27,6 +27,7 @@
     }
     int Game_Manager::Play_Game()
     {
+    /*
         bool Is_Game_Finished = false;
 
         while(!Is_Game_Finished)
@@ -40,6 +41,8 @@
         }
         std::cout << "game ended" << std::endl;
         return 0;
+     */
+
     }
 //private
     void Game_Manager::Init_Players()
