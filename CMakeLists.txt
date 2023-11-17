@@ -7,4 +7,12 @@ add_executable(REMADE_Sea_Battle main.cpp
         Game_Manager.cpp
         Game_Manager.h
         Game_Player.cpp
-        Game_Player.h)
+        Game_Player.h
+        Game_Map.cpp
+        Game_Map.h
+        Game_Boats.cpp
+        Game_Boats.h
+        Boats_Destroyer.cpp
+        Boats_Destroyer.h
+        Boats_Carrier.cpp
+        Boats_Carrier.h)

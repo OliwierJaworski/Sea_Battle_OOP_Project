@@ -21,15 +21,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Game_Manager.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game_Manager.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game_Player.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Game_Player.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Project_OOP_2023.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentatie/OOP_Assignment.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentatie/Sea_Battle_ToDo.xlsx" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Boats_Destroyer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Boats_Destroyer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game_Boats.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game_Boats.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game_Map.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game_Map.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-b0740d5894d3d773b6a6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-17T10-31-51-0532.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-REMADE_Sea_Battle-Debug-0ecb3904621bfc6b3cfc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,12 +84,12 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="REMADE_Sea_Battle" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="REMADE_Sea_Battle" TARGET_NAME="REMADE_Sea_Battle" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="REMADE_Sea_Battle" RUN_TARGET_NAME="REMADE_Sea_Battle">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="REMADE_Sea_Battle" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="REMADE_Sea_Battle" TARGET_NAME="REMADE_Sea_Battle" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="REMADE_Sea_Battle" RUN_TARGET_NAME="REMADE_Sea_Battle">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -96,7 +104,8 @@
       <option name="presentableId" value="Default" />
       <updated>1700153552450</updated>
       <workItem from="1700153553670" duration="1326000" />
-      <workItem from="1700216373562" duration="4157000" />
+      <workItem from="1700216373562" duration="7267000" />
+      <workItem from="1700223688012" duration="1550000" />
     </task>
     <servers />
   </component>

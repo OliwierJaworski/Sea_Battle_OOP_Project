@@ -3,22 +3,18 @@
 //constructor | destructor
     Game_Player::Game_Player()
     {
-
+        Init_Map();
     }
     Game_Player::~Game_Player()
     {
-
+        Free_Alloc();
     }
 //public
-    void Game_Player::Get_PLayer_Id(this)
-    {
-
-    }
     bool Game_Player::Get_Player_lost()
     {
 
     }
-    int Game_Player::Get_friendly_map_loc_value()
+    const int Game_Player::Get_friendly_map_loc_value()
     {
 
     }
@@ -27,11 +23,7 @@
 
     }
 //private
-    void Game_Player::Free_Space()
+    void Game_Player::Free_Alloc()
     {
-
-    }
-    void Game_Player::Init_map()
-    {
-
+        delete map;
     }

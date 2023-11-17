@@ -15,7 +15,7 @@ class Game_Manager
     Game_Manager();
     ~Game_Manager();
 //public
-    Game_Player* Get_Player_ID(int requested_id);
+    const Game_Player* Get_Player_ID(int requested_id) ;//only allows for player to get the ID not change its contents
     int Play_Game();
 
     private:

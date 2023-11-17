@@ -13,7 +13,7 @@
         Free_Alloc();
     }
 //public
-    Game_Player* Game_Manager::Get_Player_ID(int requested_id)
+    const Game_Player* Game_Manager::Get_Player_ID(int requested_id)
     {
         if(requested_id >= 0 && requested_id < PlayerVector.size())
         {
