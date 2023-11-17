@@ -25,9 +25,161 @@
         BoatsVector.push_back(Destroyer);
         BoatsVector.push_back(Carrier);
     }
-    void Game_Map::Boats_Fill_Map(Game_Boats& Boat_ID)
+    bool Game_Map::Boats_Fill_Map(Game_Boats& Boat_ID, int x, int y, int rot)
     {
+    //check if coordinates are valid-> no boat parts on it, no illegal placements
+        if(Will_Boat_Fit(Boat_ID,x,y,rot))
+        {
+            place_boats(Boat_ID, x, y, rot);
+        }
+        else
+        {
+            return false;
+        }
 
+    }
+
+    bool Game_Map::Will_Boat_Fit(Game_Boats& Boat_ID, int x, int y, int rot)
+    {
+        int willfit=0;
+            switch (rot)
+            {
+                case 0://to right
+                    if(x + Boat_ID.Get_Size() <= 63 )
+                    {
+                        for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
+                        {
+
+                            if(My_map[y][x+ var]==0)
+                            {
+                                willfit=0;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                    break;
+
+                case 1://to left
+                    if(x - Boat_ID.Get_Size()  >= 0 )
+                    {
+                        for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
+                        {
+
+                            if(My_map[y][x - var]==0)
+                            {
+                                willfit=0;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                    break;
+
+                case 2://up
+                    if(y - Boat_ID.Get_Size()  >= 0 )
+                    {
+                        for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
+                        {
+                            if(My_map[y- var][x]==0)
+                            {
+                                willfit=0;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                    break;
+                case 3://down
+                    if(y + Boat_ID.Get_Size()  <= 63 )
+                    {
+                        for (int var = 0; var < Boat_ID.Get_Size() ; ++var)
+                        {
+                            if(My_map[y+ var][x]==0)
+                            {
+                                willfit=0;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                    break;
+
+                default:
+                    std::cout<< "wrong rotation variable has been given"<< std::endl;
+                    break;
+            }
+        if(willfit==0)
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+    
+    void Game_Map::place_boats(Game_Boats& Boat_ID, int x, int y, int rot)
+    {
+        switch (rot)
+        {
+            case 0://to right
+                std::cout<< "it reaches the case 0"<< std::endl;
+                for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
+                {
+                    My_map[y][x + var]+=1;
+                }
+                break;
+            case 1://to left
+                std::cout<< "it reaches the case 1"<< std::endl;
+                for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
+                {
+                    My_map[y][x - var]+=1;
+                }
+                break;
+            case 2://up
+                std::cout<< "it reaches the case 2"<< std::endl;
+                for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
+                {
+                    My_map[y- var][x]+=1;
+
+                }
+                break;
+            case 3://down
+                std::cout<< "it reaches the case 3"<< std::endl;
+                for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
+                {
+
+                    My_map[y+ var][x]+=1;
+                }
+                break;
+
+            default:
+                std::cout<< "wrong rotation variable has been given"<< std::endl;
+                break;
+        }
     }
     void Game_Map::Free_Alloc()
     {

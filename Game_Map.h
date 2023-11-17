@@ -27,9 +27,12 @@ private:
     int My_map[64][64];
     int Enemy_map[64][64];
     void Init_Boats();
-    void Boats_Fill_Map(Game_Boats& Boat_ID);
-    void Free_Alloc();
     void set_map_toempty(int map_to_empty[64][64]);
+    bool Boats_Fill_Map(Game_Boats& Boat_ID, int x, int y, int rot);
+    bool Will_Boat_Fit(Game_Boats& Boat_ID, int x, int y, int rot);
+    void place_boats(Game_Boats& Boat_ID, int x, int y, int rot);
+    void Free_Alloc();
+
 };
 
 
