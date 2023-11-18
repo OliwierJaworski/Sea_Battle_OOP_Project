@@ -27,10 +27,10 @@
     }
     int Game_Manager::Play_Game()
     {
-
         bool Is_Game_Finished = false;
+        int playersturn = 0;
 
-        while(!Is_Game_Finished)
+        while (!Is_Game_Finished)
         {
             //check for win condition
             for (int playeriterator = 0; playeriterator < PlayerVector.size(); ++playeriterator)
@@ -42,12 +42,36 @@
                 }
             }
             //if no one has lost yet continue loop
-
+            PlayTurns(& playersturn);
         }
+
         std::cout << "game ended" << std::endl;
         return 0;
-
     }
+    void Game_Manager::PlayTurns(int * playersturn)
+    {
+        switch ( * playersturn)
+        {
+            case 0:
+                std::cout << "player 1"<<std::endl;
+                PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,0);
+                PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,1);
+                PlayerVector[* playersturn]->Attack_Enemy(* PlayerVector[* playersturn],* PlayerVector[* playersturn+1]);
+                * playersturn =1;
+                break;
+            case 1:
+                std::cout << "player 2"<<std::endl;
+                PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,0);
+                PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,1);
+                PlayerVector[* playersturn]->Attack_Enemy(* PlayerVector[* playersturn],* PlayerVector[* playersturn-1]);
+                 * playersturn =0;
+                break;
+            default:
+                std::cout << "not a valid player in playersturn"<< std::endl;
+                break;
+        }
+    }
+
 //private
     void Game_Manager::Init_Players()
     {

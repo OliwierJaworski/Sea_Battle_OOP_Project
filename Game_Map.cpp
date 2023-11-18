@@ -11,10 +11,7 @@
             Boats_Fill_Map(*BoatsVector[i]);
         }
     }
-    void Game_Map::set_enemy_map(int x, int y)
-    {
 
-    }
     const int Game_Map::Player_Life_Left()
     {
         int life=0;
@@ -24,6 +21,17 @@
         }
         return life;
     }
+
+    void Game_Map::set_enemy_map(int x, int y,bool hit_or_mis)
+    {
+     if(hit_or_mis)
+     {
+      Enemy_map[x][y] =2;//hit the ship on enemy map
+     }
+     else
+      Enemy_map[x][y] =1;//missed the ship on enemy map
+    }
+
 
 //private
     void Game_Map::Init_Boats()
@@ -55,7 +63,7 @@
             willfit=Will_Boat_Fit(Boat_ID,random_index_x,random_index_y,boat_rot);
         }
         place_boats(Boat_ID, random_index_x, random_index_y, boat_rot);
-
+        return true;
     }
 
     bool Game_Map::Will_Boat_Fit(Game_Boats& Boat_ID, int x, int y, int rot)

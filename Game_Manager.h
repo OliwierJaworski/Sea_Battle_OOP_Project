@@ -18,7 +18,7 @@ class Game_Manager
 //public
     const Game_Player* Get_Player_ID(int requested_id) ;//only allows for player to get the ID not change its contents
     int Play_Game();
-
+    void PlayTurns(int * playersturn);
     private:
 //private
     std::vector<Game_Player *> PlayerVector;
