@@ -50,25 +50,21 @@
     }
     void Game_Manager::PlayTurns(int * playersturn)
     {
-        switch ( * playersturn)
+        if (* playersturn==0)
         {
-            case 0:
-                std::cout << "player 1"<<std::endl;
-                PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,0);
-                PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,1);
-                PlayerVector[* playersturn]->Attack_Enemy(* PlayerVector[* playersturn],* PlayerVector[* playersturn+1]);
-                * playersturn =1;
-                break;
-            case 1:
-                std::cout << "player 2"<<std::endl;
-                PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,0);
-                PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,1);
-                PlayerVector[* playersturn]->Attack_Enemy(* PlayerVector[* playersturn],* PlayerVector[* playersturn-1]);
-                 * playersturn =0;
-                break;
-            default:
-                std::cout << "not a valid player in playersturn"<< std::endl;
-                break;
+            PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,0);
+            PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,1);
+
+            PlayerVector[* playersturn]->Attack_Enemy(* PlayerVector[* playersturn],* PlayerVector[* playersturn +1]);
+            *playersturn=1;
+        }
+        else
+        {
+            PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,0);
+            PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,1);
+
+            PlayerVector[* playersturn]->Attack_Enemy(* PlayerVector[* playersturn],* PlayerVector[* playersturn -1]);
+            *playersturn=0;
         }
     }
 

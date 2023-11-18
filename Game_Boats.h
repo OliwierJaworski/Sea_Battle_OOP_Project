@@ -14,7 +14,7 @@ public:
     virtual ~Game_Boats() {};
 //public
     virtual void SpecialMove() = 0;
-    void Take_Damage(Game_Boats & boat, int x, int y);
+    void Take_Damage(int amount)                                                                 {Health_Amount -=amount;}
     int get_Health_Amount ()                                                                     {return Health_Amount;}
     int Get_Size()                                                                               {return size;}
 private:
@@ -22,7 +22,7 @@ private:
 
 protected:
 //protected
-     int Health_Amount;
+    int Health_Amount;
     int size;
 };
 

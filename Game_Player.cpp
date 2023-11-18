@@ -25,21 +25,37 @@
     {
         int x;
         int y;
-        int targeted_area;
+        bool targeted_area;
 
         x=user_input();
         y=user_input();
-        targeted_area= enemy_player.Get_friendly_map_loc_value(x,y);
+        targeted_area= enemy_player.Did_enemy_hit(y,x);
 
-        if (targeted_area>0 && targeted_area<6)
+
+        if(targeted_area)
         {
-            std::cout<< "kaboom!!!"<< std::endl;
-            current_player.Set_enemy_map_hit_attempt(x,y,true);
+            current_player.map->set_enemy_map(x,y,true);
         }
         else
         {
-            std::cout<< "unfortunate miss!!!" << std::endl;
-            current_player.Set_enemy_map_hit_attempt(x,y,false);
+            current_player.map->set_enemy_map(x,y,false);
+        }
+    }
+    bool Game_Player::Did_enemy_hit(int y, int x)//eigen map aanpassen
+    {
+        int contained_ship;
+
+        if(map->get_my_map(x,y)>0 && map->get_my_map(x,y) <6)//hitttttt
+        {
+            contained_ship = map->get_my_map(x,y);
+            map->get_boat(contained_ship)->Take_Damage(1);
+            map->set_my_map(x,y,true);
+            return true;
+        }
+        else //missssss
+        {
+            map->set_my_map(x,y,false);
+            return false;
         }
     }
     void Game_Player::print_map(Game_Map & Used_map, int whichmap)

@@ -18,8 +18,10 @@ public:
     ~Game_Map() {Free_Alloc();};
 //public
     void set_enemy_map(int x, int y,bool hit_or_mis);
+    void set_my_map(int x, int y,bool hit_or_mis);
     const int get_my_map(int x, int y)                                                      const {return My_map[x][y];}
     const int get_enemy_map(int x, int y)                                                   const {return Enemy_map[x][y];}
+    Game_Boats* get_boat(int size);
     const int Player_Life_Left();
 private:
 //private

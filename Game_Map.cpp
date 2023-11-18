@@ -26,12 +26,32 @@
     {
      if(hit_or_mis)
      {
-      Enemy_map[x][y] =2;//hit the ship on enemy map
+      Enemy_map[x][y] =8;//hit the ship on enemy map
      }
      else
-      Enemy_map[x][y] =1;//missed the ship on enemy map
+      Enemy_map[x][y] =9;//missed the ship on enemy map
+    }
+    void Game_Map::set_my_map(int x, int y,bool hit_or_mis)
+    {
+        if(hit_or_mis)
+        {
+            Enemy_map[x][y] =8;//hit the ship on enemy map
+        }
+        else
+            Enemy_map[x][y] =9;//missed the ship on enemy map
     }
 
+    Game_Boats* Game_Map::get_boat(int size)
+    {
+        for (int i = 0; i < BoatsVector.size(); ++i)
+        {
+            if (BoatsVector[i]->Get_Size()==size)
+            {
+                return BoatsVector[i];
+            }
+        }
+        return nullptr;
+    }
 
 //private
     void Game_Map::Init_Boats()
@@ -42,8 +62,6 @@
         BoatsVector.push_back(Destroyer);
         BoatsVector.push_back(Carrier);
     }
-
-
 
     bool Game_Map::Boats_Fill_Map(Game_Boats& Boat_ID)
     {
@@ -204,6 +222,7 @@
                 break;
         }
     }
+
     void Game_Map::Free_Alloc()
     {
 
