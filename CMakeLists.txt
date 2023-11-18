@@ -15,4 +15,11 @@ add_executable(REMADE_Sea_Battle main.cpp
         Boats_Destroyer.cpp
         Boats_Destroyer.h
         Boats_Carrier.cpp
-        Boats_Carrier.h)
+        Boats_Carrier.h
+        Tcp_Server_Socket.cpp
+        Tcp_Server_Socket.h
+        Tcp_Client_Socket.cpp
+        Tcp_Client_Socket.h
+        Game_TCP_Communication.cpp
+        Game_TCP_Communication.h
+)

@@ -91,6 +91,24 @@ build CMakeFiles/REMADE_Sea_Battle.dir/Boats_Carrier.cpp.o: CXX_COMPILER__REMADE
   OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
   OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir
 
+build CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Server_Socket.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/REMADE_Sea_Battle/Tcp_Server_Socket.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
+  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Server_Socket.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+
+build CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Client_Socket.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/REMADE_Sea_Battle/Tcp_Client_Socket.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
+  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Client_Socket.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+
+build CMakeFiles/REMADE_Sea_Battle.dir/Game_TCP_Communication.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/REMADE_Sea_Battle/Game_TCP_Communication.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
+  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Game_TCP_Communication.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target REMADE_Sea_Battle
@@ -99,7 +117,7 @@ build CMakeFiles/REMADE_Sea_Battle.dir/Boats_Carrier.cpp.o: CXX_COMPILER__REMADE
 #############################################
 # Link the executable REMADE_Sea_Battle
 
-build REMADE_Sea_Battle: CXX_EXECUTABLE_LINKER__REMADE_Sea_Battle_Debug CMakeFiles/REMADE_Sea_Battle.dir/main.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_Player.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_Map.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_Boats.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Boats_Destroyer.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Boats_Carrier.cpp.o
+build REMADE_Sea_Battle: CXX_EXECUTABLE_LINKER__REMADE_Sea_Battle_Debug CMakeFiles/REMADE_Sea_Battle.dir/main.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_Player.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_Map.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_Boats.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Boats_Destroyer.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Boats_Carrier.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Server_Socket.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Client_Socket.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_TCP_Communication.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
   POST_BUILD = :
