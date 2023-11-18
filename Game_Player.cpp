@@ -83,7 +83,7 @@
                         }
                         if (Used_map.get_my_map(i,j)==8)
                         {
-                            std::cout << "\\U0001F4A6";
+                            std::cout << "\U0001F4A6";
                         }
                         if (Used_map.get_my_map(i,j)==9)
                         {

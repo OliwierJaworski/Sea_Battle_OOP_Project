@@ -35,10 +35,10 @@
     {
         if(hit_or_mis)
         {
-            Enemy_map[x][y] =8;//hit the ship on enemy map
+            My_map[x][y] =9;//hit the ship on enemy map
         }
         else
-            Enemy_map[x][y] =9;//missed the ship on enemy map
+            My_map[x][y] =8;//missed the ship on enemy map
     }
 
     Game_Boats* Game_Map::get_boat(int size)
