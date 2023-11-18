@@ -64,6 +64,7 @@
     }
     void Game_Player::print_map(Game_Map & Used_map, int whichmap)
     {
+    //std::cout << "\U0001F7E6"<< std::endl;
         switch (whichmap)
         {
             case 0:
@@ -72,7 +73,23 @@
                 {
                     for (int j = 0; j < 10; ++j)
                     {
-                        std::cout <<  Used_map.get_my_map(i,j);
+                        if (Used_map.get_my_map(i,j)==0)
+                        {
+                            std::cout << "\U0001F7E6";
+                        }
+                        if(Used_map.get_my_map(i,j)>0 && Used_map.get_my_map(i,j)< 6)
+                        {
+                            std::cout << "\U0001F532";
+                        }
+                        if (Used_map.get_my_map(i,j)==8)
+                        {
+                            std::cout << "\\U0001F4A6";
+                        }
+                        if (Used_map.get_my_map(i,j)==9)
+                        {
+                            std::cout << "\U0001F525";
+                        }
+
                     }
                     std::cout << std::endl;
                 }
@@ -85,7 +102,23 @@
                 {
                     for (int j = 0; j < 10; ++j)
                     {
-                        std::cout <<  Used_map.get_enemy_map(i,j);
+                        if (Used_map.get_enemy_map(i,j)==0)
+                        {
+                            std::cout << "\U0001F7E6";
+                        }
+                        if(Used_map.get_enemy_map(i,j)>0 && Used_map.get_enemy_map(i,j)< 6)
+                        {
+                            std::cout << "\U0001F532";
+                        }
+                        if (Used_map.get_enemy_map(i,j)==8)
+                        {
+                            std::cout << "\U0001F525";
+                        }
+                        if (Used_map.get_enemy_map(i,j)==9)
+                        {
+                            std::cout << "\U0001F4A6";
+                        }
+
                     }
                     std::cout << std::endl;
                 }
