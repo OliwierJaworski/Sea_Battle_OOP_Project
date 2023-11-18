@@ -37,21 +37,21 @@
             {
                 if (PlayerVector.at(playeriterator)->Get_Player_lost())
                 {
-                    std::cout << "player called (moet nog implementeren) has lost" << std::endl;
+                    std::cout << "player called (moet nog implementeren) has lost " << std::endl;
                     Is_Game_Finished = true;
+                    return 0;
                 }
             }
             //if no one has lost yet continue loop
             PlayTurns(& playersturn);
         }
-
-        std::cout << "game ended" << std::endl;
         return 0;
     }
     void Game_Manager::PlayTurns(int * playersturn)
     {
         if (* playersturn==0)
         {
+            std::cout << "PLAYER 1" << std::endl;
             PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,0);
             PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,1);
 
@@ -60,6 +60,7 @@
         }
         else
         {
+            std::cout << "PLAYER 2" << std::endl;
             PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,0);
             PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,1);
 

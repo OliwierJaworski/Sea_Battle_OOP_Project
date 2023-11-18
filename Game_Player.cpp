@@ -35,13 +35,14 @@
         if(targeted_area)
         {
             current_player.map->set_enemy_map(x,y,true);
+
         }
         else
         {
             current_player.map->set_enemy_map(x,y,false);
         }
     }
-    bool Game_Player::Did_enemy_hit(int y, int x)//eigen map aanpassen
+    bool Game_Player::Did_enemy_hit(int y, int x)
     {
         int contained_ship;
 
@@ -49,6 +50,9 @@
         {
             contained_ship = map->get_my_map(x,y);
             map->get_boat(contained_ship)->Take_Damage(1);
+
+            std::cout << map->get_boat(contained_ship)->get_Health_Amount() << std::endl;
+
             map->set_my_map(x,y,true);
             return true;
         }
