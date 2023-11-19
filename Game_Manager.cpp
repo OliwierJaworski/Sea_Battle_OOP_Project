@@ -37,7 +37,7 @@
             //if no one has lost yet continue loop
             PlayTurns(& playersturn);
         }
-        return 0;
+        //return 0;
     }
     void Game_Manager::PlayTurns(int * playersturn)
     {
@@ -69,7 +69,7 @@
             std::cout << "yes or no only!" << std::endl;
             std::cin>>Is_Player_Host;
         }
-        while(Is_Player_Host!="yes" && Is_Player_Host!="no\n");
+        while(Is_Player_Host!="yes" && Is_Player_Host!="no");
 
         if(Is_Player_Host=="yes")
         {
@@ -89,11 +89,23 @@
             case 1:
                 Server =new Tcp_Server_Socket;
                 std::cout << "you are hosting on the ip: "<< "this will show the ip" <<"on port:" << Server->get_port() << std::endl;
-                //Server->set_connection();                                                                                             //-->connection part of the code
                 waiting_on_connection();
                 break;
             case 2:
+                std::string New_IP;
+                int New_PORT;
+
                 Client =new Tcp_Client_Socket;
+                /*std::cout << "what ip you want to connect to " << std::endl;
+                std::cin >> New_IP;
+                Client->set_IP(New_IP);
+                std::cout << Client->return_IP();
+
+                std::cout << "what port is the Server on " << std::endl;
+                std::cin >> New_PORT;
+                Client->set_PORT(New_PORT);
+                 */
+                Client->Connect_to_Server();
                 break;
         }
         return false;

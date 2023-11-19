@@ -28,6 +28,7 @@ class Game_Manager
     Tcp_Server_Socket * Server;
     Tcp_Client_Socket * Client;
     std::vector<Game_Player *> PlayerVector;
+
     void Init_Players();
     bool waiting_on_connection();
     void Dots_Loading_Screen(Tcp_Server_Socket& server);
