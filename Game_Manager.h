@@ -24,15 +24,20 @@ public:
     void Online_Ask_Game_Type();
 private:
 //private
+//Player Core structure
     int Game_Type;
     Tcp_Server_Socket * Server;
     Tcp_Client_Socket * Client;
     std::vector<Game_Player *> PlayerVector;
 
-    void Init_Players();
+//extra added functionality
+    enum Game_Types{Singleplayer,Multiplayer};
     bool Online_waiting_on_connection();
     void Extra_Dots_Loading_Screen(Tcp_Server_Socket& server);
     bool Online_Start_Correct_Protocol();
+
+//initialization & destruction
+    void Init_Players();
     void Free_Alloc();
 };
 

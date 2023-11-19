@@ -15,7 +15,7 @@
 //Game Core structure
     int Game_Manager::Game_Loop()
     {
-        Online_Start_Correct_Protocol();
+        Online_Ask_Game_Type();
 
         bool Is_Game_Finished = false;
         int playersturn = 0;
@@ -31,36 +31,48 @@
                     return 0;
                 }
             }
-            //if no one has lost yet continue loop
-            Game_Loop_Turn_handler(& playersturn);
+            switch (Game_Type)
+            {
+                case Singleplayer:
+                    Game_Loop_Turn_handler(& playersturn);
+
+                case Multiplayer:
+                    Online_Start_Correct_Protocol();
+                    Game_Loop_Turn_handler(& playersturn);
+            }
+            Is_Game_Finished=true;
         }
         return 0;
     }
     void Game_Manager::Game_Loop_Turn_handler(int * playersturn)
     {
-        if (* playersturn==0)
-        {
-            std::cout << "PLAYER 1" << std::endl;
-            PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,0);
-            PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,1);
 
-            PlayerVector[* playersturn]->Current_Player_Attack_Enemy(* PlayerVector[* playersturn],* PlayerVector[* playersturn +1]);
-            *playersturn=1;
-        }
-        else
-        {
-            std::cout << "PLAYER 2" << std::endl;
-            PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,0);
-            PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,1);
+                if (*playersturn == 0)
+                {
+                    std::cout << "PLAYER 1" << std::endl;
+                    PlayerVector[*playersturn]->print_map(*PlayerVector[*playersturn]->map, 0);
+                    PlayerVector[*playersturn]->print_map(*PlayerVector[*playersturn]->map, 1);
 
-            PlayerVector[* playersturn]->Current_Player_Attack_Enemy(* PlayerVector[* playersturn],* PlayerVector[* playersturn -1]);
-            *playersturn=0;
-        }
+                    PlayerVector[*playersturn]->Current_Player_Attack_Enemy(*PlayerVector[*playersturn],
+                                                                            *PlayerVector[*playersturn + 1]);
+                    *playersturn = 1;
+                } else {
+                    std::cout << "PLAYER 2" << std::endl;
+                    PlayerVector[*playersturn]->print_map(*PlayerVector[*playersturn]->map, 0);
+                    PlayerVector[*playersturn]->print_map(*PlayerVector[*playersturn]->map, 1);
+
+                    PlayerVector[*playersturn]->Current_Player_Attack_Enemy(*PlayerVector[*playersturn],
+                                                                            *PlayerVector[*playersturn - 1]);
+                    *playersturn = 0;
+                }
+
+
     }
 //extra added functionality
     void Game_Manager::Online_Ask_Game_Type()
     {
      std::string Is_Player_Host;
+
      std::cout << "are you hosting the game" << std::endl;
         do
         {
@@ -71,7 +83,20 @@
 
         if(Is_Player_Host=="yes")
         {
-            set_Game_Type(1);//TCP server must be started;
+            std::cout << "singleplayer or multiplayer?" << std::endl;
+            do
+            {
+                std::cin>>Is_Player_Host;
+            }
+            while(Is_Player_Host!="singleplayer" && Is_Player_Host!="multiplayer");
+            if(Is_Player_Host=="singleplayer")
+            {
+                set_Game_Type(0);//TCP server must be started;
+            }
+            else
+            {
+                set_Game_Type(1);//TCP server must be started;
+            }
         }
         else
         {
@@ -80,8 +105,6 @@
     }
     bool Game_Manager::Online_Start_Correct_Protocol()
     {
-
-        Online_Ask_Game_Type();
         switch (Game_Type)
         {
             case 1:
