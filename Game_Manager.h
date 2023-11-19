@@ -31,11 +31,13 @@ private:
     std::vector<Game_Player *> PlayerVector;
 
 //extra added functionality
-    enum Game_Types{Singleplayer,Multiplayer};
+    enum Game_Types{Singleplayer,Multiplayer_host,client};
     bool Online_waiting_on_connection();
     void Extra_Dots_Loading_Screen(Tcp_Server_Socket& server);
     bool Online_Start_Correct_Protocol();
 
+//experimental
+    void Online_Send_Client_Map();
 //initialization & destruction
     void Init_Players();
     void Free_Alloc();

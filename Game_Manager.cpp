@@ -7,7 +7,7 @@
     }
     Game_Manager::~Game_Manager()
     {
-        Free_Alloc();
+       Free_Alloc();
     }
 
 //public | private
@@ -20,6 +20,11 @@
         bool Is_Game_Finished = false;
         int playersturn = 0;
 
+        if(Game_Type== Multiplayer_host ||Game_Type== client )
+        {
+            Online_Start_Correct_Protocol();
+        }
+
         while (!Is_Game_Finished)
         {
             //check for win condition
@@ -31,21 +36,15 @@
                     return 0;
                 }
             }
-            switch (Game_Type)
-            {
-                case Singleplayer:
-                    Game_Loop_Turn_handler(& playersturn);
-
-                case Multiplayer:
-                    Online_Start_Correct_Protocol();
-                    Game_Loop_Turn_handler(& playersturn);
-            }
-            Is_Game_Finished=true;
+            Game_Loop_Turn_handler(& playersturn);
         }
         return 0;
     }
     void Game_Manager::Game_Loop_Turn_handler(int * playersturn)
     {
+        switch (Game_Type)
+        {
+            case Singleplayer:
 
                 if (*playersturn == 0)
                 {
@@ -56,7 +55,8 @@
                     PlayerVector[*playersturn]->Current_Player_Attack_Enemy(*PlayerVector[*playersturn],
                                                                             *PlayerVector[*playersturn + 1]);
                     *playersturn = 1;
-                } else {
+                } else
+                {
                     std::cout << "PLAYER 2" << std::endl;
                     PlayerVector[*playersturn]->print_map(*PlayerVector[*playersturn]->map, 0);
                     PlayerVector[*playersturn]->print_map(*PlayerVector[*playersturn]->map, 1);
@@ -66,7 +66,17 @@
                     *playersturn = 0;
                 }
 
-
+                break;
+            case Multiplayer_host:
+                    //send player 1 map
+                    Online_Send_Client_Map();
+                    //attack
+                break;
+            case client:
+                //ask for my map
+                //
+                break;
+        }
     }
 //extra added functionality
     void Game_Manager::Online_Ask_Game_Type()
@@ -91,28 +101,28 @@
             while(Is_Player_Host!="singleplayer" && Is_Player_Host!="multiplayer");
             if(Is_Player_Host=="singleplayer")
             {
-                set_Game_Type(0);//TCP server must be started;
+                set_Game_Type(Singleplayer);//local game will start
             }
             else
             {
-                set_Game_Type(1);//TCP server must be started;
+                set_Game_Type(Multiplayer_host);//TCP server must be started;
             }
         }
         else
         {
-            set_Game_Type(2);//TCP client must be started;
+            set_Game_Type(client);//TCP client must be started;
         }
     }
     bool Game_Manager::Online_Start_Correct_Protocol()
     {
         switch (Game_Type)
         {
-            case 1:
+            case Multiplayer_host:
                 Server =new Tcp_Server_Socket;
                 std::cout << "you are hosting on the ip: "<< "this will show the ip" <<"on port:" << Server->get_port() << std::endl;
                 Online_waiting_on_connection();
                 break;
-            case 2:
+            case client:
                 Client =new Tcp_Client_Socket;
                 break;
         }
@@ -146,14 +156,29 @@
     }
 }
 
+//experimental
+void Game_Manager::Online_Send_Client_Map()
+{
+    std::string Client_Map;
+    for (int i = 0; i < 10; ++i)
+    {
+        for (int j = 0; j < 10; ++j)
+        {
+            Client_Map+=std::to_string(PlayerVector[2]->map->get_my_map(i,j));
+        }
+    }
+    Server->send_data(Client_Map);
+}
+
 //initialization & destruction
     void Game_Manager::Init_Players()
     {
-        Game_Player * player1 =new Game_Player;
-        Game_Player * player2 =new Game_Player;
 
-        PlayerVector.push_back(player1);
-        PlayerVector.push_back(player2);
+            Game_Player *player1 = new Game_Player;
+            Game_Player *player2 = new Game_Player;
+
+            PlayerVector.push_back(player1);
+            PlayerVector.push_back(player2);
     }
     void Game_Manager::Free_Alloc()
     {
@@ -163,11 +188,15 @@
         }
         PlayerVector.clear();
         PlayerVector.shrink_to_fit();
-        if (Game_Type==1)
+
+        if (Game_Type==Multiplayer_host)
         {
             delete Server;
         }
-        else { delete Client; }
+        if(Game_Type== client)
+        {
+            delete Client;
+        }
     }
 
 
