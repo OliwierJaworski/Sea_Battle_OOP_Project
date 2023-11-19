@@ -15,6 +15,7 @@ public:
     virtual ~Game_TCP_Communication()=0;
     void send_data();
     void recv_data();
+    int get_port() {return Used_Port;}
 //private
 protected:
     virtual int Create_Socket()=0;

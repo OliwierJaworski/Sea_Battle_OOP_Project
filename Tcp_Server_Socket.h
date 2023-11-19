@@ -11,6 +11,7 @@ class Tcp_Server_Socket : public Game_TCP_Communication
 public:
         Tcp_Server_Socket();
         ~Tcp_Server_Socket() override    {close_socket();}
+        bool is_Client_Connected() {listen_for_connections();}
 //private
 private:
         int Create_Socket() override;

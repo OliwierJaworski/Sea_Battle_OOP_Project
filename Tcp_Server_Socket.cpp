@@ -4,7 +4,7 @@ Tcp_Server_Socket::Tcp_Server_Socket()
 {
    Create_Socket();
    Bind_to_port();
-   listen_for_connections();
+   //listen_for_connections();
 }
 
 int  Tcp_Server_Socket::Create_Socket()
@@ -58,8 +58,6 @@ bool Tcp_Server_Socket::listen_for_connections()
 
     return true;
 }
-
-
 
 bool Tcp_Server_Socket::close_socket()
 {

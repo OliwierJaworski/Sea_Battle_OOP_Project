@@ -228,16 +228,8 @@
 
         for (int i = 0; i < BoatsVector.size(); ++i)
         {
-            BoatsVector.erase(BoatsVector.begin()+ i);
+           delete BoatsVector[i];
         }
+        BoatsVector.clear();
         BoatsVector.shrink_to_fit();
     }
-    /*
-    void set_map_toempty(int map_to_empty[64][64])
-    {
-        for (int i = 0; i < 10; ++i)
-        {
-           std::fill(map_to_empty[i],map_to_empty[i]+10,0);
-        }
-    }
-    */
