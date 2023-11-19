@@ -26,18 +26,15 @@ bool Tcp_Server_Socket::Bind_to_port()
     address.sin_addr.s_addr = INADDR_ANY;
 
     if (setsockopt(server_client_fd, SOL_SOCKET,SO_REUSEADDR | SO_REUSEPORT, &opt,sizeof(opt))) {
-        perror("setsockopt");
-        exit(EXIT_FAILURE);
+        std::cout <<"sockopt setting failed"<< std::endl;
+        return false;
     }
 
-    if (bind(server_client_fd, (struct sockaddr*)&address,
-             sizeof(address))
-        < 0)
+    if (bind(server_client_fd, (struct sockaddr*)&address,sizeof(address))< 0)
     {
-        perror("bind failed");
-        exit(EXIT_FAILURE);
+        std::cout <<"bind failed"<< std::endl;
+        return false;
     }
-
     std::cout <<"binded to port!"<< std::endl;
     return true;
 }
@@ -45,19 +42,28 @@ bool Tcp_Server_Socket::listen_for_connections()
 {
     if (listen(server_client_fd, 3) < 0)
     {
-        perror("listen");
-        exit(EXIT_FAILURE);
+        std::cout <<"error while listen"<< std::endl;
+        return false;
     }
     if ((new_socket= accept(server_client_fd, (struct sockaddr*)&address,&addrlen))< 0)
     {
-        perror("accept");
-        exit(EXIT_FAILURE);
+        std::cout <<"error while accept"<< std::endl;
+        return false;
     }
 
     valread = read(new_socket, buffer,1024 - 1);
-
+    Connection_Bind =true;
     return true;
 }
+bool Tcp_Server_Socket::set_connection(Tcp_Server_Socket& server)
+{
+    if(listen_for_connections())
+    {
+        return true;
+    }
+    else{return false;}
+}
+
 
 bool Tcp_Server_Socket::close_socket()
 {

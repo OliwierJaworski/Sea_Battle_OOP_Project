@@ -11,9 +11,11 @@ class Tcp_Server_Socket : public Game_TCP_Communication
 public:
         Tcp_Server_Socket();
         ~Tcp_Server_Socket() override    {close_socket();}
-        bool is_Client_Connected() {listen_for_connections();}
+        bool set_connection(Tcp_Server_Socket& server);
+        bool get_Connection_Bind() {return Connection_Bind;}
 //private
 private:
+        bool Connection_Bind;
         int Create_Socket() override;
         bool Bind_to_port() override;
         bool listen_for_connections();

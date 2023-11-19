@@ -61,7 +61,7 @@ void loadingfunction();
             *playersturn=0;
         }
     }
-    int Game_Manager::Ask_Game_Type()
+    void Game_Manager::Ask_Game_Type()
     {
      std::string Is_Player_Host;
      std::cout << "are you hosting the game" << std::endl;
@@ -90,7 +90,8 @@ void loadingfunction();
             case 1:
                 Server =new Tcp_Server_Socket;
                 std::cout << "you are hosting on the ip: "<< "this will show the ip" <<"on port:" << Server->get_port() << std::endl;
-                Server->is_Client_Connected();
+                //Server->set_connection();                                                                                             //-->connection part of the code
+                waiting_on_connection();
                 break;
             case 2:
                 Client =new Tcp_Client_Socket;
@@ -109,6 +110,17 @@ void loadingfunction();
         PlayerVector.push_back(player1);
         PlayerVector.push_back(player2);
     }
+
+    bool Game_Manager::waiting_on_connection()
+    {
+        std::thread t1(&Game_Manager::Dots_Loading_Screen, this, std::ref(*Server));
+        if(Server->set_connection(*Server))
+        {
+            t1.join();
+        }
+
+    }
+
     void Game_Manager::Free_Alloc()
     {
         for (int i = 0; i < PlayerVector.size(); ++i)
@@ -117,9 +129,27 @@ void loadingfunction();
         }
         PlayerVector.clear();
         PlayerVector.shrink_to_fit();
-
-        delete Server;
-        delete Client;
+        if (Game_Type==1)
+        {
+            delete Server;
+        }
+        else { delete Client; }
     }
 
+void Game_Manager::Dots_Loading_Screen(Tcp_Server_Socket& server)
+{
+    while (!server.get_Connection_Bind())
+    {
+        std::system("clear");
+        std::string dots = "";
+
+        for (int i = 0; i < 3; ++i)
+        {
+            dots.append(".");
+            std::cout << dots << std::endl;
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            std::system("clear");
+        }
+    }
+};
 

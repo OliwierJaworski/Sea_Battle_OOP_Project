@@ -16,6 +16,7 @@ public:
     void send_data();
     void recv_data();
     int get_port() {return Used_Port;}
+
 //private
 protected:
     virtual int Create_Socket()=0;
@@ -31,6 +32,7 @@ protected:
     socklen_t addrlen = sizeof(address);
     ssize_t valread;
 
+    //char * ip =inet_ntoa(their_addr.sin_addr)-> to give the ip of person connected to you
     char  buffer[1024] = { 0 };
 };
 
