@@ -1,4 +1,5 @@
 #include "Tcp_Client_Socket.h"
+//constructor | destructor
     Tcp_Client_Socket::Tcp_Client_Socket()
     {
         Create_Socket();
@@ -6,6 +7,8 @@
         //Connect_to_Server();
     }
 
+//public | private
+//TCP_Client Core structure
     int Tcp_Client_Socket::Create_Socket()
     {
         if ((new_socket = socket(AF_INET, SOCK_STREAM, 0)) < 0)
@@ -16,17 +19,12 @@
         std::cout <<"created socket!"<< std::endl;
         return new_socket;
     }
-    Tcp_Client_Socket::~Tcp_Client_Socket()
-    {
-        close_socket();
-    }
     bool Tcp_Client_Socket::Bind_to_port()
     {
         serv_addr.sin_family = AF_INET;
         serv_addr.sin_port = htons(Used_Port);
         return true;
     }
-
     bool Tcp_Client_Socket::Connect_to_Server()
     {
 
@@ -43,6 +41,10 @@
         }
         return true;
     }
+
+//extra added functionality
+
+//initialization & destruction
     bool Tcp_Client_Socket::close_socket()
     {
         close(new_socket);

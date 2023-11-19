@@ -10,19 +10,19 @@
 
 class Game_TCP_Communication
 {
-//public
 public:
+//constructor | destructor
     virtual ~Game_TCP_Communication()=0;
+//public
+//Game_TCP_Communication Core structure
     void send_data();
     void recv_data();
+//extra added functionality
     int get_port() {return Used_Port;}
 
-//private
 protected:
-    virtual int Create_Socket()=0;
-    virtual bool Bind_to_port()=0;
-    virtual bool close_socket()=0;
-
+//protected
+//Game_TCP_Communication Core structure
     int server_client_fd, new_socket;
     int Used_Port =18754;
     int opt = 1;
@@ -32,8 +32,16 @@ protected:
     socklen_t addrlen = sizeof(address);
     ssize_t valread;
 
-    //char * ip =inet_ntoa(their_addr.sin_addr)-> to give the ip of person connected to you
+    virtual int Create_Socket()=0;
+    virtual bool Bind_to_port()=0;
+    virtual bool close_socket()=0;
     char  buffer[1024] = { 0 };
+//extra added functionality
+
+    /*-> "context" :: to give the ip of person connected to you, will be implemented in later version
+      ->"function" :: char * ip =inet_ntoa(their_addr.sin_addr)*/
+
+
 };
 
 

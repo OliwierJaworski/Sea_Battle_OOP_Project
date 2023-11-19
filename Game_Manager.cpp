@@ -1,5 +1,3 @@
-#include <iostream>
-#include <thread>
 #include "Game_Manager.h"
 
 
@@ -14,11 +12,13 @@
     {
         Free_Alloc();
     }
-//public
 
-    int Game_Manager::Play_Game()
+//public | private
+
+//Game Core structure
+    int Game_Manager::Game_Loop()
     {
-        Start_Correct_Protocol();
+        Online_Start_Correct_Protocol();
 
         bool Is_Game_Finished = false;
         int playersturn = 0;
@@ -28,18 +28,18 @@
             //check for win condition
             for (auto & playeriterator : PlayerVector)
             {
-                if (playeriterator->Get_Player_lost())
+                if (playeriterator->Get_Player_Status())
                 {
                     std::cout << "player called (moet nog implementeren) has lost " << std::endl;
                     return 0;
                 }
             }
             //if no one has lost yet continue loop
-            PlayTurns(& playersturn);
+            Game_Loop_Turn_handler(& playersturn);
         }
-        //return 0;
+        return 0;
     }
-    void Game_Manager::PlayTurns(int * playersturn)
+    void Game_Manager::Game_Loop_Turn_handler(int * playersturn)
     {
         if (* playersturn==0)
         {
@@ -47,7 +47,7 @@
             PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,0);
             PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,1);
 
-            PlayerVector[* playersturn]->Attack_Enemy(* PlayerVector[* playersturn],* PlayerVector[* playersturn +1]);
+            PlayerVector[* playersturn]->Current_Player_Attack_Enemy(* PlayerVector[* playersturn],* PlayerVector[* playersturn +1]);
             *playersturn=1;
         }
         else
@@ -56,11 +56,12 @@
             PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,0);
             PlayerVector[* playersturn]->print_map( * PlayerVector[* playersturn]->map,1);
 
-            PlayerVector[* playersturn]->Attack_Enemy(* PlayerVector[* playersturn],* PlayerVector[* playersturn -1]);
+            PlayerVector[* playersturn]->Current_Player_Attack_Enemy(* PlayerVector[* playersturn],* PlayerVector[* playersturn -1]);
             *playersturn=0;
         }
     }
-    void Game_Manager::Ask_Game_Type()
+//extra added functionality
+    void Game_Manager::Online_Ask_Game_Type()
     {
      std::string Is_Player_Host;
      std::cout << "are you hosting the game" << std::endl;
@@ -80,16 +81,16 @@
             set_Game_Type(2);//TCP client must be started;
         }
     }
-    bool Game_Manager::Start_Correct_Protocol()
+    bool Game_Manager::Online_Start_Correct_Protocol()
     {
 
-        Ask_Game_Type();
+        Online_Ask_Game_Type();
         switch (Game_Type)
         {
             case 1:
                 Server =new Tcp_Server_Socket;
                 std::cout << "you are hosting on the ip: "<< "this will show the ip" <<"on port:" << Server->get_port() << std::endl;
-                waiting_on_connection();
+                Online_waiting_on_connection();
                 break;
             case 2:
                 std::string New_IP;
@@ -110,45 +111,18 @@
         }
         return false;
     }
-
-
-//private
-    void Game_Manager::Init_Players()
+    bool Game_Manager::Online_waiting_on_connection()
+{
+    std::thread t1(&Game_Manager::Extra_Dots_Loading_Screen, this, std::ref(*Server));
+    if(Server->set_connection(*Server))
     {
-        Game_Player * player1 =new Game_Player;
-        Game_Player * player2 =new Game_Player;
-
-        PlayerVector.push_back(player1);
-        PlayerVector.push_back(player2);
+        t1.join();
+        return true;
     }
+    return false;
+}
 
-    bool Game_Manager::waiting_on_connection()
-    {
-        std::thread t1(&Game_Manager::Dots_Loading_Screen, this, std::ref(*Server));
-        if(Server->set_connection(*Server))
-        {
-            t1.join();
-            return true;
-        }
-        return false;
-    }
-
-    void Game_Manager::Free_Alloc()
-    {
-        for (auto & i : PlayerVector)
-        {
-            delete i;
-        }
-        PlayerVector.clear();
-        PlayerVector.shrink_to_fit();
-        if (Game_Type==1)
-        {
-            delete Server;
-        }
-        else { delete Client; }
-    }
-
-void Game_Manager::Dots_Loading_Screen(Tcp_Server_Socket& server)
+    void Game_Manager::Extra_Dots_Loading_Screen(Tcp_Server_Socket& server)
 {
     while (!server.get_Connection_Bind())
     {
@@ -164,4 +138,29 @@ void Game_Manager::Dots_Loading_Screen(Tcp_Server_Socket& server)
         }
     }
 }
+
+//initialization & destruction
+    void Game_Manager::Init_Players()
+    {
+        Game_Player * player1 =new Game_Player;
+        Game_Player * player2 =new Game_Player;
+
+        PlayerVector.push_back(player1);
+        PlayerVector.push_back(player2);
+    }
+    void Game_Manager::Free_Alloc()
+    {
+        for (auto & i : PlayerVector)
+        {
+            delete i;
+        }
+        PlayerVector.clear();
+        PlayerVector.shrink_to_fit();
+        if (Game_Type==1)
+        {
+            delete Server;
+        }
+        else { delete Client; }
+    }
+
 

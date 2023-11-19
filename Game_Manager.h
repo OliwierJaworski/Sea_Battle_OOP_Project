@@ -1,10 +1,10 @@
 #ifndef REMADE_SEA_BATTLE_GAME_MANAGER_H
 #define REMADE_SEA_BATTLE_GAME_MANAGER_H
-
+//only class where all the headers have to be
 #include <vector>
 #include <string>
 #include <iostream>
-
+#include <thread>
 
 #include "Game_Player.h"
 #include "Tcp_Server_Socket.h"
@@ -13,16 +13,16 @@
 class Game_Manager
 {
 
-    public:
+public:
 //constructor | destructor
     Game_Manager();
     ~Game_Manager();
 //public
-    int Play_Game();
-    void PlayTurns(int * playersturn);
+    int Game_Loop();
+    void Game_Loop_Turn_handler(int * playersturn);//PlayTurns
     void set_Game_Type(int type)                                             {Game_Type=type;}
-    void Ask_Game_Type();
-    private:
+    void Online_Ask_Game_Type();
+private:
 //private
     int Game_Type;
     Tcp_Server_Socket * Server;
@@ -30,9 +30,9 @@ class Game_Manager
     std::vector<Game_Player *> PlayerVector;
 
     void Init_Players();
-    bool waiting_on_connection();
-    void Dots_Loading_Screen(Tcp_Server_Socket& server);
-    bool Start_Correct_Protocol();
+    bool Online_waiting_on_connection();
+    void Extra_Dots_Loading_Screen(Tcp_Server_Socket& server);
+    bool Online_Start_Correct_Protocol();
     void Free_Alloc();
 };
 

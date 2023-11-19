@@ -13,9 +13,13 @@ public:
         ~Boats_Destroyer(){};
 
 //public
+//Boats_Destroyer Core structure
+//extra added functionality
         void SpecialMove();
 private:
 //private
+//Boats_Destroyer Core structure
+//extra added functionality
 
 
 };

@@ -6,7 +6,7 @@ int main()
     srand(time(NULL));
 
     Game_Manager  game;
-    game.Play_Game();
+    game.Game_Loop();
 
     return 0;
 }

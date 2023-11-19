@@ -12,9 +12,13 @@ public:
     ~Boats_Carrier(){};
 
 //public
+//Boats_Carrier Core structure
+//extra added functionality
     void SpecialMove();
 private:
 //private
+//Boats_Carrier Core structure
+//extra added functionality
 
 };
 

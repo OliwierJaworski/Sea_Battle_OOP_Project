@@ -22,10 +22,21 @@
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Carrier.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Carrier.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Destroyer.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Destroyer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Map.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Map.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Map.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_TCP_Communication.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_TCP_Communication.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_TCP_Communication.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_TCP_Communication.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tcp_Client_Socket.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tcp_Client_Socket.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tcp_Client_Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/Tcp_Client_Socket.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tcp_Server_Socket.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tcp_Server_Socket.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tcp_Server_Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/Tcp_Server_Socket.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +107,8 @@
       <workItem from="1700234356956" duration="8492000" />
       <workItem from="1700302933700" duration="35996000" />
       <workItem from="1700346925535" duration="10934000" />
-      <workItem from="1700388185676" duration="11023000" />
+      <workItem from="1700388185676" duration="11156000" />
+      <workItem from="1700411044231" duration="5213000" />
     </task>
     <servers />
   </component>
