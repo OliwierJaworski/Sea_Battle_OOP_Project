@@ -22,21 +22,18 @@
     bool Tcp_Client_Socket::Bind_to_port()
     {
         serv_addr.sin_family = AF_INET;
-        serv_addr.sin_port = htons(53902);
+        serv_addr.sin_port = htons(this->Used_Port);
         return true;
     }
     bool Tcp_Client_Socket::Connect_to_Server()
     {
-        if (inet_pton(AF_INET, "192.168.0.145", &serv_addr.sin_addr)
-            <= 0) {
-            printf(
-                    "\nInvalid address/ Address not supported \n");
+        if (inet_pton(AF_INET, ipAddress, &serv_addr.sin_addr)<= 0)
+        {
+            printf("\nInvalid address/ Address not supported \n");
             return -1;
         }
 
-        if ((status
-                     = connect(new_socket, (struct sockaddr*)&serv_addr,
-                               sizeof(serv_addr)))
+        if ((status= connect(new_socket, (struct sockaddr*)&serv_addr,sizeof(serv_addr)))
             < 0) {
             printf("\nConnection Failed \n");
             return -1;
@@ -46,20 +43,14 @@
     }
     void Tcp_Client_Socket::Client_Setup_Input()
     {
-
+/*
         std::string New_IP;
-        int New_PORT;
-
 
         std::cout << "what ip you want to connect to " << std::endl;
         std::cin >> New_IP;
 
-        std::cout << "what port is the Server on " << std::endl;
-        std::cin >> New_PORT;
-
         set_IP(New_IP);
-        set_PORT(New_PORT);
-
+*/
         Connect_to_Server();
     }
 
