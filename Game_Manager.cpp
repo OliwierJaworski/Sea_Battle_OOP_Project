@@ -1,8 +1,5 @@
 #include "Game_Manager.h"
 
-
-
-
 //constructor | destructor
     Game_Manager::Game_Manager()
     {
@@ -93,20 +90,7 @@
                 Online_waiting_on_connection();
                 break;
             case 2:
-                std::string New_IP;
-                int New_PORT;
-
                 Client =new Tcp_Client_Socket;
-                /*std::cout << "what ip you want to connect to " << std::endl;
-                std::cin >> New_IP;
-                Client->set_IP(New_IP);
-                std::cout << Client->return_IP();
-
-                std::cout << "what port is the Server on " << std::endl;
-                std::cin >> New_PORT;
-                Client->set_PORT(New_PORT);
-                 */
-                Client->Connect_to_Server();
                 break;
         }
         return false;

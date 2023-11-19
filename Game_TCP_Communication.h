@@ -15,7 +15,7 @@ public:
     virtual ~Game_TCP_Communication()=0;
 //public
 //Game_TCP_Communication Core structure
-    void send_data();
+    void send_data(std::string inputmessage);
     void recv_data();
 //extra added functionality
     int get_port() {return Used_Port;}

@@ -11,9 +11,9 @@ void Game_TCP_Communication::recv_data()
 {
     valread = read(new_socket, buffer, 1024 - 1);
 }
-void Game_TCP_Communication::send_data()
+void Game_TCP_Communication::send_data(std::string inputmessage)
 {
-    send(new_socket, message.c_str(), 5, 0);
+    send(new_socket, inputmessage.c_str(), 5, 0);
 }
 //extra added functionality
 
