@@ -6,18 +6,18 @@
     {
         Init_Boats();
 
-        for (int i = 0; i < BoatsVector.size(); ++i)
+        for (auto & i : BoatsVector)
         {
-            Boats_Fill_Map(*BoatsVector[i]);
+            Boats_Fill_Map(*i);
         }
     }
 
     const int Game_Map::Player_Life_Left()
     {
         int life=0;
-        for (int i = 0; i < BoatsVector.size(); ++i)
+        for (auto & i : BoatsVector)
         {
-            life +=BoatsVector.at(i)->get_Health_Amount();
+            life +=i->get_Health_Amount();
         }
         return life;
     }
@@ -43,11 +43,11 @@
 
     Game_Boats* Game_Map::get_boat(int size)
     {
-        for (int i = 0; i < BoatsVector.size(); ++i)
+        for (auto & i : BoatsVector)
         {
-            if (BoatsVector[i]->Get_Size()==size)
+            if (i->Get_Size()==size)
             {
-                return BoatsVector[i];
+                return i;
             }
         }
         return nullptr;
@@ -226,9 +226,9 @@
     void Game_Map::Free_Alloc()
     {
 
-        for (int i = 0; i < BoatsVector.size(); ++i)
+        for (auto & i : BoatsVector)
         {
-           delete BoatsVector[i];
+           delete i;
         }
         BoatsVector.clear();
         BoatsVector.shrink_to_fit();

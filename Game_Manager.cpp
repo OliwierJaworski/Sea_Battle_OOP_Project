@@ -1,9 +1,9 @@
 #include <iostream>
 #include <thread>
 #include "Game_Manager.h"
-#include <time.h>
 
-void loadingfunction();
+
+
 
 //constructor | destructor
     Game_Manager::Game_Manager()
@@ -26,19 +26,17 @@ void loadingfunction();
         while (!Is_Game_Finished)
         {
             //check for win condition
-            for (int playeriterator = 0; playeriterator < PlayerVector.size(); ++playeriterator)
+            for (auto & playeriterator : PlayerVector)
             {
-                if (PlayerVector.at(playeriterator)->Get_Player_lost())
+                if (playeriterator->Get_Player_lost())
                 {
                     std::cout << "player called (moet nog implementeren) has lost " << std::endl;
-                    Is_Game_Finished = true;
                     return 0;
                 }
             }
             //if no one has lost yet continue loop
             PlayTurns(& playersturn);
         }
-        return 0;
     }
     void Game_Manager::PlayTurns(int * playersturn)
     {
@@ -123,9 +121,9 @@ void loadingfunction();
 
     void Game_Manager::Free_Alloc()
     {
-        for (int i = 0; i < PlayerVector.size(); ++i)
+        for (auto & i : PlayerVector)
         {
-            delete PlayerVector[i];
+            delete i;
         }
         PlayerVector.clear();
         PlayerVector.shrink_to_fit();
@@ -151,5 +149,5 @@ void Game_Manager::Dots_Loading_Screen(Tcp_Server_Socket& server)
             std::system("clear");
         }
     }
-};
+}
 
