@@ -37,6 +37,7 @@
             //if no one has lost yet continue loop
             PlayTurns(& playersturn);
         }
+        return 0;
     }
     void Game_Manager::PlayTurns(int * playersturn)
     {
@@ -115,8 +116,9 @@
         if(Server->set_connection(*Server))
         {
             t1.join();
+            return true;
         }
-
+        return false;
     }
 
     void Game_Manager::Free_Alloc()
