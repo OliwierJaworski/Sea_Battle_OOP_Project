@@ -23,8 +23,4 @@ add_executable(REMADE_Sea_Battle main.cpp
         Game_TCP_Communication.cpp
         Game_TCP_Communication.h
 )
-if(WIN32)
-    target_compile_definitions(REMADE_Sea_Battle PRIVATE _WIN32)
-    target_compile_options(REMADE_Sea_Battle PRIVATE /EHsc)
-    target_link_libraries(REMADE_Sea_Battle PRIVATE wsock32 ws2_32)
-endif()
+
