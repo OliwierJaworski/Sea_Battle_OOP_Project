@@ -1,14 +1,11 @@
 #ifndef REMADE_SEA_BATTLE_GAME_MANAGER_H
 #define REMADE_SEA_BATTLE_GAME_MANAGER_H
 //only class where all the headers have to be
-#include <vector>
-#include <string>
-#include <iostream>
-#include <thread>
 
 #include "Game_Player.h"
 #include "Tcp_Server_Socket.h"
 #include "Tcp_Client_Socket.h"
+#include "Required_Program_Files.h"
 
 class Game_Manager
 {

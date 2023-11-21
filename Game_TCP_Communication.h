@@ -1,12 +1,9 @@
 #ifndef REMADE_SEA_BATTLE_GAME_TCP_COMMUNICATION_H
 #define REMADE_SEA_BATTLE_GAME_TCP_COMMUNICATION_H
 
-#include <iostream>
-#include <netinet/in.h>
-#include <sys/socket.h>
-#include <sys/types.h>
-#include <unistd.h>
-#include <arpa/inet.h>
+#include "Required_Program_Files.h"
+
+
 
 class Game_TCP_Communication
 {

@@ -21,9 +21,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Required_Program_Files.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_TCP_Communication.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_TCP_Communication.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tcp_Server_Socket.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tcp_Server_Socket.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tcp_Server_Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/Tcp_Server_Socket.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-189a3940ff74e2fa777b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-18T20-37-42-0064.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-REMADE_Sea_Battle-Debug-0a01419aa13f781ee9b0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +84,11 @@
   }
 }</component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="REMADE_Sea_Battle" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="REMADE_Sea_Battle" TARGET_NAME="REMADE_Sea_Battle" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="REMADE_Sea_Battle" RUN_TARGET_NAME="REMADE_Sea_Battle">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -95,7 +110,9 @@
       <workItem from="1700302933700" duration="35996000" />
       <workItem from="1700346925535" duration="10934000" />
       <workItem from="1700388185676" duration="11156000" />
-      <workItem from="1700411044231" duration="17633000" />
+      <workItem from="1700411044231" duration="17895000" />
+      <workItem from="1700578532949" duration="77000" />
+      <workItem from="1700578706863" duration="4024000" />
     </task>
     <servers />
   </component>

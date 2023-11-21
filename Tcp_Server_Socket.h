@@ -1,8 +1,6 @@
 #ifndef REMADE_SEA_BATTLE_TCP_SERVER_SOCKET_H
 #define REMADE_SEA_BATTLE_TCP_SERVER_SOCKET_H
 
-
-
 #include "Game_TCP_Communication.h"
 
 class Tcp_Server_Socket : public Game_TCP_Communication
@@ -12,7 +10,7 @@ public:
 //public
 //constructor | destructor
     Tcp_Server_Socket();
-    ~Tcp_Server_Socket() override    {close_socket();}
+    ~Tcp_Server_Socket() override      { void OSCleanup( void );  close_socket();}
 
 //Tcp_Server_Socket Core structure
 
@@ -32,6 +30,7 @@ private:
 
 //initialization & destruction
         bool close_socket() override;
+
 };
 #endif
 
