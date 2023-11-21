@@ -22,7 +22,6 @@ add_executable(REMADE_Sea_Battle main.cpp
         Tcp_Client_Socket.h
         Game_TCP_Communication.cpp
         Game_TCP_Communication.h
-        Required_Program_Files.h
 )
 if(WIN32)
     target_compile_definitions(REMADE_Sea_Battle PRIVATE _WIN32)

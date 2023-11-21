@@ -1,7 +1,65 @@
 #ifndef REMADE_SEA_BATTLE_GAME_TCP_COMMUNICATION_H
 #define REMADE_SEA_BATTLE_GAME_TCP_COMMUNICATION_H
 
-#include "Required_Program_Files.h"
+#ifdef _WIN32
+#define _WIN32_WINNT _WIN32_WINNT_WIN7
+
+#include <sys/socket.h> // for sockaddr, socket, socket
+#include <sys/types.h>   // for size_t
+#include <netdb.h>       // for getaddrinfo
+#include <netinet/in.h>  // for sockaddr_in
+#include <arpa/inet.h>   // for htons, htonl, inet_pton, inet_ntop
+#include <cerrno>        // for errno (C++ version)
+#include <cstdio>        // for fprintf
+#include <unistd.h>      // for close
+#include <cstdlib>       // for exit
+#include <cstring>       // for memset (C++ version)
+#include <ctime>         // for time_t, struct tm
+#include <iostream>
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <thread>
+
+void OSInit( void )
+{
+    WSADATA wsaData;
+    int WSAError = WSAStartup( MAKEWORD( 2, 0 ), &wsaData );
+    if( WSAError != 0 )
+    {
+        fprintf( stderr, "WSAStartup errno = %d\n", WSAError );
+        exit( -1 );
+    }
+}
+void OSCleanup( void )
+{
+    WSACleanup();
+}
+#define perror(string) fprintf( stderr, string ": WSA errno = %d\n", WSAGetLastError() )
+#else
+
+#include <sys/socket.h>    // for sockaddr, socket, socket
+#include <sys/types.h>      // for size_t
+#include <netdb.h>          // for getaddrinfo
+#include <netinet/in.h>     // for sockaddr_in
+#include <arpa/inet.h>      // for htons, htonl, inet_pton, inet_ntop
+#include <cerrno>           // for errno (C++ version)
+#include <cstdio>           // for fprintf
+#include <unistd.h>         // for close
+#include <cstdlib>          // for exit
+#include <cstring>          // for memset (C++ version)
+#include <ctime>            // for time_t, struct tm
+#include <iostream>
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <thread>
+#endif
+
 
 
 
