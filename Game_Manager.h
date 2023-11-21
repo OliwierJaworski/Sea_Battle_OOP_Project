@@ -1,6 +1,13 @@
 #ifndef REMADE_SEA_BATTLE_GAME_MANAGER_H
 #define REMADE_SEA_BATTLE_GAME_MANAGER_H
-//only class where all the headers have to be
+
+#include <iostream>
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <thread>
 
 #include "Game_Player.h"
 #include "Tcp_Server_Socket.h"

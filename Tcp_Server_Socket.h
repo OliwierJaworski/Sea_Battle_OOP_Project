@@ -10,7 +10,7 @@ public:
 //public
 //constructor | destructor
     Tcp_Server_Socket();
-    ~Tcp_Server_Socket() override      { void OSCleanup( void );  close_socket();}
+    ~Tcp_Server_Socket() override      { close_socket();}
 
 //Tcp_Server_Socket Core structure
 

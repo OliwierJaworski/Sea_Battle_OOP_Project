@@ -115,8 +115,7 @@
 				12,
 				14,
 				16,
-				18,
-				19
+				18
 			]
 		}
 	],
@@ -225,11 +224,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "Game_TCP_Communication.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "Required_Program_Files.h",
 			"sourceGroupIndex" : 1
 		}
 	],

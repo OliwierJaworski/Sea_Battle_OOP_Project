@@ -3,7 +3,7 @@
 //constructor | destructor
 Tcp_Server_Socket::Tcp_Server_Socket()
 {
-   void OSInit( void );
+
    Create_Socket();
    Bind_to_port();
    //listen_for_connections();
