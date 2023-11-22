@@ -1,7 +1,7 @@
 # ninja log v5
 2	372	1700319694132593165	CMakeFiles/REMADE_Sea_Battle.dir/Game_Boats.cpp.o	81b8d7fb2b1dd85c
 1	404	1700591784387535177	CMakeFiles/REMADE_Sea_Battle.dir/main.cpp.o	64b73b54eabd9452
-0	13	1700593156007130394	build.ninja	ec466046fce287fe
+0	13	1700655657386344473	build.ninja	ec466046fce287fe
 1	567	1700591610999561908	CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Server_Socket.cpp.o	adde171c7152d05d
 535	580	1700591784563535178	REMADE_Sea_Battle	21a71417df82d6d0
 2	545	1700416226197116428	CMakeFiles/REMADE_Sea_Battle.dir/Game_Map.cpp.o	e3ba286b5380584d
@@ -11,4 +11,3 @@
 2	468	1700416226121117313	CMakeFiles/REMADE_Sea_Battle.dir/Game_Player.cpp.o	52cac3e9b19eefba
 2	466	1700416226117117362	CMakeFiles/REMADE_Sea_Battle.dir/Boats_Carrier.cpp.o	9cbb3b766b33ed02
 1	535	1700591784519535179	CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager.cpp.o	45d3e2814e809c28
-0	13	1700593156007130394	build.ninja	ec466046fce287fe
