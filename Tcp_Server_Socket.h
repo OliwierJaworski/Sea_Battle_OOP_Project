@@ -43,22 +43,16 @@ namespace SBN//SEA_Battle_Networking
             {
     public:
         Tcp_Server_Socket();
-
         ~Tcp_Server_Socket();
 
-        int initialization();
-
-        int connection(int internet_socket);
-
         void recv(int internet_socket);
-
         void send(int internet_socket);
-
-        void cleanup(int internet_socket, int client_internet_socket);
-
         int get_internet_socket() { return internet_socket; }
 
     private:
+        int initialization();
+        int connection(int internet_socket);
+        void cleanup(int internet_socket, int client_internet_socket);
 //main
         int internet_socket;
         int client_internet_socket;
@@ -73,7 +67,6 @@ namespace SBN//SEA_Battle_Networking
         int client_socket;
 //execution->recv
         int number_of_bytes_received;
-
 //execution->send
         int number_of_bytes_send;
 //cleanup

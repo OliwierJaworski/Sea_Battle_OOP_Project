@@ -1,6 +1,6 @@
 #include "Tcp_Server_Socket.h"
-using namespace SBN;
 
+using namespace SBN;
 Tcp_Server_Socket::Tcp_Server_Socket()
 {
 #ifdef _WIN32
@@ -20,7 +20,8 @@ Tcp_Server_Socket::~Tcp_Server_Socket()
 }
 
 
-int Tcp_Server_Socket::initialization() {
+int Tcp_Server_Socket::initialization()
+{
     memset(&internet_address_setup, 0, sizeof internet_address_setup);
     internet_address_setup.ai_family = AF_UNSPEC;
     internet_address_setup.ai_socktype = SOCK_STREAM;
@@ -108,13 +109,16 @@ void Tcp_Server_Socket::send(int internet_socket)
 
 void Tcp_Server_Socket::cleanup(int internet_socket, int client_internet_socket)
 {
-    //Step 4.2
+#ifdef _WIN32
+    shutdown_return = shutdown( internet_socket, SD_RECEIVE );
+#else
     shutdown_return = shutdown(client_internet_socket, SHUT_RD);
-    if (shutdown_return == -1) {
+#endif
+    if (shutdown_return == -1)
+    {
         perror("shutdown");
     }
 
-    //Step 4.1
     close(client_internet_socket);
     close(internet_socket);
 }

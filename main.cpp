@@ -1,10 +1,9 @@
 #include <iostream>
 #include "Tcp_Server_Socket.h"
+#include "Tcp_Client_Socket.h"
 
 int main()
 {
-    std::cout <<"hello world!" <<std::endl;
-    SBN::Tcp_Server_Socket Server;
-
+    SBN::Tcp_Client_Socket client;
     return 0;
 }
