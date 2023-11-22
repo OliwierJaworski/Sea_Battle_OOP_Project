@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "REMADE_Sea_Battle::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-REMADE_Sea_Battle-Debug-0a01419aa13f781ee9b0.json",
+					"jsonFile" : "target-REMADE_Sea_Battle-Debug-01be57dfd2c628ab5cfe.json",
 					"name" : "REMADE_Sea_Battle",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/oliwier-desktop/Documents/Code_Projects/REMADE_Sea_Battle/cmake-build-debug",
-		"source" : "/home/oliwier-desktop/Documents/Code_Projects/REMADE_Sea_Battle"
+		"build" : "/home/oliwier-desktop/Documents/Code_Projects/OOP_TCP_Multiplayer_Implementation/Sea_Battle_OOP_Project/cmake-build-debug",
+		"source" : "/home/oliwier-desktop/Documents/Code_Projects/OOP_TCP_Multiplayer_Implementation/Sea_Battle_OOP_Project"
 	},
 	"version" : 
 	{
