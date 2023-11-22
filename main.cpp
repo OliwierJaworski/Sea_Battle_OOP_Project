@@ -4,6 +4,6 @@
 
 int main()
 {
-    SBN::Tcp_Client_Socket client;
+    SBN::Tcp_Server_Socket Server;
     return 0;
 }
