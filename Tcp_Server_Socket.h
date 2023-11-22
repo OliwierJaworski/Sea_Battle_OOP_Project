@@ -25,6 +25,7 @@
 	}
 	#define perror(string) fprintf( stderr, string ": WSA errno = %d\n", WSAGetLastError() )
 #else
+
 #include <sys/socket.h> //for sockaddr, socket, socket
 #include <sys/types.h> //for size_t
 #include <netdb.h> //for getaddrinfo
@@ -35,14 +36,52 @@
 #include <unistd.h> //for close
 #include <stdlib.h> //for exit
 #include <string.h> //for memset
-void OSInit( void ) {}
-void OSCleanup( void ) {}
+#endif
+namespace SBN//SEA_Battle_Networking
+{
+    class Tcp_Server_Socket
+            {
+    public:
+        Tcp_Server_Socket();
+
+        ~Tcp_Server_Socket();
+
+        int initialization();
+
+        int connection(int internet_socket);
+
+        void recv(int internet_socket);
+
+        void send(int internet_socket);
+
+        void cleanup(int internet_socket, int client_internet_socket);
+
+        int get_internet_socket() { return internet_socket; }
+
+    private:
+//main
+        int internet_socket;
+        int client_internet_socket;
+//initialization
+        struct addrinfo internet_address_setup;
+        struct addrinfo *internet_address_result;
+        int getaddrinfo_return;
+        struct addrinfo *internet_address_result_iterator;
+//connection
+        struct sockaddr_storage client_internet_address;
+        socklen_t client_internet_address_length;
+        int client_socket;
+//execution->recv
+        int number_of_bytes_received;
+
+//execution->send
+        int number_of_bytes_send;
+//cleanup
+        int shutdown_return;
+    };
+}
 #endif
 
-class Tcp_Server_Socket
-{
-
-};
 
 
 

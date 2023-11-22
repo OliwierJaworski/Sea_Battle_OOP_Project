@@ -10,6 +10,7 @@ add_executable( REMADE_Sea_Battle main.cpp
                 Tcp_Client_Socket.h
                 Game_TCP_Communication.cpp
                 Game_TCP_Communication.h
-
 )
-
+if(WIN32)
+    target_link_libraries(REMADE_Sea_Battle PRIVATE ws2_32)
+endif()
