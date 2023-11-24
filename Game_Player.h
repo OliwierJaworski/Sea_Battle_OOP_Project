@@ -9,7 +9,8 @@ class Game_Player
 {
     friend class Game_Manager;
     friend class SP_Game_Manager;
-
+    friend class Client_Game_Manager;
+    friend class Host_Game_Manager;
 public:
     Game_Player()   {};
     ~Game_Player()  {};

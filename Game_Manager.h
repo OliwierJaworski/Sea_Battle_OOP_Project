@@ -7,6 +7,9 @@
 
 
 #include "Game_Player.h"
+#include "Tcp_Client_Socket.h"
+#include "Tcp_Server_Socket.h"
+
 //////////////////////////////////////////////////////////////////////////////
 class Game_Manager
 {
@@ -17,6 +20,7 @@ public:
     virtual int Play_Game()=0;
 
 private:
+    enum Game_Type{Singleplayer,Multiplayer_Host,Multiplayer_Client};
     std::vector<std::unique_ptr<Game_Player>> PlayerVector;
     virtual void Init_Players()=0;
     virtual bool Is_Game_Finished()=0;
@@ -41,13 +45,14 @@ class Client_Game_Manager : Game_Manager
 {
 public:
     Client_Game_Manager() ;
-    ~Client_Game_Manager() override = default;
+    ~Client_Game_Manager() override;
 
     int Play_Game() override;
-    void PlayTurns(int * playersturn);
+    void PlayTurns();
 
 private:
     std::vector<std::unique_ptr<Game_Player>> PlayerVector;
+    SBN::Tcp_Client_Socket Client_Connection;
     void Init_Players() override;
     bool Is_Game_Finished() override;
 };
@@ -56,13 +61,14 @@ class Host_Game_Manager : Game_Manager
 {
 public:
     Host_Game_Manager() ;
-    ~Host_Game_Manager() override = default;
+    ~Host_Game_Manager() override;
 
     int Play_Game() override;
-    void PlayTurns(int * playersturn);
+    void PlayTurns();
 
 private:
     std::vector<std::unique_ptr<Game_Player>> PlayerVector;
+    SBN::Tcp_Server_Socket Server_Connection;
     void Init_Players() override;
     bool Is_Game_Finished() override;
 };

@@ -7,7 +7,7 @@ Tcp_Client_Socket::Tcp_Client_Socket()
         OSInit();
     #endif
     internet_socket = initialization();
-    send(internet_socket,"TCP client socket working after 11:10");
+    send(internet_socket,"Game Connect Request");
     recv(internet_socket);
 }
 Tcp_Client_Socket::~Tcp_Client_Socket()
