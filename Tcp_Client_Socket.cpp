@@ -121,13 +121,15 @@ std::vector<std::vector<int>> Tcp_Client_Socket::data_translation(int clarify_da
     switch (clarify_datatype)
     {
         case Player_Array:
-            std::vector<std::vector<int>> Tcp_Received_Array(10,std::vector<int>(10));
-            std::istringstream iss(buffer);
+            std::vector<std::vector<int>> Tcp_Received_Array(9,std::vector<int>(9));
+            int index=0;
             for (int i = 0; i < 9; ++i)
             {
+                std::string char_to_int;
+                char_to_int =buffer;
                 for (int j = 0; j < 9; ++j)
                 {
-                    iss >> Tcp_Received_Array[i][j];
+                    Tcp_Received_Array[i][j] =atoi(char_to_int.substr(index, 1).c_str());
                 }
             }
             return Tcp_Received_Array;
