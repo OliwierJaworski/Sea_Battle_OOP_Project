@@ -23,7 +23,7 @@ int Tcp_Client_Socket::initialization()
     memset( &internet_address_setup, 0, sizeof internet_address_setup );
     internet_address_setup.ai_family = AF_UNSPEC;
     internet_address_setup.ai_socktype = SOCK_STREAM;
-    getaddrinfo_return = getaddrinfo( "192.168.0.145", "36363", &internet_address_setup, &internet_address_result );
+    getaddrinfo_return = getaddrinfo( "192.168.0.145", "24042", &internet_address_setup, &internet_address_result );
     if( getaddrinfo_return != 0 )
     {
         fprintf( stderr, "getaddrinfo: %s\n", gai_strerror( getaddrinfo_return ) );
@@ -70,7 +70,6 @@ void Tcp_Client_Socket::recv( int internet_socket )
 {
     {
         number_of_bytes_received = 0;
-        free(buffer);
         number_of_bytes_received = ::recv( internet_socket, buffer, ( sizeof buffer ) - 1, 0 );
         if( number_of_bytes_received == -1 )
         {
@@ -116,20 +115,21 @@ Not_Set_Datatype Tcp_Client_Socket::data_translation(int clarify_datatype)
 }
 */
 //template <typename Not_Set_Datatype>
-std::vector<std::vector<int>> Tcp_Client_Socket::data_translation(int clarify_datatype)
+std::vector<std::vector<int>> Tcp_Client_Socket::Get_Array_Format(int clarify_datatype)
 {
     switch (clarify_datatype)
     {
         case Player_Array:
-            std::vector<std::vector<int>> Tcp_Received_Array(9,std::vector<int>(9));
+            std::vector<std::vector<int>> Tcp_Received_Array(10,std::vector<int>(10));
             int index=0;
-            for (int i = 0; i < 9; ++i)
+            for (int i = 0; i < 10; ++i)
             {
                 std::string char_to_int;
                 char_to_int =buffer;
-                for (int j = 0; j < 9; ++j)
+                for (int j = 0; j < 10; ++j)
                 {
-                    Tcp_Received_Array[i][j] =atoi(char_to_int.substr(index, 1).c_str());
+                    Tcp_Received_Array[i][j]= char_to_int[index]-'0';
+                    index++;
                 }
             }
             return Tcp_Received_Array;

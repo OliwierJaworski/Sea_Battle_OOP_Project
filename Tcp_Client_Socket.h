@@ -59,7 +59,7 @@ namespace SBN
 
         int get_socket_state() { return internet_socket;}
         //template <typename Not_Set_Datatype>
-        std::vector<std::vector<int>> data_translation(int clarify_datatype);
+        std::vector<std::vector<int>> Get_Array_Format(int clarify_datatype);
     private:
         enum change_received_data_to{Player_Array,Player_Cords};
         int initialization();

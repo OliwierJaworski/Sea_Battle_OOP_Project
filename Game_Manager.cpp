@@ -78,7 +78,7 @@
 
             case client:
                 std::cout << "setting map" <<std::endl;
-                PlayerVector[0]->map->Online_Set_my_map(Client->data_translation(0));
+                PlayerVector[0]->map->Online_Set_my_map(Client->Get_Array_Format(0));
                 std::cout << "map is set" <<std::endl;
                 PlayerVector[0]->print_map(*PlayerVector[0]->map,0);
                 //ask for my map
