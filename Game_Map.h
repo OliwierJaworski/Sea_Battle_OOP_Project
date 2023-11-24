@@ -3,7 +3,7 @@
 
 #include "Boats_Destroyer.h"
 #include "Boats_Carrier.h"
-
+#include <vector>
 class Game_Map
 {
 
@@ -36,7 +36,5 @@ private:
     bool Boats_Fill_Map(Game_Boats& Boat_ID);
     bool Will_Boat_Fit(Game_Boats& Boat_ID, int x, int y, int rot);
     void place_boats(Game_Boats& Boat_ID, int x, int y, int rot);
-
-
 };
 #endif

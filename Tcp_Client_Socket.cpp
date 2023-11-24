@@ -115,8 +115,8 @@ Not_Set_Datatype Tcp_Client_Socket::data_translation(int clarify_datatype)
     }
 }
 */
-template <typename Not_Set_Datatype>
-Not_Set_Datatype Tcp_Client_Socket::data_translation(int clarify_datatype)
+//template <typename Not_Set_Datatype>
+std::vector<std::vector<int>> Tcp_Client_Socket::data_translation(int clarify_datatype)
 {
     switch (clarify_datatype)
     {

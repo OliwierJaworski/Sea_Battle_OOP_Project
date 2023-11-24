@@ -58,8 +58,8 @@ namespace SBN
         void send(int internet_socket,std::string StringData_ToBe_send);
 
         int get_socket_state() { return internet_socket;}
-        template <typename Not_Set_Datatype>
-        Not_Set_Datatype data_translation(int clarify_datatype);
+        //template <typename Not_Set_Datatype>
+        std::vector<std::vector<int>> data_translation(int clarify_datatype);
     private:
         enum change_received_data_to{Player_Array,Player_Cords};
         int initialization();

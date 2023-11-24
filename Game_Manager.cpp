@@ -66,8 +66,8 @@
                                                                             *PlayerVector[*playersturn - 1]);
                     *playersturn = 0;
                 }
-
                 break;
+
             case Multiplayer_host:
                     //debug print player map
                     PlayerVector[1]->print_map(*PlayerVector[1]->map,0);
@@ -75,9 +75,10 @@
                     Online_Send_Client_Map();
                     //attack
                 break;
+
             case client:
                 std::cout << "setting map" <<std::endl;
-                PlayerVector[0]->map->Online_Set_my_map(Client->data_translation<std::vector<std::vector<int>>>(0));
+                PlayerVector[0]->map->Online_Set_my_map(Client->data_translation(0));
                 std::cout << "map is set" <<std::endl;
                 PlayerVector[0]->print_map(*PlayerVector[0]->map,0);
                 //ask for my map
