@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/oliwier-desktop/Documents/Code_Projects/REMADE_Sea_Battle/cmake-build-debug"
+			"value" : "/home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -543,7 +543,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/oliwier-desktop/Documents/Code_Projects/REMADE_Sea_Battle/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -603,7 +603,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/oliwier-desktop/Documents/Code_Projects/REMADE_Sea_Battle"
+			"value" : "/home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1135,7 +1135,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/oliwier-desktop/Documents/Code_Projects/REMADE_Sea_Battle/cmake-build-debug"
+			"value" : "/home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/cmake-build-debug"
 		},
 		{
 			"name" : "REMADE_Sea_Battle_IS_TOP_LEVEL",
@@ -1159,7 +1159,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/oliwier-desktop/Documents/Code_Projects/REMADE_Sea_Battle"
+			"value" : "/home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

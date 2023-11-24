@@ -7,24 +7,63 @@
 
 
 #include "Game_Player.h"
-
+//////////////////////////////////////////////////////////////////////////////
 class Game_Manager
 {
-
-    public:
-//constructor | destructor
+public:
     Game_Manager();
-    ~Game_Manager();
-//public
-    const Game_Player* Get_Player_ID(int requested_id) ;//only allows for player to get the ID not change its contents
-    int Play_Game();
-    void PlayTurns(int * playersturn);
-    private:
-//private
-    std::vector<Game_Player *> PlayerVector;
-    void Init_Players();
-    void Free_Alloc();
+    virtual ~Game_Manager()=0;
+
+    virtual int Play_Game()=0;
+
+private:
+    std::vector<std::unique_ptr<Game_Player>> PlayerVector;
+    virtual void Init_Players()=0;
+    virtual bool Is_Game_Finished()=0;
 };
+//////////////////////////////////////////////////////////////////////////////
+class SP_Game_Manager : Game_Manager
+{
+public:
+    SP_Game_Manager() ;
+    ~SP_Game_Manager() override ;
 
+    int Play_Game() override;
+    void PlayTurns(int * playersturn);
 
+private:
+    std::vector<std::unique_ptr<Game_Player>> PlayerVector;
+    void Init_Players() override;
+    bool Is_Game_Finished() override;
+};
+//////////////////////////////////////////////////////////////////////////////
+class Client_Game_Manager : Game_Manager
+{
+public:
+    Client_Game_Manager() ;
+    ~Client_Game_Manager() override = default;
+
+    int Play_Game() override;
+    void PlayTurns(int * playersturn);
+
+private:
+    std::vector<std::unique_ptr<Game_Player>> PlayerVector;
+    void Init_Players() override;
+    bool Is_Game_Finished() override;
+};
+//////////////////////////////////////////////////////////////////////////////
+class Host_Game_Manager : Game_Manager
+{
+public:
+    Host_Game_Manager() ;
+    ~Host_Game_Manager() override = default;
+
+    int Play_Game() override;
+    void PlayTurns(int * playersturn);
+
+private:
+    std::vector<std::unique_ptr<Game_Player>> PlayerVector;
+    void Init_Players() override;
+    bool Is_Game_Finished() override;
+};
 #endif

@@ -6,10 +6,24 @@
 int main()
 {
     srand(time(NULL));
-
-    Game_Manager  game;
-    game.Play_Game();
-
+    std::string gametype;
+    std::cout << "which Game mode you want to start" << std::endl;
+    std::cin >> gametype;
+    if (gametype =="singleplayer")
+    {
+        SP_Game_Manager game;
+        game.Play_Game();
+    }
+    else if(gametype =="Host")
+    {
+        //Host_Game_Manager game;
+        //game.Play_Game();
+    }
+    else if(gametype =="Client")
+    {
+        //Client_Game_Manager game;
+        //game.Play_Game();
+    }
     return 0;
 }
 

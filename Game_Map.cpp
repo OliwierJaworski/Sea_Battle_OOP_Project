@@ -47,7 +47,7 @@
         {
             if (BoatsVector[i]->Get_Size()==size)
             {
-                return BoatsVector[i];
+                return BoatsVector[i].get();
             }
         }
         return nullptr;
@@ -56,11 +56,11 @@
 //private
     void Game_Map::Init_Boats()
     {
-        Boats_Destroyer* Destroyer =new Boats_Destroyer;
-        Boats_Carrier* Carrier = new Boats_Carrier;
+        std::unique_ptr<Boats_Destroyer> Destroyer =std::make_unique<Boats_Destroyer>();
+        std::unique_ptr<Boats_Carrier> Carrier =std::make_unique<Boats_Carrier>();
 
-        BoatsVector.push_back(Destroyer);
-        BoatsVector.push_back(Carrier);
+        BoatsVector.push_back(std::move(Destroyer));
+        BoatsVector.push_back(std::move(Carrier));
     }
 
     bool Game_Map::Boats_Fill_Map(Game_Boats& Boat_ID)
@@ -232,12 +232,4 @@
         }
         BoatsVector.shrink_to_fit();
     }
-    /*
-    void set_map_toempty(int map_to_empty[64][64])
-    {
-        for (int i = 0; i < 10; ++i)
-        {
-           std::fill(map_to_empty[i],map_to_empty[i]+10,0);
-        }
-    }
-    */
+    

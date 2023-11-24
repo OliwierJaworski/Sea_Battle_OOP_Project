@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
-
+#include <memory>
 
 #include "Boats_Destroyer.h"
 #include "Boats_Carrier.h"
@@ -14,7 +14,7 @@ class Game_Map
 
 public:
 //constructor | destructor
-    Game_Map() ;
+    Game_Map();
     ~Game_Map() {Free_Alloc();};
 //public
     void set_enemy_map(int x, int y,bool hit_or_mis);
@@ -25,7 +25,7 @@ public:
     const int Player_Life_Left();
 private:
 //private
-    std::vector<Game_Boats *> BoatsVector;
+    std::vector<std::unique_ptr<Game_Boats>> BoatsVector;
     int My_map[10][10];
     int Enemy_map[10][10];
     void Init_Boats();
@@ -34,7 +34,6 @@ private:
     bool Will_Boat_Fit(Game_Boats& Boat_ID, int x, int y, int rot);
     void place_boats(Game_Boats& Boat_ID, int x, int y, int rot);
     void Free_Alloc();
-
 };
 
 
