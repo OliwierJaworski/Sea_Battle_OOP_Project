@@ -9,7 +9,7 @@ Tcp_Server_Socket::Tcp_Server_Socket()
     internet_socket = initialization();
     client_internet_socket = connection(internet_socket);
     recv(client_internet_socket);
-    send(client_internet_socket);
+    send(client_internet_socket,"TCP Server socket working after 11:10");
 }
 Tcp_Server_Socket::~Tcp_Server_Socket()
 {
@@ -98,10 +98,10 @@ void Tcp_Server_Socket::recv(int internet_socket)
     }
 
 }
-void Tcp_Server_Socket::send(int internet_socket)
+void Tcp_Server_Socket::send(int internet_socket,std::string StringData_ToBe_send)
 {
     number_of_bytes_send = 0;
-    number_of_bytes_send = ::send(internet_socket, "Hello TCP world!", 16, 0);
+    number_of_bytes_send = ::send(internet_socket, StringData_ToBe_send.c_str(), StringData_ToBe_send.size(), 0);
     if (number_of_bytes_send == -1) {
         perror("send");
     }

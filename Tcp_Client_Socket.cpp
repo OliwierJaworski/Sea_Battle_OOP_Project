@@ -7,7 +7,7 @@ Tcp_Client_Socket::Tcp_Client_Socket()
         OSInit();
     #endif
     internet_socket = initialization();
-    send(internet_socket);
+    send(internet_socket,"TCP client socket working after 11:10");
     recv(internet_socket);
 }
 Tcp_Client_Socket::~Tcp_Client_Socket()
@@ -23,7 +23,7 @@ int Tcp_Client_Socket::initialization()
     memset( &internet_address_setup, 0, sizeof internet_address_setup );
     internet_address_setup.ai_family = AF_UNSPEC;
     internet_address_setup.ai_socktype = SOCK_STREAM;
-    getaddrinfo_return = getaddrinfo( "192.168.0.145", "42661", &internet_address_setup, &internet_address_result );
+    getaddrinfo_return = getaddrinfo( "192.168.0.145", "36363", &internet_address_setup, &internet_address_result );
     if( getaddrinfo_return != 0 )
     {
         fprintf( stderr, "getaddrinfo: %s\n", gai_strerror( getaddrinfo_return ) );
@@ -83,10 +83,10 @@ void Tcp_Client_Socket::recv( int internet_socket )
         }
     }
 }
-void Tcp_Client_Socket::send( int internet_socket )
+void Tcp_Client_Socket::send( int internet_socket, std::string StringData_ToBe_send)
 {
         number_of_bytes_send = 0;
-        number_of_bytes_send = ::send( internet_socket, "Hello TCP world!", 16, 0 );
+        number_of_bytes_send = ::send( internet_socket, StringData_ToBe_send.c_str(), StringData_ToBe_send.size(), 0 );
         if( number_of_bytes_send == -1 )
         {
             perror( "send" );

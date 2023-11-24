@@ -1,5 +1,6 @@
 #ifndef REMADE_SEA_BATTLE_TCP_CLIENT_SOCKET_H
 #define REMADE_SEA_BATTLE_TCP_CLIENT_SOCKET_H
+
 #ifdef _WIN32
 #define _WIN32_WINNT _WIN32_WINNT_WIN7
 	#include <winsock2.h> //for all socket programming
@@ -8,6 +9,7 @@
 	#include <unistd.h> //for close
 	#include <stdlib.h> //for exit
 	#include <string.h> //for memset
+    #include <iostream>
 	void OSInit( void )
 	{
 		WSADATA wsaData;
@@ -34,7 +36,9 @@
 #include <unistd.h> //for close
 #include <stdlib.h> //for exit
 #include <string.h> //for memset
+#include <iostream>
 #endif
+
 namespace SBN
 {
     class Tcp_Client_Socket
@@ -45,9 +49,9 @@ namespace SBN
         ~Tcp_Client_Socket();
 
         void recv(int internet_socket);
-        void send(int internet_socket);
+        void send(int internet_socket,std::string StringData_ToBe_send);
 
-        int get_internet_socket() { return internet_socket;}
+        int get_socket_state() { return internet_socket;}
 
     private:
         int initialization();

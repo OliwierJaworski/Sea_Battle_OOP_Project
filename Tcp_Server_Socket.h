@@ -9,6 +9,7 @@
 	#include <unistd.h> //for close
 	#include <stdlib.h> //for exit
 	#include <string.h> //for memset
+    #include <iostream>
 	void OSInit( void )
 	{
 		WSADATA wsaData;
@@ -36,7 +37,9 @@
 #include <unistd.h> //for close
 #include <stdlib.h> //for exit
 #include <string.h> //for memset
+#include <iostream>
 #endif
+
 namespace SBN//SEA_Battle_Networking
 {
     class Tcp_Server_Socket
@@ -46,8 +49,8 @@ namespace SBN//SEA_Battle_Networking
         ~Tcp_Server_Socket();
 
         void recv(int internet_socket);
-        void send(int internet_socket);
-        int get_internet_socket() { return internet_socket; }
+        void send(int internet_socket,std::string StringData_ToBe_send);
+        int get_Client_socket_state() { return client_internet_socket; }
 
     private:
         int initialization();

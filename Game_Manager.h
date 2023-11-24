@@ -30,14 +30,14 @@ private:
 //private
 //Player Core structure
     int Game_Type;
-    Tcp_Server_Socket * Server;
-    Tcp_Client_Socket * Client;
+    SBN::Tcp_Server_Socket * Server;
+    SBN::Tcp_Client_Socket * Client;
     std::vector<Game_Player *> PlayerVector;
 
 //extra added functionality
     enum Game_Types{Singleplayer,Multiplayer_host,client};
     bool Online_waiting_on_connection();
-    void Extra_Dots_Loading_Screen(Tcp_Server_Socket& server);
+    void Extra_Dots_Loading_Screen(SBN::Tcp_Server_Socket& server);
     bool Online_Start_Correct_Protocol();
 
 //experimental

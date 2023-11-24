@@ -118,30 +118,31 @@
         switch (Game_Type)
         {
             case Multiplayer_host:
-                Server =new Tcp_Server_Socket;
-                std::cout << "you are hosting on the ip: "<< "this will show the ip" <<"on port:" << Server->get_port() << std::endl;
-                Online_waiting_on_connection();
+                Server =new SBN::Tcp_Server_Socket;
+               // std::cout << "you are hosting on the ip: "<< "this will show the ip" <<"on port:" << Server->get_port() << std::endl;
+                return Online_waiting_on_connection();
                 break;
             case client:
-                Client =new Tcp_Client_Socket;
+                Client =new SBN::Tcp_Client_Socket;
+                //                                                                                              !!!!!!!!!!!!!!!niet vergeten moet meer komen
                 break;
         }
         return false;
     }
     bool Game_Manager::Online_waiting_on_connection()
-{
-    std::thread t1(&Game_Manager::Extra_Dots_Loading_Screen, this, std::ref(*Server));
-    if(Server->set_connection(*Server))
     {
-        t1.join();
-        return true;
+        std::thread t1(&Game_Manager::Extra_Dots_Loading_Screen, this, std::ref(*Server));
+        if(Server->get_Client_socket_state()>0)
+        {
+            t1.join();
+            return true;
+        }
+        return false;
     }
-    return false;
-}
 
-    void Game_Manager::Extra_Dots_Loading_Screen(Tcp_Server_Socket& server)
+    void Game_Manager::Extra_Dots_Loading_Screen(SBN::Tcp_Server_Socket& server)
 {
-    while (!server.get_Connection_Bind())
+    while (Server->get_Client_socket_state()<=0)
     {
         std::system("clear");
         std::string dots = "";
@@ -167,7 +168,7 @@ void Game_Manager::Online_Send_Client_Map()
             Client_Map+=std::to_string(PlayerVector[2]->map->get_my_map(i,j));
         }
     }
-    Server->send_data(Client_Map);
+    //Server->send(Server->get_Client_socket_state());                                                      !!!!!!!!!!!!!!!!!!!!!!!!!! niet vergeten te veranderen
 }
 
 //initialization & destruction
