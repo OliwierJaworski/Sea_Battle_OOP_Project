@@ -70,7 +70,7 @@ void Tcp_Client_Socket::recv( int internet_socket )
 {
     {
         number_of_bytes_received = 0;
-        char buffer[1000];
+        free(buffer);
         number_of_bytes_received = ::recv( internet_socket, buffer, ( sizeof buffer ) - 1, 0 );
         if( number_of_bytes_received == -1 )
         {
@@ -92,6 +92,50 @@ void Tcp_Client_Socket::send( int internet_socket, std::string StringData_ToBe_s
             perror( "send" );
         }
 }
+/*
+template <typename Not_Set_Datatype>
+Not_Set_Datatype Tcp_Client_Socket::data_translation(int clarify_datatype)
+{
+    switch (clarify_datatype)
+    {
+        case Player_Array:
+            int Tcp_Received_Array[10][10];
+            std::istringstream iss(buffer);
+            for (int i = 0; i < 9; ++i)
+            {
+                for (int j = 0; j < 9; ++j)
+                {
+                    iss >> Tcp_Received_Array[i][j];
+                }
+            }
+            return Tcp_Received_Array;
+            break;
+        //case Player_Cords:
+
+    }
+}
+*/
+template <typename Not_Set_Datatype>
+Not_Set_Datatype Tcp_Client_Socket::data_translation(int clarify_datatype)
+{
+    switch (clarify_datatype)
+    {
+        case Player_Array:
+            std::vector<std::vector<int>> Tcp_Received_Array(10,std::vector<int>(10));
+            std::istringstream iss(buffer);
+            for (int i = 0; i < 9; ++i)
+            {
+                for (int j = 0; j < 9; ++j)
+                {
+                    iss >> Tcp_Received_Array[i][j];
+                }
+            }
+            return Tcp_Received_Array;
+            break;
+            //case Player_Cords:
+
+    }
+}
 
 void Tcp_Client_Socket::cleanup( int internet_socket )
 {
@@ -108,3 +152,7 @@ void Tcp_Client_Socket::cleanup( int internet_socket )
     //Step 3.1
     close( internet_socket );
 }
+
+
+
+

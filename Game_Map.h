@@ -16,6 +16,7 @@ public:
     const int Get_Player_Life_Left();
     void set_enemy_map(int x, int y,bool hit_or_mis);
     void set_my_map(int x, int y,bool hit_or_mis);
+    void Online_Set_my_map(std::vector<std::vector<int>> cordvector);
     const int get_my_map(int x, int y)const                 {return My_map[x][y];}
     const int get_enemy_map(int x, int y)const              {return Enemy_map[x][y];}
 

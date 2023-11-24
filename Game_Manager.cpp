@@ -37,6 +37,7 @@
                 }
             }
             Game_Loop_Turn_handler(& playersturn);
+            return 0;                                                                      // this is stopping the loop dont forget!!
         }
         return 0;
     }
@@ -68,11 +69,17 @@
 
                 break;
             case Multiplayer_host:
+                    //debug print player map
+                    PlayerVector[1]->print_map(*PlayerVector[1]->map,0);
                     //send player 1 map
                     Online_Send_Client_Map();
                     //attack
                 break;
             case client:
+                std::cout << "setting map" <<std::endl;
+                PlayerVector[0]->map->Online_Set_my_map(Client->data_translation<std::vector<std::vector<int>>>(0));
+                std::cout << "map is set" <<std::endl;
+                PlayerVector[0]->print_map(*PlayerVector[0]->map,0);
                 //ask for my map
                 //
                 break;
@@ -119,7 +126,6 @@
         {
             case Multiplayer_host:
                 Server =new SBN::Tcp_Server_Socket;
-               // std::cout << "you are hosting on the ip: "<< "this will show the ip" <<"on port:" << Server->get_port() << std::endl;
                 return Online_waiting_on_connection();
                 break;
             case client:
@@ -165,10 +171,10 @@ void Game_Manager::Online_Send_Client_Map()
     {
         for (int j = 0; j < 10; ++j)
         {
-            Client_Map+=std::to_string(PlayerVector[2]->map->get_my_map(i,j));
+            Client_Map+=std::to_string(PlayerVector[1]->map->get_my_map(i,j));
         }
     }
-    //Server->send(Server->get_Client_socket_state());                                                      !!!!!!!!!!!!!!!!!!!!!!!!!! niet vergeten te veranderen
+    Server->send(Server->get_Client_socket_state(),Client_Map);
 }
 
 //initialization & destruction

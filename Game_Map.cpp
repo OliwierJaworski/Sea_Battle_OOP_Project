@@ -230,3 +230,13 @@
         BoatsVector.clear();
         BoatsVector.shrink_to_fit();
     }
+    void Game_Map::Online_Set_my_map(std::vector<std::vector<int>> cordvector)
+    {
+        for (int i = 0; i < 9; ++i)
+        {
+            for (int j = 0; j < 9; ++j)
+            {
+                My_map[i][j] =cordvector[i][j];
+            }
+        }
+    }
