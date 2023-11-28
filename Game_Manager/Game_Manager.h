@@ -22,7 +22,7 @@ protected:
 
 private:
     std::vector<std::unique_ptr<Game_Player>> PlayerVector;
-    virtual void Init_Players();
+    void Init_Players();
 };
 
 #endif

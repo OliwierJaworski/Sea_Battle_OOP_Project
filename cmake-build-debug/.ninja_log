@@ -1,13 +1,15 @@
 # ninja log v5
+1	398	1701211729109784527	CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager/Game_Manager_Loader.cpp.o	8d2d1b9c3e7c6521
 1	287	1701207320602718053	CMakeFiles/REMADE_Sea_Battle.dir/Boats_Related/Boats_Carrier.cpp.o	2d9f6768d8b572aa
 1	371	1700865717628252580	CMakeFiles/REMADE_Sea_Battle.dir/Game_Boats.cpp.o	6e9872d3c3e70405
-1	355	1700868125248382475	CMakeFiles/REMADE_Sea_Battle.dir/main.cpp.o	ba1387aa0d51e6ef
-0	12	1701209846761707978	build.ninja	4769a6e6a153847d
+0	370	1701211729081784849	CMakeFiles/REMADE_Sea_Battle.dir/main.cpp.o	8be1968ee7241e38
+0	12	1701214131243229326	build.ninja	4769a6e6a153847d
 1	387	1700865717648252385	CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Server_Socket.cpp.o	281197742985c352
 398	445	1700868125336381929	REMADE_Sea_Battle	567ea870a42eb071
 0	576	1700865717836250562	CMakeFiles/REMADE_Sea_Battle.dir/Game_Map.cpp.o	75795306f9225c19
 1	416	1700865717676252113	CMakeFiles/REMADE_Sea_Battle.dir/Boats_Destroyer.cpp.o	37e0d9ce913b4487
 1	393	1700865717652252346	CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Client_Socket.cpp.o	b31a755d9dbfd8b3
+1	454	1701211729165783888	CMakeFiles/REMADE_Sea_Battle.dir/Player_Related/Game_Map.cpp.o	3923897c8aae9a9
 1	289	1701207320606718009	CMakeFiles/REMADE_Sea_Battle.dir/Boats_Related/Boats_Destroyer.cpp.o	7b65e48a442b8348
 1	450	1700866681037390426	CMakeFiles/REMADE_Sea_Battle.dir/Game_Player.cpp.o	f2df6bd91937ff57
 1	373	1700865717632252541	CMakeFiles/REMADE_Sea_Battle.dir/Boats_Carrier.cpp.o	fcf383709a222395
@@ -16,6 +18,3 @@
 2	387	1701207320702716949	CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Related/Tcp_Client_Socket.cpp.o	b5a4df4493407e18
 1	271	1701207320586718230	CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Related/Tcp_Server_Socket.cpp.o	b4b606c2e1cd2e19
 1	354	1701211729069784985	CMakeFiles/REMADE_Sea_Battle.dir/Player_Related/Game_Player.cpp.o	4de5678c41cea502
-0	370	1701211729081784849	CMakeFiles/REMADE_Sea_Battle.dir/main.cpp.o	8be1968ee7241e38
-1	398	1701211729109784527	CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager/Game_Manager_Loader.cpp.o	8d2d1b9c3e7c6521
-1	454	1701211729165783888	CMakeFiles/REMADE_Sea_Battle.dir/Player_Related/Game_Map.cpp.o	3923897c8aae9a9

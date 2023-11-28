@@ -3,7 +3,7 @@
 
 #include "Game_Manager.h"
 
-class Online_Game_Manager : Game_Manager
+class Online_Game_Manager : public Game_Manager
 {
 public:
     Online_Game_Manager() ;
@@ -11,7 +11,7 @@ public:
 
     bool Play_Game() override;
 private:
-    Game_Player player;
+    Game_Player me_the_player;
 };
 
 #endif
