@@ -6,8 +6,8 @@
 #include <iostream>
 #include <memory>
 
-#include "Boats_Destroyer.h"
-#include "Boats_Carrier.h"
+#include "../Boats_Related/Boats_Destroyer.h"
+#include "../Boats_Related/Boats_Carrier.h"
 
 class Game_Map
 {

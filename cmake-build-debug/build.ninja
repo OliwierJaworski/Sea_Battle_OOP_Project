@@ -52,56 +52,79 @@ build cmake_object_order_depends_target_REMADE_Sea_Battle: phony || CMakeFiles/R
 build CMakeFiles/REMADE_Sea_Battle.dir/main.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/main.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
   DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/Boats_Related -I/Game_Manager -I/Player_Related -I/Tcp_Related
   OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
   OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir
 
-build CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Game_Manager.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
-  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager.cpp.o.d
+build CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager/Game_Manager.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Game_Manager/Game_Manager.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
+  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager/Game_Manager.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/Boats_Related -I/Game_Manager -I/Player_Related -I/Tcp_Related
   OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
-  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager
 
-build CMakeFiles/REMADE_Sea_Battle.dir/Game_Player.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Game_Player.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
-  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Game_Player.cpp.o.d
+build CMakeFiles/REMADE_Sea_Battle.dir/Player_Related/Game_Player.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Player_Related/Game_Player.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
+  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Player_Related/Game_Player.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/Boats_Related -I/Game_Manager -I/Player_Related -I/Tcp_Related
   OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
-  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir/Player_Related
 
-build CMakeFiles/REMADE_Sea_Battle.dir/Game_Map.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Game_Map.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
-  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Game_Map.cpp.o.d
+build CMakeFiles/REMADE_Sea_Battle.dir/Player_Related/Game_Map.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Player_Related/Game_Map.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
+  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Player_Related/Game_Map.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/Boats_Related -I/Game_Manager -I/Player_Related -I/Tcp_Related
   OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
-  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir/Player_Related
 
-build CMakeFiles/REMADE_Sea_Battle.dir/Game_Boats.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Game_Boats.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
-  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Game_Boats.cpp.o.d
+build CMakeFiles/REMADE_Sea_Battle.dir/Boats_Related/Game_Boats.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Boats_Related/Game_Boats.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
+  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Boats_Related/Game_Boats.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/Boats_Related -I/Game_Manager -I/Player_Related -I/Tcp_Related
   OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
-  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir/Boats_Related
 
-build CMakeFiles/REMADE_Sea_Battle.dir/Boats_Destroyer.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Boats_Destroyer.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
-  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Boats_Destroyer.cpp.o.d
+build CMakeFiles/REMADE_Sea_Battle.dir/Boats_Related/Boats_Destroyer.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Boats_Related/Boats_Destroyer.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
+  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Boats_Related/Boats_Destroyer.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/Boats_Related -I/Game_Manager -I/Player_Related -I/Tcp_Related
   OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
-  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir/Boats_Related
 
-build CMakeFiles/REMADE_Sea_Battle.dir/Boats_Carrier.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Boats_Carrier.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
-  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Boats_Carrier.cpp.o.d
+build CMakeFiles/REMADE_Sea_Battle.dir/Boats_Related/Boats_Carrier.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Boats_Related/Boats_Carrier.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
+  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Boats_Related/Boats_Carrier.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/Boats_Related -I/Game_Manager -I/Player_Related -I/Tcp_Related
   OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
-  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir/Boats_Related
 
-build CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Server_Socket.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Tcp_Server_Socket.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
-  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Server_Socket.cpp.o.d
+build CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Related/Tcp_Server_Socket.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Tcp_Related/Tcp_Server_Socket.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
+  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Related/Tcp_Server_Socket.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/Boats_Related -I/Game_Manager -I/Player_Related -I/Tcp_Related
   OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
-  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Related
 
-build CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Client_Socket.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Tcp_Client_Socket.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
-  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Client_Socket.cpp.o.d
+build CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Related/Tcp_Client_Socket.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Tcp_Related/Tcp_Client_Socket.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
+  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Related/Tcp_Client_Socket.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/Boats_Related -I/Game_Manager -I/Player_Related -I/Tcp_Related
   OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
-  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Related
+
+build CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager/Online_Game_Manager.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Game_Manager/Online_Game_Manager.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
+  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager/Online_Game_Manager.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/Boats_Related -I/Game_Manager -I/Player_Related -I/Tcp_Related
+  OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager
+
+build CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager/Game_Manager_Loader.cpp.o: CXX_COMPILER__REMADE_Sea_Battle_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/Game_Manager/Game_Manager_Loader.cpp || cmake_object_order_depends_target_REMADE_Sea_Battle
+  DEP_FILE = CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager/Game_Manager_Loader.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I/Boats_Related -I/Game_Manager -I/Player_Related -I/Tcp_Related
+  OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
+  OBJECT_FILE_DIR = CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager
 
 
 # =============================================================================
@@ -111,7 +134,7 @@ build CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Client_Socket.cpp.o: CXX_COMPILER__RE
 #############################################
 # Link the executable REMADE_Sea_Battle
 
-build REMADE_Sea_Battle: CXX_EXECUTABLE_LINKER__REMADE_Sea_Battle_Debug CMakeFiles/REMADE_Sea_Battle.dir/main.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_Player.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_Map.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_Boats.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Boats_Destroyer.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Boats_Carrier.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Server_Socket.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Client_Socket.cpp.o
+build REMADE_Sea_Battle: CXX_EXECUTABLE_LINKER__REMADE_Sea_Battle_Debug CMakeFiles/REMADE_Sea_Battle.dir/main.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager/Game_Manager.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Player_Related/Game_Player.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Player_Related/Game_Map.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Boats_Related/Game_Boats.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Boats_Related/Boats_Destroyer.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Boats_Related/Boats_Carrier.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Related/Tcp_Server_Socket.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Tcp_Related/Tcp_Client_Socket.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager/Online_Game_Manager.cpp.o CMakeFiles/REMADE_Sea_Battle.dir/Game_Manager/Game_Manager_Loader.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/REMADE_Sea_Battle.dir
   POST_BUILD = :
