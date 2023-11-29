@@ -10,24 +10,26 @@
 
 class Game_Boats
 {
-friend Game_Map;
+friend class Game_Map;
 public:
 //constructor | destructor
-    Game_Boats() : size(0) {}
+    Game_Boats() : Boat_size(0){ship_info.size()=Boat_size;}
     virtual ~Game_Boats() {};
-//public
-    virtual void SpecialMove() = 0;
-    int Get_Size()                         {return size;}
-    std::string Get_Ship_Name()            {return ship_name;}
-    std::vector<TILE_INFO> Get_ship_tile(int i)    {return ship_info[i];}
-private:
-//private
-    void set_ship_tile(int x, int y,int IsHit, )
+
+    int Get_Size()                         {return Boat_size;}
+
 protected:
-//protected
-    int size;
+    int Boat_size;
     std::string ship_name;
-    std::vector<std::vector<TILE_INFO>> ship_info;
+    std::vector<TILE_INFO> ship_info;
+
+    virtual void SpecialMove() = 0;
+    std::string Get_Ship_Name()            {return ship_name;}
+    void set_ship_tile(int x, int y,int IsHit, int ship_part);
+    TILE_INFO * Get_ship_tile(int i)    {return & ship_info.at(i);}
+
+private:
+
 };
 
 

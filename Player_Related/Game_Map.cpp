@@ -65,7 +65,7 @@
                     for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
                     {
 
-                        if(My_map[y][x+ var]==0)
+                        if(My_map[y][x+ var].tile_status==WATER)
                         {
                             willfit=0;
                         }
@@ -87,7 +87,7 @@
                     for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
                     {
 
-                        if(My_map[y][x - var]==0)
+                        if(My_map[y][x - var].tile_status==WATER)
                         {
                             willfit=0;
                         }
@@ -108,7 +108,7 @@
                 {
                     for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
                     {
-                        if(My_map[y- var][x]==0)
+                        if(My_map[y- var][x].tile_status==WATER)
                         {
                             willfit=0;
                         }
@@ -128,7 +128,7 @@
                 {
                     for (int var = 0; var < Boat_ID.Get_Size() ; ++var)
                     {
-                        if(My_map[y+ var][x]==0)
+                        if(My_map[y+ var][x].tile_status==WATER)
                         {
                             willfit=0;
                         }
@@ -158,13 +158,28 @@
         switch (rot)
         {
             case TO_RIGHT:
-                fill_boat_info(Game_Boats& Boat_ID);
+                for (int current_size = 0; current_size < Boat_ID.Get_Size(); ++current_size)
+                {
+                    Boat_ID.set_ship_tile(x+current_size,y,SHIP,current_size);
+                }
                 return;
             case TO_LEFT:
+                for (int current_size = 0; current_size < Boat_ID.Get_Size(); ++current_size)
+                {
+                    Boat_ID.set_ship_tile(x-current_size,y,SHIP,current_size);
+                }
                 return;
             case UP:
+                for (int current_size = 0; current_size < Boat_ID.Get_Size(); ++current_size)
+                {
+                    Boat_ID.set_ship_tile(x,y-current_size,SHIP,current_size);
+                }
                 return;
             case DOWN:
+                for (int current_size = 0; current_size < Boat_ID.Get_Size(); ++current_size)
+                {
+                    Boat_ID.set_ship_tile(x,y+current_size,SHIP,current_size);
+                }
                 return;
         }
     }

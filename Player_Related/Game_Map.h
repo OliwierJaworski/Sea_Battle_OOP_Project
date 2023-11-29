@@ -6,10 +6,11 @@
 #include <iostream>
 #include <memory>
 
+
+
+#include "../External_Data_Declaration/Data_Declaration.h"
 #include "../Boats_Related/Boats_Destroyer.h"
 #include "../Boats_Related/Boats_Carrier.h"
-#include "../Boats_Related/Game_Boats.h"
-#include "../External_Data_Declaration/Data_Declaration.h"
 
 class Game_Map
 {
