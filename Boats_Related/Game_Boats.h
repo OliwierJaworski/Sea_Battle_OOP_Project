@@ -5,7 +5,6 @@
 #include <string>
 #include <iostream>
 #include <memory>
-#include "../External_Data_Declaration/Data_Declaration.h"
 #include "../Player_Related/Game_Map.h"
 
 class Game_Boats
