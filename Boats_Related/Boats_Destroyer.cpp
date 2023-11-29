@@ -2,8 +2,8 @@
 
 Boats_Destroyer::Boats_Destroyer()
 {
+    ship_name = "Destroyer";
     size = 2;
-    Health_Amount =2;
 }
 
 

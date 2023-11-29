@@ -2,8 +2,8 @@
 
 Boats_Carrier::Boats_Carrier()
 {
+    ship_name = "Carrier";
     size =5;
-    Health_Amount =5;
 }
 
 void Boats_Carrier::SpecialMove()

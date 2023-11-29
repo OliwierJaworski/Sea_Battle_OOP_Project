@@ -21,16 +21,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/External_Data_Declaration/Data_Declaration.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Boats_Carrier.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Boats_Carrier.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Boats_Carrier.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Boats_Carrier.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Boats_Destroyer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Boats_Destroyer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Boats_Destroyer.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Boats_Destroyer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Boats_Related/Game_Boats.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Game_Boats.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/External_Data_Declaration/Data_Declaration.h" beforeDir="false" afterPath="$PROJECT_DIR$/External_Data_Declaration/Data_Declaration.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player_Related/Game_Map.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Map.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-5893dcdf50c44a05b205.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-28T23-28-51-0253.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-REMADE_Sea_Battle-Debug-8b434f44db284c6b9633.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +121,7 @@
       <workItem from="1700846792858" duration="7612000" />
       <workItem from="1700864625667" duration="4369000" />
       <workItem from="1701203683265" duration="934000" />
-      <workItem from="1701206963687" duration="12972000" />
+      <workItem from="1701206963687" duration="18290000" />
     </task>
     <servers />
   </component>

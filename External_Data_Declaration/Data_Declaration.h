@@ -7,13 +7,18 @@ enum TILE_STATE {
                  HIT,
                  SHIP
                 };
-
+enum Rotation_Direction {
+                        TO_RIGHT,
+                        TO_LEFT,
+                        UP,
+                        DOWN
+};
 struct TILE_INFO
 {
     int x;//cords of part of ship
     int y;
     int IsHit = MISS;
-    const std::shared_ptr<Game_Boats> ship_on_tile = nullptr;//easier way to iterate through ships
+    //std::shared_ptr<Game_Boats> ship_on_tile = nullptr;//easier way to iterate through ships
 };
 
 #endif //REMADE_SEA_BATTLE_DATA_DECLARATION_H
