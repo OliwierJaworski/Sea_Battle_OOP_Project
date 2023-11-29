@@ -4,6 +4,8 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <memory>
+#include "../External_Data_Declaration/Data_Declaration.h"
 
 class Game_Boats
 {
@@ -14,16 +16,16 @@ public:
     virtual ~Game_Boats() {};
 //public
     virtual void SpecialMove() = 0;
-    void Take_Damage(int amount)                                                                 {Health_Amount -=amount;}
-    int get_Health_Amount ()                                                                     {return Health_Amount;}
     int Get_Size()                                                                               {return size;}
 private:
 //private
 
 protected:
 //protected
-    int Health_Amount;
     int size;
+    std::string ship_name;
+    std::vector<TILE_INFO> ship_info;
+
 };
 
 

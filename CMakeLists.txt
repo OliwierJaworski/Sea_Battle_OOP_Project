@@ -26,7 +26,8 @@ set(SOURCE_FILES main.cpp
         Game_Manager/Game_Manager_Loader.cpp
         Game_Manager/Game_Manager_Loader.h
         Player_Related/Online_Player.cpp
-        Player_Related/Online_Player.h)
+        Player_Related/Online_Player.h
+        External_Data_Declaration/Data_Declaration.h)
 
 add_executable(REMADE_Sea_Battle ${SOURCE_FILES})
 

@@ -8,6 +8,7 @@
 
 #include "../Boats_Related/Boats_Destroyer.h"
 #include "../Boats_Related/Boats_Carrier.h"
+#include "../Boats_Related/Game_Boats.h"
 
 class Game_Map
 {
@@ -17,17 +18,18 @@ public:
     Game_Map();
     ~Game_Map() {Free_Alloc();};
 //public
-    void set_enemy_map(int x, int y,bool hit_or_mis);
-    void set_my_map(int x, int y,bool hit_or_mis);
-    const int get_my_map(int x, int y)                                                      const {return My_map[x][y];}
-    const int get_enemy_map(int x, int y)                                                   const {return Enemy_map[x][y];}
+
+    void set_enemy_map();
+    void set_my_map();
+    const int get_my_map()          {}
+    const int get_enemy_map()       {}
     Game_Boats* get_boat(int size);
-    const int Player_Life_Left();
+
 private:
 //private
     std::vector<std::unique_ptr<Game_Boats>> BoatsVector;
-    int My_map[10][10];
-    int Enemy_map[10][10];
+    TILE_INFO My_map[10][10];
+    TILE_INFO Enemy_map[10][10];
     void Init_Boats();
     //void set_map_toempty(int map_to_empty[10][10]);
     bool Boats_Fill_Map(Game_Boats& Boat_ID);
