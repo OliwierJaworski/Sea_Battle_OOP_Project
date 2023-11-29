@@ -8,6 +8,7 @@
 
 #include "../Boats_Related/Boats_Destroyer.h"
 #include "../Boats_Related/Boats_Carrier.h"
+#include "../Boats_Related/Game_Boats.h"
 enum TILE_STATE
 {
     MISS,
@@ -22,13 +23,7 @@ enum Rotation_Direction
     UP,
     DOWN
 };
-struct TILE_INFO
-{
-    int x;//cords of part of ship
-    int y;
-    int tile_status = WATER;
-    std::shared_ptr<Game_Boats *> ship_on_tile = nullptr;//easier way to iterate through ships
-};
+
 
 class Game_Map
 {
@@ -40,16 +35,16 @@ public:
 
 public:
 //public
-    void set_enemy_map();
-    void set_my_map();
-    const int get_my_map()          {}
-    const int get_enemy_map()       {}
+    //void set_enemy_map();
+    //void set_my_map();
+    //const int get_my_map()          {}
+    //const int get_enemy_map()       {}
 private:
 //private
     std::vector<Game_Boats *> BoatsVector;
-    TILE_INFO my_map;
-    TILE_INFO My_map[10][10];
-    TILE_INFO Enemy_map[10][10];
+    int My_map[10][10];
+    //int Enemy_map[10][10];
+
     void Init_Boats();
     bool Boats_Fill_Map();
     bool Will_Boat_Fit(Game_Boats& Boat_ID, int x, int y, int rot);

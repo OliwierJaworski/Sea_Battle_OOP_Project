@@ -11,8 +11,16 @@ class Game_Boats
 {
 friend class Game_Map;
 public:
+    struct TILE_INFO
+    {
+        int x;//cords of part of ship
+        int y;
+        int tile_status = WATER;
+        std::shared_ptr<Game_Boats> ship_on_tile = nullptr; //easier way to iterate through ships
+    };
+
 //constructor | destructor
-    Game_Boats() : Boat_size(0){ship_info.size()=Boat_size;}
+    Game_Boats() : Boat_size(0){}
     virtual ~Game_Boats() {};
 
     int Get_Size()                         {return Boat_size;}
@@ -20,16 +28,12 @@ public:
 protected:
     int Boat_size;
     std::string ship_name;
-    std::vector<TILE_INFO> ship_info;
 
     virtual void SpecialMove() = 0;
     std::string Get_Ship_Name()            {return ship_name;}
+    std::vector<TILE_INFO> ship_info;
     void set_ship_tile(int x, int y,int IsHit, int ship_part);
-    TILE_INFO * Get_ship_tile(int i)    {return & ship_info.at(i);}
-
 private:
 
 };
-
-
 #endif

@@ -63,7 +63,7 @@
                     for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
                     {
 
-                        if(My_map[y][x+ var].tile_status==WATER)
+                        if(My_map[y][x+ var]==WATER)
                         {
                             willfit=0;
                         }
@@ -85,7 +85,7 @@
                     for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
                     {
 
-                        if(My_map[y][x - var].tile_status==WATER)
+                        if(My_map[y][x - var]==WATER)
                         {
                             willfit=0;
                         }
@@ -106,7 +106,7 @@
                 {
                     for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
                     {
-                        if(My_map[y- var][x].tile_status==WATER)
+                        if(My_map[y- var][x]==WATER)
                         {
                             willfit=0;
                         }
@@ -126,7 +126,7 @@
                 {
                     for (int var = 0; var < Boat_ID.Get_Size() ; ++var)
                     {
-                        if(My_map[y+ var][x].tile_status==WATER)
+                        if(My_map[y+ var][x]==WATER)
                         {
                             willfit=0;
                         }
@@ -158,34 +158,29 @@
             case TO_RIGHT:
                 for (int current_size = 0; current_size < Boat_ID.Get_Size(); ++current_size)
                 {
-                    Boat_ID.set_ship_tile(x+current_size,y,SHIP,current_size);
-                    My_map[x + current_size][y].tile_status=SHIP;
-                    My_map[x + current_size][y].ship_on_tile = std::make_shared<* Game_Boats>(Boat_ID).get();
-
+                   My_map[x + current_size][y]=SHIP;
+                   Boat_ID.set_ship_tile(x + current_size,y,SHIP,current_size);
                 }
                 return;
             case TO_LEFT:
                 for (int current_size = 0; current_size < Boat_ID.Get_Size(); ++current_size)
                 {
-                    Boat_ID.set_ship_tile(x-current_size,y,SHIP,current_size);
-                    My_map[x - current_size][y].tile_status=SHIP;
-                    My_map[x - current_size][y].ship_on_tile = std::make_shared<* Game_Boats>(Boat_ID).get();
+                    My_map[x - current_size][y]=SHIP;
+                    Boat_ID.set_ship_tile(x - current_size,y,SHIP,current_size);
                 }
                 return;
             case UP:
                 for (int current_size = 0; current_size < Boat_ID.Get_Size(); ++current_size)
                 {
-                    Boat_ID.set_ship_tile(x,y-current_size,SHIP,current_size);
-                    My_map[x][y - current_size].tile_status=SHIP;
-                    My_map[x][y - current_size].ship_on_tile = std::make_shared<* Game_Boats>(Boat_ID).get();
+                    My_map[x][y - current_size]=SHIP;
+                    Boat_ID.set_ship_tile(x,y - current_size,SHIP,current_size);
                 }
                 return;
             case DOWN:
                 for (int current_size = 0; current_size < Boat_ID.Get_Size(); ++current_size)
                 {
-                    Boat_ID.set_ship_tile(x,y+current_size,SHIP,current_size);
-                    My_map[x][y + current_size].tile_status=SHIP;
-                    My_map[x][y + current_size].ship_on_tile = std::make_shared<* Game_Boats>(Boat_ID).get();
+                    My_map[x][y + current_size]=SHIP;
+                    Boat_ID.set_ship_tile(x,y + current_size,SHIP,current_size);
                 }
                 return;
         }
