@@ -13,6 +13,7 @@ public:
 
     virtual bool Get_Player_lost();
     virtual void Attack_Enemy();
+    bool Verify_Ifenemy_Hit(int y, int x)           {return map.get_my_map(y,x);}
     void print_map();
 
 protected:

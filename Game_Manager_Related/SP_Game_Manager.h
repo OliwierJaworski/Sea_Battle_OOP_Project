@@ -10,11 +10,13 @@ class SP_Game_Manager
 public:
     SP_Game_Manager() {std::cout << "SP constructor";}
     virtual ~SP_Game_Manager();
+    virtual void attack_enemy();
 protected:
     virtual bool Play_Game();
     virtual bool Game_State();
 private:
-    Game_Player Player;
+    Game_Player Player_Me;
+    Game_Player Player_Enemy;
 };
 
 

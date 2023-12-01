@@ -11,7 +11,8 @@ enum TILE_STATE
     WATER,
     HIT,
     SHIP,
-    MISS
+    MISS,
+    WAS_ALREADY_HIT
 };
 enum Rotation_Direction
 {

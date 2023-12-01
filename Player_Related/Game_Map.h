@@ -21,16 +21,13 @@ public:
 
 public:
 //public
-    //void set_enemy_map();
-    //void set_my_map();
-    const int get_my_map(int x, int y)                                                      const {return My_map[x][y];}
+    const bool get_my_map(int y, int x);
     void print_map();
-    //const int get_enemy_map()       {}
+
 private:
-//private
     std::vector<Game_Boats *> BoatsVector;
     int My_map[10][10];
-    //int Enemy_map[10][10];
+    int Enemy_map[10][10];
 
     void Init_Boats();
     bool Boats_Fill_Map();

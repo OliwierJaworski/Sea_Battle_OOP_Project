@@ -4,7 +4,6 @@
     {
         Init_Boats();
         Boats_Fill_Map();
-        print_map();
     }
 
 //private
@@ -43,18 +42,20 @@
         switch (rot)
         {
             case TO_RIGHT:
-                check_if_fit(Boat_ID.Get_Size(),y,x,1,TO_RIGHT);
-                break;
+                return check_if_fit(Boat_ID.Get_Size(),y,x,1,TO_RIGHT);
+
             case TO_LEFT:
-                check_if_fit(Boat_ID.Get_Size(),y,x,-1,TO_LEFT);
-                break;
+                return check_if_fit(Boat_ID.Get_Size(),y,x,-1,TO_LEFT);
+
             case UP:
-                check_if_fit(Boat_ID.Get_Size(),y,x,-1,UP);
-                break;
+                return check_if_fit(Boat_ID.Get_Size(),y,x,-1,UP);
+
             case DOWN:
-                check_if_fit(Boat_ID.Get_Size(),y,x,1,DOWN);
-                break;
+                return check_if_fit(Boat_ID.Get_Size(),y,x,1,DOWN);
+            default:
+                std::cerr << "Error: no default value for rotation operator" << std::endl;
         }
+
     }
     bool Game_Map::check_if_fit(int boatsize,int y, int x,int rotation_Operator, int rotation)
     {
@@ -109,36 +110,52 @@
          }
         }
     }
-void Game_Map::print_map()
-{
-            std::cout << "my map"<<std::endl;
-            for (int i = 0; i < 10; ++i)
-            {
-                for (int j = 0; j < 10; ++j)
-                {
-                    if (get_my_map(i,j)==WATER)
-                    {
-                        std::cout << "\U0001F7E6";
-                    }
-                    if(get_my_map(i,j)==SHIP)
-                    {
-                        std::cout << "\U0001F532";
-                    }
-                    if (get_my_map(i,j)==HIT)
-                    {
-                        std::cout << "\U0001F4A6";
-                    }
-                    if (get_my_map(i,j)==MISS)
-                    {
-                        std::cout << "\U0001F525";
-                    }
 
+    void Game_Map::print_map()
+    {
+                std::cout << "my map"<<std::endl;
+                for (int i = 0; i < 10; ++i)
+                {
+                    for (int j = 0; j < 10; ++j)
+                    {
+                        if (My_map[i][j]==WATER)
+                        {
+                            std::cout << "\U0001F7E6";
+                        }
+                        if(My_map[i][j]==SHIP)
+                        {
+                            std::cout << "\U0001F532";
+                        }
+                        if (My_map[i][j]==HIT)
+                        {
+                            std::cout << "\U0001F4A6";
+                        }
+                        if (My_map[i][j]==MISS)
+                        {
+                            std::cout << "\U0001F525";
+                        }
+
+                    }
+                    std::cout << std::endl;
                 }
                 std::cout << std::endl;
-            }
-            std::cout << std::endl;
-            std::cout << std::endl;
-}
+                std::cout << std::endl;
+    }
+    const bool Game_Map::get_my_map(int y,int x )
+    {
+        if(My_map[y][x]==WATER)
+        {
+            My_map[y][x]=MISS;
+            return false;
+        }
+        if(My_map[y][x]==SHIP ||My_map[y][x]==HIT)//nu kan de Gehitte tile nog worden opnieuw gehit ga het aanpassen
+        {
+            My_map[y][x]=HIT;
+            return true;
+        }
+        else
+            return false;
+    }
     void Game_Map::Free_Alloc()
     {
         for (int i = 0; i < BoatsVector.size(); ++i)
