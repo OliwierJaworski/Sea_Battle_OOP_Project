@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Zeeslag_Code_Fixing",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Zeeslag_Code_Fixing::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Zeeslag_Code_Fixing-Debug-8e3dc482ace26d6f5b58.json",
+					"name" : "Zeeslag_Code_Fixing",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/cmake-build-debug",
+		"source" : "/home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

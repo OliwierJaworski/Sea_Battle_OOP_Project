@@ -1,18 +1,24 @@
 cmake_minimum_required(VERSION 3.26)
-project(REMADE_Sea_Battle)
+project(Zeeslag_Code_Fixing)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(REMADE_Sea_Battle main.cpp
-        Game_Manager.cpp
-        Game_Manager.h
-        Game_Player.cpp
-        Game_Player.h
-        Game_Map.cpp
-        Game_Map.h
-        Game_Boats.cpp
-        Game_Boats.h
-        Boats_Destroyer.cpp
-        Boats_Destroyer.h
-        Boats_Carrier.cpp
-        Boats_Carrier.h)
+add_executable(Zeeslag_Code_Fixing main.cpp
+        Game_Manager_Related/Game_Manager_Loader.h
+        Game_Manager_Related/MP_Game_Manager.h
+        Game_Manager_Related/SP_Game_Manager.h
+        Game_Manager_Related/Game_Manager_Loader.cpp
+        Game_Manager_Related/MP_Game_Manager.cpp
+        Game_Manager_Related/SP_Game_Manager.cpp
+        Player_Related/Online_Player.h
+        Player_Related/Game_Player.h
+        Player_Related/Game_Map.h
+        Player_Related/Game_Map.cpp
+        Player_Related/Game_Player.cpp
+        Player_Related/Online_Player.cpp
+        Boats_Related/Boats_Carrier.cpp
+        Boats_Related/Boats_Carrier.h
+        Boats_Related/Boats_Destroyer.cpp
+        Boats_Related/Boats_Destroyer.h
+        Boats_Related/Game_Boats.cpp
+        Boats_Related/Game_Boats.h)
