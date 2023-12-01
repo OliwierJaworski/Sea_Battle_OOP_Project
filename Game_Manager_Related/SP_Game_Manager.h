@@ -11,6 +11,8 @@ public:
     SP_Game_Manager() {std::cout << "SP constructor";}
     virtual ~SP_Game_Manager();
     virtual void attack_enemy();
+    std::string Player_Input();//x,y||chat"hey blabla"
+    bool Correct_Input_type(std::string user_input);
 protected:
     virtual bool Play_Game();
     virtual bool Game_State();

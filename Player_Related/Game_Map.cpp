@@ -55,7 +55,7 @@
             default:
                 std::cerr << "Error: no default value for rotation operator" << std::endl;
         }
-
+        //return true;//niet zeker
     }
     bool Game_Map::check_if_fit(int boatsize,int y, int x,int rotation_Operator, int rotation)
     {
