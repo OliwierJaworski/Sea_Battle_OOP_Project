@@ -4,7 +4,7 @@
 #include <memory>
 #include "Game_Map.h"
 
-struct Coordinates
+ struct Coordinates
 {
     int x;
     int y;

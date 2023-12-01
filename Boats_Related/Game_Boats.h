@@ -45,6 +45,7 @@ protected:
 
     void Init_Boat_Tiles();
     void set_Boat_tile(int x, int y,int IsHit, int ship_part);
+    TILE_INFO get_boat_tile(int ship_part)                      {return ship_info[ship_part];}
     void set_Boat_Size(int replace_value)                       {Boat_size= replace_value;}
     void set_Boat_name(std::string new_name)                    {Boat_name=new_name;}
 

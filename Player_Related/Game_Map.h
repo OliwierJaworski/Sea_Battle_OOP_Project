@@ -36,6 +36,8 @@ private:
     bool Will_Boat_Fit(Game_Boats& Boat_ID, int y, int x, int rot);
     bool check_if_fit(int boatsize,int y, int x,int rotation_Operator,int rotation);
     void place_boats(Game_Boats& Boat_ID, int y, int x, int rot);
+    void Damage_ship(int y, int x);
     void Free_Alloc();
+
 };
 #endif

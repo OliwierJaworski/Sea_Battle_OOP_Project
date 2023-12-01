@@ -9,7 +9,7 @@ void Game_Boats::Init_Boat_Tiles()
 }
 void Game_Boats::set_Boat_tile(int x, int y,int IsHit, int ship_part )
 {
-    ship_info[ship_part].tile_status =SHIP;
+    ship_info[ship_part].tile_status =IsHit;
     ship_info[ship_part].x = x;
     ship_info[ship_part].y = y;
 

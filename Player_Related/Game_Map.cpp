@@ -181,10 +181,28 @@
         if(My_map[y][x]==SHIP ||My_map[y][x]==HIT)//nu kan de Gehitte tile nog worden opnieuw gehit ga het aanpassen
         {
             My_map[y][x]=HIT;
+            Damage_ship(y,x);
             return true;
         }
         else
             return false;
+    }
+    void Game_Map::Damage_ship(int y, int x)
+    {
+        for(auto boat : BoatsVector)
+        {
+            for (int curr_tile = 0; curr_tile < boat->Get_Size(); ++curr_tile)
+            {
+                if( boat->get_boat_tile(curr_tile).x == x && boat->get_boat_tile(curr_tile).y == y)
+                {
+                    boat->set_Boat_tile(x,y,HIT,curr_tile);
+                    std::cout << " Boat: "             << boat->Boat_name
+                              << " Boat tile status: " << boat->get_boat_tile(curr_tile).tile_status
+                              << " corresponding x : " << boat->get_boat_tile(curr_tile).x
+                              << " corresponding y : " << boat->get_boat_tile(curr_tile).y <<std::endl;
+                }
+            }
+        }
     }
     void  Game_Map::Set_Enemy_map(int x, int y, bool is_Hit)
     {

@@ -21,8 +21,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Game_Boats.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Game_Boats.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Game_Boats.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Game_Boats.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Map.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Map.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Player.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,10 +88,16 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="CMake Application.Zeeslag_Code_Fixing">
     <configuration name="Zeeslag_Code_Fixing" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Zeeslag_Code_Fixing" TARGET_NAME="Zeeslag_Code_Fixing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Zeeslag_Code_Fixing" RUN_TARGET_NAME="Zeeslag_Code_Fixing">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="REMADE_Sea_Battle" TARGET_NAME="main.cpp" CONFIG_NAME="main.cpp">
+      <option name="sourceFile" value="main.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -110,6 +120,8 @@
       <workItem from="1701206963687" duration="18521000" />
       <workItem from="1701257648515" duration="6531000" />
       <workItem from="1701393980726" duration="12000" />
+      <workItem from="1701441329070" duration="600000" />
+      <workItem from="1701441935613" duration="2945000" />
     </task>
     <servers />
   </component>
