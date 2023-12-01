@@ -9,7 +9,7 @@ public:
     ~Online_Player() override {};
 
     bool Get_Player_lost()  override;
-    void Attack_Enemy() override;
+    void Attack_Enemy();
 private:
 };
 

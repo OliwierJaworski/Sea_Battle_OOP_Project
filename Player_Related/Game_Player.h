@@ -13,11 +13,11 @@ struct Coordinates
 class Game_Player
 {
 public:
-    Game_Player() {std::cout <<"Player object is created in SP";}
+    Game_Player() {std::cout <<"Player object is created in SP"<< std::endl;}
     virtual ~Game_Player();
 
     virtual bool Get_Player_lost();
-    virtual void Attack_Enemy(Game_Player & Enemy_Player,Coordinates User_Input_Cords(std::string cordvalue));
+    virtual void Attack_Enemy(Game_Player & Enemy_Player,Coordinates User_Input_Cords);
     bool Verify_Ifenemy_Hit(int y, int x)           {return map.get_my_map(y,x);}
     void print_map();
 
