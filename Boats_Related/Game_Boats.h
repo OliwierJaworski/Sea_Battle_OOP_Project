@@ -42,7 +42,6 @@ public:
 
 protected:
     virtual void SpecialMove() = 0;
-
     void Init_Boat_Tiles();
     void set_Boat_tile(int x, int y,int IsHit, int ship_part);
     TILE_INFO get_boat_tile(int ship_part)                      {return ship_info[ship_part];}
@@ -50,7 +49,7 @@ protected:
     void set_Boat_name(std::string new_name)                    {Boat_name=new_name;}
 
 private:
-    int Boat_size;
+    int Boat_size=0;
     std::string Boat_name;
     std::vector<TILE_INFO> ship_info;
 };
