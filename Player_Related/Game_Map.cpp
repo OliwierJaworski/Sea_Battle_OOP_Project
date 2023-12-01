@@ -90,7 +90,7 @@
         for (int shippart = 0; shippart < Boat_ID.Get_Size(); ++shippart)
         {
          switch (rot)
-         {                               
+         {
              case TO_RIGHT:
                  My_map[y][x + shippart ] = SHIP;
                  Boat_ID.set_Boat_tile(x+ shippart,y,SHIP,shippart);
@@ -173,40 +173,37 @@
     }
     int Game_Map::cummulated_boat_size()
     {
-        int totaltilesize;
+        int totaltilesize =0;
         for (auto & boat : BoatsVector)
         {
             totaltilesize +=boat->Boat_size;
         }
         std::cout << "totaltilesize in cummulated_boat_size = " << totaltilesize <<std::endl;
         return totaltilesize;
+
     }
 
     bool Game_Map::any_ship_alive()
     {
-        int totaltilesize=cummulated_boat_size();
-        std::cout << "totaltilesize in any_ship_alive = " << totaltilesize <<std::endl;
+        int hits=0;
         for(auto boat : BoatsVector)
         {
             for (int curr_tile=0; curr_tile < boat->Boat_size ; curr_tile++)
             {
                 if(boat->get_boat_tile(curr_tile).tile_status==HIT)
                 {
-                    totaltilesize-=1;
-                    std::cout << "get_boat_tile is HIT totaltilesize = " << totaltilesize <<std::endl;
+                    hits++;
+                    std::cout <<"hits :" <<hits <<std::endl;
                 }
                 std::cout << " Current Tile_Status :" << boat->get_boat_tile(curr_tile).tile_status <<std::endl;
             }
         }
-        if(totaltilesize==0)
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-
+       if(hits == cummulated_boat_size())
+       {
+           return false;
+       }
+       else
+           return true;
     }
     bool Game_Map::get_my_map(int y,int x )
     {
@@ -261,4 +258,3 @@
     }
 
 
-    
