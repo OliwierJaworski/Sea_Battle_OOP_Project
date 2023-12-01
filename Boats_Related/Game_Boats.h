@@ -5,12 +5,29 @@
 #include <string>
 #include <iostream>
 #include <memory>
-#include "../Player_Related/Game_Map.h"
+
+enum TILE_STATE
+{
+    WATER,
+    HIT,
+    SHIP,
+    MISS
+};
+enum Rotation_Direction
+{
+    TO_RIGHT,
+    TO_LEFT,
+    UP,
+    DOWN
+};
 
 class Game_Boats
 {
 friend class Game_Map;
 public:
+    Game_Boats() : Boat_size(0){}
+    virtual ~Game_Boats() {};
+
     struct TILE_INFO
     {
         int x;//cords of part of ship
@@ -19,12 +36,7 @@ public:
         std::shared_ptr<Game_Boats> ship_on_tile = nullptr; //easier way to iterate through ships
     };
 
-//constructor | destructor
-    Game_Boats() : Boat_size(0){}
-    virtual ~Game_Boats() {};
-
     int Get_Size()                         {return Boat_size;}
-
 protected:
     int Boat_size;
     std::string ship_name;
@@ -34,6 +46,5 @@ protected:
     std::vector<TILE_INFO> ship_info;
     void set_ship_tile(int x, int y,int IsHit, int ship_part);
 private:
-
 };
 #endif

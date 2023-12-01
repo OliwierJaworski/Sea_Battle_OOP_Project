@@ -8,17 +8,14 @@
 class Game_Player
 {
 public:
-    Game_Player()   {};
-    virtual ~Game_Player()  {};
+    Game_Player() {std::cout <<"Player object is created in SP";}
+    virtual ~Game_Player();
 
     virtual bool Get_Player_lost();
     virtual void Attack_Enemy();
     void print_map();
 
-
 protected:
     Game_Map map;
 };
-
-
 #endif

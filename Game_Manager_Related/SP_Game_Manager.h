@@ -1,0 +1,21 @@
+#ifndef GAME_FROM_SCRATCH_AGAIN_SP_GAME_MANAGER_H
+#define GAME_FROM_SCRATCH_AGAIN_SP_GAME_MANAGER_H
+
+#include <iostream>
+#include <memory>
+#include <string>
+#include "../Player_Related/Game_Player.h"
+class SP_Game_Manager
+{
+public:
+    SP_Game_Manager() {std::cout << "SP constructor";}
+    virtual ~SP_Game_Manager();
+protected:
+    virtual bool Play_Game();
+    virtual bool Game_State();
+private:
+    Game_Player Player;
+};
+
+
+#endif //GAME_FROM_SCRATCH_AGAIN_SP_GAME_MANAGER_H

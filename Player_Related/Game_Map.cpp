@@ -1,24 +1,10 @@
 #include "Game_Map.h"
-
-
 //public
     Game_Map::Game_Map()
     {
         Init_Boats();
-
-        for(auto boat : BoatsVector)
-        {
-            Boats_Fill_Map();
-        }
-    }
-
-    void Game_Map::set_enemy_map()
-    {
-
-    }
-    void Game_Map::set_my_map()
-    {
-
+        Boats_Fill_Map();
+        print_map();
     }
 
 //private
@@ -33,159 +19,126 @@
 
     bool Game_Map::Boats_Fill_Map()
     {
-        int x;
-        int y;
-        int rot;
-
-        for (auto boat : BoatsVector)
+        int x=0;
+        int y=0;
+        int rot=0;
+        for(auto cur_boat : BoatsVector)
         {
+            std::cout <<"reached Boats_Fill_Map" <<std::endl;
             do
             {
-              x   =rand()%10;
-              y   =rand()%10;
-              rot =rand()%4;
+                x = rand() % 10;
+                y = rand() % 10;
+                rot = rand() % 4;
+                std::cout << "rot :" << rot << " y :" << y << " x :" << x << std::endl;
             }
-            while(!Will_Boat_Fit(*boat, x, y, rot));
-            place_boats(*boat, x, y, rot);
+            while (!Will_Boat_Fit(* cur_boat, y, x, rot));
+            place_boats(* cur_boat,y,x,rot);
         }
-
+        return true;
     }
 
-    bool Game_Map::Will_Boat_Fit(Game_Boats& Boat_ID, int x, int y, int rot)
-    {
-
-        int willfit=0;
-        switch (rot)
-        {
-            case TO_RIGHT:
-                if(x + Boat_ID.Get_Size() <= 9 )
-                {
-                    for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
-                    {
-
-                        if(My_map[y][x+ var]==WATER)
-                        {
-                            willfit=0;
-                        }
-                        else
-                        {
-                            return false;
-                        }
-                    }
-                }
-                else
-                {
-                    return false;
-                }
-                break;
-
-            case TO_LEFT:
-                if(x - Boat_ID.Get_Size()  >= 0 )
-                {
-                    for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
-                    {
-
-                        if(My_map[y][x - var]==WATER)
-                        {
-                            willfit=0;
-                        }
-                        else
-                        {
-                            return false;
-                        }
-                    }
-                }
-                else
-                {
-                    return false;
-                }
-                break;
-
-            case UP:
-                if(y - Boat_ID.Get_Size()  >= 0 )
-                {
-                    for (int var = 0; var < Boat_ID.Get_Size() ; ++var)//0,1,2,3,4->size 5
-                    {
-                        if(My_map[y- var][x]==WATER)
-                        {
-                            willfit=0;
-                        }
-                        else
-                        {
-                            return false;
-                        }
-                    }
-                }
-                else
-                {
-                    return false;
-                }
-                break;
-            case DOWN:
-                if(y + Boat_ID.Get_Size()  <= 9 )
-                {
-                    for (int var = 0; var < Boat_ID.Get_Size() ; ++var)
-                    {
-                        if(My_map[y+ var][x]==WATER)
-                        {
-                            willfit=0;
-                        }
-                        else
-                        {
-                            return false;
-                        }
-                    }
-                }
-                else
-                {
-                    return false;
-                }
-                break;
-
-            default:
-                std::cout<< "wrong rotation variable has been given"<< std::endl;
-                break;
-        }
-        if(willfit==0)
-        {
-            return true;
-        }
-    }
-    void Game_Map::place_boats(Game_Boats& Boat_ID, int x, int y, int rot)
+    bool Game_Map::Will_Boat_Fit(Game_Boats& Boat_ID, int y, int x, int rot)
     {
         switch (rot)
         {
             case TO_RIGHT:
-                for (int current_size = 0; current_size < Boat_ID.Get_Size(); ++current_size)
-                {
-                   My_map[x + current_size][y]=SHIP;
-                   Boat_ID.set_ship_tile(x + current_size,y,SHIP,current_size);
-                }
-                return;
+                check_if_fit(Boat_ID.Get_Size(),y,x,1,TO_RIGHT);
+                break;
             case TO_LEFT:
-                for (int current_size = 0; current_size < Boat_ID.Get_Size(); ++current_size)
-                {
-                    My_map[x - current_size][y]=SHIP;
-                    Boat_ID.set_ship_tile(x - current_size,y,SHIP,current_size);
-                }
-                return;
+                check_if_fit(Boat_ID.Get_Size(),y,x,-1,TO_LEFT);
+                break;
             case UP:
-                for (int current_size = 0; current_size < Boat_ID.Get_Size(); ++current_size)
-                {
-                    My_map[x][y - current_size]=SHIP;
-                    Boat_ID.set_ship_tile(x,y - current_size,SHIP,current_size);
-                }
-                return;
+                check_if_fit(Boat_ID.Get_Size(),y,x,-1,UP);
+                break;
             case DOWN:
-                for (int current_size = 0; current_size < Boat_ID.Get_Size(); ++current_size)
-                {
-                    My_map[x][y + current_size]=SHIP;
-                    Boat_ID.set_ship_tile(x,y + current_size,SHIP,current_size);
-                }
-                return;
+                check_if_fit(Boat_ID.Get_Size(),y,x,1,DOWN);
+                break;
         }
     }
+    bool Game_Map::check_if_fit(int boatsize,int y, int x,int rotation_Operator, int rotation)
+    {
+        for (int curr_size = 0; curr_size < boatsize && curr_size > -boatsize ; curr_size+=rotation_Operator)
+        {
+            switch (rotation)
+            {
+                case TO_RIGHT:
+                case TO_LEFT:
+                        if (My_map[y][x+ curr_size] != WATER || x+ curr_size>9 || x+ curr_size<0)
+                        {
+                            std::cout << "cant place because  x :" << x+curr_size << "for boat of size : "<< boatsize << std::endl;
+                            return false;
+                        }
+                    break;
+                case UP:
+                case DOWN:
+                        if (My_map[y+ curr_size][x] != WATER || y+ curr_size>9 || y+ curr_size<0)
+                        {
+                            std::cout << "cant place because  y :" << y+curr_size << std::endl;
+                            return false;
+                        }
+                        break;
+                default:
+                    std::cerr << "Error: no default value for rotation operator" << std::endl;
+            }
+        }
+        return true;
+    }
+    void Game_Map::place_boats(Game_Boats& Boat_ID, int y, int x, int rot)
+    {
+        for (int shippart = 0; shippart < Boat_ID.Get_Size(); ++shippart)
+        {
+         switch (rot)
+         {                               
+             case TO_RIGHT:
+                 My_map[y][x + shippart ] = SHIP;
+                 //Boat_ID.set_ship_tile(y,x + shippart,SHIP,shippart);
+                 break;
+             case TO_LEFT:
+                 My_map[y][x - shippart] = SHIP;
+                // Boat_ID.set_ship_tile(y,x- shippart,SHIP,shippart);
+                 break;
+             case UP:
+                 My_map[y - shippart][x] = SHIP;
+                 //Boat_ID.set_ship_tile(y- shippart,x,SHIP,shippart);
+                 break;
+             case DOWN:
+                 My_map[y + shippart][x] = SHIP;
+                 //Boat_ID.set_ship_tile(y+ shippart,x,SHIP,shippart);
+                 break;
+         }
+        }
+    }
+void Game_Map::print_map()
+{
+            std::cout << "my map"<<std::endl;
+            for (int i = 0; i < 10; ++i)
+            {
+                for (int j = 0; j < 10; ++j)
+                {
+                    if (get_my_map(i,j)==WATER)
+                    {
+                        std::cout << "\U0001F7E6";
+                    }
+                    if(get_my_map(i,j)==SHIP)
+                    {
+                        std::cout << "\U0001F532";
+                    }
+                    if (get_my_map(i,j)==HIT)
+                    {
+                        std::cout << "\U0001F4A6";
+                    }
+                    if (get_my_map(i,j)==MISS)
+                    {
+                        std::cout << "\U0001F525";
+                    }
 
+                }
+                std::cout << std::endl;
+            }
+            std::cout << std::endl;
+            std::cout << std::endl;
+}
     void Game_Map::Free_Alloc()
     {
         for (int i = 0; i < BoatsVector.size(); ++i)

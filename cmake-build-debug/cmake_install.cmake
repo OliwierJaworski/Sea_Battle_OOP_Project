@@ -1,4 +1,4 @@
-# Install script for directory: /home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project
+# Install script for directory: /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/oliwier-desktop/Documents/Code_Projects/Sea_Battle_Enhanced/Sea_Battle_OOP_Project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -5,11 +5,11 @@
 class Online_Player : public Game_Player
 {
 public:
-    Online_Player() {};
+    Online_Player() =default;
     ~Online_Player() override {};
 
-     bool Get_Player_lost()  override;
-     void Attack_Enemy() override;
+    bool Get_Player_lost()  override;
+    void Attack_Enemy() override;
 private:
 };
 
