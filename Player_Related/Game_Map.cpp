@@ -126,11 +126,11 @@
                         {
                             std::cout << "\U0001F532";
                         }
-                        if (My_map[i][j]==HIT)
+                        if (My_map[i][j]==MISS)
                         {
                             std::cout << "\U0001F4A6";
                         }
-                        if (My_map[i][j]==MISS)
+                        if (My_map[i][j]==HIT)
                         {
                             std::cout << "\U0001F525";
                         }

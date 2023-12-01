@@ -15,12 +15,14 @@ bool SP_Game_Manager::Play_Game()
       if(& Player_Me!= previous_player)
       {
           std::cout <<"PLAYER Me turn "<<std::endl;
+          Player_Me.print_map();
           play_turn(Player_Me,Player_Enemy);
           previous_player =&Player_Me;
       }
       else if(& Player_Enemy != previous_player)
       {
           std::cout <<"PLAYER Enemy turn "<<std::endl;
+          Player_Enemy.print_map();
           play_turn(Player_Enemy,Player_Me);
           previous_player =& Player_Enemy;
       }
@@ -53,8 +55,8 @@ Coordinates SP_Game_Manager::tranlate_to_cords(std::string input_string)
 {
     Coordinates User_Cords;
     std::string::size_type pos =input_string.find('.');
-    User_Cords.y = input_string.at(pos -1)-'0';
-    User_Cords.x = input_string.at(pos +1)-'0';
+    User_Cords.y = input_string.at(pos +1)-'0';
+    User_Cords.x = input_string.at(pos -1)-'0';
     return  User_Cords;
 }
 

@@ -8,6 +8,7 @@
         Coordinates Attack_Enemy_Cords = User_Input_Cords;
         int x= Attack_Enemy_Cords.x;
         int y= Attack_Enemy_Cords.y;
+        std::cout << "Game_Player cords x:" << x << " y:" << y << std::endl;
         Enemy_Player.map.get_my_map(y,x);
     }
 
@@ -17,7 +18,7 @@
     }
     void Game_Player::print_map()
     {
-
+        map.print_map();
     }
 
 
