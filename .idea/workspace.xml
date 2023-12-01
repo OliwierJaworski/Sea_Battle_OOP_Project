@@ -21,29 +21,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player_Related/Online_Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Online_Player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-18211c7c16cb080a127d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-bdf46da269d55c862846.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-12-01T01-26-21-0203.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Zeeslag_Code_Fixing-Debug-8e3dc482ace26d6f5b58.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +137,7 @@
       <workItem from="1701441329070" duration="600000" />
       <workItem from="1701441935613" duration="7036000" />
       <workItem from="1701454782663" duration="3717000" />
-      <workItem from="1701460120799" duration="1611000" />
+      <workItem from="1701460120799" duration="3711000" />
     </task>
     <servers />
   </component>
@@ -164,5 +152,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

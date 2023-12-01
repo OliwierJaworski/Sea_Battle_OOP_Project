@@ -8,7 +8,7 @@ Game_Manager_Loader::Game_Manager_Loader()
 
     std::string Game_Manager_Loader::Player_Option()
     {
-    std::string UserGame ="singleplayer";
+    std::string UserGame ="multiplayer";
     std::cout<< "Multiplayer Or Singleplayer? :>";
     do
     {

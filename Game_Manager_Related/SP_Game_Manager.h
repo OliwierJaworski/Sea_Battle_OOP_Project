@@ -13,7 +13,7 @@ public:
     SP_Game_Manager() ;
     virtual ~SP_Game_Manager();
 
-    std::string Player_Input();//x,y||chat"hey blabla"
+    virtual std::string Player_Input();//x,y||chat"hey blabla"
     Coordinates tranlate_to_cords(std::string input_string);
     virtual bool Play_Game();
 protected:

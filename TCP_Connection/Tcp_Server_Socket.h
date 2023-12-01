@@ -43,7 +43,7 @@
 namespace SBN//SEA_Battle_Networking
 {
     class Tcp_Server_Socket
-            {
+    {
     public:
         Tcp_Server_Socket();
         ~Tcp_Server_Socket();

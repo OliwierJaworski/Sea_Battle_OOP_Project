@@ -5,21 +5,22 @@
 #include "../TCP_Connection/Tcp_Server_Socket.h"
 #include "../TCP_Connection/Tcp_Client_Socket.h"
 enum Connection_type{TCP_CLIENT, TCP_HOST};
-class MP_Game_Manager : public SP_Game_Manager
+class MP_Game_Manager
 {
 public:
-    MP_Game_Manager() {std::cout << "MP constructor";}
-    ~MP_Game_Manager() override =default;
+    MP_Game_Manager();
+    ~MP_Game_Manager()  =default;
 
-    bool Play_Game() override;
+    bool Play_Game() ;
 private:
     std::unique_ptr<SBN::Tcp_Client_Socket> Client;
-    std::unique_ptr<SBN::Tcp_Server_Socket> Server;
+    std::unique_ptr<SBN::Tcp_Server_Socket> host;
+
+    std::string Player_Input() ;
     void Init_TCP_Connection(int connection_type);
     int filter_input();
-
-    void play_turn(Game_Player & Current_Player,Game_Player & Enemy_Player)override;
-    bool Game_State_active() override;
+    void play_turn(Game_Player & Current_Player,Game_Player & Enemy_Player);
+    bool Game_State_active() ;
 };
 
 #endif
