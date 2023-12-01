@@ -12,7 +12,7 @@ public:
     virtual ~Game_Player();
 
     virtual bool Get_Player_lost();
-    virtual void Attack_Enemy();
+    virtual void Attack_Enemy(Game_Player & Enemy_Player);
     bool Verify_Ifenemy_Hit(int y, int x)           {return map.get_my_map(y,x);}
     void print_map();
 

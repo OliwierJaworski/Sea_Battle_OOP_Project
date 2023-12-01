@@ -5,9 +5,26 @@ SP_Game_Manager::~SP_Game_Manager()
 }
 bool SP_Game_Manager::Play_Game()
 {
-
+    Game_Player * previous_player= nullptr;
+    while(Game_State_active())
+    {
+      if(& Player_Me!= previous_player)
+      {
+          play_turn(Player_Me,Player_Enemy);
+          previous_player =&Player_Me;
+      }
+      else if(& Player_Enemy != previous_player)
+      {
+          play_turn(Player_Enemy,Player_Me);
+          previous_player =& Player_Enemy;
+      }
+    }
 }
-bool SP_Game_Manager::Game_State()
+void SP_Game_Manager::play_turn(Game_Player & Current_Player,Game_Player & Enemy_Player)
+{
+    Current_Player.Attack_Enemy(Enemy_Player);
+}
+bool SP_Game_Manager::Game_State_active()
 {
 
 }

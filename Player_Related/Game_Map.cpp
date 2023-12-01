@@ -141,7 +141,7 @@
                 std::cout << std::endl;
                 std::cout << std::endl;
     }
-    const bool Game_Map::get_my_map(int y,int x )
+    bool Game_Map::get_my_map(int y,int x ) const
     {
         if(My_map[y][x]==WATER)
         {

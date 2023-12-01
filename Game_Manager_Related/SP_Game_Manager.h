@@ -15,7 +15,8 @@ public:
     bool Correct_Input_type(std::string user_input);
 protected:
     virtual bool Play_Game();
-    virtual bool Game_State();
+    virtual void play_turn(Game_Player & Current_Player,Game_Player & Enemy_Player);
+    virtual bool Game_State_active();
 private:
     Game_Player Player_Me;
     Game_Player Player_Enemy;

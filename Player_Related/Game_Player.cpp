@@ -3,7 +3,7 @@
     {
 
     }
-    void Game_Player::Attack_Enemy()
+    void Game_Player::Attack_Enemy(Game_Player & Enemy_Player)
     {
 
     }
