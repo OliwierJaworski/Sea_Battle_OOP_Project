@@ -92,19 +92,19 @@
          {                               
              case TO_RIGHT:
                  My_map[y][x + shippart ] = SHIP;
-                 //Boat_ID.set_ship_tile(y,x + shippart,SHIP,shippart);
+                 Boat_ID.set_ship_tile(x+ shippart,y,SHIP,shippart);
                  break;
              case TO_LEFT:
                  My_map[y][x - shippart] = SHIP;
-                // Boat_ID.set_ship_tile(y,x- shippart,SHIP,shippart);
+                 Boat_ID.set_ship_tile(x- shippart,y,SHIP,shippart);
                  break;
              case UP:
                  My_map[y - shippart][x] = SHIP;
-                 //Boat_ID.set_ship_tile(y- shippart,x,SHIP,shippart);
+                 Boat_ID.set_ship_tile(x,y- shippart,SHIP,shippart);
                  break;
              case DOWN:
                  My_map[y + shippart][x] = SHIP;
-                 //Boat_ID.set_ship_tile(y+ shippart,x,SHIP,shippart);
+                 Boat_ID.set_ship_tile(x,y+ shippart,SHIP,shippart);
                  break;
          }
         }

@@ -43,7 +43,8 @@ protected:
 
     virtual void SpecialMove() = 0;
     std::string Get_Ship_Name()            {return ship_name;}
-    std::vector<TILE_INFO> ship_info;
+    std::vector<std::unique_ptr<TILE_INFO>> ship_info;
+    void shipvector_element_amount();
     void set_ship_tile(int x, int y,int IsHit, int ship_part);
 private:
 };

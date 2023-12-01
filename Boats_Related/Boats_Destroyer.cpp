@@ -4,6 +4,7 @@ Boats_Destroyer::Boats_Destroyer()
 {
     ship_name = "Destroyer";
     Boat_size = 2;
+    shipvector_element_amount();
 }
 
 
