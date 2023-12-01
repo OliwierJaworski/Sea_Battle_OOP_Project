@@ -7,5 +7,6 @@ int main()
     srand(time(NULL));
 
     Game_Manager_Loader game;
+    game.Game_Type(game.Player_Option());
     return 0;
 }

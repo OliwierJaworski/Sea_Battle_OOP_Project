@@ -21,4 +21,8 @@ add_executable(Zeeslag_Code_Fixing main.cpp
         Boats_Related/Boats_Destroyer.cpp
         Boats_Related/Boats_Destroyer.h
         Boats_Related/Game_Boats.cpp
-        Boats_Related/Game_Boats.h)
+        Boats_Related/Game_Boats.h
+        TCP_Connection/Tcp_Client_Socket.cpp
+        TCP_Connection/Tcp_Server_Socket.cpp
+        TCP_Connection/Tcp_Client_Socket.h
+        TCP_Connection/Tcp_Server_Socket.h)
