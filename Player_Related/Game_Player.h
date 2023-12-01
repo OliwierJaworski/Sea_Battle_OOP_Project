@@ -19,7 +19,7 @@ public:
     virtual bool Get_Player_lost();
     virtual void Attack_Enemy(Game_Player & Enemy_Player,Coordinates User_Input_Cords);
     bool Verify_Ifenemy_Hit(int y, int x)           {return map.get_my_map(y,x);}
-    void print_map();
+    void print_map(int whichmap);
 
 protected:
     Game_Map map;

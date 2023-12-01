@@ -141,6 +141,36 @@
                 std::cout << std::endl;
                 std::cout << std::endl;
     }
+    void Game_Map::print_my_enemymap()
+    {
+        std::cout << "my map"<<std::endl;
+        for (int i = 0; i < 10; ++i)
+        {
+            for (int j = 0; j < 10; ++j)
+            {
+                if (Enemy_map[i][j]==WATER)
+                {
+                    std::cout << "\U0001F7E6";
+                }
+                if(Enemy_map[i][j]==SHIP)
+                {
+                    std::cout << "\U0001F532";
+                }
+                if (Enemy_map[i][j]==MISS)
+                {
+                    std::cout << "\U0001F4A6";
+                }
+                if (Enemy_map[i][j]==HIT)
+                {
+                    std::cout << "\U0001F525";
+                }
+
+            }
+            std::cout << std::endl;
+        }
+        std::cout << std::endl;
+        std::cout << std::endl;
+    }
     bool Game_Map::get_my_map(int y,int x )
     {
         if(My_map[y][x]==WATER)
@@ -155,6 +185,15 @@
         }
         else
             return false;
+    }
+    void  Game_Map::Set_Enemy_map(int x, int y, bool is_Hit)
+    {
+        if(is_Hit)
+        {
+            Enemy_map[y][x]=HIT;
+        }
+        else
+            Enemy_map[y][x]=MISS;
     }
     void Game_Map::Free_Alloc()
     {

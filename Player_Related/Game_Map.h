@@ -22,7 +22,9 @@ public:
 public:
 //public
     bool get_my_map(int y, int x) ;
+    void Set_Enemy_map(int x, int y, bool is_Hit);
     void print_map();
+    void print_my_enemymap();
 
 private:
     std::vector<Game_Boats *> BoatsVector;

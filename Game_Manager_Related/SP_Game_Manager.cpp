@@ -15,14 +15,16 @@ bool SP_Game_Manager::Play_Game()
       if(& Player_Me!= previous_player)
       {
           std::cout <<"PLAYER Me turn "<<std::endl;
-          Player_Me.print_map();
+          Player_Me.print_map(0);
+          Player_Me.print_map(1);
           play_turn(Player_Me,Player_Enemy);
           previous_player =&Player_Me;
       }
       else if(& Player_Enemy != previous_player)
       {
           std::cout <<"PLAYER Enemy turn "<<std::endl;
-          Player_Enemy.print_map();
+          Player_Enemy.print_map(0);
+          Player_Enemy.print_map(1);
           play_turn(Player_Enemy,Player_Me);
           previous_player =& Player_Enemy;
       }
