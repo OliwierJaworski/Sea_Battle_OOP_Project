@@ -36,7 +36,11 @@ void SP_Game_Manager::play_turn(Game_Player & Current_Player,Game_Player & Enemy
 }
 bool SP_Game_Manager::Game_State_active()
 {
-
+    if (Player_Me.Get_Player_boats_alive() && Player_Enemy.Get_Player_boats_alive())
+    {
+        return true;
+    }
+    return false;
 }
 std::string SP_Game_Manager::Player_Input()
 {

@@ -171,6 +171,34 @@
         std::cout << std::endl;
         std::cout << std::endl;
     }
+    int Game_Map::cummulated_boat_size()
+    {
+        int totaltilesize;
+        for(auto boat : BoatsVector)
+        {
+            totaltilesize+=boat->Get_Size();
+        }
+    }
+    bool Game_Map::any_ship_alive()
+    {
+        int totaltilesize=cummulated_boat_size();
+
+        for(auto boat : BoatsVector)
+
+            for (int curr_tile=0; curr_tile < boat->Get_Size() ; curr_tile++)
+            {
+                if(boat->get_boat_tile(curr_tile).tile_status==HIT)
+                {
+                    totaltilesize-=1;
+                }
+            }
+        if(totaltilesize>0)
+        {
+            return true;
+        }
+        else
+            return false;
+    }
     bool Game_Map::get_my_map(int y,int x )
     {
         if(My_map[y][x]==WATER)

@@ -8,7 +8,7 @@ public:
     Online_Player() =default;
     ~Online_Player() override {};
 
-    bool Get_Player_lost()  override;
+    bool Get_Player_boats_alive()  override;
     void Attack_Enemy();
 private:
 };

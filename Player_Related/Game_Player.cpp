@@ -12,9 +12,9 @@
         map.Set_Enemy_map(x,y,Enemy_Player.map.get_my_map(y,x));
     }
 
-    bool  Game_Player::Get_Player_lost()
+    bool  Game_Player::Get_Player_boats_alive()
     {
-        return true;
+        return map.any_ship_alive();
     }
     void Game_Player::print_map(int whichmap)
     {

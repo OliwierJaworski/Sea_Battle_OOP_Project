@@ -25,6 +25,8 @@ public:
     void Set_Enemy_map(int x, int y, bool is_Hit);
     void print_map();
     void print_my_enemymap();
+    int cummulated_boat_size();
+    bool any_ship_alive();
 
 private:
     std::vector<Game_Boats *> BoatsVector;
