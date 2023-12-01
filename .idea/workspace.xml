@@ -21,14 +21,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Map.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Map.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Player.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

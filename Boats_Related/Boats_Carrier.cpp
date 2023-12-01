@@ -2,9 +2,9 @@
 
 Boats_Carrier::Boats_Carrier()
 {
-    ship_name = "Carrier";
-    Boat_size =5;
-    shipvector_element_amount();
+    set_Boat_name("Carrier");
+    set_Boat_Size(5);
+    Init_Boat_Tiles();
 }
 
 void Boats_Carrier::SpecialMove()

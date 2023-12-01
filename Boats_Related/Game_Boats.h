@@ -38,15 +38,19 @@ public:
     };
 
     int Get_Size()                         {return Boat_size;}
-protected:
-    int Boat_size;
-    std::string ship_name;
+    std::string Get_Ship_Name()            {return Boat_name;}
 
+protected:
     virtual void SpecialMove() = 0;
-    std::string Get_Ship_Name()            {return ship_name;}
-    std::vector<std::unique_ptr<TILE_INFO>> ship_info;
-    void shipvector_element_amount();
-    void set_ship_tile(int x, int y,int IsHit, int ship_part);
+
+    void Init_Boat_Tiles();
+    void set_Boat_tile(int x, int y,int IsHit, int ship_part);
+    void set_Boat_Size(int replace_value)                       {Boat_size= replace_value;}
+    void set_Boat_name(std::string new_name)                    {Boat_name=new_name;}
+
 private:
+    int Boat_size;
+    std::string Boat_name;
+    std::vector<TILE_INFO> ship_info;
 };
 #endif

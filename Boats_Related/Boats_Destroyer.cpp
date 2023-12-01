@@ -2,9 +2,9 @@
 
 Boats_Destroyer::Boats_Destroyer()
 {
-    ship_name = "Destroyer";
-    Boat_size = 2;
-    shipvector_element_amount();
+    set_Boat_name("destroyer");
+    set_Boat_Size(2);
+    Init_Boat_Tiles();
 }
 
 
