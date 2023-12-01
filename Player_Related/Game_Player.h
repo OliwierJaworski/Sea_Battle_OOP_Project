@@ -4,6 +4,11 @@
 #include <memory>
 #include "Game_Map.h"
 
+struct Coordinates
+{
+    int x;
+    int y;
+};
 
 class Game_Player
 {
@@ -12,7 +17,7 @@ public:
     virtual ~Game_Player();
 
     virtual bool Get_Player_lost();
-    virtual void Attack_Enemy(Game_Player & Enemy_Player);
+    virtual void Attack_Enemy(Game_Player & Enemy_Player,Coordinates User_Input_Cords(std::string cordvalue));
     bool Verify_Ifenemy_Hit(int y, int x)           {return map.get_my_map(y,x);}
     void print_map();
 

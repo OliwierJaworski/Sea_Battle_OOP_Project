@@ -21,7 +21,7 @@ public:
 
 public:
 //public
-    bool get_my_map(int y, int x) const;
+    bool get_my_map(int y, int x) ;
     void print_map();
 
 private:
