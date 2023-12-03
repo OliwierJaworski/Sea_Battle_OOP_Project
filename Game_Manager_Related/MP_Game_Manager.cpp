@@ -75,22 +75,34 @@ std::string MP_Game_Manager::Player_turn_decision()
     message_prefix =Check_message_type(user_input);
    }while(message_prefix!=DM && message_prefix!=AT);
 
-    complete_string_winfo += std::to_string(message_prefix);
     if(message_prefix==DM)
     {
-        std::string msg_content="";
+        complete_string_winfo.append("DM,");
+        std::string msg_content;
+
         std::cout<< "what would you like to say?" <<std::endl;
+        //std::getline(std::cin, msg_content);
         std::cin >> msg_content;
+
         complete_string_winfo.append(msg_content);
         host->send(host->get_Client_socket_state(),complete_string_winfo);
     }
     else if(message_prefix==AT)
     {
-
+        complete_string_winfo.append("AT,");
+        std::string input_read;
+        std::cout << "type x.y to attack"<< std::endl;
+        do
+        {
+            input_read="";
+            std::cin >> input_read;
+        }
+        while(input_read.size()<3);
+        complete_string_winfo.append(input_read);
+        host->send(host->get_Client_socket_state(),complete_string_winfo);
     }
     else
         std::cerr << "player_turn_decision:: this part has not been implemented yet"<<std::endl;
-
 }
 void MP_Game_Manager::host_play_turn()
 {
@@ -98,8 +110,9 @@ void MP_Game_Manager::host_play_turn()
     {
         if (host->get_Client_socket_state()>0)//check if client is still connected
         {
-            host->send(host->get_Client_socket_state(),"AT,1.0");
-            host->recv(host->get_Client_socket_state());
+           Player_Me.print_map(0);
+           Player_Me.print_map(1);
+           Player_turn_decision();
         }
     }
 }
@@ -114,7 +127,7 @@ int MP_Game_Manager::Check_message_type(std::string message_received)
 {
  if(message_received[2]!=',')//bv "CT,hello from this pc\n"
  {
-     std::cerr << "wrong prefix-sign  has been used by the sender";
+     //std::cerr << "wrong prefix-sign  has been used by the sender";
  }
     message_received.substr(2,std::string::npos);
     int ARG_Am = 2;
@@ -140,8 +153,6 @@ int MP_Game_Manager::Check_message_type(std::string message_received)
                     return AT;
                 }
                 break;
-            default:
-                //std::cerr << " wrong prefix-data has been used by sender"<<std::endl;-> have to find a better solution for the code for thist cerr to work
         }
     }
 }
