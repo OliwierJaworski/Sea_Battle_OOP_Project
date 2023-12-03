@@ -4,11 +4,19 @@
 #include "SP_Game_Manager.h"
 #include "../TCP_Connection/Tcp_Server_Socket.h"
 #include "../TCP_Connection/Tcp_Client_Socket.h"
-enum Connection_type{TCP_CLIENT, TCP_HOST};
+
+#include <type_traits>
+
+enum Connection_type
+        {
+            TCP_CLIENT,
+            TCP_HOST
+        };
 enum  msg_prefix //maak class van als tijd over
         {
-            DC  //DIRECTCHAT WITH OPONENT
-           ,YT  //Transfer the turn to the other party
+            DC,  //DIRECTCHAT received from OPONENT
+            YT,  //Transfer the turn to the other party
+            AT //attack received format: "AT,y.x"
 
         };
 class MP_Game_Manager
@@ -31,8 +39,8 @@ private:
     bool Game_State_active() ;
     int Check_message_type(std::string message_received);
 
-    template <typename Type_1>
-    Type_1 convert_message_content(Type_1 message_received, int message_type);
+    template<typename MSG_TYPE>
+    typename std::conditional<std::is_same<MSG_TYPE, std::string>::value, std::string ,Coordinates>::type Convert_Message(std::string recvd_message,int msg_type);
 };
 
 #endif

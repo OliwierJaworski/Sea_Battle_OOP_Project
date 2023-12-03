@@ -64,17 +64,20 @@ int MP_Game_Manager::Play_Game()
 }
 void MP_Game_Manager::host_play_turn()
 {
-    while(Game_State_active())
-    {
-         convert_message_content<int>( "lala", 1);
-         convert_message_content<std::string>("lala",0);
-    }
+    //while(Game_State_active())
+    //{
+        Coordinates cords;
+        cords= Convert_Message<Coordinates>("AT,1.0",AT);
+
+        std::cout << "cord .y:" << cords.y << " cord .x:" << cords.x << std::endl;
+        std::cout << Convert_Message<std::string>("AT,1.0",AT) << std::endl;
+    //}
 }
 void MP_Game_Manager::client_play_turn()
 {
     while(Game_State_active())
     {
-        //tot hier werkt het client
+
     }
 }
 int MP_Game_Manager::Check_message_type(std::string message_received)
@@ -94,7 +97,6 @@ int MP_Game_Manager::Check_message_type(std::string message_received)
                 {
                     return DC;
                 }
-                break;
             case YT:
                 if(message_received=="YT")
                 {
@@ -106,13 +108,27 @@ int MP_Game_Manager::Check_message_type(std::string message_received)
         }
     }
 }
-template <typename Type_1>
-Type_1 MP_Game_Manager::convert_message_content(Type_1 message_received, int message_type)
+
+template<typename MSG_TYPE>
+typename std::conditional<std::is_same<MSG_TYPE, std::string>::value, std::string ,Coordinates>::type MP_Game_Manager::Convert_Message(std::string recvd_message,int msg_type)
 {
-    switch (message_type)
+    switch (msg_type)
     {
         case DC:
-
+            if constexpr (std::is_same<MSG_TYPE,std::string>::value)
+            {
+                return recvd_message;
+            }
+            break;
+        case AT:
+            if constexpr (std::is_same<MSG_TYPE,Coordinates>::value)
+            {
+                Coordinates cords;
+                cords.y=recvd_message.at(3)-'0';//A(0)T(1),(2)3(3).(4)5(5)
+                cords.x=recvd_message.at(5)-'0';
+                return cords;
+            }
+            break;
     }
 }
 bool MP_Game_Manager::Game_State_active()
