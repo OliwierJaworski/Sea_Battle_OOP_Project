@@ -1,11 +1,6 @@
 #include "Game_Manager_Loader.h"
 
 
-Game_Manager_Loader::Game_Manager_Loader()
-{
-    Game_Type(Player_Option());
-}
-
     std::string Game_Manager_Loader::Player_Option()
     {
     std::string UserGame ="multiplayer";
@@ -30,10 +25,10 @@ void Game_Manager_Loader::Game_Type(std::string User_Option)
        forward_MP_playgame();
    }
 }
-void Game_Manager_Loader::forward_SP_playgame()
-{
-    SP_Game->Play_Game();
-}
+    void Game_Manager_Loader::forward_SP_playgame()
+    {
+        SP_Game->Play_Game();
+    }
 void Game_Manager_Loader::forward_MP_playgame()
 {
     MP_Game->Play_Game();

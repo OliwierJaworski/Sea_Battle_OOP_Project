@@ -1,7 +1,7 @@
 #include "MP_Game_Manager.h"
 MP_Game_Manager::MP_Game_Manager()
 {
-    Init_TCP_Connection(filter_input());
+   Init_TCP_Connection(filter_input());
 }
 void MP_Game_Manager::Init_TCP_Connection(int connection_type)
 {
@@ -48,9 +48,9 @@ int MP_Game_Manager::filter_input()
     else
        std::cerr <<"wrong connection type";
 }
-bool MP_Game_Manager::Play_Game()
+int MP_Game_Manager::Play_Game()
 {
-
+return 0;
 }
 void MP_Game_Manager::play_turn(Game_Player & Current_Player,Game_Player & Enemy_Player)
 {

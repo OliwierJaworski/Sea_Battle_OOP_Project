@@ -3,13 +3,7 @@
 using namespace SBN;
 Tcp_Server_Socket::Tcp_Server_Socket()
 {
-#ifdef _WIN32
-    OSInit();
-#endif
-    std::cout << " the tcp socket is initializing.." <<std::endl;
-    internet_socket = initialization();
-    client_internet_socket = connection(internet_socket);
-    recv(client_internet_socket);
+   bind_to_client();
 }
 Tcp_Server_Socket::~Tcp_Server_Socket()
 {
@@ -18,7 +12,16 @@ Tcp_Server_Socket::~Tcp_Server_Socket()
     OSCleanup();
 #endif
 }
-
+void Tcp_Server_Socket::bind_to_client()
+{
+#ifdef _WIN32
+    OSInit();
+#endif
+    std::cout << " the tcp socket is initializing.." <<std::endl;
+    internet_socket = initialization();
+    client_internet_socket = connection(internet_socket);
+    recv(client_internet_socket);
+}
 
 int Tcp_Server_Socket::initialization()
 {

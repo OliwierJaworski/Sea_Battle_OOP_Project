@@ -47,7 +47,7 @@ namespace SBN//SEA_Battle_Networking
     public:
         Tcp_Server_Socket();
         ~Tcp_Server_Socket();
-
+        void bind_to_client();
         void recv(int internet_socket);
         void send(int internet_socket,std::string StringData_ToBe_send);
         int get_Client_socket_state() { return client_internet_socket; }

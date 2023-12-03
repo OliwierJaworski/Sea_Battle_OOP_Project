@@ -11,10 +11,10 @@ public:
     MP_Game_Manager();
     ~MP_Game_Manager()  =default;
 
-    bool Play_Game() ;
+    int Play_Game() ;
 private:
-    std::unique_ptr<SBN::Tcp_Client_Socket> Client;
-    std::unique_ptr<SBN::Tcp_Server_Socket> host;
+    std::unique_ptr<SBN::Tcp_Client_Socket> Client = nullptr;
+    std::unique_ptr<SBN::Tcp_Server_Socket> host = nullptr;
 
     std::string Player_Input() ;
     void Init_TCP_Connection(int connection_type);
