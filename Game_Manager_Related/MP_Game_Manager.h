@@ -14,9 +14,9 @@ enum Connection_type
         };
 enum  msg_prefix //maak class van als tijd over
         {
-            DC,  //DIRECTCHAT received from OPONENT
+            DM,  //DIRECTCHAT received from OPONENT
             YT,  //Transfer the turn to the other party
-            AT //attack received format: "AT,y.x"
+            AT   //attack received format: "AT,y.x"
 
         };
 class MP_Game_Manager
@@ -32,13 +32,15 @@ private:
     Game_Player Player_Me;
 
     std::string Player_Input_init() ;
-    void Init_TCP_Connection(int connection_type);
     int filter_input();
+
+    void Init_TCP_Connection(int connection_type);
     void host_play_turn();
     void client_play_turn();
     bool Game_State_active() ;
-    int Check_message_type(std::string message_received);
 
+    int Check_message_type(std::string message_received);
+    std::string Player_turn_decision();
     template<typename MSG_TYPE>
     typename std::conditional<std::is_same<MSG_TYPE, std::string>::value, std::string ,Coordinates>::type Convert_Message(std::string recvd_message,int msg_type);
 };

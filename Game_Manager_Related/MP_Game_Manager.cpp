@@ -62,16 +62,46 @@ int MP_Game_Manager::Play_Game()
         else
             std::cerr<<"could not find the correct game to bind to"<<std::endl;
 }
+std::string MP_Game_Manager::Player_turn_decision()
+{
+   std::string complete_string_winfo;
+   std::string user_input;
+   int message_prefix;
+
+   std::cout << "would you like to attack 'AT' or send a message to your oponent 'DM' " << std::endl;
+   do
+   {
+    std::cin >> user_input;
+    message_prefix =Check_message_type(user_input);
+   }while(message_prefix!=DM && message_prefix!=AT);
+
+    complete_string_winfo += std::to_string(message_prefix);
+    if(message_prefix==DM)
+    {
+        std::string msg_content="";
+        std::cout<< "what would you like to say?" <<std::endl;
+        std::cin >> msg_content;
+        complete_string_winfo.append(msg_content);
+        host->send(host->get_Client_socket_state(),complete_string_winfo);
+    }
+    else if(message_prefix==AT)
+    {
+
+    }
+    else
+        std::cerr << "player_turn_decision:: this part has not been implemented yet"<<std::endl;
+
+}
 void MP_Game_Manager::host_play_turn()
 {
-    //while(Game_State_active())
-    //{
-        Coordinates cords;
-        cords= Convert_Message<Coordinates>("AT,1.0",AT);
-
-        std::cout << "cord .y:" << cords.y << " cord .x:" << cords.x << std::endl;
-        std::cout << Convert_Message<std::string>("AT,1.0",AT) << std::endl;
-    //}
+    while(Game_State_active())
+    {
+        if (host->get_Client_socket_state()>0)//check if client is still connected
+        {
+            host->send(host->get_Client_socket_state(),"AT,1.0");
+            host->recv(host->get_Client_socket_state());
+        }
+    }
 }
 void MP_Game_Manager::client_play_turn()
 {
@@ -87,15 +117,16 @@ int MP_Game_Manager::Check_message_type(std::string message_received)
      std::cerr << "wrong prefix-sign  has been used by the sender";
  }
     message_received.substr(2,std::string::npos);
-    int Argument_Amount = 1; //2 but 1 bec 0 counts aswell
-    for (int messagetype= 0; messagetype <= Argument_Amount; ++messagetype)
+    int ARG_Am = 2;
+
+    for (int messagetype= 0; messagetype <= ARG_Am; ++messagetype)
     {
         switch (messagetype)
         {
-            case DC:
-                if(message_received=="DC")
+            case DM:
+                if(message_received=="DM")
                 {
-                    return DC;
+                    return DM;
                 }
             case YT:
                 if(message_received=="YT")
@@ -103,8 +134,14 @@ int MP_Game_Manager::Check_message_type(std::string message_received)
                     return YT;
                 }
                 break;
+            case AT:
+                if(message_received=="AT")
+                {
+                    return AT;
+                }
+                break;
             default:
-                std::cerr << " wrong prefix-data has been used by sender"<<std::endl;
+                //std::cerr << " wrong prefix-data has been used by sender"<<std::endl;-> have to find a better solution for the code for thist cerr to work
         }
     }
 }
@@ -114,7 +151,7 @@ typename std::conditional<std::is_same<MSG_TYPE, std::string>::value, std::strin
 {
     switch (msg_type)
     {
-        case DC:
+        case DM:
             if constexpr (std::is_same<MSG_TYPE,std::string>::value)
             {
                 return recvd_message;
