@@ -40,7 +40,7 @@ private:
     bool Game_State_active() ;
 
     int Check_message_type(std::string message_received);
-    std::string Player_turn_decision();
+    Coordinates Player_turn_decision();
     template<typename MSG_TYPE>
     typename std::conditional<std::is_same<MSG_TYPE, std::string>::value, std::string ,Coordinates>::type Convert_Message(std::string recvd_message,int msg_type);
 };

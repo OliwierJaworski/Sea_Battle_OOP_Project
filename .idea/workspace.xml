@@ -23,6 +23,7 @@
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" afterDir="false" />
@@ -129,7 +130,7 @@
       <workItem from="1701460120799" duration="3759000" />
       <workItem from="1701563137475" duration="11077000" />
       <workItem from="1701601153908" duration="3041000" />
-      <workItem from="1701614639997" duration="7675000" />
+      <workItem from="1701614639997" duration="8723000" />
     </task>
     <servers />
   </component>

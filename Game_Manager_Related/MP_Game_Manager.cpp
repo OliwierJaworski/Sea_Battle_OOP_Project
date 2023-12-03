@@ -62,7 +62,7 @@ int MP_Game_Manager::Play_Game()
         else
             std::cerr<<"could not find the correct game to bind to"<<std::endl;
 }
-std::string MP_Game_Manager::Player_turn_decision()
+Coordinates MP_Game_Manager::Player_turn_decision()
 {
    std::string complete_string_winfo;
    std::string user_input;
@@ -82,7 +82,7 @@ std::string MP_Game_Manager::Player_turn_decision()
 
         std::cout<< "what would you like to say?" <<std::endl;
         //std::getline(std::cin, msg_content);
-        std::cin >> msg_content;
+        std::getline(std::cin,msg_content);
 
         complete_string_winfo.append(msg_content);
         host->send(host->get_Client_socket_state(),complete_string_winfo);
@@ -101,8 +101,8 @@ std::string MP_Game_Manager::Player_turn_decision()
         complete_string_winfo.append(input_read);
         host->send(host->get_Client_socket_state(),complete_string_winfo);
     }
-    else
-        std::cerr << "player_turn_decision:: this part has not been implemented yet"<<std::endl;
+        //std::cerr << "player_turn_decision:: this part has not been implemented yet"<<std::endl;
+
 }
 void MP_Game_Manager::host_play_turn()
 {
