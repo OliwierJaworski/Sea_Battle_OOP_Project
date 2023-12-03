@@ -17,7 +17,7 @@ void MP_Game_Manager::Init_TCP_Connection(int connection_type)
             std::cout <<"no valid connection type" <<std::endl;
     }
 }
-std::string MP_Game_Manager::Player_Input()
+std::string MP_Game_Manager::Player_Input_init()
 {
     std::string input_read;
     std::cout << "Host or Client?"<< std::endl;
@@ -35,7 +35,7 @@ int MP_Game_Manager::filter_input()
     std::string Connection_type="";
     do
     {
-        Connection_type = Player_Input();
+        Connection_type = Player_Input_init();
     } while (Connection_type!= "Host" && Connection_type!="Client");
     if (Connection_type=="Host")
     {
@@ -48,13 +48,72 @@ int MP_Game_Manager::filter_input()
     else
        std::cerr <<"wrong connection type";
 }
+
 int MP_Game_Manager::Play_Game()
 {
-return 0;
+        if(Client != nullptr)
+        {
+            client_play_turn();
+        }
+        else if(host != nullptr)
+        {
+            host_play_turn();
+        }
+        else
+            std::cerr<<"could not find the correct game to bind to"<<std::endl;
 }
-void MP_Game_Manager::play_turn(Game_Player & Current_Player,Game_Player & Enemy_Player)
+void MP_Game_Manager::host_play_turn()
 {
+    while(Game_State_active())
+    {
+         convert_message_content<int>( "lala", 1);
+         convert_message_content<std::string>("lala",0);
+    }
+}
+void MP_Game_Manager::client_play_turn()
+{
+    while(Game_State_active())
+    {
+        //tot hier werkt het client
+    }
+}
+int MP_Game_Manager::Check_message_type(std::string message_received)
+{
+ if(message_received[2]!=',')//bv "CT,hello from this pc\n"
+ {
+     std::cerr << "wrong prefix-sign  has been used by the sender";
+ }
+    message_received.substr(2,std::string::npos);
+    int Argument_Amount = 1; //2 but 1 bec 0 counts aswell
+    for (int messagetype= 0; messagetype <= Argument_Amount; ++messagetype)
+    {
+        switch (messagetype)
+        {
+            case DC:
+                if(message_received=="DC")
+                {
+                    return DC;
+                }
+                break;
+            case YT:
+                if(message_received=="YT")
+                {
+                    return YT;
+                }
+                break;
+            default:
+                std::cerr << " wrong prefix-data has been used by sender"<<std::endl;
+        }
+    }
+}
+template <typename Type_1>
+Type_1 MP_Game_Manager::convert_message_content(Type_1 message_received, int message_type)
+{
+    switch (message_type)
+    {
+        case DC:
 
+    }
 }
 bool MP_Game_Manager::Game_State_active()
 {
