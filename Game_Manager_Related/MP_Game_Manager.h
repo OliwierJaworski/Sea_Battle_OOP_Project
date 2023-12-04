@@ -4,8 +4,10 @@
 #include "SP_Game_Manager.h"
 #include "../TCP_Connection/Tcp_Server_Socket.h"
 #include "../TCP_Connection/Tcp_Client_Socket.h"
+#include "../Player_Related/Online_Player.h"
 
 #include <type_traits>
+
 
 enum Connection_type
         {
@@ -29,7 +31,7 @@ public:
 private:
     std::unique_ptr<SBN::Tcp_Client_Socket> Client = nullptr;
     std::unique_ptr<SBN::Tcp_Server_Socket> host = nullptr;
-    Game_Player Player_Me;
+    Online_Player Player_Me;
 
     std::string Player_Input_init() ;
     int filter_input();
@@ -39,6 +41,8 @@ private:
     void client_play_turn();
     bool Game_State_active() ;
 
+    Coordinates tranlate_to_cords(std::string input_string);
+    std::string Player_Input();
     int Check_message_type(std::string message_received);
     Coordinates Player_turn_decision();
     template<typename MSG_TYPE>

@@ -8,8 +8,8 @@ public:
     Online_Player() =default;
     ~Online_Player() override {};
 
-    bool Get_Player_boats_alive()  override;
-    void Attack_Enemy();
+    Coordinates Attack_Enemy(Coordinates User_Input_Cords);
+    void Att_tile_state(Coordinates User_Input_Cords , bool Tile_State);
 private:
 };
 
