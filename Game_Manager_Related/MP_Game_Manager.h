@@ -37,10 +37,7 @@ private:
 
     Coordinates tranlate_to_cords(std::string input_string);
     std::string Player_Input();
-    int Check_message_type(std::string message_received);
     Coordinates Player_turn_decision();
-    template<typename MSG_TYPE>
-    typename std::conditional<std::is_same<MSG_TYPE, std::string>::value, std::string ,Coordinates>::type Convert_Message(std::string recvd_message,int msg_type);
 };
 
 #endif

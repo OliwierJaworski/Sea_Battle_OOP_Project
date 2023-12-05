@@ -58,7 +58,7 @@ namespace SBN//SEA_Battle_Networking
     {
     public:
 
-        struct TCP_RecvData_Format
+        struct TCP_DATA_FORMAT
         {
             int MSG_Type=10;//10 is niet gedeclared
             Coordinates var_cords;
@@ -69,10 +69,10 @@ namespace SBN//SEA_Battle_Networking
         Tcp_Server_Socket();
         ~Tcp_Server_Socket();
         void bind_to_client();
-        void Send_Formatted_Data();
+        void Send_Formatted_Data(TCP_DATA_FORMAT data);
 
 
-        TCP_RecvData_Format Format_Recvd_Data(std::string recvd_data);
+        TCP_DATA_FORMAT Format_Recvd_Data(std::string recvd_data);
 
         template<typename Extr_msg>
         typename std::conditional<std::is_same<Extr_msg, bool>::value, bool ,Coordinates>::type

@@ -112,10 +112,30 @@ void Tcp_Server_Socket::send(int internet_socket,std::string StringData_ToBe_sen
     }
 }
 
-void Tcp_Server_Socket::Send_Formatted_Data()
+void Tcp_Server_Socket::Send_Formatted_Data(TCP_DATA_FORMAT data)
 {
-
+    std::string data_tobe_send;
+    switch (data.MSG_Type)
+    {
+        case YT:
+            data_tobe_send="YT,"+std::to_string(data.recvd_bool);
+            break;
+        case AT:
+            data_tobe_send="AT,"+std::to_string(data.var_cords.y)+"."+std::to_string(data.var_cords.x);
+            break;
+        case TI:
+            data_tobe_send="TI,"+std::to_string(data.var_cords.y)+"."+std::to_string(data.var_cords.x)+"."+std::to_string(data.recvd_bool);
+            break;
+        case DM:
+            data_tobe_send="DM,"+data.var_string;
+            break;
+        case MR:
+            data_tobe_send="MR,"+std::to_string(data.recvd_bool);
+            break;
+    }
+    send(client_internet_socket,data_tobe_send);
 }
+
 template<typename Extr_msg>
 typename std::conditional<std::is_same<Extr_msg, bool>::value, bool ,Coordinates>::type
 extract_frm_string(std::string recvd_message,int data_type)
@@ -163,39 +183,7 @@ extract_frm_string(std::string recvd_message,int data_type)
     }
     else
         std::cerr<<"wrong type was passed to function :extract_frm_string"<<std::endl;
-}
-
-Tcp_Server_Socket::TCP_RecvData_Format Tcp_Server_Socket::Format_Recvd_Data(std::string recvd_data)
-{
-    int data_type =Get_Data_Type(recvd_data);
-    recvd_data.substr(0,2);
-
-    Tcp_Server_Socket::TCP_RecvData_Format Formatted_data;
-    Formatted_data.MSG_Type =data_type;
-    switch (data_type)
-    {
-        case YT:
-            Formatted_data.recvd_bool =extract_frm_string<bool>(recvd_data,YT);
-            return Formatted_data;
-            break;
-        case AT:
-            Formatted_data.var_cords=extract_frm_string<Coordinates>(recvd_data,AT);
-            return Formatted_data;
-            break;
-        case TI:
-            Formatted_data.var_cords=extract_frm_string<Coordinates>(recvd_data,TI);
-            break;
-        case DM:
-            Formatted_data.var_string=recvd_data;
-            return Formatted_data;
-            break;
-        case MR:
-            Formatted_data.recvd_bool= extract_frm_string<bool>(recvd_data,MR);
-            return Formatted_data;
-            break;
-    }
-}
-
+}//wordt gebruikt in Format_Recvd_Data
 int Tcp_Server_Socket::Get_Data_Type(std::string recvd_data)
 {
     recvd_data.substr(2,std::string::npos);
@@ -221,7 +209,39 @@ int Tcp_Server_Socket::Get_Data_Type(std::string recvd_data)
     }
     else
         std::cerr<<"received unsupported data prefix";
+}//wordt gebruikt in Format_Recvd_Data
+Tcp_Server_Socket::TCP_DATA_FORMAT Tcp_Server_Socket::Format_Recvd_Data(std::string recvd_data)
+{
+    int data_type =Get_Data_Type(recvd_data);
+    recvd_data.substr(0,2);
+
+    Tcp_Server_Socket::TCP_DATA_FORMAT Formatted_data;
+    Formatted_data.MSG_Type =data_type;
+    switch (data_type)
+    {
+        case YT:
+            Formatted_data.recvd_bool =extract_frm_string<bool>(recvd_data,YT);
+            return Formatted_data;
+            break;
+        case AT:
+            Formatted_data.var_cords=extract_frm_string<Coordinates>(recvd_data,AT);
+            return Formatted_data;
+            break;
+        case TI:
+            Formatted_data.var_cords=extract_frm_string<Coordinates>(recvd_data,TI);
+            return Formatted_data;
+            break;
+        case DM:
+            Formatted_data.var_string=recvd_data;
+            return Formatted_data;
+            break;
+        case MR:
+            Formatted_data.recvd_bool= extract_frm_string<bool>(recvd_data,MR);
+            return Formatted_data;
+            break;
+    }
 }
+
 
 void Tcp_Server_Socket::cleanup(int internet_socket, int client_internet_socket)
 {

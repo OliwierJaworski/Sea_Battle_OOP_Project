@@ -21,7 +21,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +138,7 @@
       <workItem from="1701698680971" duration="420000" />
       <workItem from="1701699106232" duration="92000" />
       <workItem from="1701707647605" duration="1266000" />
-      <workItem from="1701794780709" duration="7407000" />
+      <workItem from="1701794780709" duration="9770000" />
     </task>
     <servers />
   </component>
@@ -154,11 +161,6 @@
           <url>file://$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h</url>
           <line>5</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp</url>
-          <line>73</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp</url>

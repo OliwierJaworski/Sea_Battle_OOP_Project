@@ -75,10 +75,6 @@ void MP_Game_Manager::client_play_turn()
 {
 
 }
-int MP_Game_Manager::Check_message_type(std::string message_received)
-{
-
-}
 Coordinates MP_Game_Manager::tranlate_to_cords(std::string input_string)
 {
     Coordinates User_Cords;
@@ -101,28 +97,7 @@ std::string MP_Game_Manager::Player_Input()
 
     return input_read;
 }
-template<typename MSG_TYPE>
-typename std::conditional<std::is_same<MSG_TYPE, std::string>::value, std::string ,Coordinates>::type MP_Game_Manager::Convert_Message(std::string recvd_message,int msg_type)
-{
-    switch (msg_type)
-    {
-        case DM:
-            if constexpr (std::is_same<MSG_TYPE,std::string>::value)
-            {
-                return recvd_message;
-            }
-            break;
-        case AT:
-            if constexpr (std::is_same<MSG_TYPE,Coordinates>::value)
-            {
-                Coordinates cords;
-                cords.y=recvd_message.at(3)-'0';//A(0)T(1),(2)3(3).(4)5(5)
-                cords.x=recvd_message.at(5)-'0';
-                return cords;
-            }
-            break;
-    }
-}
+
 bool MP_Game_Manager::Game_State_active()
 {
 
