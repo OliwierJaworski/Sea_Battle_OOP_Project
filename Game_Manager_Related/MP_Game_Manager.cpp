@@ -69,6 +69,7 @@ Coordinates MP_Game_Manager::Player_turn_decision()
 void MP_Game_Manager::host_play_turn()
 {
  Player_Me.Att_tile_state(Player_Me.Attack_Enemy(tranlate_to_cords(Player_Input())),true);
+
 }
 void MP_Game_Manager::client_play_turn()
 {

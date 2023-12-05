@@ -14,13 +14,7 @@ enum Connection_type
             TCP_CLIENT,
             TCP_HOST
         };
-enum  msg_prefix //maak class van als tijd over
-        {
-            DM,  //DIRECTCHAT received from OPONENT
-            YT,  //Transfer the turn to the other party
-            AT   //attack received format: "AT,y.x"
 
-        };
 class MP_Game_Manager
 {
 public:
