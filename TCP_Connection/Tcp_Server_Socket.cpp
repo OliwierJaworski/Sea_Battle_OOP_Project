@@ -125,6 +125,7 @@ extract_frm_string(std::string recvd_message,int data_type)
         bool bool_recvd;
         switch (data_type)
         {
+            case MR:    //valt gewoon door naar de YT case
             case YT:
                 recvd_message.substr(0,2);
                 if(recvd_message=="TRUE")
@@ -174,6 +175,7 @@ Tcp_Server_Socket::TCP_RecvData_Format Tcp_Server_Socket::Format_Recvd_Data(std:
     switch (data_type)
     {
         case YT:
+            Formatted_data.recvd_bool =extract_frm_string<bool>(recvd_data,YT);
             return Formatted_data;
             break;
         case AT:
@@ -188,7 +190,7 @@ Tcp_Server_Socket::TCP_RecvData_Format Tcp_Server_Socket::Format_Recvd_Data(std:
             return Formatted_data;
             break;
         case MR:
-            Formatted_data.var_string=recvd_data;
+            Formatted_data.recvd_bool= extract_frm_string<bool>(recvd_data,MR);
             return Formatted_data;
             break;
     }
