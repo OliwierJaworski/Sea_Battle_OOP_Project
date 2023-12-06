@@ -50,73 +50,92 @@ cmake_ninja_workdir = /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodl
 build cmake_object_order_depends_target_Zeeslag_Code_Fixing: phony || CMakeFiles/Zeeslag_Code_Fixing.dir
 
 build CMakeFiles/Zeeslag_Code_Fixing.dir/main.cpp.o: CXX_COMPILER__Zeeslag_Code_Fixing_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/main.cpp || cmake_object_order_depends_target_Zeeslag_Code_Fixing
+  DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
   DEP_FILE = CMakeFiles/Zeeslag_Code_Fixing.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
   OBJECT_FILE_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
 
 build CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/Game_Manager_Loader.cpp.o: CXX_COMPILER__Zeeslag_Code_Fixing_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/Game_Manager_Related/Game_Manager_Loader.cpp || cmake_object_order_depends_target_Zeeslag_Code_Fixing
+  DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
   DEP_FILE = CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/Game_Manager_Loader.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
   OBJECT_FILE_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related
 
 build CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/MP_Game_Manager.cpp.o: CXX_COMPILER__Zeeslag_Code_Fixing_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/Game_Manager_Related/MP_Game_Manager.cpp || cmake_object_order_depends_target_Zeeslag_Code_Fixing
+  DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
   DEP_FILE = CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/MP_Game_Manager.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
   OBJECT_FILE_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related
 
 build CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/SP_Game_Manager.cpp.o: CXX_COMPILER__Zeeslag_Code_Fixing_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/Game_Manager_Related/SP_Game_Manager.cpp || cmake_object_order_depends_target_Zeeslag_Code_Fixing
+  DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
   DEP_FILE = CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/SP_Game_Manager.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
   OBJECT_FILE_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related
 
 build CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Game_Map.cpp.o: CXX_COMPILER__Zeeslag_Code_Fixing_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/Player_Related/Game_Map.cpp || cmake_object_order_depends_target_Zeeslag_Code_Fixing
+  DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
   DEP_FILE = CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Game_Map.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
   OBJECT_FILE_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related
 
 build CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Game_Player.cpp.o: CXX_COMPILER__Zeeslag_Code_Fixing_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/Player_Related/Game_Player.cpp || cmake_object_order_depends_target_Zeeslag_Code_Fixing
+  DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
   DEP_FILE = CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Game_Player.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
   OBJECT_FILE_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related
 
 build CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Online_Player.cpp.o: CXX_COMPILER__Zeeslag_Code_Fixing_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/Player_Related/Online_Player.cpp || cmake_object_order_depends_target_Zeeslag_Code_Fixing
+  DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
   DEP_FILE = CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Online_Player.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
   OBJECT_FILE_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related
 
 build CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Carrier.cpp.o: CXX_COMPILER__Zeeslag_Code_Fixing_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/Boats_Related/Boats_Carrier.cpp || cmake_object_order_depends_target_Zeeslag_Code_Fixing
+  DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
   DEP_FILE = CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Carrier.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
   OBJECT_FILE_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related
 
 build CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Destroyer.cpp.o: CXX_COMPILER__Zeeslag_Code_Fixing_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/Boats_Related/Boats_Destroyer.cpp || cmake_object_order_depends_target_Zeeslag_Code_Fixing
+  DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
   DEP_FILE = CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Destroyer.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
   OBJECT_FILE_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related
 
 build CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Game_Boats.cpp.o: CXX_COMPILER__Zeeslag_Code_Fixing_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/Boats_Related/Game_Boats.cpp || cmake_object_order_depends_target_Zeeslag_Code_Fixing
+  DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
   DEP_FILE = CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Game_Boats.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
   OBJECT_FILE_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related
 
 build CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/Tcp_Client_Socket.cpp.o: CXX_COMPILER__Zeeslag_Code_Fixing_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/TCP_Connection/Tcp_Client_Socket.cpp || cmake_object_order_depends_target_Zeeslag_Code_Fixing
+  DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
   DEP_FILE = CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/Tcp_Client_Socket.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
   OBJECT_FILE_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection
 
 build CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/Tcp_Server_Socket.cpp.o: CXX_COMPILER__Zeeslag_Code_Fixing_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/TCP_Connection/Tcp_Server_Socket.cpp || cmake_object_order_depends_target_Zeeslag_Code_Fixing
+  DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
   DEP_FILE = CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/Tcp_Server_Socket.cpp.o.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
+  OBJECT_FILE_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection
+
+build CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/TCP_SHARED.cpp.o: CXX_COMPILER__Zeeslag_Code_Fixing_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/TCP_Connection/TCP_SHARED.cpp || cmake_object_order_depends_target_Zeeslag_Code_Fixing
+  DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
+  DEP_FILE = CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/TCP_SHARED.cpp.o.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
   OBJECT_FILE_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection
@@ -129,7 +148,7 @@ build CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/Tcp_Server_Socket.cpp.o:
 #############################################
 # Link the executable Zeeslag_Code_Fixing
 
-build Zeeslag_Code_Fixing: CXX_EXECUTABLE_LINKER__Zeeslag_Code_Fixing_Debug CMakeFiles/Zeeslag_Code_Fixing.dir/main.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/Game_Manager_Loader.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/MP_Game_Manager.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/SP_Game_Manager.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Game_Map.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Game_Player.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Online_Player.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Carrier.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Destroyer.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Game_Boats.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/Tcp_Client_Socket.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/Tcp_Server_Socket.cpp.o
+build Zeeslag_Code_Fixing: CXX_EXECUTABLE_LINKER__Zeeslag_Code_Fixing_Debug CMakeFiles/Zeeslag_Code_Fixing.dir/main.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/Game_Manager_Loader.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/MP_Game_Manager.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/SP_Game_Manager.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Game_Map.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Game_Player.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Online_Player.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Carrier.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Destroyer.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Game_Boats.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/Tcp_Client_Socket.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/Tcp_Server_Socket.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/TCP_SHARED.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
   POST_BUILD = :
@@ -180,14 +199,14 @@ build all: phony Zeeslag_Code_Fixing
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/CMakeLists.txt /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU-C.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU-CXX.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/CMakeLists.txt /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU-C.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU-CXX.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonTargets.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/CMakeLists.txt /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU-C.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU-CXX.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
+build /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/CMakeLists.txt /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU-C.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU-CXX.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux-GNU.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/Linux.cmake /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonTargets.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
 
 
 #############################################

@@ -10,7 +10,8 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_executable",
+			"target_link_libraries"
 		],
 		"files" : 
 		[
@@ -24,7 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 6,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 34,
 				"parent" : 0
 			}
 		]
@@ -38,12 +45,23 @@
 					"fragment" : "-g -std=gnu++23 -fdiagnostics-color=always"
 				}
 			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "JSON_DIAGNOSTICS=0"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "JSON_USE_IMPLICIT_CONVERSIONS=1"
+				}
+			],
 			"language" : "CXX",
 			"languageStandard" : 
 			{
 				"backtraces" : 
 				[
-					1
+					2
 				],
 				"standard" : "23"
 			},
@@ -60,7 +78,8 @@
 				15,
 				17,
 				19,
-				20
+				20,
+				23
 			]
 		}
 	],
@@ -104,7 +123,8 @@
 				15,
 				17,
 				19,
-				20
+				20,
+				23
 			]
 		},
 		{
@@ -121,7 +141,8 @@
 				16,
 				18,
 				21,
-				22
+				22,
+				24
 			]
 		}
 	],
@@ -252,6 +273,17 @@
 		{
 			"backtrace" : 1,
 			"path" : "TCP_Connection/Tcp_Server_Socket.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "TCP_Connection/TCP_SHARED.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "TCP_Connection/TCP_SHARED.h",
 			"sourceGroupIndex" : 1
 		}
 	],

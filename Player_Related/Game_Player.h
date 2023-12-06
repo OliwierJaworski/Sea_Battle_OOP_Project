@@ -8,6 +8,7 @@
 {
     int x;
     int y;
+    bool tile_state;
 };
 
 class Game_Player

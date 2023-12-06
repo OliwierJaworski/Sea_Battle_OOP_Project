@@ -21,11 +21,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Online_Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Online_Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Online_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Online_Player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +96,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="C/C++ File.main.cpp">
+  <component name="RunManager" selected="CMake Application.Zeeslag_Code_Fixing">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -142,7 +151,7 @@
       <workItem from="1701707647605" duration="1266000" />
       <workItem from="1701794780709" duration="12164000" />
       <workItem from="1701809602525" duration="64000" />
-      <workItem from="1701867365960" duration="312000" />
+      <workItem from="1701867365960" duration="3236000" />
     </task>
     <servers />
   </component>
@@ -161,11 +170,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h</url>
-          <line>5</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp</url>
           <line>68</line>

@@ -8,8 +8,9 @@ public:
     Online_Player() =default;
     ~Online_Player() override {};
 
-    Coordinates Attack_Enemy(Coordinates User_Input_Cords);
-    void Att_tile_state(Coordinates User_Input_Cords , bool Tile_State);
+    std::string Player_Input();
+    Coordinates Attack_Enemy(std::string input_string);
+    Coordinates adj_map_ToResponse(int y,int x, bool tile_state);
 private:
 };
 

@@ -68,35 +68,14 @@ Coordinates MP_Game_Manager::Player_turn_decision()
 }
 void MP_Game_Manager::host_play_turn()
 {
- Player_Me.Att_tile_state(Player_Me.Attack_Enemy(tranlate_to_cords(Player_Input())),true);
+
 
 }
 void MP_Game_Manager::client_play_turn()
 {
 
 }
-Coordinates MP_Game_Manager::tranlate_to_cords(std::string input_string)
-{
-    Coordinates User_Cords;
-    std::string::size_type pos =input_string.find('.');
-    User_Cords.y = input_string.at(pos +1)-'0';
-    User_Cords.x = input_string.at(pos -1)-'0';
-    return  User_Cords;
-}
-std::string MP_Game_Manager::Player_Input()
-{
-    std::string input_read;
-    std::cout << "type x.y to attack"<< std::endl;
 
-    do
-    {
-        input_read="";
-        std::cin >> input_read;
-    }
-    while(input_read.size()<3);
-
-    return input_read;
-}
 
 bool MP_Game_Manager::Game_State_active()
 {

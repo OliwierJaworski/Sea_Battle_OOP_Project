@@ -8,7 +8,6 @@
 
 #include <type_traits>
 
-
 enum Connection_type
         {
             TCP_CLIENT,
@@ -35,8 +34,6 @@ private:
     void client_play_turn();
     bool Game_State_active() ;
 
-    Coordinates tranlate_to_cords(std::string input_string);
-    std::string Player_Input();
     Coordinates Player_turn_decision();
 };
 

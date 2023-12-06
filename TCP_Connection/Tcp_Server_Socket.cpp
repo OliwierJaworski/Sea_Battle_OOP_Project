@@ -107,36 +107,13 @@ void Tcp_Server_Socket::send(int internet_socket,std::string StringData_ToBe_sen
     number_of_bytes_send = 0;
     std::cout << StringData_ToBe_send << "send :" << StringData_ToBe_send <<std::endl;
     number_of_bytes_send = ::send(internet_socket, StringData_ToBe_send.c_str(), StringData_ToBe_send.size(), 0);
-    if (number_of_bytes_send == -1) {
+    if (number_of_bytes_send == -1)
+    {
         perror("send");
     }
 }
 
-std::string Tcp_Server_Socket::serialize(MSG& msgPacket)
-{
-    std::ostringstream oss;
-    nlohmann::json j;
-    j["MSG_Type"] = msgPacket.MSG_Type;
-    j["x"] = msgPacket.x;
-    j["y"] = msgPacket.y;
-    j["bool_recvd"] = msgPacket.bool_recvd;
-    j["message"] = msgPacket.message;
-    oss << j;
-    return to_string(j);
-}
 
-MSG Tcp_Server_Socket::deserialize(std::string & str)
-{
-    MSG msg;
-    nlohmann::json j= nlohmann::json::parse(str);
-    msg.MSG_Type =j["MSG_Type"];
-    msg.x = j["x"];
-    msg.y = j["y"];
-    msg.bool_recvd = j["bool_recvd"];
-    msg.message = j["message"];
-    return msg;
-
-}
 
 void Tcp_Server_Socket::cleanup(int internet_socket, int client_internet_socket)
 {

@@ -21,7 +21,6 @@ private:
 
     void forward_SP_playgame();
     void forward_MP_playgame();
-
 };
 
 
