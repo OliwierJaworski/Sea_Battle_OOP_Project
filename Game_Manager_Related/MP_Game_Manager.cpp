@@ -116,7 +116,7 @@ void MP_Game_Manager::host_play_turn()
     while(keepgamerolling)
     {
         MSG_STRUCT currentmsg = host->deserialize_ToMSG(host->recv(host->get_Client_socket_state()));
-        if(currentmsg.MSG_Type=MSG_TYPE::GO)
+        if(currentmsg.MSG_Type==MSG_TYPE::GO)
         {
             keepgamerolling =false;
         }
@@ -134,7 +134,7 @@ void MP_Game_Manager::client_play_turn()
     while(keepgamerolling)
     {
         MSG_STRUCT currentmsg=Client->deserialize_ToMSG(Client->recv(Client->get_socket_state()));
-        if(currentmsg.MSG_Type=MSG_TYPE::GO)
+        if(currentmsg.MSG_Type==MSG_TYPE::GO)
         {
             keepgamerolling =false;
         }
