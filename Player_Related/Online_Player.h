@@ -8,8 +8,10 @@ public:
     Online_Player() =default;
     ~Online_Player() override {};
 
-    bool Get_Player_boats_alive()  override;
-    void Attack_Enemy();
+    std::string Player_Input();
+    bool adj_MyMAP_TOResponse(int x, int y);
+    Coordinates Attack_Enemy(std::string input_string);
+    Coordinates adj_map_ToResponse(int y,int x, bool tile_state);
 private:
 };
 
