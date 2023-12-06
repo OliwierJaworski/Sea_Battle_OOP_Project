@@ -23,9 +23,6 @@
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +139,7 @@
       <workItem from="1701707647605" duration="1266000" />
       <workItem from="1701794780709" duration="12164000" />
       <workItem from="1701809602525" duration="64000" />
-      <workItem from="1701867365960" duration="6165000" />
+      <workItem from="1701867365960" duration="6813000" />
     </task>
     <servers />
   </component>
@@ -163,7 +160,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp</url>
-          <line>91</line>
+          <line>92</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
