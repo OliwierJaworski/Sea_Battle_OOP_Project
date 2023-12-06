@@ -100,7 +100,7 @@ void MP_Game_Manager::host_play_turn()
 {
     while(1)
     {
-        Player_turn_decision(host->deserialize_ToMSG(host->recv(host->get_Client_socket_state())));
+        host->send(host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(host->deserialize_ToMSG(host->recv(host->get_Client_socket_state())))));
     }
 
 }
@@ -108,7 +108,8 @@ void MP_Game_Manager::client_play_turn()
 {
     while(1)
     {
-        Player_turn_decision(Client->deserialize_ToMSG(Client->recv(Client->get_socket_state())));
+        //Player_turn_decision(Client->deserialize_ToMSG(Client->recv(Client->get_socket_state())));
+        Client->send(Client->get_socket_state(),Client->serialize_Tostring(Player_turn_decision(Client->deserialize_ToMSG(Client->recv(Client->get_socket_state())))));
     }
 
 }
