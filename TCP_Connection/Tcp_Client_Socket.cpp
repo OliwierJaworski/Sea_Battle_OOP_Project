@@ -7,7 +7,6 @@ Tcp_Client_Socket::Tcp_Client_Socket()
         OSInit();
     #endif
     internet_socket = initialization();
-    send(get_socket_state(), serialize_Tostring(default_message()));
 }
 Tcp_Client_Socket::~Tcp_Client_Socket()
 {

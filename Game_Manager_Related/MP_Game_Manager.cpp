@@ -101,9 +101,9 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
             break;
         default:
             std::cerr << "wrong Type has been specified by the sender"<<std::endl;
-            return Structured_msg;
-
+            break;
     }
+    return Structured_msg;
 }
 void MP_Game_Manager::host_play_turn()
 {
