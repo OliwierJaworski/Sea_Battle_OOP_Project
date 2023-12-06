@@ -98,11 +98,19 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
 }
 void MP_Game_Manager::host_play_turn()
 {
-    Player_turn_decision(host->deserialize_ToMSG(host->recv(host->get_Client_socket_state())));
+    while(1)
+    {
+        Player_turn_decision(host->deserialize_ToMSG(host->recv(host->get_Client_socket_state())));
+    }
+
 }
 void MP_Game_Manager::client_play_turn()
 {
-    Player_turn_decision(Client->deserialize_ToMSG(Client->recv(Client->get_socket_state())));
+    while(1)
+    {
+        Player_turn_decision(Client->deserialize_ToMSG(Client->recv(Client->get_socket_state())));
+    }
+
 }
 
 
