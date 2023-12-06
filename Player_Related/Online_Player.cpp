@@ -25,4 +25,9 @@ Coordinates Online_Player::adj_map_ToResponse(int y,int x, bool tile_state)
 {
     map.Set_Enemy_map(x,y,tile_state);
 }
+bool Online_Player::adj_MyMAP_TOResponse(int x, int y)
+{
+    return map.get_my_map(x,y);
+}
+
 

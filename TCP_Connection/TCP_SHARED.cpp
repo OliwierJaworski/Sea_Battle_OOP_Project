@@ -44,7 +44,7 @@ void TCP_SHARED::send(int internet_socket,std::string StringData_ToBe_send)
 {
 
     number_of_bytes_send = 0;
-    std::cout << StringData_ToBe_send << "send :" << StringData_ToBe_send <<std::endl;
+    std::cout<< "data to be send :" << StringData_ToBe_send <<std::endl;
     number_of_bytes_send = ::send(internet_socket, StringData_ToBe_send.c_str(), StringData_ToBe_send.size(), 0);
     if (number_of_bytes_send == -1)
     {

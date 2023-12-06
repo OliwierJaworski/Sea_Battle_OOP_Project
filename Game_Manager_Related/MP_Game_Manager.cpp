@@ -67,18 +67,11 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
     MSG_STRUCT Structured_msg;
     switch (recvd_content.MSG_Type) 
     {
-        case MSG_TYPE::DM:
+        case MSG_TYPE::DM://dm naar oponent
             Structured_msg.MSG_Type=MSG_TYPE::YT;
+            Structured_msg.bool_recvd=true;
             break;
-        case MSG_TYPE::AT:
-            Structured_msg.bool_recvd =Player_Me.Verify_Ifenemy_Hit(recvd_content.y,recvd_content.x);
-            Structured_msg.MSG_Type=MSG_TYPE::TI;
-            break;
-        case MSG_TYPE::TI:
-            Player_Me.adj_map_ToResponse(recvd_content.y,recvd_content.x,recvd_content.bool_recvd);
-            Structured_msg.MSG_Type=MSG_TYPE::YT;
-            break;
-        case MSG_TYPE::YT:
+        case MSG_TYPE::YT://voer attack uit
             if(recvd_content.bool_recvd)
             {
                 Coordinates Player_cords;
@@ -89,7 +82,18 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
             }
             else
                 Structured_msg.MSG_Type=MSG_TYPE::YT;
-                Structured_msg.bool_recvd=true;
+            Structured_msg.bool_recvd=true;
+            break;
+        case MSG_TYPE::AT://als de opponent u attacked bekijk u map en send die terug als TI
+            Structured_msg.bool_recvd =Player_Me.adj_MyMAP_TOResponse(recvd_content.x,recvd_content.y);
+            Structured_msg.x=recvd_content.x;
+            Structured_msg.y=recvd_content.y;
+            Structured_msg.MSG_Type=MSG_TYPE::TI;
+            break;
+        case MSG_TYPE::TI://de attacking player adjust his tile info
+            Player_Me.adj_map_ToResponse(recvd_content.y,recvd_content.x,recvd_content.bool_recvd);
+            Structured_msg.MSG_Type=MSG_TYPE::YT;
+            Structured_msg.bool_recvd=true;
             break;
         default:
             std::cerr << "wrong Type has been specified by the sender"<<std::endl;
@@ -100,6 +104,8 @@ void MP_Game_Manager::host_play_turn()
 {
     while(1)
     {
+        Player_Me.print_map(1);
+        Player_Me.print_map(2);
         host->send(host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(host->deserialize_ToMSG(host->recv(host->get_Client_socket_state())))));
     }
 
@@ -108,7 +114,8 @@ void MP_Game_Manager::client_play_turn()
 {
     while(1)
     {
-        //Player_turn_decision(Client->deserialize_ToMSG(Client->recv(Client->get_socket_state())));
+        Player_Me.print_map(1);
+        Player_Me.print_map(2);
         Client->send(Client->get_socket_state(),Client->serialize_Tostring(Player_turn_decision(Client->deserialize_ToMSG(Client->recv(Client->get_socket_state())))));
     }
 
