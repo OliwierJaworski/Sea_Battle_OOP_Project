@@ -68,7 +68,7 @@ int Tcp_Client_Socket::initialization()
 MSG_STRUCT Tcp_Client_Socket::default_message()
 {
     MSG_STRUCT msg;
-    msg.MSG_Type=MSG_TYPE::YT;
+    msg.MSG_Type=MSG_TYPE::IN;
     msg.bool_recvd= false;
     return msg;
 }

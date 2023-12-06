@@ -59,7 +59,8 @@ public:
     };
     enum MSG_TYPE
             {
-                DM=1,   //DIRECTCHAT received from OPONENT
+                IN,     //initialization
+                DM,     //DIRECTCHAT received from OPONENT
                 YT,     //Transfer the turn to the other party
                 AT,     //attack received format: "AT,y.x"
                 TI,     //RECV tile info from opponent TI,y.x.true/false
