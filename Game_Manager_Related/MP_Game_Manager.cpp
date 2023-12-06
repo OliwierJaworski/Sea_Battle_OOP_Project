@@ -89,7 +89,7 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
                 Structured_msg.bool_recvd=true;
             break;
         case MSG_TYPE::AT://als de opponent u attacked bekijk u map en send die terug als TI
-            Structured_msg.bool_recvd =Player_Me.adj_MyMAP_TOResponse(recvd_content.x,recvd_content.y);
+            Structured_msg.bool_recvd =Player_Me.adj_MyMAP_TOResponse(recvd_content.y,recvd_content.x);
             Structured_msg.x=recvd_content.x;
             Structured_msg.y=recvd_content.y;
             Structured_msg.MSG_Type=MSG_TYPE::TI;
