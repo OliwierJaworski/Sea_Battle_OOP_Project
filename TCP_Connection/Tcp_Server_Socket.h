@@ -16,8 +16,6 @@ namespace SBN//SEA_Battle_Networking
     private:
         int initialization();
         int connection(int internet_socket);
-        void recv(int internet_socket);
-        void send(int internet_socket,std::string StringData_ToBe_send);
         void cleanup(int internet_socket, int client_internet_socket);
 //main
         int internet_socket;
@@ -31,10 +29,6 @@ namespace SBN//SEA_Battle_Networking
         struct sockaddr_storage client_internet_address;
         socklen_t client_internet_address_length;
         int client_socket;
-//execution->recv
-        int number_of_bytes_received;
-//execution->send
-        int number_of_bytes_send;
 //cleanup
         int shutdown_return;
     };

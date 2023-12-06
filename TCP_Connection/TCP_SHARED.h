@@ -64,10 +64,13 @@ public:
                 AT,  //attack received format: "AT,y.x"
                 TI,  //RECV tile info from opponent TI,y.x.true/false
             };
-    std::string serialize_Tostring(MSG& msgPacket);
-    MSG deserialize_ToMSG(std::string & str);
+    std::string serialize_Tostring(MSG msgPacket);
+    MSG deserialize_ToMSG(std::string  str);
+    std::string recv(int internet_socket);
+    void send(int internet_socket,std::string StringData_ToBe_send);
 private:
-
+    int number_of_bytes_received;
+    int number_of_bytes_send;
 };
 }
 using MSG_TYPE = SBN::TCP_SHARED::MSG_TYPE;

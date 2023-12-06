@@ -1,6 +1,6 @@
 #include "TCP_SHARED.h"
 using namespace SBN;
-std::string TCP_SHARED::serialize_Tostring(MSG& msgPacket)
+std::string TCP_SHARED::serialize_Tostring(MSG msgPacket)
 {
     std::ostringstream oss;
     nlohmann::json j;
@@ -13,7 +13,7 @@ std::string TCP_SHARED::serialize_Tostring(MSG& msgPacket)
     return to_string(j);
 }
 
-TCP_SHARED::MSG TCP_SHARED::deserialize_ToMSG(std::string & str)
+TCP_SHARED::MSG TCP_SHARED::deserialize_ToMSG(std::string  str)
 {
     MSG msg;
     nlohmann::json j= nlohmann::json::parse(str);
@@ -24,4 +24,29 @@ TCP_SHARED::MSG TCP_SHARED::deserialize_ToMSG(std::string & str)
     msg.message = j["message"];
     return msg;
 
+}
+std::string TCP_SHARED::recv(int internet_socket)
+{
+    int number_of_bytes_received = 0;
+    char buffer[1000];
+    number_of_bytes_received = ::recv(internet_socket, buffer, (sizeof buffer) - 1, 0);
+    if (number_of_bytes_received == -1)
+    {
+        perror("recv");
+    } else {
+        buffer[number_of_bytes_received] = '\0';
+        printf("Received : %s\n", buffer);
+    }
+    return buffer;
+}
+void TCP_SHARED::send(int internet_socket,std::string StringData_ToBe_send)
+{
+
+    number_of_bytes_send = 0;
+    std::cout << StringData_ToBe_send << "send :" << StringData_ToBe_send <<std::endl;
+    number_of_bytes_send = ::send(internet_socket, StringData_ToBe_send.c_str(), StringData_ToBe_send.size(), 0);
+    if (number_of_bytes_send == -1)
+    {
+        perror("send");
+    }
 }
