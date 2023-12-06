@@ -37,7 +37,8 @@ std::string TCP_SHARED::recv(int internet_socket)
         buffer[number_of_bytes_received] = '\0';
         printf("Received : %s\n", buffer);
     }
-    return buffer;
+    std::string buffered_string =buffer;
+    return buffered_string;
 }
 void TCP_SHARED::send(int internet_socket,std::string StringData_ToBe_send)
 {

@@ -96,7 +96,7 @@ void MP_Game_Manager::host_play_turn()
 }
 void MP_Game_Manager::client_play_turn()
 {
-    Player_turn_decision(host->deserialize_ToMSG(host->recv(host->get_Client_socket_state())));
+    Player_turn_decision(Client->deserialize_ToMSG(Client->recv(Client->get_socket_state())));
 }
 
 

@@ -7,8 +7,7 @@ Tcp_Client_Socket::Tcp_Client_Socket()
         OSInit();
     #endif
     internet_socket = initialization();
-    send(internet_socket,"TCP client socket working after 11:10");
-    recv(internet_socket);
+    send(get_socket_state(), serialize_Tostring(default_message()));
 }
 Tcp_Client_Socket::~Tcp_Client_Socket()
 {
@@ -65,6 +64,13 @@ int Tcp_Client_Socket::initialization()
     }
 
     return internet_socket;
+}
+MSG_STRUCT Tcp_Client_Socket::default_message()
+{
+    MSG_STRUCT msg;
+    msg.MSG_Type=MSG_TYPE::YT;
+    msg.bool_recvd= true;
+    return msg;
 }
 
 void Tcp_Client_Socket::cleanup( int internet_socket )
