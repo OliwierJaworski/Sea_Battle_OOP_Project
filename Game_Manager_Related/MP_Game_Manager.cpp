@@ -62,9 +62,32 @@ int MP_Game_Manager::Play_Game()
         else
             std::cerr<<"could not find the correct game to bind to"<<std::endl;
 }
-Coordinates MP_Game_Manager::Player_turn_decision()
+MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
 {
+    MSG_STRUCT Structured_msg;
+    switch (recvd_content.MSG_Type) 
+    {
+        case MSG_TYPE::DM:
+            break;
+        case MSG_TYPE::YT:
+            Coordinates Player_cords =Player_Me.Attack_Enemy(Player_Me.Player_Input());
+            Structured_msg.x=Player_cords.x;
+            Structured_msg.y=Player_cords.y;
+            Structured_msg.MSG_Type=MSG_TYPE::AT;
+            break;
+        case MSG_TYPE::AT:
+            Structured_msg.bool_recvd =Player_Me.Verify_Ifenemy_Hit(recvd_content.y,recvd_content.x);
+            Structured_msg.MSG_Type=MSG_TYPE::TI;
+            break;
 
+        case MSG_TYPE::TI:
+            Player_Me.adj_map_ToResponse(recvd_content.y,recvd_content.x,recvd_content.bool_recvd);
+            Structured_msg.MSG_Type=MSG_TYPE::YT;
+            break;
+        default:
+            std::cerr << "wrong Type has been specified by the sender"<<std::endl;
+            return Structured_msg;
+    }
 }
 void MP_Game_Manager::host_play_turn()
 {

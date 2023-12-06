@@ -2,10 +2,6 @@
 #define GAME_FROM_SCRATCH_AGAIN_MP_GAME_MANAGER_H
 
 #include "SP_Game_Manager.h"
-#include "../TCP_Connection/Tcp_Server_Socket.h"
-#include "../TCP_Connection/Tcp_Client_Socket.h"
-#include "../Player_Related/Online_Player.h"
-
 #include <type_traits>
 
 enum Connection_type
@@ -34,7 +30,7 @@ private:
     void client_play_turn();
     bool Game_State_active() ;
 
-    Coordinates Player_turn_decision();
+    MSG_STRUCT Player_turn_decision(MSG_STRUCT recvd_content);
 };
 
 #endif

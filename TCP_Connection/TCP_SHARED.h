@@ -42,6 +42,8 @@
 #include <sstream>
 #include "nlohmann/json.hpp"
 #include "../Player_Related/Game_Player.h"
+
+
 namespace SBN
 {
 class TCP_SHARED
@@ -55,12 +57,19 @@ public:
         bool bool_recvd;
         std::string message;
     };
+    enum MSG_TYPE
+            {
+                DM=1,  //DIRECTCHAT received from OPONENT
+                YT,  //Transfer the turn to the other party
+                AT,  //attack received format: "AT,y.x"
+                TI,  //RECV tile info from opponent TI,y.x.true/false
+            };
     std::string serialize_Tostring(MSG& msgPacket);
     MSG deserialize_ToMSG(std::string & str);
 private:
 
 };
 }
-
-
+using MSG_TYPE = SBN::TCP_SHARED::MSG_TYPE;
+using MSG_STRUCT = SBN::TCP_SHARED::MSG;
 #endif //REMADE_SEA_BATTLE_TCP_SHARED_H
