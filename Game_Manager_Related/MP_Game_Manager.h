@@ -21,6 +21,7 @@ private:
     std::unique_ptr<SBN::Tcp_Client_Socket> Client = nullptr;
     std::unique_ptr<SBN::Tcp_Server_Socket> host = nullptr;
     Online_Player Player_Me;
+    bool keepgamerolling=true;
 
     std::string Player_Input_init() ;
     int filter_input();

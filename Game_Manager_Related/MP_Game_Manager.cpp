@@ -65,6 +65,12 @@ int MP_Game_Manager::Play_Game()
 MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
 {
     MSG_STRUCT Structured_msg;
+    if(!Player_Me.Get_Player_boats_alive())
+    {
+        Structured_msg.MSG_Type=MSG_TYPE::GO;
+        Structured_msg.bool_recvd= true;
+        return Structured_msg;
+    }
     switch (recvd_content.MSG_Type) 
     {
         case MSG_TYPE::IN://dm naar oponent
@@ -107,23 +113,38 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
 }
 void MP_Game_Manager::host_play_turn()
 {
-    while(1)
+    while(keepgamerolling)
     {
-        Player_Me.print_map(0);
-        Player_Me.print_map(1);
-        host->send(host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(host->deserialize_ToMSG(host->recv(host->get_Client_socket_state())))));
+        MSG_STRUCT currentmsg = host->deserialize_ToMSG(host->recv(host->get_Client_socket_state()));
+        if(currentmsg.MSG_Type=MSG_TYPE::GO)
+        {
+            keepgamerolling =false;
+        }
+        else
+        {
+            Player_Me.print_map(0);
+            Player_Me.print_map(1);
+            host->send(host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(currentmsg)));
+        }
     }
-
+std::cout << "game over!";
 }
 void MP_Game_Manager::client_play_turn()
 {
-    while(1)
+    while(keepgamerolling)
     {
-        Player_Me.print_map(0);
-        Player_Me.print_map(1);
-        Client->send(Client->get_socket_state(),Client->serialize_Tostring(Player_turn_decision(Client->deserialize_ToMSG(Client->recv(Client->get_socket_state())))));
+        MSG_STRUCT currentmsg=Client->deserialize_ToMSG(Client->recv(Client->get_socket_state()));
+        if(currentmsg.MSG_Type=MSG_TYPE::GO)
+        {
+            keepgamerolling =false;
+        }
+        else
+        {
+            Player_Me.print_map(0);
+            Player_Me.print_map(1);
+            Client->send(Client->get_socket_state(), Client->serialize_Tostring(Player_turn_decision(currentmsg)));
+        }
     }
-
 }
 
 
