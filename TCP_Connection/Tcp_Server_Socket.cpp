@@ -21,7 +21,7 @@ void Tcp_Server_Socket::bind_to_client()
     std::cout << " the tcp socket is initializing.." <<std::endl;
     internet_socket = initialization();
     client_internet_socket = connection(internet_socket);
-    recv(client_internet_socket);
+    send(get_Client_socket_state(),serialize_Tostring(default_message()));
 }
 
 int Tcp_Server_Socket::initialization()
@@ -103,6 +103,13 @@ void Tcp_Server_Socket::cleanup(int internet_socket, int client_internet_socket)
 
     close(client_internet_socket);
     close(internet_socket);
+}
+MSG_STRUCT Tcp_Server_Socket::default_message()
+{
+    MSG_STRUCT msg;
+    msg.MSG_Type=MSG_TYPE::YT;
+    msg.bool_recvd= true;
+    return msg;
 }
 
 

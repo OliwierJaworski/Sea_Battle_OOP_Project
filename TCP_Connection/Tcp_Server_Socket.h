@@ -14,6 +14,7 @@ namespace SBN//SEA_Battle_Networking
         int get_Client_socket_state() { return client_internet_socket; }
 
     private:
+        MSG_STRUCT default_message();
         int initialization();
         int connection(int internet_socket);
         void cleanup(int internet_socket, int client_internet_socket);

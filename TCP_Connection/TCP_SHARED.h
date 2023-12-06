@@ -51,10 +51,10 @@ class TCP_SHARED
 public:
     struct MSG
     {
-        int MSG_Type;
-        int x;
-        int y;
-        bool bool_recvd;
+        int MSG_Type=0;
+        int x=0;
+        int y=0;
+        bool bool_recvd=false;
         std::string message;
     };
     enum MSG_TYPE

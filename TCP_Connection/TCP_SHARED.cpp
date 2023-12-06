@@ -27,7 +27,7 @@ TCP_SHARED::MSG TCP_SHARED::deserialize_ToMSG(std::string  str)
 }
 std::string TCP_SHARED::recv(int internet_socket)
 {
-    int number_of_bytes_received = 0;
+    number_of_bytes_received = 0;
     char buffer[1000];
     number_of_bytes_received = ::recv(internet_socket, buffer, (sizeof buffer) - 1, 0);
     if (number_of_bytes_received == -1)
