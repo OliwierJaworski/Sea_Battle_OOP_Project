@@ -3,12 +3,12 @@
 
     std::string Game_Manager_Loader::Player_Option()
     {
-    std::string UserGame ="";//"multiplayer"
+    std::string UserGame ="multiplayer";
     std::cout<< "Multiplayer Or Singleplayer? :>";
-    do
-    {
-        std::cin >> UserGame;
-    } while (UserGame !="singleplayer" && UserGame != "multiplayer");
+   // do
+   // {
+   //     std::cin >> UserGame;
+   //} while (UserGame !="singleplayer" && UserGame != "multiplayer");
         return UserGame;
     }
 

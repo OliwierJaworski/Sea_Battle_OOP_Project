@@ -22,6 +22,8 @@
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,11 +92,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="main.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="REMADE_Sea_Battle" TARGET_NAME="main.cpp" CONFIG_NAME="main.cpp">
       <option name="sourceFile" value="main.cpp" />
       <method v="2">
@@ -140,7 +137,8 @@
       <workItem from="1701794780709" duration="12164000" />
       <workItem from="1701809602525" duration="64000" />
       <workItem from="1701867365960" duration="9655000" />
-      <workItem from="1701884092571" duration="1000" />
+      <workItem from="1701884092571" duration="8918000" />
+      <workItem from="1701899925132" duration="1256000" />
     </task>
     <servers />
   </component>
