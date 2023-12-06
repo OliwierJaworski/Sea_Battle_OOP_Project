@@ -79,11 +79,17 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
             Structured_msg.MSG_Type=MSG_TYPE::YT;
             break;
         case MSG_TYPE::YT:
-            Coordinates Player_cords;
-            Player_cords=Player_Me.Attack_Enemy(Player_Me.Player_Input());
-            Structured_msg.x=Player_cords.x;
-            Structured_msg.y=Player_cords.y;
-            Structured_msg.MSG_Type=MSG_TYPE::AT;
+            if(recvd_content.bool_recvd)
+            {
+                Coordinates Player_cords;
+                Player_cords=Player_Me.Attack_Enemy(Player_Me.Player_Input());
+                Structured_msg.x=Player_cords.x;
+                Structured_msg.y=Player_cords.y;
+                Structured_msg.MSG_Type=MSG_TYPE::AT;
+            }
+            else
+                Structured_msg.MSG_Type=MSG_TYPE::YT;
+                Structured_msg.bool_recvd=true;
             break;
         default:
             std::cerr << "wrong Type has been specified by the sender"<<std::endl;
