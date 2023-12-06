@@ -40,18 +40,17 @@
 #include <string.h> //for memset
 #include <iostream>
 #endif
-
+#include <sstream>
+#include "nlohmann/json.hpp"
 namespace SBN//SEA_Battle_Networking
 {
-    enum  msg_prefix //maak class van als tijd over
+    struct MSG
     {
-        YT,//YT,bool
-
-        AT,//AT,y.x
-        TI,//TI,y.x.Bool -> How the recipent of AT,y.x will have to answer to the call
-
-        DM,//DM,message string
-        MR,//MR,bool->recipent confirms that message has been received
+        int MSG_Type;
+        int x;
+        int y;
+        bool bool_recvd;
+        std::string message;
     };
 
     class Tcp_Server_Socket
@@ -69,17 +68,8 @@ namespace SBN//SEA_Battle_Networking
         Tcp_Server_Socket();
         ~Tcp_Server_Socket();
         void bind_to_client();
-        void Send_Formatted_Data(TCP_DATA_FORMAT data);
-
-
-        TCP_DATA_FORMAT Format_Recvd_Data(std::string recvd_data);
-
-        template<typename Extr_msg>
-        typename std::conditional<std::is_same<Extr_msg, bool>::value, bool ,Coordinates>::type
-        extract_frm_string(std::string recvd_message,int data_type);
-
-
-        int Get_Data_Type(std::string recvd_data);
+        std::string serialize(MSG& msgPacket);
+        MSG deserialize(std::string & str);
         int get_Client_socket_state() { return client_internet_socket; }
 
     private:

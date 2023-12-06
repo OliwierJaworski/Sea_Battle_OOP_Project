@@ -112,136 +112,31 @@ void Tcp_Server_Socket::send(int internet_socket,std::string StringData_ToBe_sen
     }
 }
 
-void Tcp_Server_Socket::Send_Formatted_Data(TCP_DATA_FORMAT data)
+std::string Tcp_Server_Socket::serialize(MSG& msgPacket)
 {
-    std::string data_tobe_send;
-    switch (data.MSG_Type)
-    {
-        case YT:
-            data_tobe_send="YT,"+std::to_string(data.recvd_bool);
-            break;
-        case AT:
-            data_tobe_send="AT,"+std::to_string(data.var_cords.y)+"."+std::to_string(data.var_cords.x);
-            break;
-        case TI:
-            data_tobe_send="TI,"+std::to_string(data.var_cords.y)+"."+std::to_string(data.var_cords.x)+"."+std::to_string(data.recvd_bool);
-            break;
-        case DM:
-            data_tobe_send="DM,"+data.var_string;
-            break;
-        case MR:
-            data_tobe_send="MR,"+std::to_string(data.recvd_bool);
-            break;
-    }
-    send(client_internet_socket,data_tobe_send);
+    std::ostringstream oss;
+    nlohmann::json j;
+    j["MSG_Type"] = msgPacket.MSG_Type;
+    j["x"] = msgPacket.x;
+    j["y"] = msgPacket.y;
+    j["bool_recvd"] = msgPacket.bool_recvd;
+    j["message"] = msgPacket.message;
+    oss << j;
+    return to_string(j);
 }
 
-template<typename Extr_msg>
-typename std::conditional<std::is_same<Extr_msg, bool>::value, bool ,Coordinates>::type
-extract_frm_string(std::string recvd_message,int data_type)
+MSG Tcp_Server_Socket::deserialize(std::string & str)
 {
-    if constexpr (std::is_same<Extr_msg,bool>::value)
-    {
-        bool bool_recvd;
-        switch (data_type)
-        {
-            case MR:    //valt gewoon door naar de YT case
-            case YT:
-                recvd_message.substr(0,2);
-                if(recvd_message=="TRUE")
-                {
-                    bool_recvd= true;
-                }
-                if(recvd_message=="FALSE")
-                {
-                    bool_recvd= false;
-                }
-                else
-                    std::cerr << "Tcp_Server_Socket::extract_frm_string : could not convert to bool" << std::endl;
-                return bool_recvd;
-            case TI:
-                recvd_message.substr(0,6);//bv :TI,1.1.true
-                if(recvd_message=="TRUE")
-                {
-                    bool_recvd= true;
-                }
-                if(recvd_message=="FALSE")
-                {
-                    bool_recvd= false;
-                }
-                else
-                    std::cerr << "Tcp_Server_Socket::extract_frm_string : could not convert to bool" << std::endl;
-                return bool_recvd;
-        }
-    }
-    if constexpr (std::is_same<Extr_msg,Coordinates>::value)
-    {
-        Coordinates cord_pair_recvd;
-        cord_pair_recvd.y=recvd_message.at(3)-'0';
-        cord_pair_recvd.x=recvd_message.at(5)-'0';
-        return cord_pair_recvd;
-    }
-    else
-        std::cerr<<"wrong type was passed to function :extract_frm_string"<<std::endl;
-}//wordt gebruikt in Format_Recvd_Data
-int Tcp_Server_Socket::Get_Data_Type(std::string recvd_data)
-{
-    recvd_data.substr(2,std::string::npos);
-    if (recvd_data=="YT")
-    {
-        return YT;
-    }
-    else if(recvd_data=="AT")
-    {
-        return AT;
-    }
-    else if(recvd_data=="TI")
-    {
-        return TI;
-    }
-    else if(recvd_data=="DM")
-    {
-        return DM;
-    }
-    else if(recvd_data=="MR")
-    {
-        return MR;
-    }
-    else
-        std::cerr<<"received unsupported data prefix";
-}//wordt gebruikt in Format_Recvd_Data
-Tcp_Server_Socket::TCP_DATA_FORMAT Tcp_Server_Socket::Format_Recvd_Data(std::string recvd_data)
-{
-    int data_type =Get_Data_Type(recvd_data);
-    recvd_data.substr(0,2);
+    MSG msg;
+    nlohmann::json j= nlohmann::json::parse(str);
+    msg.MSG_Type =j["MSG_Type"];
+    msg.x = j["x"];
+    msg.y = j["y"];
+    msg.bool_recvd = j["bool_recvd"];
+    msg.message = j["message"];
+    return msg;
 
-    Tcp_Server_Socket::TCP_DATA_FORMAT Formatted_data;
-    Formatted_data.MSG_Type =data_type;
-    switch (data_type)
-    {
-        case YT:
-            Formatted_data.recvd_bool =extract_frm_string<bool>(recvd_data,YT);
-            return Formatted_data;
-            break;
-        case AT:
-            Formatted_data.var_cords=extract_frm_string<Coordinates>(recvd_data,AT);
-            return Formatted_data;
-            break;
-        case TI:
-            Formatted_data.var_cords=extract_frm_string<Coordinates>(recvd_data,TI);
-            return Formatted_data;
-            break;
-        case DM:
-            Formatted_data.var_string=recvd_data;
-            return Formatted_data;
-            break;
-        case MR:
-            Formatted_data.recvd_bool= extract_frm_string<bool>(recvd_data,MR);
-            return Formatted_data;
-            break;
-    }
 }
-
 
 void Tcp_Server_Socket::cleanup(int internet_socket, int client_internet_socket)
 {

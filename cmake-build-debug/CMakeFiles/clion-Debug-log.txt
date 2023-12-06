@@ -1,4 +1,8 @@
 /home/oliwier-desktop/Documents/clion-2023.2.2/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/oliwier-desktop/Documents/clion-2023.2.2/bin/ninja/linux/x64/ninja -G Ninja -S /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project -B /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/cmake-build-debug
--- Configuring done (0.0s)
--- Generating done (0.0s)
--- Build files have been written to: /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/cmake-build-debug
+-- Found nlohmann_json: /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake (found version "3.10.5") 
+CMake Error at CMakeLists.txt:32 (target_link_libraries):
+  Cannot specify link libraries for target "Data_serialization_TCP" which is
+  not built by this project.
+
+
+-- Configuring incomplete, errors occurred!

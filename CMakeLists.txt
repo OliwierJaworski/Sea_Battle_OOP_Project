@@ -3,6 +3,8 @@ project(Zeeslag_Code_Fixing)
 
 set(CMAKE_CXX_STANDARD 23)
 
+find_package(nlohmann_json CONFIG REQUIRED)
+
 add_executable(Zeeslag_Code_Fixing main.cpp
         Game_Manager_Related/Game_Manager_Loader.h
         Game_Manager_Related/MP_Game_Manager.h
@@ -26,3 +28,5 @@ add_executable(Zeeslag_Code_Fixing main.cpp
         TCP_Connection/Tcp_Server_Socket.cpp
         TCP_Connection/Tcp_Client_Socket.h
         TCP_Connection/Tcp_Server_Socket.h)
+
+target_link_libraries(Data_serialization_TCP PRIVATE nlohmann_json::nlohmann_json)
