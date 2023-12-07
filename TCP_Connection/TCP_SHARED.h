@@ -64,6 +64,7 @@ public:
                 YT,     //Transfer the turn to the other party
                 AT,     //attack received format: "AT,y.x"
                 TI,     //RECV tile info from opponent TI,y.x.true/false
+                GO      //Game over send by or to
             };
     std::string serialize_Tostring(MSG msgPacket);
     MSG deserialize_ToMSG(std::string  str);
