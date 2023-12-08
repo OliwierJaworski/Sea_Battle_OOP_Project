@@ -23,7 +23,6 @@ TCP_SHARED::MSG TCP_SHARED::deserialize_ToMSG(std::string  str)
     msg.bool_recvd = j["bool_recvd"];
     msg.message = j["message"];
     return msg;
-
 }
 std::string TCP_SHARED::recv(int internet_socket)
 {

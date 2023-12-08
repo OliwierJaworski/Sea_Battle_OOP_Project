@@ -18,7 +18,12 @@ public:
 //constructor | destructor
     Game_Map();
     ~Game_Map() {Free_Alloc();};
-
+    struct Coordinates
+    {
+        int x;
+        int y;
+        bool tile_state;
+    };
 public:
 //public
     bool get_my_map(int y, int x) ;
@@ -42,4 +47,5 @@ private:
     void Free_Alloc();
 
 };
+using Coordinates = Game_Map::Coordinates;
 #endif

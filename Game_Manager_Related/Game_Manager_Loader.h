@@ -13,6 +13,8 @@ public:
     Game_Manager_Loader() {}
     virtual ~Game_Manager_Loader() =default;
 
+
+
     void Game_Type(std::string User_Option);
     std::string Player_Option();
 private:

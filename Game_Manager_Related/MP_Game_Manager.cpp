@@ -32,24 +32,31 @@ std::string MP_Game_Manager::Player_Input_init()
 }
 int MP_Game_Manager::filter_input()
 {
-    std::string Connection_type="";
-    do
+    try
     {
-        Connection_type = Player_Input_init();
-    } while (Connection_type!= "Host" && Connection_type!="Client");
-    if (Connection_type=="Host")
-    {
-        return TCP_HOST;
+        std::string Connection_type = "";
+        do
+        {
+            Connection_type = Player_Input_init();
+        }while (Connection_type != "Host" && Connection_type != "Client");
+        if (Connection_type == "Host")
+        {
+            return TCP_HOST;
+        }
+        else if (Connection_type == "Client")
+        {
+            return Connection_type::TCP_CLIENT;
+        }
+        else
+        throw (Connection_type);
     }
-    else if(Connection_type=="Client")
+    catch (int connection_error)
     {
-        return TCP_CLIENT;
+        std::cout<< "Wrong int value has been provided bz Player_Input_init";
     }
-    else
-       std::cerr <<"wrong connection type";
 }
 
-int MP_Game_Manager::Play_Game()
+void MP_Game_Manager::Play_Game()
 {
         if(Client != nullptr)
         {
@@ -118,7 +125,7 @@ void MP_Game_Manager::host_play_turn()
         MSG_STRUCT currentmsg = host->deserialize_ToMSG(host->recv(host->get_Client_socket_state()));
         if(currentmsg.MSG_Type==MSG_TYPE::GO)
         {
-            keepgamerolling =false;
+            keepgamerolling =false ;
         }
         else
         {
@@ -147,8 +154,3 @@ void MP_Game_Manager::client_play_turn()
     }
 }
 
-
-bool MP_Game_Manager::Game_State_active()
-{
-
-}

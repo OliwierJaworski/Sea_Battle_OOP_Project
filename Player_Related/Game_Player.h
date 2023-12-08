@@ -4,25 +4,21 @@
 #include <memory>
 #include "Game_Map.h"
 
- struct Coordinates
-{
-    int x;
-    int y;
-    bool tile_state;
-};
+
 
 class Game_Player
 {
 public:
-    Game_Player() {std::cout <<"Player object is created in SP"<< std::endl;}
-    virtual ~Game_Player();
+             Game_Player();
+    virtual  ~Game_Player();
 
-    bool Get_Player_boats_alive();
-    virtual void Attack_Enemy(Game_Player & Enemy_Player,Coordinates User_Input_Cords);
-    bool Verify_Ifenemy_Hit(int y, int x)           {return map.get_my_map(y,x);}
-    void print_map(int whichmap);
-
+        bool Get_Player_boats_alive();
+        void Attack_Enemy(Game_Player & Enemy_Player,Coordinates User_Input_Cords);
+        std::string Player_Input();
+        void print_map(int whichmap);
 protected:
+    Game_Map get_map(){return  map;}
+private:
     Game_Map map;
 };
 #endif

@@ -16,8 +16,8 @@ public:
     SP_Game_Manager() ;
     virtual ~SP_Game_Manager();
 
-    virtual std::string Player_Input();//x,y||chat"hey blabla"
     Coordinates tranlate_to_cords(std::string input_string);
+
     virtual bool Play_Game();
 protected:
     virtual void play_turn(Game_Player & Current_Player,Game_Player & Enemy_Player);
