@@ -9,16 +9,16 @@
 class Game_Player
 {
 public:
-             Game_Player();
-    virtual  ~Game_Player();
+               Game_Player()=default;
+       virtual ~Game_Player()=default;
 
-        bool Get_Player_boats_alive();
-        void Attack_Enemy(Game_Player & Enemy_Player,Coordinates User_Input_Cords);
-        std::string Player_Input();
-        void print_map(int whichmap);
+          bool Get_Player_boats_alive();
+          void Attack_Enemy(Game_Player & Enemy_Player,Coordinates User_Input_Cords);
+   std::string Player_Input();
+          void print_map();
 protected:
-    Game_Map get_map(){return  map;}
+      Game_Map get_map(){return  map;}
 private:
-    Game_Map map;
+      Game_Map map;
 };
 #endif

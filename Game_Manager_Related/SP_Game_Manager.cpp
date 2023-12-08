@@ -1,12 +1,4 @@
 #include "SP_Game_Manager.h"
-SP_Game_Manager::SP_Game_Manager()
-{
-
-}
-SP_Game_Manager::~SP_Game_Manager()
-{
-
-}
 bool SP_Game_Manager::Play_Game()
 {
     Game_Player * previous_player= nullptr;
@@ -15,25 +7,25 @@ bool SP_Game_Manager::Play_Game()
       if(& Player_Me!= previous_player)
       {
           std::cout <<"PLAYER Me turn "<<std::endl;
-          Player_Me.print_map(0);
-          Player_Me.print_map(1);
+          Player_Me.print_map();
           play_turn(Player_Me,Player_Enemy);
           previous_player =&Player_Me;
       }
       else if(& Player_Enemy != previous_player)
       {
           std::cout <<"PLAYER Enemy turn "<<std::endl;
-          Player_Enemy.print_map(0);
-          Player_Enemy.print_map(1);
+          Player_Enemy.print_map();
           play_turn(Player_Enemy,Player_Me);
           previous_player =& Player_Enemy;
       }
     }
 }
+
 void SP_Game_Manager::play_turn(Game_Player & Current_Player,Game_Player & Enemy_Player)
 {
     Current_Player.Attack_Enemy(Enemy_Player,tranlate_to_cords(Current_Player.Player_Input()));
 }
+
 bool SP_Game_Manager::Game_State_active()
 {
     if (Player_Me.Get_Player_boats_alive() && Player_Enemy.Get_Player_boats_alive())

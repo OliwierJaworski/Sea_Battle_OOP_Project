@@ -5,12 +5,11 @@
 class Online_Player : public Game_Player
 {
 public:
-    Online_Player()  =default;
-    ~Online_Player()  override {};
+                Online_Player()  =default;
+                ~Online_Player()  override {};
 
     Coordinates Attack_Enemy(std::string input_string);
-
-           void adj_map_ToResponse(int y,int x, bool tile_state);
+           void adj_myEnemymap_ToResponse(int y,int x, bool tile_state);
            bool adj_MyMAP_TOResponse(int x, int y);
 private:
 };

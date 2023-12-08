@@ -39,11 +39,11 @@ int MP_Game_Manager::filter_input()
         {
             Connection_type = Player_Input_init();
         }while (Connection_type != "Host" && Connection_type != "Client");
-        if (Connection_type == "Host")
+        if (Connection_type == "Host" || Connection_type == "host")
         {
             return TCP_HOST;
         }
-        else if (Connection_type == "Client")
+        else if (Connection_type == "Client" || Connection_type == "client")
         {
             return Connection_type::TCP_CLIENT;
         }
@@ -58,63 +58,74 @@ int MP_Game_Manager::filter_input()
 
 void MP_Game_Manager::Play_Game()
 {
-        if(Client != nullptr)
+    try
+    {
+        if (Client != nullptr)
         {
             client_play_turn();
         }
-        else if(host != nullptr)
+        else if (host != nullptr)
         {
             host_play_turn();
         }
         else
-            std::cerr<<"could not find the correct game to bind to"<<std::endl;
+           throw("could not find the correct game to bind to" );
+    }
+    catch (const char * recvderr)
+    {
+        std::cout<< recvderr;
+    }
 }
 MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
 {
     MSG_STRUCT Structured_msg;
-    if(!Player_Me.Get_Player_boats_alive())
+    try
     {
-        Structured_msg.MSG_Type=MSG_TYPE::GO;
-        Structured_msg.bool_recvd= true;
-        return Structured_msg;
+        if (!Player_Me.Get_Player_boats_alive())
+        {
+            Structured_msg.MSG_Type = MSG_TYPE::GO;
+            Structured_msg.bool_recvd = true;
+            return Structured_msg;
+        }
+        switch (recvd_content.MSG_Type)
+        {
+            case MSG_TYPE::IN://dm naar oponent
+                Structured_msg.MSG_Type = MSG_TYPE::YT;
+                Structured_msg.bool_recvd = true;
+                break;
+            case MSG_TYPE::DM://dm naar oponent
+                Structured_msg.MSG_Type = MSG_TYPE::YT;
+                Structured_msg.bool_recvd = true;
+                break;
+            case MSG_TYPE::YT://voer attack uit
+                if (recvd_content.bool_recvd) {
+                    Coordinates Player_cords;
+                    Player_cords = Player_Me.Attack_Enemy(Player_Me.Player_Input());
+                    Structured_msg.x = Player_cords.x;
+                    Structured_msg.y = Player_cords.y;
+                    Structured_msg.MSG_Type = MSG_TYPE::AT;
+                } else
+                    Structured_msg.MSG_Type = MSG_TYPE::YT;
+                Structured_msg.bool_recvd = true;
+                break;
+            case MSG_TYPE::AT://als de opponent u attacked bekijk u map en send die terug als TI
+                Structured_msg.bool_recvd = Player_Me.adj_MyMAP_TOResponse(recvd_content.y, recvd_content.x);
+                Structured_msg.x = recvd_content.x;
+                Structured_msg.y = recvd_content.y;
+                Structured_msg.MSG_Type = MSG_TYPE::TI;
+                break;
+            case MSG_TYPE::TI://de attacking player adjust his tile info
+                Player_Me.adj_myEnemymap_ToResponse(recvd_content.y, recvd_content.x, recvd_content.bool_recvd);
+                Structured_msg.MSG_Type = MSG_TYPE::YT;
+                Structured_msg.bool_recvd = true;
+                break;
+            default:
+                throw("wrong Type has been specified by the sender");
+        }
     }
-    switch (recvd_content.MSG_Type) 
+    catch (const char * data)
     {
-        case MSG_TYPE::IN://dm naar oponent
-            Structured_msg.MSG_Type=MSG_TYPE::YT;
-            Structured_msg.bool_recvd=true;
-            break;
-        case MSG_TYPE::DM://dm naar oponent
-            Structured_msg.MSG_Type=MSG_TYPE::YT;
-            Structured_msg.bool_recvd=true;
-            break;
-        case MSG_TYPE::YT://voer attack uit
-            if(recvd_content.bool_recvd)
-            {
-                Coordinates Player_cords;
-                Player_cords=Player_Me.Attack_Enemy(Player_Me.Player_Input());
-                Structured_msg.x=Player_cords.x;
-                Structured_msg.y=Player_cords.y;
-                Structured_msg.MSG_Type=MSG_TYPE::AT;
-            }
-            else
-                Structured_msg.MSG_Type=MSG_TYPE::YT;
-                Structured_msg.bool_recvd=true;
-            break;
-        case MSG_TYPE::AT://als de opponent u attacked bekijk u map en send die terug als TI
-            Structured_msg.bool_recvd =Player_Me.adj_MyMAP_TOResponse(recvd_content.y,recvd_content.x);
-            Structured_msg.x=recvd_content.x;
-            Structured_msg.y=recvd_content.y;
-            Structured_msg.MSG_Type=MSG_TYPE::TI;
-            break;
-        case MSG_TYPE::TI://de attacking player adjust his tile info
-            Player_Me.adj_map_ToResponse(recvd_content.y,recvd_content.x,recvd_content.bool_recvd);
-            Structured_msg.MSG_Type=MSG_TYPE::YT;
-            Structured_msg.bool_recvd=true;
-            break;
-        default:
-            std::cerr << "wrong Type has been specified by the sender"<<std::endl;
-            break;
+        std::cout<< data;
     }
     return Structured_msg;
 }
@@ -129,8 +140,7 @@ void MP_Game_Manager::host_play_turn()
         }
         else
         {
-            Player_Me.print_map(0);
-            Player_Me.print_map(1);
+            Player_Me.print_map();
             host->send(host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(currentmsg)));
         }
     }
@@ -147,8 +157,7 @@ void MP_Game_Manager::client_play_turn()
         }
         else
         {
-            Player_Me.print_map(0);
-            Player_Me.print_map(1);
+            Player_Me.print_map();
             Client->send(Client->get_socket_state(), Client->serialize_Tostring(Player_turn_decision(currentmsg)));
         }
     }

@@ -1,7 +1,7 @@
 #include "Game_Manager_Loader.h"
 
 
-    std::string Game_Manager_Loader::Player_Option()
+std::string Game_Manager_Loader::Player_Option()
     {
     std::string UserGame;
     std::cout<< "Multiplayer Or Singleplayer? :>";
@@ -11,7 +11,6 @@
    } while (UserGame !="singleplayer" && UserGame != "multiplayer");
         return UserGame;
     }
-
 void Game_Manager_Loader::Game_Type(std::string User_Option)
 {
    if(User_Option =="singleplayer")
@@ -25,10 +24,10 @@ void Game_Manager_Loader::Game_Type(std::string User_Option)
        forward_MP_playgame();
    }
 }
-    void Game_Manager_Loader::forward_SP_playgame()
-    {
-        SP_Game->Play_Game();
-    }
+void Game_Manager_Loader::forward_SP_playgame()
+{
+    SP_Game->Play_Game();
+}
 void Game_Manager_Loader::forward_MP_playgame()
 {
     MP_Game->Play_Game();

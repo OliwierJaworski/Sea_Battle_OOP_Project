@@ -22,22 +22,25 @@
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Boats_Carrier.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Boats_Carrier.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Boats_Destroyer.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Boats_Destroyer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player_Related/Game_Map.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Map.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player_Related/Game_Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Player.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player_Related/Game_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Player.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player_Related/Online_Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Online_Player.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player_Related/Online_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Online_Player.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/Game_Manager_Loader.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/Game_Manager_Loader.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,7 +159,7 @@
       <workItem from="1701905243096" duration="3426000" />
       <workItem from="1701969493681" duration="30000" />
       <workItem from="1701970244782" duration="2355000" />
-      <workItem from="1701986466520" duration="7321000" />
+      <workItem from="1701986466520" duration="12080000" />
     </task>
     <servers />
   </component>

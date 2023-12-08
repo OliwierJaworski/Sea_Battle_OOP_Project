@@ -1,12 +1,5 @@
 #include "Game_Player.h"
-    Game_Player::Game_Player()
-    {
 
-    }
-    Game_Player::~Game_Player()
-    {
-
-    }
     void Game_Player::Attack_Enemy(Game_Player & Enemy_Player,Coordinates User_Input_Cords)
     {
         Coordinates Attack_Enemy_Cords = User_Input_Cords;
@@ -36,20 +29,14 @@
         return output_format;
     }
 
-
     bool  Game_Player::Get_Player_boats_alive()
     {
         return map.any_ship_alive();
     }
-    void Game_Player::print_map(int whichmap)
-    {
-    if(whichmap==0)
+
+    void Game_Player::print_map()
     {
         map.print_map();
-    }
-    else
-        map.print_my_enemymap();
-
     }
 
 
