@@ -79,8 +79,6 @@ void MP_Game_Manager::Play_Game()
 MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
 {
     MSG_STRUCT Structured_msg;
-    try
-    {
         if (!Player_Me.Get_Player_boats_alive())
         {
             Structured_msg.MSG_Type = MSG_TYPE::GO;
@@ -98,14 +96,16 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
                 Structured_msg.bool_recvd = true;
                 break;
             case MSG_TYPE::YT://voer attack uit
-                if (recvd_content.bool_recvd) {
+                if (recvd_content.bool_recvd)
+                {
                     Coordinates Player_cords;
                     Player_cords = Player_Me.Attack_Enemy(Player_Me.Player_Input());
                     Structured_msg.x = Player_cords.x;
                     Structured_msg.y = Player_cords.y;
                     Structured_msg.MSG_Type = MSG_TYPE::AT;
-                } else
-                    Structured_msg.MSG_Type = MSG_TYPE::YT;
+                }
+                else
+                Structured_msg.MSG_Type = MSG_TYPE::YT;
                 Structured_msg.bool_recvd = true;
                 break;
             case MSG_TYPE::AT://als de opponent u attacked bekijk u map en send die terug als TI
@@ -119,14 +119,7 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
                 Structured_msg.MSG_Type = MSG_TYPE::YT;
                 Structured_msg.bool_recvd = true;
                 break;
-            default:
-                throw("wrong Type has been specified by the sender");
         }
-    }
-    catch (const char * data)
-    {
-        std::cout<< data;
-    }
     return Structured_msg;
 }
 void MP_Game_Manager::host_play_turn()
