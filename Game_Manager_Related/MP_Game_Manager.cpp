@@ -142,6 +142,7 @@ void MP_Game_Manager::host_play_turn()
         {
             Player_Me.print_map();
             host->send(host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(currentmsg)));
+            Player_Me.print_map();
         }
     }
 std::cout << "game over!";
@@ -159,6 +160,7 @@ void MP_Game_Manager::client_play_turn()
         {
             Player_Me.print_map();
             Client->send(Client->get_socket_state(), Client->serialize_Tostring(Player_turn_decision(currentmsg)));
+            Player_Me.print_map();
         }
     }
 }
