@@ -117,6 +117,7 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
                     break;
             }
         }
+        std::cout << "message: " << Structured_msg.MSG_Type << ", " << Structured_msg.bool_recvd << ", " <<Structured_msg.x << ", " <<Structured_msg.y <<std::endl;
     return Structured_msg;
 }
 void MP_Game_Manager::host_play_turn()

@@ -16,7 +16,6 @@ namespace SBN
     private:
             enum change_received_data_to{Player_Array,Player_Cords};
              int initialization();
-      MSG_STRUCT default_message();
             void cleanup(int internet_socket);
 
 //main

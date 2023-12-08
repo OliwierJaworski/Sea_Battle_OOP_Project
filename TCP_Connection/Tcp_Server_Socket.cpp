@@ -104,13 +104,7 @@ void Tcp_Server_Socket::cleanup(int internet_socket, int client_internet_socket)
     close(client_internet_socket);
     close(internet_socket);
 }
-MSG_STRUCT Tcp_Server_Socket::default_message()
-{
-    MSG_STRUCT msg;
-    msg.MSG_Type=IN;
-    msg.bool_recvd= true;
-    return msg;
-}
+
 
 
 

@@ -66,15 +66,16 @@ public:
                         TI,//4      //RECV tile info from opponent TI,y.x.true/false
                         GO //5     //Game over send by or to
                    };
+               MSG default_message();
        std::string serialize_Tostring(MSG msgPacket);
                MSG deserialize_ToMSG(std::string  str);
        std::string recv(int internet_socket);
               void send(int internet_socket,std::string StringData_ToBe_send);
 private:
-                int number_of_bytes_received;
-                int number_of_bytes_send;
+               int number_of_bytes_received;
+               int number_of_bytes_send;
 };
 }
-              using MSG_TYPE = SBN::TCP_SHARED::MSG_TYPE;
-              using MSG_STRUCT = SBN::TCP_SHARED::MSG;
+             using MSG_TYPE = SBN::TCP_SHARED::MSG_TYPE;
+             using MSG_STRUCT = SBN::TCP_SHARED::MSG;
 #endif //REMADE_SEA_BATTLE_TCP_SHARED_H

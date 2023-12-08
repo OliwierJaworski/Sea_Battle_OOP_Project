@@ -50,3 +50,10 @@ void TCP_SHARED::send(int internet_socket,std::string StringData_ToBe_send)
         perror("send");
     }
 }
+MSG_STRUCT TCP_SHARED::default_message()
+{
+    MSG_STRUCT msg;
+    msg.MSG_Type=IN;
+    msg.bool_recvd= true;
+    return msg;
+}
