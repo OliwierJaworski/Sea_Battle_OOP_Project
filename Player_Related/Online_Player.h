@@ -10,7 +10,7 @@ public:
 
     Coordinates Attack_Enemy(std::string input_string);
            void adj_myEnemymap_ToResponse(int y,int x, bool tile_state);
-           bool adj_MyMAP_TOResponse(int x, int y);
+           bool adj_MyMAP_TOResponse(int y, int x);
 private:
 };
 

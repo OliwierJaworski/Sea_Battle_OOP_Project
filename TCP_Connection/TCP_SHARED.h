@@ -59,12 +59,12 @@ public:
                    };
               enum MSG_TYPE
                    {
-                        IN,     //initialization
-                        DM,     //DIRECTCHAT received from OPONENT
-                        YT,     //Transfer the turn to the other party
-                        AT,     //attack received format: "AT,y.x"
-                        TI,     //RECV tile info from opponent TI,y.x.true/false
-                        GO      //Game over send by or to
+                        IN,//0     //initialization
+                        DM,//1     //DIRECTCHAT received from OPONENT
+                        YT,//2      //Transfer the turn to the other party
+                        AT,//3      //attack received format: "AT,y.x"
+                        TI,//4      //RECV tile info from opponent TI,y.x.true/false
+                        GO //5     //Game over send by or to
                    };
        std::string serialize_Tostring(MSG msgPacket);
                MSG deserialize_ToMSG(std::string  str);
