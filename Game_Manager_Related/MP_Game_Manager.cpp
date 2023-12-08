@@ -85,40 +85,37 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
             Structured_msg.bool_recvd = true;
             return Structured_msg;
         }
-        switch (recvd_content.MSG_Type)
+        else
         {
-            case MSG_TYPE::IN://dm naar oponent
-                Structured_msg.MSG_Type = MSG_TYPE::YT;
-                Structured_msg.bool_recvd = true;
-                break;
-            case MSG_TYPE::DM://dm naar oponent
-                Structured_msg.MSG_Type = MSG_TYPE::YT;
-                Structured_msg.bool_recvd = true;
-                break;
-            case MSG_TYPE::YT://voer attack uit
-                if (recvd_content.bool_recvd)
-                {
+            switch (recvd_content.MSG_Type)
+            {
+                case MSG_TYPE::IN://dm naar oponent
+                    Structured_msg.MSG_Type = MSG_TYPE::YT;
+                    Structured_msg.bool_recvd = true;
+                    break;
+                case MSG_TYPE::DM://dm naar oponent
+                    Structured_msg.MSG_Type = MSG_TYPE::YT;
+                    Structured_msg.bool_recvd = true;
+                    break;
+                case MSG_TYPE::YT://voer attack uit
                     Coordinates Player_cords;
                     Player_cords = Player_Me.Attack_Enemy(Player_Me.Player_Input());
                     Structured_msg.x = Player_cords.x;
                     Structured_msg.y = Player_cords.y;
                     Structured_msg.MSG_Type = MSG_TYPE::AT;
-                }
-                else
-                Structured_msg.MSG_Type = MSG_TYPE::YT;
-                Structured_msg.bool_recvd = true;
-                break;
-            case MSG_TYPE::AT://als de opponent u attacked bekijk u map en send die terug als TI
-                Structured_msg.bool_recvd = Player_Me.adj_MyMAP_TOResponse(recvd_content.y, recvd_content.x);
-                Structured_msg.x = recvd_content.x;
-                Structured_msg.y = recvd_content.y;
-                Structured_msg.MSG_Type = MSG_TYPE::TI;
-                break;
-            case MSG_TYPE::TI://de attacking player adjust his tile info
-                Player_Me.adj_myEnemymap_ToResponse(recvd_content.y, recvd_content.x, recvd_content.bool_recvd);
-                Structured_msg.MSG_Type = MSG_TYPE::YT;
-                Structured_msg.bool_recvd = true;
-                break;
+                    break;
+                case MSG_TYPE::AT://als de opponent u attacked bekijk u map en send die terug als TI
+                    Structured_msg.bool_recvd = Player_Me.adj_MyMAP_TOResponse(recvd_content.y, recvd_content.x);
+                    Structured_msg.x = recvd_content.x;
+                    Structured_msg.y = recvd_content.y;
+                    Structured_msg.MSG_Type = MSG_TYPE::TI;
+                    break;
+                case MSG_TYPE::TI://de attacking player adjust his tile info
+                    Player_Me.adj_myEnemymap_ToResponse(recvd_content.y, recvd_content.x, recvd_content.bool_recvd);
+                    Structured_msg.MSG_Type = MSG_TYPE::YT;
+                    Structured_msg.bool_recvd = true;
+                    break;
+            }
         }
     return Structured_msg;
 }
@@ -156,5 +153,6 @@ void MP_Game_Manager::client_play_turn()
             Player_Me.print_map();
         }
     }
+    std::cout << "game over!";
 }
 
