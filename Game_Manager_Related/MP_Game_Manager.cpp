@@ -140,6 +140,7 @@ void MP_Game_Manager::host_play_turn()
         if(currentmsg.MSG_Type==MSG_TYPE::Game_Over)
         {
             keepgamerolling =false ;
+            host->send(host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(currentmsg)));
         }
         else
         {
@@ -156,6 +157,7 @@ void MP_Game_Manager::client_play_turn()
         if(currentmsg.MSG_Type==MSG_TYPE::Game_Over)
         {
             keepgamerolling =false ;
+            Client->send(Client->get_socket_state(), Client->serialize_Tostring(Player_turn_decision(currentmsg)));
         }
         else
         {
