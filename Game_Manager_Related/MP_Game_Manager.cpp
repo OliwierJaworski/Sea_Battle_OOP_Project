@@ -81,7 +81,7 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
     MSG_STRUCT Structured_msg;
         if (!Player_Me.Get_Player_boats_alive())
         {
-            Structured_msg.MSG_Type = MSG_TYPE::GO;
+            Structured_msg.MSG_Type = MSG_TYPE::Game_Over;
             Structured_msg.bool_recvd = true;
             return Structured_msg;
         }
@@ -89,30 +89,37 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
         {
             switch (recvd_content.MSG_Type)
             {
-                case MSG_TYPE::IN://dm naar oponent
-                    Structured_msg.MSG_Type = MSG_TYPE::YT;
+                case MSG_TYPE::Init_Message:
+                case MSG_TYPE::Directd_Message://dm naar oponent
+                    Structured_msg.MSG_Type = MSG_TYPE::Your_Turn;
                     Structured_msg.bool_recvd = true;
                     break;
-                case MSG_TYPE::DM://dm naar oponent
-                    Structured_msg.MSG_Type = MSG_TYPE::YT;
-                    Structured_msg.bool_recvd = true;
-                    break;
-                case MSG_TYPE::YT://voer attack uit
+
+                case MSG_TYPE::Your_Turn://voer attack uit
                     Coordinates Player_cords;
                     Player_cords = Player_Me.Attack_Enemy(Player_Me.Player_Input());
+
+                    Structured_msg.MSG_Type = MSG_TYPE::Attack_received;
                     Structured_msg.x = Player_cords.x;
                     Structured_msg.y = Player_cords.y;
-                    Structured_msg.MSG_Type = MSG_TYPE::AT;
                     break;
-                case MSG_TYPE::AT://als de opponent u attacked bekijk u map en send die terug als TI
+
+                case MSG_TYPE::Attack_received://als de opponent u attacked bekijk u map en send die terug als TI
+                /*
+                    Structured_msg.MSG_Type = MSG_TYPE::Tile_Info;
                     Structured_msg.bool_recvd = Player_Me.adj_MyMAP_TOResponse(recvd_content.y, recvd_content.x);
                     Structured_msg.x = recvd_content.x;
                     Structured_msg.y = recvd_content.y;
-                    Structured_msg.MSG_Type = MSG_TYPE::TI;
                     break;
-                case MSG_TYPE::TI://de attacking player adjust his tile info
+                */
+                    Structured_msg.MSG_Type = MSG_TYPE::Tile_Info;
+                    Structured_msg.x = 1;
+                    Structured_msg.y = 2;
+                    break;
+                case MSG_TYPE::Tile_Info://de attacking player adjust his tile info
                     Player_Me.adj_myEnemymap_ToResponse(recvd_content.y, recvd_content.x, recvd_content.bool_recvd);
-                    Structured_msg.MSG_Type = MSG_TYPE::YT;
+
+                    Structured_msg.MSG_Type = MSG_TYPE::Your_Turn;
                     Structured_msg.bool_recvd = true;
                     break;
             }
@@ -125,7 +132,7 @@ void MP_Game_Manager::host_play_turn()
     while(keepgamerolling)
     {
         MSG_STRUCT currentmsg = host->deserialize_ToMSG(host->recv(host->get_Client_socket_state()));
-        if(currentmsg.MSG_Type==MSG_TYPE::GO)
+        if(currentmsg.MSG_Type==MSG_TYPE::Game_Over)
         {
             keepgamerolling =false ;
         }
@@ -143,7 +150,7 @@ void MP_Game_Manager::client_play_turn()
     while(keepgamerolling)
     {
         MSG_STRUCT currentmsg=Client->deserialize_ToMSG(Client->recv(Client->get_socket_state()));
-        if(currentmsg.MSG_Type==MSG_TYPE::GO)
+        if(currentmsg.MSG_Type==MSG_TYPE::Game_Over)
         {
             keepgamerolling =false;
         }

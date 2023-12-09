@@ -18,7 +18,8 @@ public:
           void print_map();
 protected:
       Game_Map get_map(){return  map;}
+    Game_Map map;
 private:
-      Game_Map map;
+
 };
 #endif

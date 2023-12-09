@@ -59,19 +59,20 @@ public:
                    };
               enum MSG_TYPE
                    {
-                        IN,//0     //initialization
-                        DM,//1     //DIRECTCHAT received from OPONENT
-                        YT,//2      //Transfer the turn to the other party
-                        AT,//3      //attack received format: "AT,y.x"
-                        TI,//4      //RECV tile info from opponent TI,y.x.true/false
-                        GO //5     //Game over send by or to
+                        Init_Message,   //0     //initialization
+                        Directd_Message,//1     //DIRECTCHAT received from OPONENT
+                        Your_Turn,      //2      //Transfer the turn to the other party
+                        Attack_received,//3      //attack received format: "AT,y.x"
+                        Tile_Info,      //4      //RECV tile info from opponent TI,y.x.true/false
+                        Game_Over       //5     //Game over send by or to
                    };
                MSG default_message();
        std::string serialize_Tostring(MSG msgPacket);
                MSG deserialize_ToMSG(std::string  str);
        std::string recv(int internet_socket);
               void send(int internet_socket,std::string StringData_ToBe_send);
-private:
+
+protected:
                int number_of_bytes_received;
                int number_of_bytes_send;
 };
