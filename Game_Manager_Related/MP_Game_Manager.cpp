@@ -83,7 +83,6 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
         {
             Structured_msg.MSG_Type = MSG_TYPE::Game_Over;
             Structured_msg.bool_recvd = true;
-            return Structured_msg;
         }
         else
         {
@@ -125,11 +124,9 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
                     Structured_msg.x = recvd_content.x;
                     Structured_msg.y = recvd_content.y;
                     break;
-
-                default:
-                    Structured_msg.MSG_Type = MSG_TYPE::Your_Turn;
+                case MSG_TYPE::Game_Over:
+                    Structured_msg.MSG_Type = MSG_TYPE::Game_Over;
                     Structured_msg.bool_recvd = true;
-                    Structured_msg.message="default case in was called in the switch statement !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
                     break;
             }
         }
@@ -142,12 +139,7 @@ void MP_Game_Manager::host_play_turn()
         MSG_STRUCT currentmsg = host->deserialize_ToMSG(host->recv(host->get_Client_socket_state()));
         if(currentmsg.MSG_Type==MSG_TYPE::Game_Over)
         {
-            MSG_STRUCT Structured_msg;
             keepgamerolling =false ;
-
-            Structured_msg.MSG_Type = MSG_TYPE::Game_Over;
-            Structured_msg.bool_recvd = true;
-            host->send(host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(Structured_msg)));
         }
         else
         {
@@ -163,12 +155,7 @@ void MP_Game_Manager::client_play_turn()
         MSG_STRUCT currentmsg=Client->deserialize_ToMSG(Client->recv(Client->get_socket_state()));
         if(currentmsg.MSG_Type==MSG_TYPE::Game_Over)
         {
-            MSG_STRUCT Structured_msg;
             keepgamerolling =false ;
-
-            Structured_msg.MSG_Type = MSG_TYPE::Game_Over;
-            Structured_msg.bool_recvd = true;
-            Client->send(Client->get_socket_state(), Client->serialize_Tostring(Player_turn_decision(Structured_msg)));
         }
         else
         {
