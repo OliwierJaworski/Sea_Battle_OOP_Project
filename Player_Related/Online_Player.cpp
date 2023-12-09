@@ -11,12 +11,12 @@ Coordinates Online_Player::Attack_Enemy(std::string input_string)
 
 void Online_Player::adj_myEnemymap_ToResponse(int y,int x, bool tile_state)
 {
-    map.Set_Enemy_map(x,y,tile_state);
+    get_map().Set_Enemy_map(x,y,tile_state);
 }
 
 bool Online_Player::adj_MyMAP_TOResponse(int y, int x)
 {
-    return map.get_my_map(y,x);
+    return get_map().get_my_map(y,x);
 }
 
 

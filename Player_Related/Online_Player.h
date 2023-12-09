@@ -12,7 +12,6 @@ public:
            void adj_myEnemymap_ToResponse(int y,int x, bool tile_state);
            bool adj_MyMAP_TOResponse(int y, int x);
 private:
-    Game_Map map;
 };
 
 
