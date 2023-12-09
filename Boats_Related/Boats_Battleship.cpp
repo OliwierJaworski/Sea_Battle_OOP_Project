@@ -2,7 +2,7 @@
 Boats_Battleship::Boats_Battleship()
 {
     set_Boat_name("Boats_Battleship");
-    set_Boat_Size(3);
+    set_Boat_Size(4);
     Init_Boat_Tiles();
 }
 
