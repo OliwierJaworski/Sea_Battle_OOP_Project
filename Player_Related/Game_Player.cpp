@@ -6,7 +6,7 @@
         int x= Attack_Enemy_Cords.x;
         int y= Attack_Enemy_Cords.y;
         std::cout << "Game_Player cords x:" << x << " y:" << y << std::endl;
-        get_map().Set_Enemy_map(x,y,Enemy_Player.map.get_my_map(y,x));
+        map.Set_Enemy_map(x,y,Enemy_Player.map.get_my_map(y,x));
     }
 
     std::string Game_Player::Player_Input()
@@ -31,12 +31,12 @@
 
     bool  Game_Player::Get_Player_boats_alive()
     {
-        return get_map().any_ship_alive();
+        return map.any_ship_alive();
     }
 
     void Game_Player::print_map()
     {
-        get_map().print_map();
+        map.print_map();
     }
 
 

@@ -6,7 +6,7 @@ class Online_Player : public Game_Player
 {
 public:
                 Online_Player()  =default;
-                ~Online_Player()  override {};
+                ~Online_Player()  override {std::cout << "destructor of online_player";}
 
     Coordinates Attack_Enemy(std::string input_string);
            void adj_myEnemymap_ToResponse(int y,int x, bool tile_state);
