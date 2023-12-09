@@ -1,7 +1,7 @@
 #include "Tcp_Client_Socket.h"
 
 using namespace SBN;
-Tcp_Client_Socket::Tcp_Client_Socket()
+Tcp_Client_Socket::Tcp_Client_Socket(const std::string port_addr,const std::string device_addr) :TCP_SHARED(port_addr,device_addr)
 {
     #ifdef _WIN32
         OSInit();
@@ -21,7 +21,7 @@ int Tcp_Client_Socket::initialization()
     memset( &internet_address_setup, 0, sizeof internet_address_setup );
     internet_address_setup.ai_family = AF_UNSPEC;
     internet_address_setup.ai_socktype = SOCK_STREAM;
-    getaddrinfo_return = getaddrinfo( "192.168.0.145", "24042", &internet_address_setup, &internet_address_result );
+    getaddrinfo_return = getaddrinfo( device_addr, port_addr, &internet_address_setup, &internet_address_result );
     if( getaddrinfo_return != 0 )
     {
         fprintf( stderr, "getaddrinfo: %s\n", gai_strerror( getaddrinfo_return ) );
