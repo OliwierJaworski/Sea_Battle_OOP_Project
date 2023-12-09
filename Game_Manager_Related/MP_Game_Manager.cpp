@@ -96,7 +96,7 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
                     break;
                 case MSG_TYPE::Tile_Info://de attacking player adjust his tile info
                     Player_Me.adj_myEnemymap_ToResponse(recvd_content.y, recvd_content.x, recvd_content.bool_recvd);
-                    if(recvd_content.bool_recvd= false)
+                    if(recvd_content.bool_recvd== false)
                     {
                         Structured_msg.MSG_Type = MSG_TYPE::Your_Turn;
                         Structured_msg.bool_recvd = true;
@@ -105,6 +105,7 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
                     else
                     {
                         recvd_content.MSG_Type = MSG_TYPE::Your_Turn;
+                        std::cout << recvd_content.MSG_Type <<std::endl;
                     }
                 case MSG_TYPE::Your_Turn://voer attack uit
                     Coordinates Player_cords;
