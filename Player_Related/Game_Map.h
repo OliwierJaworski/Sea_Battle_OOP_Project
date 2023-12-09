@@ -6,9 +6,12 @@
 #include <iostream>
 #include <memory>
 
-
-#include "../Boats_Related/Boats_Destroyer.h"
 #include "../Boats_Related/Boats_Carrier.h"
+#include "../Boats_Related/Boats_Destroyer.h"
+#include "../Boats_Related/Boats_Battleship.h"
+#include "../Boats_Related/Boats_Submarine.h"
+#include "../Boats_Related/Boats_Patrol_Boat.h"
+
 #include "../Boats_Related/Game_Boats.h"
 
 class Game_Map

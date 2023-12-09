@@ -94,9 +94,23 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
                     Structured_msg.MSG_Type = MSG_TYPE::Your_Turn;
                     Structured_msg.bool_recvd = true;
                     break;
-
+                case MSG_TYPE::Tile_Info://de attacking player adjust his tile info
+                    Player_Me.adj_myEnemymap_ToResponse(recvd_content.y, recvd_content.x, recvd_content.bool_recvd);
+                    if(recvd_content.bool_recvd== false)
+                    {
+                        Structured_msg.MSG_Type = MSG_TYPE::Your_Turn;
+                        Structured_msg.bool_recvd = true;
+                        Player_Me.print_map();
+                        break;
+                    }
+                    else
+                    {
+                        recvd_content.MSG_Type = MSG_TYPE::Your_Turn;
+                        std::cout << recvd_content.MSG_Type <<std::endl;
+                    }
                 case MSG_TYPE::Your_Turn://voer attack uit
                     Coordinates Player_cords;
+                    Player_Me.print_map();
                     Player_cords = Player_Me.Attack_Enemy(Player_Me.Player_Input());
 
                     Structured_msg.MSG_Type = MSG_TYPE::Attack_received;
@@ -106,17 +120,10 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
 
                 case MSG_TYPE::Attack_received://als de opponent u attacked bekijk u map en send die terug als TI
                     Structured_msg.bool_recvd = Player_Me.adj_MyMAP_TOResponse(recvd_content.y, recvd_content.x);
-
+                    Player_Me.print_map();
                     Structured_msg.MSG_Type = MSG_TYPE::Tile_Info;
                     Structured_msg.x = recvd_content.x;
                     Structured_msg.y = recvd_content.y;
-                    break;
-
-                case MSG_TYPE::Tile_Info://de attacking player adjust his tile info
-                    Player_Me.adj_myEnemymap_ToResponse(recvd_content.y, recvd_content.x, recvd_content.bool_recvd);
-
-                    Structured_msg.MSG_Type = MSG_TYPE::Your_Turn;
-                    Structured_msg.bool_recvd = true;
                     break;
 
                 default:
@@ -139,12 +146,10 @@ void MP_Game_Manager::host_play_turn()
         }
         else
         {
-            Player_Me.print_map();
             host->send(host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(currentmsg)));
-            Player_Me.print_map();
         }
     }
-std::cout << "game over!";
+std::cout << std::endl << "game over!" <<std::endl;
 }
 void MP_Game_Manager::client_play_turn()
 {
@@ -157,9 +162,7 @@ void MP_Game_Manager::client_play_turn()
         }
         else
         {
-            Player_Me.print_map();
             Client->send(Client->get_socket_state(), Client->serialize_Tostring(Player_turn_decision(currentmsg)));
-            Player_Me.print_map();
         }
     }
     std::cout << "game over!";
