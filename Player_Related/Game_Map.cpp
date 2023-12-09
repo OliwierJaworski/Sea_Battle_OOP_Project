@@ -241,6 +241,12 @@
     {
         for (int i = 0; i < BoatsVector.size(); ++i)
         {
+            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
+            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
+            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
+            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
+            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
+            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
             delete BoatsVector[i]; //erase verwijderd enkel u pointer uit de vector die cleared de memory niet!
             BoatsVector.erase(BoatsVector.begin()+ i);
         }

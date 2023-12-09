@@ -105,18 +105,20 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
                     break;
 
                 case MSG_TYPE::Attack_received://als de opponent u attacked bekijk u map en send die terug als TI
+                    Structured_msg.bool_recvd = Player_Me.adj_MyMAP_TOResponse(recvd_content.y, recvd_content.x);
 
                     Structured_msg.MSG_Type = MSG_TYPE::Tile_Info;
-                    Structured_msg.bool_recvd = Player_Me.adj_MyMAP_TOResponse(recvd_content.y, recvd_content.x);
                     Structured_msg.x = recvd_content.x;
                     Structured_msg.y = recvd_content.y;
                     break;
+
                 case MSG_TYPE::Tile_Info://de attacking player adjust his tile info
                     Player_Me.adj_myEnemymap_ToResponse(recvd_content.y, recvd_content.x, recvd_content.bool_recvd);
 
                     Structured_msg.MSG_Type = MSG_TYPE::Your_Turn;
                     Structured_msg.bool_recvd = true;
                     break;
+
                 default:
                     Structured_msg.MSG_Type = MSG_TYPE::Your_Turn;
                     Structured_msg.bool_recvd = true;
