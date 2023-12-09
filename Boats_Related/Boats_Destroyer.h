@@ -8,7 +8,7 @@ class Boats_Destroyer : public Game_Boats
 
 public:
 //constructor | destructor
-             Boats_Destroyer();
+             Boats_Destroyer() : Game_Boats(3, "destroyer") { Init_Boat_Tiles();}
              ~Boats_Destroyer(){};
 
 //public
