@@ -100,6 +100,7 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
                     {
                         Structured_msg.MSG_Type = MSG_TYPE::Your_Turn;
                         Structured_msg.bool_recvd = true;
+                        Player_Me.print_map();
                         break;
                     }
                     else
@@ -109,6 +110,7 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
                     }
                 case MSG_TYPE::Your_Turn://voer attack uit
                     Coordinates Player_cords;
+                    Player_Me.print_map();
                     Player_cords = Player_Me.Attack_Enemy(Player_Me.Player_Input());
 
                     Structured_msg.MSG_Type = MSG_TYPE::Attack_received;
@@ -118,7 +120,7 @@ MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
 
                 case MSG_TYPE::Attack_received://als de opponent u attacked bekijk u map en send die terug als TI
                     Structured_msg.bool_recvd = Player_Me.adj_MyMAP_TOResponse(recvd_content.y, recvd_content.x);
-
+                    Player_Me.print_map();
                     Structured_msg.MSG_Type = MSG_TYPE::Tile_Info;
                     Structured_msg.x = recvd_content.x;
                     Structured_msg.y = recvd_content.y;
@@ -144,9 +146,8 @@ void MP_Game_Manager::host_play_turn()
         }
         else
         {
-            Player_Me.print_map();
             host->send(host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(currentmsg)));
-            Player_Me.print_map();
+
         }
     }
 std::cout << "game over!";
@@ -162,9 +163,7 @@ void MP_Game_Manager::client_play_turn()
         }
         else
         {
-            Player_Me.print_map();
             Client->send(Client->get_socket_state(), Client->serialize_Tostring(Player_turn_decision(currentmsg)));
-            Player_Me.print_map();
         }
     }
     std::cout << "game over!";
