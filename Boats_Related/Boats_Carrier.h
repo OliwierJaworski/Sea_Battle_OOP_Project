@@ -7,7 +7,7 @@ class Boats_Carrier  : public Game_Boats
 {
 public:
 //constructor | destructor
-                Boats_Carrier() : Game_Boats(5, "Carrier") { Init_Boat_Tiles();}
+                Boats_Carrier() : Game_Boats(5, "Carrier") {}
                 ~Boats_Carrier(){};
 
 //public

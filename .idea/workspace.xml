@@ -22,7 +22,8 @@
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Boats_Battleship.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Boats_Battleship.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Game_Boats.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Game_Boats.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player_Related/Game_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Player.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
@@ -149,7 +150,7 @@
       <workItem from="1702119202306" duration="8206000" />
       <workItem from="1702128406369" duration="4986000" />
       <workItem from="1702147221460" duration="979000" />
-      <workItem from="1702153065915" duration="10763000" />
+      <workItem from="1702153065915" duration="11456000" />
     </task>
     <servers />
   </component>

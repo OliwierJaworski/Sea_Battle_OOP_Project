@@ -10,7 +10,7 @@ class Boats_Submarine : public Game_Boats
 {
 public:
 //constructor | destructor
-    Boats_Submarine() : Game_Boats(3, "Submarine") { Init_Boat_Tiles();}
+    Boats_Submarine() : Game_Boats(3, "Submarine") {}
     ~Boats_Submarine(){};
 
 //public

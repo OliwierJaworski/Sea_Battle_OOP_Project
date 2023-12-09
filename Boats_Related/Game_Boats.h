@@ -26,7 +26,7 @@ class Game_Boats
 {
 friend class Game_Map;
 public:
-    Game_Boats(int Boat_size, std::string  Boat_name) : Boat_size(Boat_size), Boat_name(Boat_name){}
+    Game_Boats(int Boat_size, std::string  Boat_name) : Boat_size(Boat_size), Boat_name(Boat_name){Init_Boat_Tiles();}
     virtual ~Game_Boats() =default;
 
     struct TILE_INFO

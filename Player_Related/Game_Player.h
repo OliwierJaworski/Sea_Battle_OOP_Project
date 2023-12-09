@@ -19,6 +19,6 @@ public:
 protected:
     Game_Map & Get_map_instance() {return  * map;}
 private:
-    Game_Map * map;
+    Game_Map * map;//to prevent object slicing
 };
 #endif
