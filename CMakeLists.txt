@@ -29,6 +29,12 @@ add_executable(Zeeslag_Code_Fixing main.cpp
         TCP_Connection/Tcp_Client_Socket.h
         TCP_Connection/Tcp_Server_Socket.h
         TCP_Connection/TCP_SHARED.cpp
-        TCP_Connection/TCP_SHARED.h)
+        TCP_Connection/TCP_SHARED.h
+        Boats_Related/Boats_Battleship.cpp
+        Boats_Related/Boats_Battleship.h
+        Boats_Related/Boats_Submarine.cpp
+        Boats_Related/Boats_Submarine.h
+        Boats_Related/Boats_Patrol_Boat.cpp
+        Boats_Related/Boats_Patrol_Boat.h)
 
 target_link_libraries(Zeeslag_Code_Fixing PRIVATE nlohmann_json::nlohmann_json)

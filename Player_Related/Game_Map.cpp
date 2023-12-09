@@ -11,9 +11,15 @@
     {
         Boats_Destroyer * Destroyer =new Boats_Destroyer;
         Boats_Carrier * Carrier =new Boats_Carrier;
+        Boats_Battleship * Battleship =new Boats_Battleship;
+        Boats_Submarine * Submarine =new Boats_Submarine;
+        Boats_Patrol_Boat * Patrol_Boat =new Boats_Patrol_Boat;
 
         BoatsVector.push_back(Destroyer);
         BoatsVector.push_back(Carrier);
+        BoatsVector.push_back(Battleship);
+        BoatsVector.push_back(Submarine);
+        BoatsVector.push_back(Patrol_Boat);
     }
 
     bool Game_Map::Boats_Fill_Map()

@@ -21,7 +21,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Boats_Related/Boats_Battleship.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Boats_Related/Boats_Battleship.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Boats_Related/Boats_Patrol_Boat.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Boats_Related/Boats_Patrol_Boat.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Boats_Related/Boats_Submarine.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Boats_Related/Boats_Submarine.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Boats_Destroyer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Boats_Destroyer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Map.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Map.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-ccff256c4e513599f64f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-12-06T13-13-29-0009.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Zeeslag_Code_Fixing-Debug-54f0bf8c247b3aa3f1bb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +101,11 @@
   }
 }</component>
   <component name="RunManager" selected="CMake Application.Zeeslag_Code_Fixing">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Zeeslag_Code_Fixing" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Zeeslag_Code_Fixing" TARGET_NAME="Zeeslag_Code_Fixing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Zeeslag_Code_Fixing" RUN_TARGET_NAME="Zeeslag_Code_Fixing">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -142,7 +164,7 @@
       <workItem from="1701986466520" duration="15590000" />
       <workItem from="1702033389392" duration="6550000" />
       <workItem from="1702119202306" duration="8206000" />
-      <workItem from="1702128406369" duration="1262000" />
+      <workItem from="1702128406369" duration="2567000" />
     </task>
     <servers />
   </component>
