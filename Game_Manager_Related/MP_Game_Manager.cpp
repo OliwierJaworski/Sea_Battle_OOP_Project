@@ -147,10 +147,9 @@ void MP_Game_Manager::host_play_turn()
         else
         {
             host->send(host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(currentmsg)));
-
         }
     }
-std::cout << "game over!";
+std::cout << std::endl << "game over!" <<std::endl;
 }
 void MP_Game_Manager::client_play_turn()
 {
