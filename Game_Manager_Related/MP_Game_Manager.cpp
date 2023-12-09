@@ -142,7 +142,12 @@ void MP_Game_Manager::host_play_turn()
         MSG_STRUCT currentmsg = host->deserialize_ToMSG(host->recv(host->get_Client_socket_state()));
         if(currentmsg.MSG_Type==MSG_TYPE::Game_Over)
         {
+            MSG_STRUCT Structured_msg;
             keepgamerolling =false ;
+
+            Structured_msg.MSG_Type = MSG_TYPE::Game_Over;
+            Structured_msg.bool_recvd = true;
+            host->send(host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(Structured_msg)));
         }
         else
         {
@@ -158,7 +163,12 @@ void MP_Game_Manager::client_play_turn()
         MSG_STRUCT currentmsg=Client->deserialize_ToMSG(Client->recv(Client->get_socket_state()));
         if(currentmsg.MSG_Type==MSG_TYPE::Game_Over)
         {
-            keepgamerolling =false;
+            MSG_STRUCT Structured_msg;
+            keepgamerolling =false ;
+
+            Structured_msg.MSG_Type = MSG_TYPE::Game_Over;
+            Structured_msg.bool_recvd = true;
+            Client->send(Client->get_socket_state(), Client->serialize_Tostring(Player_turn_decision(Structured_msg)));
         }
         else
         {
