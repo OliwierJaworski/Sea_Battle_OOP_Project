@@ -17,7 +17,8 @@ public:
    std::string Player_Input();
           void print_map();
 protected:
-      Game_Map map;
+    Game_Map Get_map_instance() {return map;}
 private:
+    Game_Map map;
 };
 #endif
