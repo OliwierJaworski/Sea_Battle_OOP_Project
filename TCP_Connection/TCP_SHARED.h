@@ -49,32 +49,34 @@ namespace SBN
 class TCP_SHARED
 {
 public:
-    struct MSG
-    {
-        int MSG_Type=0;
-        int x=0;
-        int y=0;
-        bool bool_recvd=false;
-        std::string message;
-    };
-    enum MSG_TYPE
-            {
-                IN,     //initialization
-                DM,     //DIRECTCHAT received from OPONENT
-                YT,     //Transfer the turn to the other party
-                AT,     //attack received format: "AT,y.x"
-                TI,     //RECV tile info from opponent TI,y.x.true/false
-                GO      //Game over send by or to
-            };
-    std::string serialize_Tostring(MSG msgPacket);
-    MSG deserialize_ToMSG(std::string  str);
-    std::string recv(int internet_socket);
-    void send(int internet_socket,std::string StringData_ToBe_send);
-private:
-    int number_of_bytes_received;
-    int number_of_bytes_send;
+            struct MSG
+                   {
+                        int MSG_Type=0;
+                        int x=0;
+                        int y=0;
+                        bool bool_recvd=false;
+                        std::string message;
+                   };
+              enum MSG_TYPE
+                   {
+                        Init_Message,   //0     //initialization
+                        Directd_Message,//1     //DIRECTCHAT received from OPONENT
+                        Your_Turn,      //2      //Transfer the turn to the other party
+                        Attack_received,//3      //attack received format: "AT,y.x"
+                        Tile_Info,      //4      //RECV tile info from opponent TI,y.x.true/false
+                        Game_Over       //5     //Game over send by or to
+                   };
+               MSG default_message();
+       std::string serialize_Tostring(MSG msgPacket);
+               MSG deserialize_ToMSG(std::string  str);
+       std::string recv(int internet_socket);
+              void send(int internet_socket,std::string StringData_ToBe_send);
+
+protected:
+               int number_of_bytes_received;
+               int number_of_bytes_send;
 };
 }
-using MSG_TYPE = SBN::TCP_SHARED::MSG_TYPE;
-using MSG_STRUCT = SBN::TCP_SHARED::MSG;
+             using MSG_TYPE = SBN::TCP_SHARED::MSG_TYPE;
+             using MSG_STRUCT = SBN::TCP_SHARED::MSG;
 #endif //REMADE_SEA_BATTLE_TCP_SHARED_H

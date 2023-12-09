@@ -64,13 +64,6 @@ int Tcp_Client_Socket::initialization()
 
     return internet_socket;
 }
-MSG_STRUCT Tcp_Client_Socket::default_message()
-{
-    MSG_STRUCT msg;
-    msg.MSG_Type=MSG_TYPE::IN;
-    msg.bool_recvd= false;
-    return msg;
-}
 
 void Tcp_Client_Socket::cleanup( int internet_socket )
 {

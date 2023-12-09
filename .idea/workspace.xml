@@ -20,7 +20,20 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="" />
+    <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/Game_Manager_Loader.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/Game_Manager_Loader.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/MP_Game_Manager.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/MP_Game_Manager.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/SP_Game_Manager.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/SP_Game_Manager.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Game_Player.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Game_Player.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Online_Player.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Online_Player.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/TCP_SHARED.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/TCP_SHARED.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Zeeslag_Code_Fixing.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +147,12 @@
       <workItem from="1701867365960" duration="9655000" />
       <workItem from="1701884092571" duration="8918000" />
       <workItem from="1701899925132" duration="5098000" />
-      <workItem from="1701905243096" duration="1967000" />
+      <workItem from="1701905243096" duration="3426000" />
+      <workItem from="1701969493681" duration="30000" />
+      <workItem from="1701970244782" duration="2355000" />
+      <workItem from="1701986466520" duration="15590000" />
+      <workItem from="1702033389392" duration="6550000" />
+      <workItem from="1702119202306" duration="8206000" />
     </task>
     <servers />
   </component>
@@ -149,5 +167,31 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/TCP_Connection/TCP_SHARED.cpp</url>
+          <line>15</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/TCP_Connection/TCP_SHARED.cpp</url>
+          <line>26</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/TCP_Connection/TCP_SHARED.cpp</url>
+          <line>42</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/TCP_Connection/TCP_SHARED.cpp</url>
+          <line>2</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
