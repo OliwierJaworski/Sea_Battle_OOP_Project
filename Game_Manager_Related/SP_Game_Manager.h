@@ -6,9 +6,6 @@
 #include <string>
 
 #include "../Player_Related/Game_Player.h"
-#include "../TCP_Connection/Tcp_Server_Socket.h"
-#include "../TCP_Connection/Tcp_Client_Socket.h"
-#include "../Player_Related/Online_Player.h"
 
 class SP_Game_Manager
 {

@@ -21,15 +21,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Player_Related/First_AI.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player_Related/First_AI.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Boats_Related/Game_Boats.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Game_Boats.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Map.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Map.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Player.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player_Related/Game_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Player.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-e9005a300806ce6b490c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-12-09T13-58-44-0335.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Zeeslag_Code_Fixing-Debug-671eee77cbe2a2ad97ea.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,26 +81,31 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Fixing__Noodle__Code&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.scopes&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "Ai__Design__Workspace",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "project.scopes",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="CMake Application.Zeeslag_Code_Fixing">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Zeeslag_Code_Fixing" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Zeeslag_Code_Fixing" TARGET_NAME="Zeeslag_Code_Fixing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Zeeslag_Code_Fixing" RUN_TARGET_NAME="Zeeslag_Code_Fixing">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -152,7 +166,7 @@
       <workItem from="1702119202306" duration="8206000" />
       <workItem from="1702128406369" duration="4986000" />
       <workItem from="1702147221460" duration="979000" />
-      <workItem from="1702153065915" duration="13323000" />
+      <workItem from="1702153065915" duration="21446000" />
     </task>
     <servers />
   </component>

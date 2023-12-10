@@ -13,7 +13,7 @@ public:
        virtual ~Game_Player() {delete map;}
 
           bool Get_Player_boats_alive();
-          void Attack_Enemy(Game_Player & Enemy_Player,Coordinates User_Input_Cords);
+   Coordinates Attack_Enemy(Coordinates User_Input_Cords);
    std::string Player_Input();
           void print_map();
 protected:
