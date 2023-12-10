@@ -17,7 +17,7 @@ public:
    std::string Player_Input();
           void print_map();
 protected:
-    Game_Map & Get_map_instance() {return  * map;}
+    inline Game_Map & Get_map_instance() {return  * map;}
 private:
     Game_Map * map;//to prevent object slicing
 };
