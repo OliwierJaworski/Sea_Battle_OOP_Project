@@ -5,11 +5,12 @@
 class Online_Player : public Game_Player
 {
 public:
-    Online_Player() =default;
-    ~Online_Player() override {};
+                Online_Player()  =default;
+                ~Online_Player()  override {std::cout << "destructor of online_player";}
 
-    bool Get_Player_boats_alive()  override;
-    void Attack_Enemy();
+    Coordinates Attack_Enemy(std::string input_string);
+           void adj_myEnemymap_ToResponse(int y,int x, bool tile_state);
+           bool adj_MyMAP_TOResponse(int y, int x);
 private:
 };
 

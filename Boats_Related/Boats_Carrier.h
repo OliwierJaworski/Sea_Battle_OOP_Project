@@ -7,11 +7,11 @@ class Boats_Carrier  : public Game_Boats
 {
 public:
 //constructor | destructor
-    Boats_Carrier();
-    ~Boats_Carrier(){};
+                Boats_Carrier();
+                ~Boats_Carrier(){};
 
 //public
-    void SpecialMove();
+           void SpecialMove();
 private:
 //private
 

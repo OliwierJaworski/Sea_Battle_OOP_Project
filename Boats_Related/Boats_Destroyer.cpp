@@ -3,7 +3,7 @@
 Boats_Destroyer::Boats_Destroyer()
 {
     set_Boat_name("destroyer");
-    set_Boat_Size(2);
+    set_Boat_Size(3);
     Init_Boat_Tiles();
 }
 

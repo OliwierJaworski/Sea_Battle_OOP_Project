@@ -21,8 +21,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +98,10 @@
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="C/C++ File.main.cpp" />
+      <item itemvalue="CMake Application.Zeeslag_Code_Fixing" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -118,7 +124,30 @@
       <workItem from="1701393980726" duration="12000" />
       <workItem from="1701441329070" duration="600000" />
       <workItem from="1701441935613" duration="7036000" />
-      <workItem from="1701454782663" duration="1561000" />
+      <workItem from="1701454782663" duration="3717000" />
+      <workItem from="1701460120799" duration="3759000" />
+      <workItem from="1701563137475" duration="11077000" />
+      <workItem from="1701601153908" duration="3041000" />
+      <workItem from="1701614639997" duration="8723000" />
+      <workItem from="1701641157871" duration="492000" />
+      <workItem from="1701690982621" duration="3774000" />
+      <workItem from="1701698680971" duration="420000" />
+      <workItem from="1701699106232" duration="92000" />
+      <workItem from="1701707647605" duration="1266000" />
+      <workItem from="1701794780709" duration="12164000" />
+      <workItem from="1701809602525" duration="64000" />
+      <workItem from="1701867365960" duration="9655000" />
+      <workItem from="1701884092571" duration="8918000" />
+      <workItem from="1701899925132" duration="5098000" />
+      <workItem from="1701905243096" duration="3426000" />
+      <workItem from="1701969493681" duration="30000" />
+      <workItem from="1701970244782" duration="2355000" />
+      <workItem from="1701986466520" duration="15590000" />
+      <workItem from="1702033389392" duration="6550000" />
+      <workItem from="1702119202306" duration="8206000" />
+      <workItem from="1702128406369" duration="4986000" />
+      <workItem from="1702147221460" duration="979000" />
+      <workItem from="1702153065915" duration="2401000" />
     </task>
     <servers />
   </component>
@@ -133,5 +162,31 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/TCP_Connection/TCP_SHARED.cpp</url>
+          <line>15</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/TCP_Connection/TCP_SHARED.cpp</url>
+          <line>26</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/TCP_Connection/TCP_SHARED.cpp</url>
+          <line>42</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/TCP_Connection/TCP_SHARED.cpp</url>
+          <line>2</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

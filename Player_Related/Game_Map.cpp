@@ -11,9 +11,15 @@
     {
         Boats_Destroyer * Destroyer =new Boats_Destroyer;
         Boats_Carrier * Carrier =new Boats_Carrier;
+        Boats_Battleship * Battleship =new Boats_Battleship;
+        Boats_Submarine * Submarine =new Boats_Submarine;
+        Boats_Patrol_Boat * Patrol_Boat =new Boats_Patrol_Boat;
 
         BoatsVector.push_back(Destroyer);
         BoatsVector.push_back(Carrier);
+        BoatsVector.push_back(Battleship);
+        BoatsVector.push_back(Submarine);
+        BoatsVector.push_back(Patrol_Boat);
     }
 
     bool Game_Map::Boats_Fill_Map()
@@ -39,48 +45,46 @@
 
     bool Game_Map::Will_Boat_Fit(Game_Boats& Boat_ID, int y, int x, int rot)
     {
-        switch (rot)
-        {
-            case TO_RIGHT:
-                return check_if_fit(Boat_ID.Get_Size(),y,x,1,TO_RIGHT);
 
-            case TO_LEFT:
-                return check_if_fit(Boat_ID.Get_Size(),y,x,-1,TO_LEFT);
+            switch (rot)
+            {
+                case TO_RIGHT:
+                    return check_if_fit(Boat_ID.Get_Size(), y, x, 1, TO_RIGHT);
 
-            case UP:
-                return check_if_fit(Boat_ID.Get_Size(),y,x,-1,UP);
+                case TO_LEFT:
+                    return check_if_fit(Boat_ID.Get_Size(), y, x, -1, TO_LEFT);
 
-            case DOWN:
-                return check_if_fit(Boat_ID.Get_Size(),y,x,1,DOWN);
-            default:
-                std::cerr << "Error: no default value for rotation operator" << std::endl;
-        }
-        //return true;//niet zeker
+                case UP:
+                    return check_if_fit(Boat_ID.Get_Size(), y, x, -1, UP);
+
+                case DOWN:
+                    return check_if_fit(Boat_ID.Get_Size(), y, x, 1, DOWN);
+            }
     }
+
     bool Game_Map::check_if_fit(int boatsize,int y, int x,int rotation_Operator, int rotation)
     {
-        for (int curr_size = 0; curr_size < boatsize && curr_size > -boatsize ; curr_size+=rotation_Operator)
+        for (int curr_size = 0; curr_size < boatsize && curr_size > -boatsize; curr_size += rotation_Operator)
         {
             switch (rotation)
             {
                 case TO_RIGHT:
                 case TO_LEFT:
-                        if (My_map[y][x+ curr_size] != WATER || x+ curr_size>9 || x+ curr_size<0)
-                        {
-                            std::cout << "cant place because  x :" << x+curr_size << "for boat of size : "<< boatsize << std::endl;
-                            return false;
-                        }
+                    if (My_map[y][x + curr_size] != WATER || x + curr_size > 9 || x + curr_size < 0)
+                    {
+                        std::cout << "cant place because  x :" << x + curr_size << "for boat of size : " << boatsize
+                                  << std::endl;
+                        return false;
+                    }
                     break;
                 case UP:
                 case DOWN:
-                        if (My_map[y+ curr_size][x] != WATER || y+ curr_size>9 || y+ curr_size<0)
-                        {
-                            std::cout << "cant place because  y :" << y+curr_size << std::endl;
-                            return false;
-                        }
-                        break;
-                default:
-                    std::cerr << "Error: no default value for rotation operator" << std::endl;
+                    if (My_map[y + curr_size][x] != WATER || y + curr_size > 9 || y + curr_size < 0)
+                    {
+                        std::cout << "cant place because  y :" << y + curr_size << std::endl;
+                        return false;
+                    }
+                    break;
             }
         }
         return true;
@@ -113,9 +117,11 @@
 
     void Game_Map::print_map()
     {
-                std::cout << "my map"<<std::endl;
+                std::cout << "my map"<< "                       " << "my enemy map"<<std::endl;
+                std::cout << " 0 1 2 3 4 5 6 7 8 9"<< "          " << " 0 1 2 3 4 5 6 7 8 9"<<std::endl;
                 for (int i = 0; i < 10; ++i)
                 {
+                    std::cout << i ;
                     for (int j = 0; j < 10; ++j)
                     {
                         if (My_map[i][j]==WATER)
@@ -134,42 +140,32 @@
                         {
                             std::cout << "\U0001F525";
                         }
+                    }
+                    std::cout << "         ";
+                    std::cout << i ;
+                    for (int j = 0; j < 10; ++j)
+                    {
+                        if (Enemy_map[i][j]==WATER)
+                        {
+                            std::cout << "\U0001F7E6";
+                        }
+                        if(Enemy_map[i][j]==SHIP)
+                        {
+                            std::cout << "\U0001F532";
+                        }
+                        if (Enemy_map[i][j]==MISS)
+                        {
+                            std::cout << "\U0001F4A6";
+                        }
+                        if (Enemy_map[i][j]==HIT)
+                        {
+                            std::cout << "\U0001F525";
+                        }
 
                     }
                     std::cout << std::endl;
                 }
                 std::cout << std::endl;
-                std::cout << std::endl;
-    }
-    void Game_Map::print_my_enemymap()
-    {
-        std::cout << "my map"<<std::endl;
-        for (int i = 0; i < 10; ++i)
-        {
-            for (int j = 0; j < 10; ++j)
-            {
-                if (Enemy_map[i][j]==WATER)
-                {
-                    std::cout << "\U0001F7E6";
-                }
-                if(Enemy_map[i][j]==SHIP)
-                {
-                    std::cout << "\U0001F532";
-                }
-                if (Enemy_map[i][j]==MISS)
-                {
-                    std::cout << "\U0001F4A6";
-                }
-                if (Enemy_map[i][j]==HIT)
-                {
-                    std::cout << "\U0001F525";
-                }
-
-            }
-            std::cout << std::endl;
-        }
-        std::cout << std::endl;
-        std::cout << std::endl;
     }
     int Game_Map::cummulated_boat_size()
     {
@@ -251,6 +247,12 @@
     {
         for (int i = 0; i < BoatsVector.size(); ++i)
         {
+            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
+            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
+            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
+            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
+            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
+            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
             delete BoatsVector[i]; //erase verwijderd enkel u pointer uit de vector die cleared de memory niet!
             BoatsVector.erase(BoatsVector.begin()+ i);
         }

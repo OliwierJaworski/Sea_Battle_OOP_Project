@@ -1,8 +1,5 @@
 #include "Game_Player.h"
-    Game_Player::~Game_Player()
-    {
 
-    }
     void Game_Player::Attack_Enemy(Game_Player & Enemy_Player,Coordinates User_Input_Cords)
     {
         Coordinates Attack_Enemy_Cords = User_Input_Cords;
@@ -12,19 +9,34 @@
         map.Set_Enemy_map(x,y,Enemy_Player.map.get_my_map(y,x));
     }
 
+    std::string Game_Player::Player_Input()
+    {
+        std::string output_format;
+        std::string cord ="";
+        do
+        {
+            std::cout << "x coordinate(number):" << std::endl;
+            std::cin >> cord;
+        }while(cord.size()!=1  || cord > "9" || cord < "0");
+        output_format+=cord+'.';
+        cord ="";
+        do
+        {
+            std::cout << "y coordinate(number):" << std::endl;
+            std::cin >> cord;
+        }while(cord.size()!=1 || cord > "9" || cord < "0");
+        output_format+=cord;
+        return output_format;
+    }
+
     bool  Game_Player::Get_Player_boats_alive()
     {
         return map.any_ship_alive();
     }
-    void Game_Player::print_map(int whichmap)
-    {
-    if(whichmap==0)
+
+    void Game_Player::print_map()
     {
         map.print_map();
-    }
-    else
-        map.print_my_enemymap();
-
     }
 
 
