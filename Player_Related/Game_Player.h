@@ -9,15 +9,16 @@
 class Game_Player
 {
 public:
-               Game_Player()=default;
-       virtual ~Game_Player() {std::cout << "destructor of game_player";}
+               Game_Player() {map =new Game_Map;}
+       virtual ~Game_Player() {delete map;}
 
           bool Get_Player_boats_alive();
           void Attack_Enemy(Game_Player & Enemy_Player,Coordinates User_Input_Cords);
    std::string Player_Input();
           void print_map();
 protected:
-      Game_Map map;
+    Game_Map & Get_map_instance() {return  * map;}
 private:
+    Game_Map * map;//to prevent object slicing
 };
 #endif

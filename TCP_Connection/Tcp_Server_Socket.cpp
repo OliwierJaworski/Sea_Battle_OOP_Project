@@ -1,11 +1,7 @@
 #include "Tcp_Server_Socket.h"
 
-
 using namespace SBN;
-Tcp_Server_Socket::Tcp_Server_Socket()
-{
-   bind_to_client();
-}
+
 Tcp_Server_Socket::~Tcp_Server_Socket()
 {
     cleanup(internet_socket, client_internet_socket);
@@ -30,7 +26,7 @@ int Tcp_Server_Socket::initialization()
     internet_address_setup.ai_family = AF_UNSPEC;
     internet_address_setup.ai_socktype = SOCK_STREAM;
     internet_address_setup.ai_flags = AI_PASSIVE;
-    getaddrinfo_return = getaddrinfo(NULL, "24042", &internet_address_setup, &internet_address_result);
+    getaddrinfo_return = getaddrinfo(nullptr, port_addr, &internet_address_setup, &internet_address_result);
     if (getaddrinfo_return != 0) {
         fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(getaddrinfo_return));
         exit(1);
@@ -38,7 +34,7 @@ int Tcp_Server_Socket::initialization()
 
     internet_socket = -1;
     internet_address_result_iterator = internet_address_result;
-    while (internet_address_result_iterator != NULL) {
+    while (internet_address_result_iterator != nullptr) {
         //Step 1.2
         internet_socket = socket(internet_address_result_iterator->ai_family,
                                  internet_address_result_iterator->ai_socktype,
