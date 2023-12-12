@@ -36,7 +36,7 @@ bool First_AI::find_initial_move()
     return false;
 }
 
-bool First_AI::chance_calculation(int boatsize)
+bool First_AI::boat_fit_combination()
 {
     for (int y_curr = 0; y_curr < 10; ++y_curr)
     {
@@ -48,35 +48,92 @@ bool First_AI::chance_calculation(int boatsize)
                         switch (rotation)
                         {
                             case Rotation_Direction::TO_RIGHT:
+
                                 for (int size = 0; size < find_biggest_boat(); ++size)
                                 {
-                                        if(Get_map_instance().get_My_Enemy_map(y_curr,x_curr+size) !=TILE_STATE ::WATER)
+                                        if(Get_map_instance().get_My_Enemy_map(y_curr,x_curr+size) !=TILE_STATE::WATER)
                                         {
                                             fit_tile.to_right=-1;
                                             fit_tile.curr_dir_boat_fit = false;
                                             chance_field[y_curr][x_curr+size].set_fit_direction(fit_tile);
                                         }
-
                                 }
                                 if(fit_tile.curr_dir_boat_fit)
                                 {
-                                    for (int size = 0; size < find_biggest_boat(); ++size)
+                                    if(chance_field[y_curr][x_curr+find_biggest_boat()].get_fit_direction().to_left==0 && x_curr+find_biggest_boat() > 0 || x_curr+find_biggest_boat() < 9)
+                                    for (int size = 0; size < find_biggest_boat(); ++size)//if boat x,y-boatx,y-boatsize==1 tile has been done to left already
                                     {
                                         fit_tile.to_right=+1;
                                         chance_field[y_curr][x_curr+size].set_fit_direction(fit_tile);
                                     }
                                 }
                                 break;
+
                             case Rotation_Direction::TO_LEFT:
+
+                                for (int size = 0; size < find_biggest_boat(); --size)
+                                {
+                                    if(Get_map_instance().get_My_Enemy_map(y_curr,x_curr+size) !=TILE_STATE::WATER)
+                                    {
+                                        fit_tile.to_left=-1;
+                                        fit_tile.curr_dir_boat_fit = false;
+                                        chance_field[y_curr][x_curr+size].set_fit_direction(fit_tile);
+                                    }
+                                }
+                                if(fit_tile.curr_dir_boat_fit)
+                                {
+                                    if(chance_field[y_curr][x_curr-find_biggest_boat()].get_fit_direction().to_right==0 && x_curr-find_biggest_boat() > 0 || x_curr-find_biggest_boat() < 9)
+                                        for (int size = 0; size < find_biggest_boat(); --size)//if boat x,y-boatx,y-boatsize==1 tile has been done to left already
+                                        {
+                                            fit_tile.to_left=+1;
+                                            chance_field[y_curr][x_curr+size].set_fit_direction(fit_tile);
+                                        }
+                                }
                                 break;
                             case Rotation_Direction::UP:
+                                for (int size = 0; size < find_biggest_boat(); --size)
+                                {
+                                    if(Get_map_instance().get_My_Enemy_map(y_curr+size,x_curr) !=TILE_STATE::WATER)
+                                    {
+                                        fit_tile.up=-1;
+                                        fit_tile.curr_dir_boat_fit = false;
+                                        chance_field[y_curr+size][x_curr].set_fit_direction(fit_tile);
+                                    }
+                                }
+                                if(fit_tile.curr_dir_boat_fit)
+                                {
+                                    if(chance_field[y_curr-find_biggest_boat()][x_curr].get_fit_direction().down==0 && y_curr-find_biggest_boat() > 0 || y_curr-find_biggest_boat() < 9)
+                                        for (int size = 0; size < find_biggest_boat(); --size)//if boat x,y-boatx,y-boatsize==1 tile has been done to left already
+                                        {
+                                            fit_tile.up=+1;
+                                            chance_field[y_curr+size][x_curr].set_fit_direction(fit_tile);
+                                        }
+                                }
                                 break;
+
                             case Rotation_Direction::DOWN:
-                                break;
+
+                                for (int size = 0; size < find_biggest_boat(); ++size)
+                                {
+                                    if(Get_map_instance().get_My_Enemy_map(y_curr+size,x_curr) !=TILE_STATE::WATER)
+                                    {
+                                        fit_tile.down=-1;
+                                        fit_tile.curr_dir_boat_fit = false;
+                                        chance_field[y_curr+size][x_curr].set_fit_direction(fit_tile);
+                                    }
+                                }
+                                if(fit_tile.curr_dir_boat_fit)
+                                {
+                                    if(chance_field[y_curr+find_biggest_boat()][x_curr].get_fit_direction().up==0 && y_curr+find_biggest_boat() > 0 || y_curr+find_biggest_boat() < 9)
+                                        for (int size = 0; size < find_biggest_boat(); ++size)//if boat x,y-boatx,y-boatsize==1 tile has been done to left already
+                                        {
+                                            fit_tile.down=+1;
+                                            chance_field[y_curr+size][x_curr].set_fit_direction(fit_tile);
+                                        }
+                                }
+                          break;
                         }
-
                 }
-
         }
     }
 }

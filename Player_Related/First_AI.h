@@ -12,7 +12,7 @@ namespace AI_Player
         std::vector<int> boats_left;
         int init_boat_sizes();
         bool find_initial_move();
-        bool chance_calculation(int boatsize);
+        bool boat_fit_combination();
         int find_biggest_boat();
     public:
         First_AI() = default;
