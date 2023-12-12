@@ -31,6 +31,7 @@ namespace AI_Player
                  void set_ship_alive(int ship_chosen,int ship_state){ships_alive[ship_chosen]=ship_state;}
                  void set_fit_direction(fit_direction fit_type) {boat_dir_fits=fit_type;}
                  void set_direction_sum(float dir_sum) {direction_sum =dir_sum;}
+                 void calculate_direction_sum();
         private:
                 float chance_ratio = 0;//min 0 - max 100
         fit_direction boat_dir_fits;

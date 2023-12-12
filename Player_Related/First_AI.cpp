@@ -14,8 +14,9 @@ void First_AI::print_chance_field_chance_values()
     {
         for (int x_curr = 0; x_curr < 10; ++x_curr)
         {
-            chance_field[y_curr][x_curr].get_direction_sum();
+            std::cout << chance_field[y_curr][x_curr].get_direction_sum();
         }
+        std::cout <<std::endl;
     }
 }
 int First_AI::find_biggest_boat()
@@ -144,6 +145,7 @@ bool First_AI::boat_fit_combination()
                           break;
                         }
                 }
+            chance_field[y_curr][x_curr].calculate_direction_sum();
         }
     }
     return true;

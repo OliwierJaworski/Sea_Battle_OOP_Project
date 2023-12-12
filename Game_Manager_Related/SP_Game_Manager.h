@@ -6,6 +6,7 @@
 #include <string>
 
 #include "../Player_Related/Game_Player.h"
+#include "../Player_Related/First_AI.h"
 
 class SP_Game_Manager
 {
@@ -19,7 +20,7 @@ protected:
      virtual bool Game_State_active();
 private:
       Game_Player Player_Me;
-      Game_Player Player_Enemy;
+      AI_Player::First_AI Player_Enemy;
 };
 
 

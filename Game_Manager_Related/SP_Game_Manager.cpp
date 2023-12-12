@@ -1,10 +1,17 @@
 #include "SP_Game_Manager.h"
 bool SP_Game_Manager::Play_Game()
 {
-    while(Game_State_active())
+    while(1)
     {
-
+        Coordinates cords = tranlate_to_cords(Player_Enemy.Player_Input());
+        Player_Enemy.Get_map_instance().Set_Enemy_map(cords.x, cords.y, true);
+        Player_Enemy.boat_fit_combination();
+        Player_Enemy.print_chance_field_chance_values();
+        // while(Game_State_active())
+        //{
+        //}
     }
+   std::cout << "it reached the play_game it reached the play_game it reached the play_game it reached the play_game it reached the play_game it reached the play_game";
     return true;
 }
 
