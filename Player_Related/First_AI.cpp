@@ -1,15 +1,24 @@
 #include "First_AI.h"
-int First_AI::biggest_BoatSize()
+using namespace AI_Player;
+
+int First_AI::init_boat_sizes()
 {
-    int biggest_boat_size=0;
     for (auto boat : Get_map_instance().Get_Boat_Vector())
     {
-        if(boat->Get_Size()>biggest_boat_size)
+        boats_left.push_back(boat->Get_Size());
+    }
+}
+int First_AI::find_biggest_boat()
+{
+    int curr_biggest =0;
+    for (auto boatsizes : boats_left)
+    {
+        if(boatsizes>curr_biggest)
         {
-            biggest_boat_size=boat->Get_Size();
+            curr_biggest=boatsizes;
         }
     }
-    return biggest_boat_size;
+    return curr_biggest;
 }
 bool First_AI::find_initial_move()
 {
@@ -26,46 +35,49 @@ bool First_AI::find_initial_move()
     }
     return false;
 }
-bool First_AI::chance_calculation()//calculate chance per tile
-{
-    if (!find_initial_move())
-    {
-        chance_field[0][0]=100;//no initial move cant measure chances
-        return true;
-    }
-    else
-    {//1 tile is minsten positief->hit/miss/boat
-    //for every tile
-    //->check if boat fits in every rotation
-    //->check if boat fits with middle
-    //determine the chance
-    }
-}
-First_AI::AI_Coordinates First_AI::PRE_Attack_Enemy(First_AI::AI_Coordinates User_Input_Cords)
-{
 
-}
-bool First_AI::will_boat_fit(int y, int x, int size)
+bool First_AI::chance_calculation(int boatsize)
 {
-    int rotation=Rotation_Direction::TO_RIGHT;
-    switch(rotation)
+    for (int y_curr = 0; y_curr < 10; ++y_curr)
     {
-        case Rotation_Direction::TO_RIGHT:
-            rotation_check(y,x)
-        case Rotation_Direction::TO_LEFT:
-        case Rotation_Direction::UP:
-        case Rotation_Direction::DOWN:
-    }
-}
-bool rotation_check(int y ,int x, int rotation , int size)
-{
-        for (int i = 0; i < size; i+=rotation)
+        for (int x_curr = 0; x_curr < 10; ++x_curr)
         {
-            for (int j = 0; j < ; ++j)
-            {
+                for (int rotation = 0; rotation < 4; ++rotation)
+                {
+                    tile_info::fit_direction fit_tile;
+                        switch (rotation)
+                        {
+                            case Rotation_Direction::TO_RIGHT:
+                                for (int size = 0; size < find_biggest_boat(); ++size)
+                                {
+                                        if(Get_map_instance().get_My_Enemy_map(y_curr,x_curr+size) !=TILE_STATE ::WATER)
+                                        {
+                                            fit_tile.to_right=-1;
+                                            fit_tile.curr_dir_boat_fit = false;
+                                            chance_field[y_curr][x_curr+size].set_fit_direction(fit_tile);
+                                        }
 
-            }
+                                }
+                                if(fit_tile.curr_dir_boat_fit)
+                                {
+                                    for (int size = 0; size < find_biggest_boat(); ++size)
+                                    {
+                                        fit_tile.to_right=+1;
+                                        chance_field[y_curr][x_curr+size].set_fit_direction(fit_tile);
+                                    }
+                                }
+                                break;
+                            case Rotation_Direction::TO_LEFT:
+                                break;
+                            case Rotation_Direction::UP:
+                                break;
+                            case Rotation_Direction::DOWN:
+                                break;
+                        }
+
+                }
+
         }
-
-
+    }
 }
+
