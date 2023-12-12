@@ -16,7 +16,6 @@ public:
 
      virtual bool Play_Game();
 protected:
-     virtual void play_turn(Game_Player & Current_Player,Game_Player & Enemy_Player);
      virtual bool Game_State_active();
 private:
       Game_Player Player_Me;

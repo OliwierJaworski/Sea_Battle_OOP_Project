@@ -1,11 +1,21 @@
 #include "First_AI.h"
 using namespace AI_Player;
 
-int First_AI::init_boat_sizes()
+void First_AI::init_boat_sizes()
 {
     for (auto boat : Get_map_instance().Get_Boat_Vector())
     {
         boats_left.push_back(boat->Get_Size());
+    }
+}
+void First_AI::print_chance_field_chance_values()
+{
+    for (int y_curr = 0; y_curr < 10; ++y_curr)
+    {
+        for (int x_curr = 0; x_curr < 10; ++x_curr)
+        {
+            chance_field[y_curr][x_curr].get_direction_sum();
+        }
     }
 }
 int First_AI::find_biggest_boat()
@@ -136,5 +146,6 @@ bool First_AI::boat_fit_combination()
                 }
         }
     }
+    return true;
 }
 

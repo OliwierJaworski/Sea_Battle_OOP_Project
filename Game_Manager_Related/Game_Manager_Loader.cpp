@@ -5,7 +5,7 @@ std::string Game_Manager_Loader::Player_Option()
     {
     std::string UserGame;
     std::cout<< "Multiplayer Or Singleplayer? :>";
-        UserGame="multiplayer";
+        UserGame="Singleplayer";
         return UserGame;
    do
    {

@@ -1,11 +1,13 @@
 #ifndef REMADE_SEA_BATTLE_TILE_INFO_H
 #define REMADE_SEA_BATTLE_TILE_INFO_H
-#include "First_AI.h"
+#include "Game_Player.h"
 namespace AI_Player
 {
     class tile_info
        {
         public:
+        tile_info();
+        ~tile_info();
                struct AI_Coordinates : Coordinates
                       {
                          int x = 0;
@@ -29,7 +31,6 @@ namespace AI_Player
                  void set_ship_alive(int ship_chosen,int ship_state){ships_alive[ship_chosen]=ship_state;}
                  void set_fit_direction(fit_direction fit_type) {boat_dir_fits=fit_type;}
                  void set_direction_sum(float dir_sum) {direction_sum =dir_sum;}
-
         private:
                 float chance_ratio = 0;//min 0 - max 100
         fit_direction boat_dir_fits;
