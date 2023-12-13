@@ -39,6 +39,8 @@ add_executable(Zeeslag_Code_Fixing main.cpp
         Player_Related/First_AI.cpp
         Player_Related/First_AI.h
         Player_Related/tile_info.cpp
-        Player_Related/tile_info.h)
+        Player_Related/tile_info.h
+        Player_Related/Simple_Ai.cpp
+        Player_Related/Simple_Ai.h)
 
 target_link_libraries(Zeeslag_Code_Fixing PRIVATE nlohmann_json::nlohmann_json)

@@ -19,9 +19,9 @@ public:
 protected:
      virtual bool Game_State_active();
 private:
-      Game_Player Player_Me;
-      AI_Player::First_AI Player_Enemy;
+    //player gaat een template function moeten worden omdat elke speler andere grootte heeft enz
+    std::vector<Game_Player *> player_vector;
+    bool Player_Add_ToGame(Game_Player & curr_player, bool identical_players_allowed);
 };
 
-
-#endif //GAME_FROM_SCRATCH_AGAIN_SP_GAME_MANAGER_H
+#endif

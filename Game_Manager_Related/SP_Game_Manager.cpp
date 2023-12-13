@@ -1,21 +1,61 @@
 #include "SP_Game_Manager.h"
+bool SP_Game_Manager::Player_Add_ToGame(Game_Player & curr_player,bool identical_players_allowed)
+{
+        if (!identical_players_allowed)
+        {
+            try
+            {
+            bool unique_id = true;
+            for (auto playercurr_vector: player_vector)
+            {
+                if (curr_player.get_player_id() == playercurr_vector->get_player_id())
+                {
+                    unique_id = false;
+                }
+            }
+            if (unique_id)
+            {
+                player_vector.push_back(curr_player.get_player_id());
+                std::cout << "player has been added succesfully to the player pool" << std::endl;
+                return true;
+            }
+            else
+            {
+               throw::std::runtime_error("cant have 2 indentical players when using the unique player wrapper");
+
+            }
+            }
+            catch(const std::exception& e)
+            {
+             std::cerr << e.what() << std::endl;
+            }
+        }
+
+    Game_Player Player_Me;
+    AI_Player::First_AI Player_Enemy;
+    player_vector.push_back(&Player_Me);
+    player_vector.push_back(&Player_Enemy);
+    if(curr_player != nullptr)
+    {
+
+    }
+}
 bool SP_Game_Manager::Play_Game()
 {
-    while(1)
+    Game_Player * previous_player= nullptr;
+    while(Game_State_active())
     {
-        Coordinates cords = tranlate_to_cords(Player_Enemy.Player_Input());
-        Player_Enemy.Get_map_instance().Set_Enemy_map(cords.x, cords.y, true);
-        Player_Enemy.boat_fit_combination();
-        Player_Enemy.print_chance_field_chance_values();
-        // while(Game_State_active())
-        //{
-        //}
+        if(& Player_Me!= previous_player)
+        {
+
+        }
+        else if(& Player_Enemy != previous_player)
+        {
+
+        }
     }
-   std::cout << "it reached the play_game it reached the play_game it reached the play_game it reached the play_game it reached the play_game it reached the play_game";
     return true;
 }
-
-
 
 bool SP_Game_Manager::Game_State_active()
 {
