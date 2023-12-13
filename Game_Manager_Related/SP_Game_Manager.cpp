@@ -22,7 +22,6 @@ bool SP_Game_Manager::Player_Add_ToGame(Game_Player & curr_player,bool identical
             else
             {
                throw::std::runtime_error("cant have 2 indentical players when using the unique player wrapper");
-
             }
             }
             catch(const std::exception& e)
@@ -30,15 +29,26 @@ bool SP_Game_Manager::Player_Add_ToGame(Game_Player & curr_player,bool identical
              std::cerr << e.what() << std::endl;
             }
         }
-
-    Game_Player Player_Me;
-    AI_Player::First_AI Player_Enemy;
-    player_vector.push_back(&Player_Me);
-    player_vector.push_back(&Player_Enemy);
-    if(curr_player != nullptr)
-    {
-
-    }
+        else
+        {
+            try
+            {
+            if (player_vector.size()>2)
+            {
+                player_vector.push_back(curr_player.get_player_id());
+                return true;
+            }
+            else
+            {
+                throw std::runtime_error("cant have more than 2 player instances in a game!");
+            }
+            }
+            catch (const std::exception& e)
+            {
+                std::cerr<< e.what() <<std::endl;
+            }
+        }
+    return false;
 }
 bool SP_Game_Manager::Play_Game()
 {
