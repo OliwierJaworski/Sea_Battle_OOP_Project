@@ -11,7 +11,7 @@ namespace SBN
                 Tcp_Client_Socket(const std::string port_addr, const std::string device_addr);
                 ~Tcp_Client_Socket();
 
-             int get_socket_state() { return internet_socket;}
+      inline int get_socket_state() { return internet_socket;}
     private:
             enum change_received_data_to{Player_Array,Player_Cords};
              int initialization();

@@ -1,14 +1,17 @@
 #include "Game_Player.h"
-
-    void Game_Player::Attack_Enemy(Game_Player & Enemy_Player,Coordinates User_Input_Cords)
+    Coordinates Game_Player::Attack_Enemy()
     {
-        Coordinates Attack_Enemy_Cords = User_Input_Cords;
-        int x= Attack_Enemy_Cords.x;
-        int y= Attack_Enemy_Cords.y;
-        std::cout << "Game_Player cords x:" << x << " y:" << y << std::endl;
-        Get_map_instance().Set_Enemy_map(x,y,Enemy_Player.Get_map_instance().get_my_map(y,x));
+     Coordinates user_cord= tranlate_to_cords(Player_Input());
+        return user_cord;
     }
-
+    Coordinates Game_Player::tranlate_to_cords(std::string input_string)
+    {
+        Coordinates User_Cords;
+        std::string::size_type pos =input_string.find('.');
+        User_Cords.y = input_string.at(pos +1)-'0';
+        User_Cords.x = input_string.at(pos -1)-'0';
+        return  User_Cords;
+    }
     std::string Game_Player::Player_Input()
     {
         std::string output_format;

@@ -77,8 +77,8 @@ public:
 protected:
                int number_of_bytes_received;
                int number_of_bytes_send;
-               const char * port_addr ="24042";
-               const char * device_addr ="127.0.0.1";
+       const char* port_addr ="24042";
+       const char* device_addr ="127.0.0.1";
 };
 }
              using MSG_TYPE = SBN::TCP_SHARED::MSG_TYPE;

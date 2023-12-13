@@ -6,25 +6,27 @@
 #include <string>
 
 #include "../Player_Related/Game_Player.h"
-#include "../TCP_Connection/Tcp_Server_Socket.h"
-#include "../TCP_Connection/Tcp_Client_Socket.h"
-#include "../Player_Related/Online_Player.h"
+#include "../Player_Related/Simple_Ai.h"
 
 class SP_Game_Manager
 {
+              friend class Game_Manager_Loader;
 public:
-                  SP_Game_Manager()=default;
-          virtual ~SP_Game_Manager()=default;
-      Coordinates tranlate_to_cords(std::string input_string);
-
-     virtual bool Play_Game();
-protected:
-     virtual void play_turn(Game_Player & Current_Player,Game_Player & Enemy_Player);
-     virtual bool Game_State_active();
+                           SP_Game_Manager(int player_type1,int player_type2);
+                           ~SP_Game_Manager();
 private:
-      Game_Player Player_Me;
-      Game_Player Player_Enemy;
+                      enum player_types
+                           {
+                                real_player,
+                                Easy_Ai,
+                                Harder_Ai
+                           };
+std::vector<Game_Player *> player_vector;
+                      bool Play_Game();
+                      bool Game_State_active();
+                      bool Player_Add_ToGame(Game_Player & curr_player, bool identical_players_allowed);
+                      void chosen_player_init(int player_Typechosen);
+                      void play_turn(Game_Player * curr_player,Game_Player * enemy_player);
+                      void answer_AttackReq(Coordinates currP_Attack,Game_Player * curr_player, Game_Player * enemy_player);
 };
-
-
-#endif //GAME_FROM_SCRATCH_AGAIN_SP_GAME_MANAGER_H
+#endif

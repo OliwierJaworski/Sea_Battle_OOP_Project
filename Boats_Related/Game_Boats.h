@@ -6,21 +6,7 @@
 #include <iostream>
 #include <memory>
 
-enum TILE_STATE
-{
-    WATER,
-    HIT,
-    SHIP,
-    MISS,
-    WAS_ALREADY_HIT
-};
-enum Rotation_Direction
-{
-    TO_RIGHT,
-    TO_LEFT,
-    UP,
-    DOWN
-};
+
 
 class Game_Boats
 {
@@ -29,24 +15,24 @@ public:
     Game_Boats(int Boat_size, std::string  Boat_name) : Boat_size(Boat_size), Boat_name(Boat_name){Init_Boat_Tiles();}
     virtual ~Game_Boats() =default;
 
-    struct TILE_INFO
-    {
-        int x;//cords of part of ship
-        int y;
-        int tile_status = WATER;
-        std::shared_ptr<Game_Boats> ship_on_tile = nullptr; //easier way to iterate through ships
-    };
+              struct TILE_INFO
+                     {
+                        int x;//cords of part of ship
+                        int y;
+                        int tile_status = 0;
+                        std::shared_ptr<Game_Boats> ship_on_tile = nullptr; //easier way to iterate through ships
+                     };
 
-    int Get_Size()                         {return Boat_size;}
-    std::string Get_Ship_Name()            {return Boat_name;}
+                 int Get_Size()                                             {return Boat_size;}
+         std::string Get_Ship_Name()                                        {return Boat_name;}
 
 protected:
-    virtual void SpecialMove() = 0;
-    void Init_Boat_Tiles();
-    void set_Boat_tile(int x, int y,int IsHit, int ship_part);
-    TILE_INFO get_boat_tile(int ship_part)                      {return ship_info[ship_part];}
-    void set_Boat_Size(int replace_value)                       {Boat_size= replace_value;}
-    void set_Boat_name(std::string new_name)                    {Boat_name=new_name;}
+        virtual void SpecialMove() = 0;
+                void Init_Boat_Tiles();
+                void set_Boat_tile(int x, int y,int IsHit, int ship_part);
+    inline TILE_INFO get_boat_tile(int ship_part)                           {return ship_info[ship_part];}
+         inline void set_Boat_Size(int replace_value)                       {Boat_size= replace_value;}
+         inline void set_Boat_name(std::string new_name)                    {Boat_name=new_name;}
 
 private:
     int Boat_size=0;
