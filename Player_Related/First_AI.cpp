@@ -1,6 +1,14 @@
 #include "First_AI.h"
 using namespace AI_Player;
-
+Coordinates First_AI::Attack_Enemy()
+{
+    int x =rand()%10;
+    int y =rand()%10;
+    Coordinates ai_cords;
+    ai_cords.x =x;
+    ai_cords.y =y;
+    return ai_cords;
+}
 void First_AI::init_boat_sizes()
 {
     for (auto boat : Get_map_instance().Get_Boat_Vector())

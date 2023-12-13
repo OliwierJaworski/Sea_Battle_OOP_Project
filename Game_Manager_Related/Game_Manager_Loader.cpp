@@ -16,7 +16,15 @@ void Game_Manager_Loader::Game_Type(std::string User_Option)
 {
    if(User_Option =="singleplayer")
    {
-      SP_Game = std::make_unique<SP_Game_Manager>(0,1);
+       std::cout << "0 for real player, 1 for easy ai, 2 for harder ai" << std::endl;
+       int player_type =-1;
+       //do
+       //{
+       //    std::cin >> player_type;
+       //}
+       //while(player_type<0 || player_type>2);
+       player_type=2;
+      SP_Game = std::make_unique<SP_Game_Manager>(0,player_type);
       forward_SP_playgame();
    }
     if(User_Option =="multiplayer")

@@ -22,14 +22,13 @@
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/First_AI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/First_AI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/First_AI.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/First_AI.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player_Related/Game_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Player.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player_Related/Simple_Ai.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Simple_Ai.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player_Related/Simple_Ai.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Simple_Ai.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +160,7 @@
       <workItem from="1702205956965" duration="3779000" />
       <workItem from="1702234160531" duration="3181000" />
       <workItem from="1702390093611" duration="13204000" />
-      <workItem from="1702472399246" duration="11559000" />
+      <workItem from="1702472399246" duration="13469000" />
     </task>
     <servers />
   </component>

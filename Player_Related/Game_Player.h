@@ -8,9 +8,9 @@
 
 class Game_Player
 {
-public:
     friend class SP_Game_Manager;
     friend class MP_Game_Manager;
+public:
                     Game_Player() {map =new Game_Map;}
             virtual ~Game_Player() {delete map;}
 

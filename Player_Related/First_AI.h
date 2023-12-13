@@ -4,10 +4,12 @@
 #include <cmath>
 namespace AI_Player
 {
-    class First_AI : public Game_Player
+   class First_AI : public Game_Player
    {
-    private:
     public:
+       First_AI() = default;
+       ~First_AI() override = default;
+    private:
         tile_info chance_field[10][10];
         std::vector<int> boats_left;
         void init_boat_sizes();
@@ -15,9 +17,7 @@ namespace AI_Player
         bool boat_fit_combination();
         int find_biggest_boat();
         void print_chance_field_chance_values();
-        First_AI() = default;
-        ~First_AI() override = default;
+       Coordinates Attack_Enemy() override;
     };
 }
-
 #endif
