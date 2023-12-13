@@ -23,11 +23,11 @@ void Game_Manager_Loader::Game_Type(std::string User_Option)
        //    std::cin >> player_type;
        //}
        //while(player_type<0 || player_type>2);
-       player_type=2;
+       player_type=1;
       SP_Game = std::make_unique<SP_Game_Manager>(0,player_type);
       forward_SP_playgame();
    }
-    if(User_Option =="multiplayer")
+   if(User_Option =="multiplayer")
    {
        MP_Game = std::make_unique<MP_Game_Manager>();
        forward_MP_playgame();

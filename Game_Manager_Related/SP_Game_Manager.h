@@ -6,7 +6,6 @@
 #include <string>
 
 #include "../Player_Related/Game_Player.h"
-#include "../Player_Related/First_AI.h"
 #include "../Player_Related/Simple_Ai.h"
 
 class SP_Game_Manager

@@ -16,7 +16,6 @@ void SP_Game_Manager::chosen_player_init(int player_Typechosen)
 {
     Game_Player * player = nullptr;
     Simple_Ai * Easy_Ai = nullptr;
-    AI_Player::First_AI * Harder_Ai = nullptr;
     switch (player_Typechosen)
     {
         case player_types::real_player:
@@ -26,10 +25,6 @@ void SP_Game_Manager::chosen_player_init(int player_Typechosen)
         case player_types::Easy_Ai:
             Easy_Ai = new Simple_Ai;
             Player_Add_ToGame(* Easy_Ai,false);
-            break;
-        case player_types::Harder_Ai:
-            Harder_Ai = new AI_Player::First_AI;
-            Player_Add_ToGame(* Harder_Ai,false);
             break;
     }
 }

@@ -31,7 +31,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 46,
+				"line" : 44,
 				"parent" : 0
 			}
 		]
@@ -84,8 +84,7 @@
 				27,
 				29,
 				31,
-				33,
-				35
+				33
 			]
 		}
 	],
@@ -135,8 +134,7 @@
 				27,
 				29,
 				31,
-				33,
-				35
+				33
 			]
 		},
 		{
@@ -159,8 +157,7 @@
 				28,
 				30,
 				32,
-				34,
-				36
+				34
 			]
 		}
 	],
@@ -335,17 +332,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "Boats_Related/Boats_Patrol_Boat.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Player_Related/First_AI.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "Player_Related/First_AI.h",
 			"sourceGroupIndex" : 1
 		},
 		{

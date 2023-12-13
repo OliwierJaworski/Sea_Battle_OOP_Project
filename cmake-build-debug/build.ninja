@@ -161,13 +161,6 @@ build CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Patrol_Boat.cpp.o: 
   OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
   OBJECT_FILE_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related
 
-build CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/First_AI.cpp.o: CXX_COMPILER__Zeeslag_Code_Fixing_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/Player_Related/First_AI.cpp || cmake_object_order_depends_target_Zeeslag_Code_Fixing
-  DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
-  DEP_FILE = CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/First_AI.cpp.o.d
-  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
-  OBJECT_FILE_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related
-
 build CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/tile_info.cpp.o: CXX_COMPILER__Zeeslag_Code_Fixing_unscanned_Debug /home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/Player_Related/tile_info.cpp || cmake_object_order_depends_target_Zeeslag_Code_Fixing
   DEFINES = -DJSON_DIAGNOSTICS=0 -DJSON_USE_IMPLICIT_CONVERSIONS=1
   DEP_FILE = CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/tile_info.cpp.o.d
@@ -190,7 +183,7 @@ build CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Simple_Ai.cpp.o: CXX_COM
 #############################################
 # Link the executable Zeeslag_Code_Fixing
 
-build Zeeslag_Code_Fixing: CXX_EXECUTABLE_LINKER__Zeeslag_Code_Fixing_Debug CMakeFiles/Zeeslag_Code_Fixing.dir/main.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/Game_Manager_Loader.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/MP_Game_Manager.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/SP_Game_Manager.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Game_Map.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Game_Player.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Online_Player.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Carrier.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Destroyer.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Game_Boats.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/Tcp_Client_Socket.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/Tcp_Server_Socket.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/TCP_SHARED.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Battleship.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Submarine.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Patrol_Boat.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/First_AI.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/tile_info.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Simple_Ai.cpp.o
+build Zeeslag_Code_Fixing: CXX_EXECUTABLE_LINKER__Zeeslag_Code_Fixing_Debug CMakeFiles/Zeeslag_Code_Fixing.dir/main.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/Game_Manager_Loader.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/MP_Game_Manager.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Game_Manager_Related/SP_Game_Manager.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Game_Map.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Game_Player.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Online_Player.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Carrier.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Destroyer.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Game_Boats.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/Tcp_Client_Socket.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/Tcp_Server_Socket.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/TCP_Connection/TCP_SHARED.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Battleship.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Submarine.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Boats_Related/Boats_Patrol_Boat.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/tile_info.cpp.o CMakeFiles/Zeeslag_Code_Fixing.dir/Player_Related/Simple_Ai.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Zeeslag_Code_Fixing.dir
   POST_BUILD = :
