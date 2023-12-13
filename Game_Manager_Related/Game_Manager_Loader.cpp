@@ -16,7 +16,7 @@ void Game_Manager_Loader::Game_Type(std::string User_Option)
 {
    if(User_Option =="singleplayer")
    {
-      SP_Game = std::make_unique<SP_Game_Manager>();
+      SP_Game = std::make_unique<SP_Game_Manager>(0,1);
       forward_SP_playgame();
    }
     if(User_Option =="multiplayer")
