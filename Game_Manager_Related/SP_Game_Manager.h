@@ -14,7 +14,7 @@ class SP_Game_Manager
               friend class Game_Manager_Loader;
 public:
                            SP_Game_Manager(int player_type1,int player_type2);
-                           ~SP_Game_Manager()=default;
+                           ~SP_Game_Manager();
 private:
                       enum player_types
                            {

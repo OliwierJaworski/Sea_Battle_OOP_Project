@@ -11,18 +11,17 @@ class Game_Player
 public:
     friend class SP_Game_Manager;
     friend class MP_Game_Manager;
-               Game_Player() {map =new Game_Map;}
-       virtual ~Game_Player() {delete map;}
-
+                    Game_Player() {map =new Game_Map;}
+            virtual ~Game_Player() {delete map;}
 
 protected:
-    bool Get_Player_boats_alive();
-    Game_Player* get_player_id() {return this;}
-    virtual Coordinates Attack_Enemy();
-    Coordinates tranlate_to_cords(std::string input_string);
-    std::string Player_Input();
-    void print_map();
-   inline Game_Map & Get_map_instance() {return  * map;}
+               bool Get_Player_boats_alive();
+       Game_Player* get_player_id() {return this;}
+virtual Coordinates Attack_Enemy();
+        Coordinates tranlate_to_cords(std::string input_string);
+        std::string Player_Input();
+               void print_map();
+   inline Game_Map& Get_map_instance() {return  * map;}
 private:
     Game_Map * map;//to prevent object slicing
 };

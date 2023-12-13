@@ -4,6 +4,14 @@ SP_Game_Manager::SP_Game_Manager(int player_type1,int player_type2)
     chosen_player_init(player_type1);
     chosen_player_init(player_type2);
 }
+SP_Game_Manager::~SP_Game_Manager()
+{
+    for (auto player: player_vector)
+    {
+        delete player;
+    }
+    player_vector.shrink_to_fit();
+}
 void SP_Game_Manager::chosen_player_init(int player_Typechosen)
 {
     Game_Player * player = nullptr;
