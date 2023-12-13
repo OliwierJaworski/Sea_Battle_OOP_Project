@@ -6,21 +6,7 @@
 #include <iostream>
 #include <memory>
 
-enum TILE_STATE
-{
-    WATER,
-    HIT,
-    SHIP,
-    MISS,
-    WAS_ALREADY_HIT
-};
-enum Rotation_Direction
-{
-    TO_RIGHT,
-    TO_LEFT,
-    UP,
-    DOWN
-};
+
 
 class Game_Boats
 {
@@ -33,7 +19,7 @@ public:
                      {
                         int x;//cords of part of ship
                         int y;
-                        int tile_status = WATER;
+                        int tile_status = 0;
                         std::shared_ptr<Game_Boats> ship_on_tile = nullptr; //easier way to iterate through ships
                      };
 

@@ -1,7 +1,9 @@
 #ifndef GAME_FROM_SCRATCH_AGAIN_MP_GAME_MANAGER_H
 #define GAME_FROM_SCRATCH_AGAIN_MP_GAME_MANAGER_H
 
-#include "SP_Game_Manager.h"
+#include "../TCP_Connection/Tcp_Server_Socket.h"
+#include "../TCP_Connection/Tcp_Client_Socket.h"
+#include "../Player_Related/Online_Player.h"
 
 class MP_Game_Manager
 {
