@@ -8,8 +8,8 @@ class Simple_Ai  : public Game_Player
 public:
     Simple_Ai()=default;
     ~Simple_Ai()=default;
+
 private:
-    Coordinates do_move();
 };
 #endif
 

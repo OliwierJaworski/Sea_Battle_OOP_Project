@@ -98,11 +98,10 @@ bool SP_Game_Manager::Play_Game()
 }
 void SP_Game_Manager::play_turn(Game_Player * curr_player, Game_Player * enemy_player)
 {
-    int curr_state=0;
+    //attack enemy geeft enkel de cords terug die het wil aanvallen de game_manager doet de rest
     curr_player->print_map();
     Coordinates currP_Attack=curr_player->Attack_Enemy();
     answer_AttackReq(currP_Attack, curr_player, enemy_player);
-    //attack enemy geeft enkel de cords terug die het wil aanvallen de game_manager doet de rest
 }
 void SP_Game_Manager::answer_AttackReq(Coordinates currP_Attack,Game_Player * curr_player, Game_Player * enemy_player)
 {
