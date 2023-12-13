@@ -49,6 +49,8 @@ namespace SBN
 class TCP_SHARED
 {
 public:
+    TCP_SHARED(const std::string port_addr,const std::string device_addr) : port_addr(port_addr.c_str()), device_addr(device_addr.c_str()) {}
+    ~TCP_SHARED()=default;
             struct MSG
                    {
                         int MSG_Type=0;
@@ -75,6 +77,8 @@ public:
 protected:
                int number_of_bytes_received;
                int number_of_bytes_send;
+       const char* port_addr ="24042";
+       const char* device_addr ="127.0.0.1";
 };
 }
              using MSG_TYPE = SBN::TCP_SHARED::MSG_TYPE;

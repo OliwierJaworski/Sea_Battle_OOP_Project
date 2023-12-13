@@ -8,10 +8,10 @@ void MP_Game_Manager::Init_TCP_Connection(int connection_type)
     switch (connection_type)
     {
         case TCP_HOST:
-            host = std::make_unique<SBN::Tcp_Server_Socket>();
+            host = std::make_unique<SBN::Tcp_Server_Socket>("24041");
             break;
         case TCP_CLIENT:
-            Client =  std::make_unique<SBN::Tcp_Client_Socket>();
+            Client =  std::make_unique<SBN::Tcp_Client_Socket>("24041","192.168.0.145");
             break;
         default:
             std::cout <<"no valid connection type" <<std::endl;

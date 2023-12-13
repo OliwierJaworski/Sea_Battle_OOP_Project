@@ -8,10 +8,10 @@ namespace SBN//SEA_Battle_Networking
     class Tcp_Server_Socket : public TCP_SHARED
     {
     public:
-                   Tcp_Server_Socket();
+                   Tcp_Server_Socket(const std::string port_addr) : TCP_SHARED(port_addr,"127.0.0.1") {bind_to_client();}
                    ~Tcp_Server_Socket();
               void bind_to_client();
-               int get_Client_socket_state() { return client_internet_socket; }
+        inline int get_Client_socket_state() { return client_internet_socket; }
 
     private:
                int initialization();
