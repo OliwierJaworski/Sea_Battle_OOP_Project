@@ -19,7 +19,6 @@ private:
                            {
                                 real_player,
                                 Easy_Ai,
-                                Harder_Ai
                            };
 std::vector<Game_Player *> player_vector;
                       bool Play_Game();

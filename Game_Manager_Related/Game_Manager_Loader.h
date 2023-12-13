@@ -10,7 +10,7 @@
 class Game_Manager_Loader
 {
 public:
-                                     Game_Manager_Loader() {}
+                                     Game_Manager_Loader() =default;
                                      ~Game_Manager_Loader() =default;
 
                                 void Game_Type(std::string User_Option);
@@ -21,6 +21,4 @@ private:
                                 void forward_SP_playgame();
                                 void forward_MP_playgame();
 };
-
-
 #endif
