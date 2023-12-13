@@ -14,7 +14,8 @@ public:
 
           bool Get_Player_boats_alive();
   Game_Player* get_player_id() {return this;}
-   Coordinates Attack_Enemy(Coordinates User_Input_Cords);
+   virtual Coordinates Attack_Enemy();
+    Coordinates tranlate_to_cords(std::string input_string);
    std::string Player_Input();
           void print_map();
     inline Game_Map & Get_map_instance() {return  * map;}

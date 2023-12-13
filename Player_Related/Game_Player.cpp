@@ -1,5 +1,17 @@
 #include "Game_Player.h"
-
+    Coordinates Game_Player::Attack_Enemy()
+    {
+     Coordinates user_cord= tranlate_to_cords(Player_Input());
+        return user_cord;
+    }
+    Coordinates Game_Player::tranlate_to_cords(std::string input_string)
+    {
+        Coordinates User_Cords;
+        std::string::size_type pos =input_string.find('.');
+        User_Cords.y = input_string.at(pos +1)-'0';
+        User_Cords.x = input_string.at(pos -1)-'0';
+        return  User_Cords;
+    }
     std::string Game_Player::Player_Input()
     {
         std::string output_format;

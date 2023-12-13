@@ -100,6 +100,14 @@ void SP_Game_Manager::play_turn(Game_Player * curr_player, Game_Player * enemy_p
 {
     int curr_state=0;
     curr_player->print_map();
+    Coordinates currP_Attack=curr_player->Attack_Enemy();
+    answer_AttackReq(currP_Attack, curr_player, enemy_player);
+    //attack enemy geeft enkel de cords terug die het wil aanvallen de game_manager doet de rest
+}
+void SP_Game_Manager::answer_AttackReq(Coordinates currP_Attack,Game_Player * curr_player, Game_Player * enemy_player)
+{
+    std::cout << "Game_Player cords x:" << currP_Attack.x << " y:" << currP_Attack.y << std::endl;
+    curr_player->Get_map_instance().Set_Enemy_map(currP_Attack.x,currP_Attack.y,enemy_player->Get_map_instance().get_my_map(currP_Attack.y,currP_Attack.x));
 }
 
 bool SP_Game_Manager::Game_State_active()
@@ -115,12 +123,4 @@ bool SP_Game_Manager::Game_State_active()
     }
 }
 
-Coordinates SP_Game_Manager::tranlate_to_cords(std::string input_string)
-{
-    Coordinates User_Cords;
-    std::string::size_type pos =input_string.find('.');
-    User_Cords.y = input_string.at(pos +1)-'0';
-    User_Cords.x = input_string.at(pos -1)-'0';
-    return  User_Cords;
-}
 
