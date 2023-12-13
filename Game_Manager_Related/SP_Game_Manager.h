@@ -20,7 +20,7 @@ private:
                                 real_player,
                                 Easy_Ai,
                            };
-std::vector<Game_Player *> player_vector;
+std::vector< Game_Player *> player_vector;
                       bool Play_Game();
                       bool Game_State_active();
                       bool Player_Add_ToGame(Game_Player & curr_player, bool identical_players_allowed);

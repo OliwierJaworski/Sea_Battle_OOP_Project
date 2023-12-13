@@ -48,11 +48,11 @@ int MP_Game_Manager::filter_input()
             return Connection_type::TCP_CLIENT;
         }
         else
-        throw (Connection_type);
+        throw std::runtime_error(Connection_type);
     }
-    catch (int connection_error)
+    catch(int connection_error)
     {
-        std::cout<< "Wrong int value has been provided bz Player_Input_init";
+        std::cerr<< "Wrong int value has been provided bz Player_Input_init :" <<connection_error;
     }
 }
 
@@ -69,11 +69,11 @@ void MP_Game_Manager::Play_Game()
             host_play_turn();
         }
         else
-           throw("could not find the correct game to bind to" );
+           throw std::runtime_error("could not find the correct game to bind to" );
     }
     catch (const char * recvderr)
     {
-        std::cout<< recvderr;
+        std::cerr<< recvderr;
     }
 }
 MSG_STRUCT MP_Game_Manager::Player_turn_decision(MSG_STRUCT recvd_content)
@@ -136,15 +136,15 @@ void MP_Game_Manager::host_play_turn()
 {
     while(keepgamerolling)
     {
-        MSG_STRUCT currentmsg = host->deserialize_ToMSG(host->recv(host->get_Client_socket_state()));
+        MSG_STRUCT currentmsg = host->deserialize_ToMSG(host->recv(* host->get_Client_socket_state()));
         if(currentmsg.MSG_Type==MSG_TYPE::Game_Over)
         {
             keepgamerolling =false ;
-            host->send(host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(currentmsg)));
+            host->send(* host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(currentmsg)));
         }
         else
         {
-            host->send(host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(currentmsg)));
+            host->send(* host->get_Client_socket_state(),host->serialize_Tostring(Player_turn_decision(currentmsg)));
         }
     }
 std::cout << std::endl << "game over!" <<std::endl;
@@ -153,15 +153,15 @@ void MP_Game_Manager::client_play_turn()
 {
     while(keepgamerolling)
     {
-        MSG_STRUCT currentmsg=Client->deserialize_ToMSG(Client->recv(Client->get_socket_state()));
+        MSG_STRUCT currentmsg=Client->deserialize_ToMSG(Client->recv(*Client->get_socket_state()));
         if(currentmsg.MSG_Type==MSG_TYPE::Game_Over)
         {
             keepgamerolling =false ;
-            Client->send(Client->get_socket_state(), Client->serialize_Tostring(Player_turn_decision(currentmsg)));
+            Client->send(*Client->get_socket_state(), Client->serialize_Tostring(Player_turn_decision(currentmsg)));
         }
         else
         {
-            Client->send(Client->get_socket_state(), Client->serialize_Tostring(Player_turn_decision(currentmsg)));
+            Client->send(*Client->get_socket_state(), Client->serialize_Tostring(Player_turn_decision(currentmsg)));
         }
     }
     std::cout << "game over!";

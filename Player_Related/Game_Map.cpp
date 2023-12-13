@@ -62,7 +62,7 @@
             }
     }
 
-    bool Game_Map::check_if_fit(int boatsize,int y, int x,int rotation_Operator, int rotation)
+    const bool Game_Map::check_if_fit(int boatsize,int y, int x,int rotation_Operator, int rotation)
     {
         for (int curr_size = 0; curr_size < boatsize && curr_size > -boatsize; curr_size += rotation_Operator)
         {
@@ -247,13 +247,7 @@
     {
         for (int i = 0; i < BoatsVector.size(); ++i)
         {
-            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
-            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
-            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
-            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
-            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
-            std::cout <<"idk why it reaches the free alloc of boats right here"<<std::endl;
-            delete BoatsVector[i]; //erase verwijderd enkel u pointer uit de vector die cleared de memory niet!
+            delete BoatsVector[i];
             BoatsVector.erase(BoatsVector.begin()+ i);
         }
         BoatsVector.shrink_to_fit();

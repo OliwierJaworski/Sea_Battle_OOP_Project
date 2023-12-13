@@ -24,7 +24,7 @@ TCP_SHARED::MSG TCP_SHARED::deserialize_ToMSG(std::string  str)
     msg.message = j["message"];
     return msg;
 }
-std::string TCP_SHARED::recv(int internet_socket)
+const std::string TCP_SHARED::recv(int internet_socket)
 {
     number_of_bytes_received = 0;
     char buffer[1000];
@@ -40,7 +40,7 @@ std::string TCP_SHARED::recv(int internet_socket)
     printf("--------------------------------->Received : %s\n", buffer);
     return buffered_string;
 }
-void TCP_SHARED::send(int internet_socket,std::string StringData_ToBe_send)
+const void TCP_SHARED::send(int internet_socket,std::string StringData_ToBe_send)
 {
 
     number_of_bytes_send = 0;

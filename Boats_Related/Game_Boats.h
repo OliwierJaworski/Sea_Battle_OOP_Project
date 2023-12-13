@@ -17,26 +17,22 @@ public:
 
               struct TILE_INFO
                      {
-                        int x;//cords of part of ship
+                        int x;
                         int y;
                         int tile_status = 0;
-                        std::shared_ptr<Game_Boats> ship_on_tile = nullptr; //easier way to iterate through ships
+                        std::shared_ptr<Game_Boats> ship_on_tile = nullptr;
                      };
-
-                 int Get_Size()                                             {return Boat_size;}
+           const int Get_Size()                                             {return Boat_size;}
          std::string Get_Ship_Name()                                        {return Boat_name;}
-
 protected:
         virtual void SpecialMove() = 0;
                 void Init_Boat_Tiles();
                 void set_Boat_tile(int x, int y,int IsHit, int ship_part);
     inline TILE_INFO get_boat_tile(int ship_part)                           {return ship_info[ship_part];}
-         inline void set_Boat_Size(int replace_value)                       {Boat_size= replace_value;}
-         inline void set_Boat_name(std::string new_name)                    {Boat_name=new_name;}
 
 private:
-    int Boat_size=0;
-    std::string Boat_name;
+ const int Boat_size=0;
+ const std::string Boat_name;
     std::vector<TILE_INFO> ship_info;
 };
 #endif

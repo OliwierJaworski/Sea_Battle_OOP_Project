@@ -108,8 +108,8 @@ void SP_Game_Manager::play_turn(Game_Player * curr_player, Game_Player * enemy_p
 }
 void SP_Game_Manager::answer_AttackReq(Coordinates currP_Attack,Game_Player * curr_player, Game_Player * enemy_player)
 {
-    std::cout << "Game_Player cords x:" << currP_Attack.x << " y:" << currP_Attack.y << std::endl;
     curr_player->Get_map_instance().Set_Enemy_map(currP_Attack.x,currP_Attack.y,enemy_player->Get_map_instance().get_my_map(currP_Attack.y,currP_Attack.x));
+    //the boats are only destroyed on 1 players map
 }
 
 bool SP_Game_Manager::Game_State_active()

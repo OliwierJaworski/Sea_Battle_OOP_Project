@@ -9,11 +9,11 @@
 class Boats_Patrol_Boat :  public Game_Boats
 {
 public:
-//constructor | destructor
+
     Boats_Patrol_Boat() : Game_Boats(2, "Patrol_Boat") {}
     ~Boats_Patrol_Boat(){};
 
-//public
+
     void SpecialMove();
 };
 #endif //REMADE_SEA_BATTLE_BOATS_PATROL_BOAT_H

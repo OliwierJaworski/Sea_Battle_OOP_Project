@@ -71,8 +71,8 @@ public:
                MSG default_message();
        std::string serialize_Tostring(MSG msgPacket);
                MSG deserialize_ToMSG(std::string  str);
-       std::string recv(int internet_socket);
-              void send(int internet_socket,std::string StringData_ToBe_send);
+ const std::string recv(int internet_socket);
+        const void send(int internet_socket,std::string StringData_ToBe_send);
 
 protected:
                int number_of_bytes_received;
@@ -83,4 +83,4 @@ protected:
 }
              using MSG_TYPE = SBN::TCP_SHARED::MSG_TYPE;
              using MSG_STRUCT = SBN::TCP_SHARED::MSG;
-#endif //REMADE_SEA_BATTLE_TCP_SHARED_H
+#endif

@@ -7,14 +7,14 @@ class Boats_Destroyer : public Game_Boats
 {
 
 public:
-//constructor | destructor
+
              Boats_Destroyer() : Game_Boats(3, "destroyer") {}
              ~Boats_Destroyer(){};
 
-//public
+
         void SpecialMove();
 private:
-//private
+
 
 
 };
