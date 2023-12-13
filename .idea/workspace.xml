@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="Zeeslag_Code_Fixing" targetName="Zeeslag_Code_Fixing" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Boats_Battleship.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Boats_Battleship.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Boats_Carrier.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Boats_Carrier.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Boats_Destroyer.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Boats_Destroyer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Boats_Patrol_Boat.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Boats_Patrol_Boat.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Boats_Submarine.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Boats_Submarine.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Game_Boats.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Game_Boats.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/Game_Manager_Loader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/MP_Game_Manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Map.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Map.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Online_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Online_Player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Simple_Ai.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Simple_Ai.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Player_Related/Game_Map.cpp" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="2.2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2YGYnr3P1aeVvuCB4KZG4kRTRGO" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "Fixing__Noodle__Code",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "project.scopes",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="CMake Application.Zeeslag_Code_Fixing">
+    <configuration name="Zeeslag_Code_Fixing" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Zeeslag_Code_Fixing" TARGET_NAME="Zeeslag_Code_Fixing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Zeeslag_Code_Fixing" RUN_TARGET_NAME="Zeeslag_Code_Fixing">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="REMADE_Sea_Battle" TARGET_NAME="main.cpp" CONFIG_NAME="main.cpp">
+      <option name="sourceFile" value="main.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="C/C++ File.main.cpp" />
+      <item itemvalue="CMake Application.Zeeslag_Code_Fixing" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="" />
+      <created>1700153552450</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700153552450</updated>
+      <workItem from="1700153553670" duration="1326000" />
+      <workItem from="1700216373562" duration="7267000" />
+      <workItem from="1700223688012" duration="10609000" />
+      <workItem from="1700234356956" duration="8492000" />
+      <workItem from="1700302933700" duration="19722000" />
+      <workItem from="1700846792858" duration="7612000" />
+      <workItem from="1700864625667" duration="4369000" />
+      <workItem from="1701203683265" duration="934000" />
+      <workItem from="1701206963687" duration="18521000" />
+      <workItem from="1701257648515" duration="6531000" />
+      <workItem from="1701393980726" duration="12000" />
+      <workItem from="1701441329070" duration="600000" />
+      <workItem from="1701441935613" duration="7036000" />
+      <workItem from="1701454782663" duration="3717000" />
+      <workItem from="1701460120799" duration="3759000" />
+      <workItem from="1701563137475" duration="11077000" />
+      <workItem from="1701601153908" duration="3041000" />
+      <workItem from="1701614639997" duration="8723000" />
+      <workItem from="1701641157871" duration="492000" />
+      <workItem from="1701690982621" duration="3774000" />
+      <workItem from="1701698680971" duration="420000" />
+      <workItem from="1701699106232" duration="92000" />
+      <workItem from="1701707647605" duration="1266000" />
+      <workItem from="1701794780709" duration="12164000" />
+      <workItem from="1701809602525" duration="64000" />
+      <workItem from="1701867365960" duration="9655000" />
+      <workItem from="1701884092571" duration="8918000" />
+      <workItem from="1701899925132" duration="5098000" />
+      <workItem from="1701905243096" duration="3426000" />
+      <workItem from="1701969493681" duration="30000" />
+      <workItem from="1701970244782" duration="2355000" />
+      <workItem from="1701986466520" duration="15590000" />
+      <workItem from="1702033389392" duration="6550000" />
+      <workItem from="1702119202306" duration="8206000" />
+      <workItem from="1702128406369" duration="4986000" />
+      <workItem from="1702147221460" duration="979000" />
+      <workItem from="1702153065915" duration="21942000" />
+      <workItem from="1702205956965" duration="3779000" />
+      <workItem from="1702234160531" duration="3181000" />
+      <workItem from="1702390093611" duration="13204000" />
+      <workItem from="1702472399246" duration="14137000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
