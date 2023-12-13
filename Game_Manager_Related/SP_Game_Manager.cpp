@@ -84,23 +84,22 @@ bool SP_Game_Manager::Play_Game()
     {
         if(player_vector.at(0)!=  previous_player)
         {
-            play_turn();
+            std::cout <<"PLAYER Me turn "<<std::endl;
+            play_turn(player_vector.at(0),player_vector.at(1));
             previous_player =player_vector.at(0);
         }
         else if(player_vector.at(1) != previous_player)
         {
-            play_turn();
+            std::cout <<"PLAYER Enemy turn "<<std::endl;
+            play_turn(player_vector.at(1),player_vector.at(0));
             previous_player =player_vector.at(1);
         }
     }
 }
-void SP_Game_Manager::play_turn()
+void SP_Game_Manager::play_turn(Game_Player * curr_player, Game_Player * enemy_player)
 {
     int curr_state=0;
-    switch (curr_state)
-    {
-
-    }
+    curr_player->print_map();
 }
 
 bool SP_Game_Manager::Game_State_active()

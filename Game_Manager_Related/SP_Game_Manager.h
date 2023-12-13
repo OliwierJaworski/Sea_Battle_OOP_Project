@@ -26,18 +26,11 @@ private:
         Easy_Ai,
         Harder_Ai
     };
-    enum turn state
-    {
-        attack,
-        ask_if_hit,
-        adjust_map,
-        get_hit
-    };
     //player gaat een template function moeten worden omdat elke speler andere grootte heeft enz
     std::vector<Game_Player *> player_vector;
     bool Player_Add_ToGame(Game_Player & curr_player, bool identical_players_allowed);
     void chosen_player_init(int player_Typechosen);
-    void play_turn();
+    void play_turn(Game_Player * curr_player,Game_Player * enemy_player);
 };
 
 #endif
