@@ -22,14 +22,6 @@
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boats_Related/Game_Boats.h" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Game_Boats.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Player.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Server_Socket.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Zeeslag_Code_Fixing" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +73,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Fixing__Noodle__Code&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Ai__Design__Workspace&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -152,7 +144,11 @@
       <workItem from="1702119202306" duration="8206000" />
       <workItem from="1702128406369" duration="4986000" />
       <workItem from="1702147221460" duration="979000" />
-      <workItem from="1702153065915" duration="13323000" />
+      <workItem from="1702153065915" duration="21942000" />
+      <workItem from="1702205956965" duration="3779000" />
+      <workItem from="1702234160531" duration="3181000" />
+      <workItem from="1702390093611" duration="13204000" />
+      <workItem from="1702472399246" duration="14137000" />
     </task>
     <servers />
   </component>

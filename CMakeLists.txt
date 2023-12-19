@@ -35,6 +35,10 @@ add_executable(Zeeslag_Code_Fixing main.cpp
         Boats_Related/Boats_Submarine.cpp
         Boats_Related/Boats_Submarine.h
         Boats_Related/Boats_Patrol_Boat.cpp
-        Boats_Related/Boats_Patrol_Boat.h)
+        Boats_Related/Boats_Patrol_Boat.h
+        Player_Related/tile_info.cpp
+        Player_Related/tile_info.h
+        Player_Related/Simple_Ai.cpp
+        Player_Related/Simple_Ai.h)
 
 target_link_libraries(Zeeslag_Code_Fixing PRIVATE nlohmann_json::nlohmann_json)
