@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.26)
-project(Zeeslag_Code_Fixing)
+project(Sea_Battle)
 
 set(CMAKE_CXX_STANDARD 23)
 
 find_package(nlohmann_json CONFIG REQUIRED)
 
-add_executable(Zeeslag_Code_Fixing main.cpp
+add_executable(Sea_Battle main.cpp
         Game_Manager_Related/Game_Manager_Loader.h
         Game_Manager_Related/MP_Game_Manager.h
         Game_Manager_Related/SP_Game_Manager.h
@@ -41,4 +41,4 @@ add_executable(Zeeslag_Code_Fixing main.cpp
         Player_Related/Simple_Ai.cpp
         Player_Related/Simple_Ai.h)
 
-target_link_libraries(Zeeslag_Code_Fixing PRIVATE nlohmann_json::nlohmann_json)
+target_link_libraries(Sea_Battle PRIVATE nlohmann_json::nlohmann_json)
