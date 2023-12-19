@@ -32,12 +32,12 @@
         return output_format;
     }
 
-    bool  Game_Player::Get_Player_boats_alive()
+    const bool  Game_Player::Get_Player_boats_alive()
     {
         return Get_map_instance().any_ship_alive();
     }
 
-    void Game_Player::print_map()
+    const void Game_Player::print_map()
     {
         Get_map_instance().print_map();
     }

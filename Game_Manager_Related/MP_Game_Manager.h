@@ -7,15 +7,16 @@
 
 class MP_Game_Manager
 {
+                               friend class Game_Manager_Loader;
 public:
-                                           MP_Game_Manager();
-                                           ~MP_Game_Manager()  =default;
-                                      enum Connection_type
-                                         {
+                                            MP_Game_Manager();
+                                            ~MP_Game_Manager()  =default;
+                                       enum Connection_type
+                                            {
                                             TCP_CLIENT,
                                             TCP_HOST
-                                         };
-                                       void Play_Game() ;
+                                            };
+
 private:
     std::unique_ptr<SBN::Tcp_Client_Socket> Client = nullptr;
     std::unique_ptr<SBN::Tcp_Server_Socket> host = nullptr;
@@ -27,5 +28,6 @@ private:
                                        void host_play_turn();
                                        void client_play_turn();
                                  MSG_STRUCT Player_turn_decision(MSG_STRUCT recvd_content);
+                                       void Play_Game();
 };
 #endif

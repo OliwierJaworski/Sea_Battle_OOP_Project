@@ -6,14 +6,14 @@
 class Boats_Carrier  : public Game_Boats
 {
 public:
-//constructor | destructor
+
                 Boats_Carrier() : Game_Boats(5, "Carrier") {}
                 ~Boats_Carrier(){};
 
-//public
+
            void SpecialMove();
 private:
-//private
+
 
 };
 

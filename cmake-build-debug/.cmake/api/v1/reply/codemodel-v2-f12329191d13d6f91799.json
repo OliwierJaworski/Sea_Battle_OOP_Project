@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.26"
+						"string" : "3.22.1"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "Zeeslag_Code_Fixing",
+					"name" : "Sea_Battle",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Zeeslag_Code_Fixing::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Zeeslag_Code_Fixing-Debug-d0a84a3c3686a77f8266.json",
-					"name" : "Zeeslag_Code_Fixing",
+					"id" : "Sea_Battle::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Sea_Battle-Debug-4e56d197a0e19233d3cc.json",
+					"name" : "Sea_Battle",
 					"projectIndex" : 0
 				}
 			]

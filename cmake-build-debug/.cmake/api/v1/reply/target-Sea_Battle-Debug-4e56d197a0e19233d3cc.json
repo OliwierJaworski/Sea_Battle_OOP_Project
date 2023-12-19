@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Zeeslag_Code_Fixing"
+			"path" : "Sea_Battle"
 		}
 	],
 	"backtrace" : 1,
@@ -88,7 +88,7 @@
 			]
 		}
 	],
-	"id" : "Zeeslag_Code_Fixing::@6890427a1f51a3e7e1df",
+	"id" : "Sea_Battle::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -104,8 +104,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Zeeslag_Code_Fixing",
-	"nameOnDisk" : "Zeeslag_Code_Fixing",
+	"name" : "Sea_Battle",
+	"nameOnDisk" : "Sea_Battle",
 	"paths" : 
 	{
 		"build" : ".",

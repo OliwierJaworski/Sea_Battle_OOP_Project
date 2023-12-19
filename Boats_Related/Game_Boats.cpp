@@ -12,8 +12,4 @@ void Game_Boats::set_Boat_tile(int x, int y,int IsHit, int ship_part )
     ship_info[ship_part].tile_status =IsHit;
     ship_info[ship_part].x = x;
     ship_info[ship_part].y = y;
-
-    std::cout << " ship_info[ship_part].tile_status :"<<  ship_info[ship_part].tile_status
-              << " ship_info[ship_part].x"            <<  ship_info[ship_part].x
-              << " ship_info[ship_part].y"            <<  ship_info[ship_part].y <<std::endl;
 }

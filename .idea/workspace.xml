@@ -11,7 +11,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="Zeeslag_Code_Fixing" targetName="Zeeslag_Code_Fixing" />
+      <config projectName="Sea_Battle" targetName="Sea_Battle" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -22,6 +22,20 @@
   <component name="ChangeListManager">
     <list default="true" id="07a4d897-3137-43d6-9bb3-da5b3cbdcf08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Boats_Related/Game_Boats.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Boats_Related/Game_Boats.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game_Manager_Related/SP_Game_Manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player_Related/Game_Map.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/TCP_SHARED.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TCP_Connection/Tcp_Client_Socket.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Sea_Battle.dir/Boats_Related/Game_Boats.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Sea_Battle.dir/Boats_Related/Game_Boats.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Sea_Battle.dir/Game_Manager_Related/SP_Game_Manager.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Sea_Battle.dir/Game_Manager_Related/SP_Game_Manager.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Sea_Battle.dir/Player_Related/Game_Map.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Sea_Battle.dir/Player_Related/Game_Map.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Sea_Battle.dir/TCP_Connection/TCP_SHARED.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Sea_Battle.dir/TCP_Connection/TCP_SHARED.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Sea_Battle.dir/TCP_Connection/Tcp_Client_Socket.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Sea_Battle.dir/TCP_Connection/Tcp_Client_Socket.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Sea_Battle" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Sea_Battle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +59,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Player_Related/Game_Map.cpp" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2023" />
@@ -64,27 +81,33 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Ai__Design__Workspace&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.scopes&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "Fixing__Noodle__Code",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.scopes",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="CMake Application.Zeeslag_Code_Fixing">
-    <configuration name="Zeeslag_Code_Fixing" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Zeeslag_Code_Fixing" TARGET_NAME="Zeeslag_Code_Fixing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Zeeslag_Code_Fixing" RUN_TARGET_NAME="Zeeslag_Code_Fixing">
+}]]></component>
+  <component name="RunManager" selected="CMake Application.Sea_Battle">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sea_Battle" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Sea_Battle" TARGET_NAME="Sea_Battle" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Sea_Battle" RUN_TARGET_NAME="Sea_Battle">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -97,7 +120,7 @@
     </configuration>
     <list>
       <item itemvalue="C/C++ File.main.cpp" />
-      <item itemvalue="CMake Application.Zeeslag_Code_Fixing" />
+      <item itemvalue="CMake Application.Sea_Battle" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -149,6 +172,9 @@
       <workItem from="1702234160531" duration="3181000" />
       <workItem from="1702390093611" duration="13204000" />
       <workItem from="1702472399246" duration="14137000" />
+      <workItem from="1702993803531" duration="702000" />
+      <workItem from="1702995269806" duration="1000" />
+      <workItem from="1703011611694" duration="1487000" />
     </task>
     <servers />
   </component>

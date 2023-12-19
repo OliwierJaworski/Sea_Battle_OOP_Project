@@ -74,7 +74,7 @@ void Tcp_Client_Socket::cleanup( int internet_socket )
 #endif
     if( shutdown_return == -1 )
     {
-        perror( "shutdown" );
+       std::cout << "host has disconnected";
     }
 
     //Step 3.1

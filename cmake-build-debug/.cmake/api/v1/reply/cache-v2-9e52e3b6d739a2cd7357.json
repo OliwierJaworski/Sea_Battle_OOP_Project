@@ -843,7 +843,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Zeeslag_Code_Fixing"
+			"value" : "Sea_Battle"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1138,7 +1138,7 @@
 			"value" : "[/usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake][v3.10.5()]"
 		},
 		{
-			"name" : "Zeeslag_Code_Fixing_BINARY_DIR",
+			"name" : "Sea_Battle_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1150,7 +1150,7 @@
 			"value" : "/home/oliwier-desktop/Documents/Code_Projects/Fixing_Noodle_Code/Sea_Battle_OOP_Project/cmake-build-debug"
 		},
 		{
-			"name" : "Zeeslag_Code_Fixing_IS_TOP_LEVEL",
+			"name" : "Sea_Battle_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1162,7 +1162,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "Zeeslag_Code_Fixing_SOURCE_DIR",
+			"name" : "Sea_Battle_SOURCE_DIR",
 			"properties" : 
 			[
 				{
