@@ -11,7 +11,7 @@ void MP_Game_Manager::Init_TCP_Connection(int connection_type)
             host = std::make_unique<SBN::Tcp_Server_Socket>("24041");
             break;
         case TCP_CLIENT:
-            Client =  std::make_unique<SBN::Tcp_Client_Socket>("24041","192.168.0.145");
+            Client =  std::make_unique<SBN::Tcp_Client_Socket>("24041","127.0.0.1");
             break;
         default:
             std::cout <<"no valid connection type" <<std::endl;

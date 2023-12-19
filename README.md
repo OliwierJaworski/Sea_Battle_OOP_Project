@@ -38,6 +38,6 @@ cmake --build .
 ```
 This shoudl leave you with an executable that can be executed using the following command:
 ```
-/.filename
+./Sea_Battle
 ```
 filename is the name of the executable file
