@@ -29,13 +29,11 @@
         int rot=0;
         for(auto cur_boat : BoatsVector)
         {
-            std::cout <<"reached Boats_Fill_Map" <<std::endl;
             do
             {
                 x = rand() % 10;
                 y = rand() % 10;
                 rot = rand() % 4;
-                std::cout << "rot :" << rot << " y :" << y << " x :" << x << std::endl;
             }
             while (!Will_Boat_Fit(* cur_boat, y, x, rot));
             place_boats(* cur_boat,y,x,rot);
@@ -72,8 +70,6 @@
                 case TO_LEFT:
                     if (My_map[y][x + curr_size] != WATER || x + curr_size > 9 || x + curr_size < 0)
                     {
-                        std::cout << "cant place because  x :" << x + curr_size << "for boat of size : " << boatsize
-                                  << std::endl;
                         return false;
                     }
                     break;
@@ -81,7 +77,6 @@
                 case DOWN:
                     if (My_map[y + curr_size][x] != WATER || y + curr_size > 9 || y + curr_size < 0)
                     {
-                        std::cout << "cant place because  y :" << y + curr_size << std::endl;
                         return false;
                     }
                     break;
@@ -174,7 +169,6 @@
         {
             totaltilesize +=boat->Boat_size;
         }
-        std::cout << "totaltilesize in cummulated_boat_size = " << totaltilesize <<std::endl;
         return totaltilesize;
 
     }
@@ -189,9 +183,7 @@
                 if(boat->get_boat_tile(curr_tile).tile_status==HIT)
                 {
                     hits++;
-                    std::cout <<"hits :" <<hits <<std::endl;
                 }
-                std::cout << " Current Tile_Status :" << boat->get_boat_tile(curr_tile).tile_status <<std::endl;
             }
         }
        if(hits == cummulated_boat_size())
@@ -226,10 +218,6 @@
                 if( boat->get_boat_tile(curr_tile).x == x && boat->get_boat_tile(curr_tile).y == y)
                 {
                     boat->set_Boat_tile(x,y,HIT,curr_tile);
-                    std::cout << " Boat: "             << boat->Boat_name
-                              << " Boat tile status: " << boat->get_boat_tile(curr_tile).tile_status
-                              << " corresponding x : " << boat->get_boat_tile(curr_tile).x
-                              << " corresponding y : " << boat->get_boat_tile(curr_tile).y <<std::endl;
                 }
             }
         }

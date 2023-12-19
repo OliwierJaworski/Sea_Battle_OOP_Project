@@ -19,3 +19,12 @@
 631	2250	1703011806869873976	CMakeFiles/Sea_Battle.dir/Game_Manager_Related/MP_Game_Manager.cpp.o	56cd97f782738ed7
 1	2792	1703011807409870569	CMakeFiles/Sea_Battle.dir/TCP_Connection/TCP_SHARED.cpp.o	e81a13cebb607ab4
 2792	2891	1703011807509869941	Sea_Battle	edac9cfdb408c21e
+1	347	1703012584446871448	CMakeFiles/Sea_Battle.dir/Boats_Related/Game_Boats.cpp.o	95b80e51ccede1e5
+347	441	1703012584538870769	Sea_Battle	edac9cfdb408c21e
+1	427	1703012772713513415	CMakeFiles/Sea_Battle.dir/Player_Related/Game_Map.cpp.o	d1de58d641cb8e93
+2	2022	1703012774301502136	CMakeFiles/Sea_Battle.dir/TCP_Connection/TCP_SHARED.cpp.o	e81a13cebb607ab4
+2022	2126	1703012774409501367	Sea_Battle	edac9cfdb408c21e
+1	374	1703012909512548337	CMakeFiles/Sea_Battle.dir/Game_Manager_Related/SP_Game_Manager.cpp.o	5562178f06f1e51f
+374	465	1703012909600547721	Sea_Battle	edac9cfdb408c21e
+1	1060	1703013126743034486	CMakeFiles/Sea_Battle.dir/TCP_Connection/Tcp_Client_Socket.cpp.o	f9c54a50b0fe2a03
+1060	1153	1703013126835033846	Sea_Battle	edac9cfdb408c21e

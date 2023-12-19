@@ -45,7 +45,6 @@ bool SP_Game_Manager::Player_Add_ToGame(Game_Player & curr_player,bool identical
             if (unique_id)
             {
                 player_vector.push_back(curr_player.get_player_id());
-                std::cout << "player has been added succesfully to the player pool" << std::endl;
                 return true;
             }
             else
